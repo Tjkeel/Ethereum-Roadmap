@@ -218,11 +218,17 @@ a:hover {
 }
 
 .back-arrow {
-  font-size: 1.5em;
-  color: #fff;
-  padding: 5px 10px;
-  margin-left: 20px;
-  text-decoration: none;
+  font-size: 4vw; /* Adjust the size of the arrow based on the width of the viewport */
+  position: relative;
+  color: white;
+  top: 2vh; /* Position the arrow slightly from the top of the viewport */
+  left: 2vw; /* Position the arrow slightly from the left of the viewport */
+  z-index: 100; /* Ensure it's above other content */
+  display: inline-block; /* Allows the use of width and height */
+  width: 8vw; /* Width of the back arrow container */
+  height: 8vw; /* Height of the back arrow container */
+  line-height: 8vw; /* Centers the arrow vertically */
+  text-align: center; /* Centers the arrow horizontally */
 }
 
 .back-arrow:hover {
