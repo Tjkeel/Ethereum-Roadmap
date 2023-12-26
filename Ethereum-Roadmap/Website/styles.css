@@ -139,7 +139,7 @@ a:hover {
 .intro-text {
   color: #fff; /* White text for visibility */
   margin: 0 auto 40px; /* Centered with some margin at the bottom */
-  padding: 0 20%; /* Padding on the sides to focus the text in the center */
+  padding: 0 15%; /* Padding on the sides to focus the text in the center */
   text-align: center; /* Center the text */
   font-size: 1.2em; /* Slightly larger font size for readability */
 }
@@ -218,7 +218,7 @@ a:hover {
 }
 
 .back-arrow {
-  font-size: 4vw; /* Adjust the size of the arrow based on the width of the viewport */
+  font-size: 6vw; /* Adjust the size of the arrow based on the width of the viewport */
   position: relative;
   color: white;
   top: 2vh; /* Position the arrow slightly from the top of the viewport */
