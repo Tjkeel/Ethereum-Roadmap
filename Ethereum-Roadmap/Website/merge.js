@@ -1,7 +1,7 @@
-document.addEventListener('DOMContentLoaded', () => {
+window.onload = function() {
   // Initialize progress bars on the merge.html page
   setMergeProgressBars();
-});
+};
 
 function setMergeProgressBars() {
   updateProgress('transition-pos-progress', 100); // Transition to PoS is complete.
