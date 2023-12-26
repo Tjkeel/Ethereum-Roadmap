@@ -7,6 +7,7 @@ function setMergeProgressBars() {
   updateProgress('transition-pos-progress', 100); // Transition to PoS is complete.
   updateProgress('ssf-progress', 75); // Estimate for SSF progress.
   updateProgress('more-validators-progress', 60); // Estimate for enabling more validators.
+  updateProgress('quantum-safe', 10); // Estimate for enabling more validators.
 }
 
 function updateProgress(id, progress) {
