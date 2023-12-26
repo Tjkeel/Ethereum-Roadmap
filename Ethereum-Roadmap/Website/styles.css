@@ -218,7 +218,7 @@ a:hover {
 }
 
 .back-arrow {
-  font-size: 6vw; /* Adjust the size of the arrow based on the width of the viewport */
+  font-size: 4vw; /* Adjust the size of the arrow based on the width of the viewport */
   position: relative;
   color: white;
   top: 2vh; /* Position the arrow slightly from the top of the viewport */
