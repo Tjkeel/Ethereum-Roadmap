@@ -255,10 +255,4 @@ a:hover {
 }
 
 
-/* This media query applies styles for screens with a max width of 768px, which usually includes mobile devices */
-@media (max-width: 768px) {
-  .header-container {
-    padding-top: 60px; /* Increase the top padding to push the content down */
-  }
-}
 
