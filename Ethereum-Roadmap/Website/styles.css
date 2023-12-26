@@ -124,8 +124,8 @@ a:hover {
 }
 
 .upgrade-title {
-  font-size: 1.8em;
-  color: #0077cc;
+  font-size: 1.5em;
+  color: #333;
   margin: 20px 0 10px;
 }
 
@@ -210,3 +210,29 @@ a:hover {
 }
 
 
+/* ... existing styles ... */
+
+.footer-box {
+  display: inline-block; /* Only as wide as its content */
+  background: rgba(0, 0, 0, 0.5); /* Same grey transparent background as the container */
+  padding: 10px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners like other boxes */
+  color: #fff; /* White text color */
+  margin-top: 10px; /* Adds a bit of margin above the footer box */
+  margin-bottom: 20px;
+}
+
+.footer p {
+  margin: 0; /* Removes default paragraph margin */
+}
+
+.footer a {
+  color: #fff; /* Ensures the text link is white */
+  text-decoration: none; /* No underline on the link */
+}
+
+.footer a:hover {
+  text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* ... existing styles ... */
