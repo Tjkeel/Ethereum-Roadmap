@@ -20,7 +20,6 @@ body, html {
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: auto;
-  position: relative;
 }
 
 h1 {
@@ -210,24 +209,24 @@ a:hover {
   to {transform:scale(1)}
 }
 
+/* Styles for the back arrow */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
 
 .back-arrow {
+  font-size: 1.5em;
   color: #fff;
-  font-size: 20px; /* Adjust the size as needed */
-  position: absolute;
-  top: 30px; /* Increase the top distance if needed */
-  left: 30px; /* Increase the left distance if needed */
-  text-decoration: none; /* Removes the underline from the link */
-  vertical-align: middle;
-  line-height: 30px; /* Adjust the line height to match the height of the element for vertical alignment */
-  padding: 5px 20px; /* Adjust top and bottom padding as needed */
-  background: none; /* No background */
-  border-radius: 5px; /* Optional: rounds the corners */
+  padding: 5px 10px;
+  margin-left: 20px;
+  text-decoration: none;
 }
 
 .back-arrow:hover {
-  background: rgba(0, 0, 0, 0.2); /* Optional: adds background on hover for better UX */
-  text-decoration: none; /* Ensures there is no underline on hover */
+  text-decoration: none;
 }
 
 /* ... footer... */
