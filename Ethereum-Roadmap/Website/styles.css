@@ -144,7 +144,13 @@ a:hover {
   font-size: 1.2em; /* Slightly larger font size for readability */
 }
 
-/* ... existing styles ... */
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%; /* Let the modal take more space on small screens */
+    margin: 10% auto; /* Increase margin from the top if needed */
+    padding: 5%; /* Increase padding to make it look bigger */
+  }
+}
 
 .image-container {
   text-align: center;
@@ -177,7 +183,9 @@ a:hover {
   margin: auto;
   display: block;
   width: 80%;
-  max-width: 700px; /* Adjust to your preference */
+  max-width: 600px; /* You can set a max-width to ensure it doesn't get too wide on large screens */
+  margin: 5% auto; /* This will center the modal and give it some space from the top */
+  padding: 2%;
 }
 
 /* The Close Button */
@@ -307,11 +315,6 @@ a:hover {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
-
-
-
-/* When the modals are displayed, they will take up the entire screen and the close button will be positioned in the top-right corner of the modal-content box, not the screen. */
-
 
 
 /* ... footer... */
