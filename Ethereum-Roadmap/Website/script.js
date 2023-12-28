@@ -36,7 +36,7 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 function updateCountdown() {
-  const callDate = new Date('2024-01-21');
+  const callDate = new Date('2024-03-31');
   const now = new Date();
   const diff = callDate - now;
 
