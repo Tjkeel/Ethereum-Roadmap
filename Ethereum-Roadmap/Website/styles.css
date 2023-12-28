@@ -262,36 +262,35 @@ a:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 10; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
+  padding-top: 5vh; /* Location of the box */
   left: 0;
   top: 0;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
-
+  font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
 .modal-content {
   background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
+  margin: 5vh auto; /* Top margin as viewport height */
+  padding: 4vw; /* Padding as viewport width */
   border: 1px solid #888;
-  width: 80%;
-  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+  width: 80%; /* Relative to the parent width */
+  max-width: 700px; /* Maximum width */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   animation-name: zoom;
   animation-duration: 0.6s;
-  position: relative; /* Ensure that this is positioned relative to modal for the close button */
   color: #333;
   font-family: 'Helvetica Neue', Arial, sans-serif;
-
+  position: relative; /* Positioned relative to its parent which is .modal */
 }
 
 .close {
-  position: absolute; /* Position absolutely within the modal-content */
-  top: 10px; /* Position the close button from the top */
-  right: 25px; /* Position the close button from the right */
+  position: absolute; /* Positioned absolutely within the .modal-content */
+  top: 1vh; /* Positioned from the top of the viewport */
+  right: 1vw; /* Positioned from the right of the viewport */
   color: #aaa;
   font-size: 28px;
   font-weight: bold;
@@ -308,6 +307,7 @@ a:hover {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
+
 
 
 /* When the modals are displayed, they will take up the entire screen and the close button will be positioned in the top-right corner of the modal-content box, not the screen. */
