@@ -29,8 +29,7 @@ h1 {
 }
 
 .section {
-  background: rgba(255, 255, 255, 0.7); /* Adjusted transparency for section backgrounds */
-  color: #333;
+  background: rgba(0, 0, 0, 0.3);  color: #fff;
   margin: 25px auto; /* Centered with auto margins on the left and right */
   max-width: 800px; /* Example maximum width, adjust as needed */
   padding: 10px;
@@ -125,7 +124,7 @@ a:hover {
 
 .upgrade-title {
   font-size: 1.5em;
-  color: #333;
+  color: #fff;
   margin: 20px 0 10px;
 }
 
@@ -315,6 +314,41 @@ a:hover {
   from {transform: scale(0)} 
   to {transform: scale(1)}
 }
+/* ... existing styles ... */
+
+.timeline-container {
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 2px;
+  border-radius: 10px;
+}
+
+.timeline-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.timeline li {
+  display: inline-block;
+  margin-right: 15px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.timeline li:hover {
+  background-color: #0077cc;
+  color: #fff;
+}
+
 
 
 /* ... footer... */
