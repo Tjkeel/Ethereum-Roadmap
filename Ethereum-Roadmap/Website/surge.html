@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Surge</title>
+    <link rel="icon" type="image/png" href="ethlogo.png">
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="header-container">
+        <a href="index.html" class="back-arrow">←</a>
+    </div>
+    <h1 class="main-title">The Surge</h1>
+
+    <div class="milestones-section">
+        
+        <!-- Proto-Danksharding -->
+        <div class="section" onclick="openModal('modal-pos')">
+            <h2 class="upgrade-title">Proto-Danksharding</h2>
+			<i class="fas fa-times x-mark"></i>     
+        </div>
+        <!-- Modal for Proto-Danksharding -->
+        <div id="modal-pos" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-pos')">&times;</span>
+                <ul>
+                    <li>TBD.</li>
+                    <!-- Additional points can be added here if needed -->
+                </ul>
+            </div>
+        </div>
+
+        <!-- Danksharding Section -->
+        <div class="section" onclick="openModal('modal-ssf')">
+            <h2 class="upgrade-title">Danksharding</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+        <!-- Modal for Danksharding -->
+        <div id="modal-ssf" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal-ssf')">&times;</span>
+                <ul>
+                    <li>TBD</li>
+                    <!-- Additional points can be added here if needed -->
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<footer class="footer">
+  <div class="footer-box">
+    <p>Created by <a href="https://twitter.com/tj_keel" target="_blank" rel="noopener noreferrer">TJ Keel</a></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+
