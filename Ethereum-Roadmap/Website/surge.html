@@ -12,36 +12,46 @@
     <div class="header-container">
         <a href="index.html" class="back-arrow">←</a>
     </div>
-    <h1 class="main-title">The Surge</h1>
+    <h1 class="main-title" style="font-weight: 100;">The Surge</h1>
 
     <div class="milestones-section">
         
         <!-- Proto-Danksharding -->
-        <div class="section" onclick="openModal('modal-pos')">
-            <h2 class="upgrade-title">Proto-Danksharding</h2>
+        <div class="section" onclick="openModal('modal-proto')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Proto-Danksharding</h2>
 			<i class="fas fa-times x-mark"></i>     
         </div>
         <!-- Modal for Proto-Danksharding -->
-        <div id="modal-pos" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-pos')">&times;</span>
-                <ul>
-                    <li>TBD.</li>
-                    <!-- Additional points can be added here if needed -->
+        <div id="modal-proto" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-proto')">&times;</span>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif;"> Proto-Danksharding introduces a new transaction type that carries large data "blobs," 
+                which are cheap to include on the consensus layer but are not processed by Ethereum's execution layer. 
+                This approach limits the computational burden on nodes, as they only store these blobs for a limited time. 
+                Proto-Danksharding lays the groundwork for future scalability upgrades, 
+                particularly full Danksharding, by setting up the necessary cryptographic and technical infrastructure.
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://eips.ethereum.org/EIPS/eip-4844" style="color: #fff;" target="_blank"><li>Official EIP-4844 Spec</li></a>
+                   <a href="https://www.eip4844.com/" style="color: #fff;" target="_blank"><li>EIP-4844 Advocacy Page</li></a>
+                   <a href="https://domothy.com/blobspace/" style="color: #fff;" target="_blank"><li>Blobspace 101 by Domothy</li></a>
+                   <a href="https://www.youtube.com/watch?v=4lyb02wZQQ4" style="color: #fff;" target="_blank"><li>PEEPanEIP #104: EIP-4844</li></a>
+                   <a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-5-eip-4844" style="color: #fff;" target="_blank"><li>Ethereum Evolved: Dencun Upgrade Part 5, EIP-4844</li></a>
                 </ul>
             </div>
         </div>
 
         <!-- Danksharding Section -->
-        <div class="section" onclick="openModal('modal-ssf')">
-            <h2 class="upgrade-title">Danksharding</h2>
+        <div class="section" onclick="openModal('modal-dank')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Danksharding</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
         <!-- Modal for Danksharding -->
-        <div id="modal-ssf" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-ssf')">&times;</span>
-                <ul>
+        <div id="modal-dank" class="modal">
+            <div class="modal-content" style="background: rgba(0, 0, 0, 0.3);  color: #fff;">
+                <span class="close" onclick="closeModal('modal-dank')">&times;</span>
+                <ul style="font-family: 'Open Sans', sans-serif;">
                     <li>TBD</li>
                     <!-- Additional points can be added here if needed -->
                 </ul>
@@ -49,9 +59,40 @@
         </div>
         
     </div>
+    
+  <p class="intro-text" > Ethereum's sharding roadmap has evolved from an idealistic, to a pragmatic, rollup centric approach. 
+   As shown below in the Ideation chart, the Ethereum community original pursued sharding at the execution layer <span style="font-weight: bold;">(Full Sharding)</span>.
+   Gradually, and in conjunction with the rollup centric roadmap, leading research began to favor sharding only on the data, or consensus, layer <span style="font-weight: bold;">(Data Sharding)</span>.
+   Again, the community shifted in favor of <span style= "font-weight: bold;">Danksharding </span>, which is not technically sharding at all, but rather a probabilistic data sampling approach requiring
+   the introduction of second transaction type, blobs. <span style="font-weight: bold;">Proto-Danksharding </span> is the first of two iterations of this approach.</p>
+   
+   <div class="timeline-container">
+  <h2 class="timeline-title" style="font-weight: 100;">Ideation</h2>
+  <ul class="timeline">
+    <li style="pointer-events: none;">Full Sharding</li>
+    <li style="pointer-events: none;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <li style="pointer-events: none;">Data Sharding</li>
+    <li style="pointer-events: none;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <li style="pointer-events: none;">Danksharding</li>
+    <li style="pointer-events: none;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <li style="pointer-events: none;">Proto-Danksharding</li>
+  </ul>
+</div>
+ <p class="intro-text"> Proto-Danksharding is slated for inclusion in the upcoming hard fork, Cancun-Deneb, as specified by EIP-4844. 
+ It is likely that Danksharding will follow in a subsequent upgrade. Beyond these two, it remains to be seen if additional upgrades will be required to further scale 
+ Ethereum. In the medium term, it is reasonable to consider these two sufficient.</p>
+   <div class="timeline-container">
+  <h2 class="timeline-title" style="font-weight: 100;">In Practice</h2>
+  <ul class="timeline">
+    <li style="background-color: #6A9BE7; pointer-events: none;">Proto-Danksharding</li>
+    <li style="pointer-events: none;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <li style="pointer-events: none;">Danksharding</li>
+  </ul>
+</div>
+    
 </div>
 <footer class="footer">
-  <div class="footer-box">
+  <div style="font-size: 0.6em;" class="footer-box">
     <p>Created by <a href="https://twitter.com/tj_keel" target="_blank" rel="noopener noreferrer">TJ Keel</a></p>
   </div>
 </footer>
