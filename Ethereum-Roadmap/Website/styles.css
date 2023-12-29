@@ -275,10 +275,11 @@ a:hover {
   display: none; /* Hidden by default */
   position: fixed; /* Stay in place */
   z-index: 10; /* Sit on top */
-   max-width: 800px;
-  margin: 25px auto;
-  padding: 10px;
-  border-radius: 10px;
+  padding-top: 5vh; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
   overflow: auto; /* Enable scroll if needed */
   background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   font-family: 'Helvetica Neue', Arial, sans-serif;
@@ -322,10 +323,9 @@ a:hover {
 /* ... existing styles ... */
 
 .timeline-container {
-  
+  margin: 25px auto;
   background: rgba(0, 0, 0, 0.3);
   max-width: 800px;
-  margin: 25px auto;
   padding: 10px;
   border-radius: 10px;
   
