@@ -53,7 +53,7 @@ h1 {
 
 .progress-bar {
   height: 20px;
-  background-color: #0077cc;
+  background-color: #6A9BE7;
   width: 0%;
   border-radius: 2px;
   transition: width 0.5s ease-in-out;
@@ -69,12 +69,12 @@ ul {
 }
 
 .checkmark {
-  color: green;
+  color: #B4E087;
   font-size: 1.5em;
 }
 
 .x-mark {
-  color: red;
+  color: #F1A196;
   font-size: 1.5em;
 }
 
@@ -319,6 +319,7 @@ a:hover {
 .timeline-container {
   margin: 20px auto;
   background: rgba(0, 0, 0, 0.3);
+  max-width: 800px;
   padding: 2px;
   border-radius: 10px;
 }
@@ -345,7 +346,7 @@ a:hover {
 }
 
 .timeline li:hover {
-  background-color: #0077cc;
+  background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
 }
 
