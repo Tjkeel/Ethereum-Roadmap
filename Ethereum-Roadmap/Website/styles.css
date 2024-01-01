@@ -91,11 +91,6 @@ ul {
   text-align: center;
 }
 
-.milestones-section {
-  background-color: transparent;
-  padding: 20px 30px 0px 30px; /* reduced bottom padding */
-}
-
 .supplemental-section {
   background-color: transparent;
   padding: 0px 30px 20px 30px; /* reduced top padding */
@@ -143,8 +138,8 @@ a:hover {
 
 .intro-text {
   color: #fff; /* White text for visibility */
-  margin: 0 auto 40px; /* Centered with some margin at the bottom */
-  padding: 0 15%; /* Padding on the sides to focus the text in the center */
+  margin: 0 auto 10px; /* Centered with some margin at the bottom */
+  padding: 0 5%; /* Padding on the sides to focus the text in the center */
   text-align: center; /* Center the text */
   font-size: 1em; /* Slightly larger font size for readability */
 }
@@ -359,6 +354,56 @@ a:hover {
   color: #fff;
 }
 
+/* ... Additional Consensus Layer Timeline Content... */
+
+.detailed-timeline {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-event {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.timeline-date {
+  background-color: #99C66D;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.timeline-content p {
+  margin: 10px 0 0;
+  color: #ddd;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .timeline-event {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .timeline-date {
+    margin-bottom: 10px;
+  }
+}
 
 
 /* ... footer... */

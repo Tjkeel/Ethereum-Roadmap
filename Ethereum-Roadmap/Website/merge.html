@@ -12,74 +12,115 @@
     <div class="header-container">
         <a href="index.html" class="back-arrow">←</a>
     </div>
-    <h1 class="main-title">The Merge</h1>
-
-    <div class="milestones-section">
-        
-        <!-- Transition to PoS Section -->
-        <div class="section" onclick="openModal('modal-pos')">
-            <h2 class="upgrade-title">Transition to PoS</h2>
-			<i class="fas fa-check checkmark"></i>        
+    <h1 class="main-title" style="font-weight: 100;">The Merge</h1>
+        <!-- Launch the Beacon Chain -->
+        <div class="section" onclick="openModal('modal-beacon')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Launch the Beacon Chain</h2>
+			 <i class="fas fa-check checkmark"></i>     
         </div>
-        <!-- Modal for Transition to PoS -->
-        <div id="modal-pos" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-pos')">&times;</span>
-                <ul>
-                    <li>Ethereum's merge and transition to a Proof of Stake system was successfully completed on September 15, 2022.</li>
-                    <!-- Additional points can be added here if needed -->
+        <!-- Modal for Beacon Chain -->
+        <div id="modal-beacon" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-beacon')">&times;</span>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
                 </ul>
             </div>
         </div>
 
-        <!-- SSF Section -->
+        <!-- Merge Section -->
+        <div class="section" onclick="openModal('modal-merge')">
+            <h2 class="upgrade-title" style="font-weight: 100;">'Merge' Execution and Consensus Layers</h2>
+			 <i class="fas fa-check checkmark"></i>     
+        </div>
+        <!-- Modal for Merge -->
+        <div id="modal-merge" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-merge')">&times;</span>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+                <!-- Withdrawals Section -->
+        <div class="section" onclick="openModal('modal-with')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Enable Withdrawals</h2>
+			 <i class="fas fa-check checkmark"></i>     
+        </div>
+        <!-- Modal for Merge -->
+        <div id="modal-with" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-with')">&times;</span>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+                    <!-- SSF Section -->
         <div class="section" onclick="openModal('modal-ssf')">
-            <h2 class="upgrade-title">SSF</h2>
+            <h2 class="upgrade-title" style="font-weight: 100;">Single Slot Finality</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
         <!-- Modal for SSF -->
         <div id="modal-ssf" class="modal">
-            <div class="modal-content">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
                 <span class="close" onclick="closeModal('modal-ssf')">&times;</span>
-                <ul>
-                    <li>Single Slot Finality will allow transactions to be finalized within a single 12-second slot.</li>
-                    <!-- Additional points can be added here if needed -->
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
                 </ul>
             </div>
         </div>
+                            <!-- More Validators Section -->
+        <div class="section" onclick="openModal('modal-more')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Enable More Validators</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+        <!-- Modal for More -->
+        <div id="modal-more" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-more')">&times;</span>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+                                    <!-- Quant Section -->
+        <div class="section" onclick="openModal('modal-more')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Quantum Safe / Signature Aggregation</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+         <!-- Modal for Quantum -->
+        <div id="modal-quant" class="modal">
+            <div class="modal-quant" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-quant')">&times;</span>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        
+  <p class="intro-text" style="max-width: 800px;"> lorem ipsum kuha</p>
 
-        <!-- Enable More Validators Section -->
-        <div class="section" onclick="openModal('modal-validators')">
-            <h2 class="upgrade-title">Enable More Validators</h2>
-            <i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for Enable More Validators -->
-        <div id="modal-validators" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-validators')">&times;</span>
-                <ul>
-                    <li>Increase the amount of validators that may be supported by the network, or increase MAX_EFFECTIVE_BALANCE</li>
-                    <!-- Additional points can be added here if needed -->
-                </ul>
-            </div>
-        </div>
-
-        <!-- Quantum Safe Section -->
-        <div class="section" onclick="openModal('modal-quantum')">
-            <h2 class="upgrade-title">Quantum Safe</h2>
-            <i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for Quantum Safe -->
-        <div id="modal-quantum" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeModal('modal-quantum')">&times;</span>
-                <ul>
-                    <li>Quantum safe and aggregation friendly signatures</li>
-                    <!-- Additional points can be added here if needed -->
-                </ul>
-            </div>
-        </div>
-    </div>
+    
 </div>
 <footer class="footer">
   <div style="font-size: 0.6em;" class="footer-box">
