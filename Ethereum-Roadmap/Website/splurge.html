@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>The Splurge</title>
+    <link rel="icon" type="image/png" href="ethlogo.png">
+    <link rel="stylesheet" href="styles.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<div class="container">
+    <div class="header-container">
+        <a href="index.html" class="back-arrow">←</a>
+    </div>
+    <h1 class="main-title" style="font-weight: 100;">The Splurge</h1>
+        <!-- 1559 -->
+        <div class="section" onclick="openModal('modal-1559')">
+            <h2 class="upgrade-title" style="font-weight: 100;">EIP-1559</h2>
+			 <i class="fas fa-check checkmark"></i>     
+        </div>
+        <!-- Modal for 1559 -->
+        <div id="modal-1559" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-1559')">&times;</span>
+                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                  
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+
+        <!-- AA Section -->
+        <div class="section" onclick="openModal('modal-aa')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Account Abstraction</h2>
+				<i class="fas fa-exclamation-triangle" style="color: #FBEA6A;"></i>
+        </div>
+        <!-- Modal for AA -->
+        <div id="modal-aa" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-aa')">&times;</span>
+                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Implementation is underway, and enshrinement research is ongoing</p>                
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+                <!-- EOF Section -->
+        <div class="section" onclick="openModal('modal-EOF')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Ethereum Object Format (EOF)</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+        <!-- Modal for EOF -->
+        <div id="modal-EOF" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-EOF')">&times;</span>
+                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+                    <!-- VDF Section -->
+        <div class="section" onclick="openModal('modal-VDF')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Privacy, VDFs, and More</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+        <!-- Modal for VDF -->
+        <div id="modal-VDF" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-VDF')">&times;</span>
+                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+        
+        
+  <p class="intro-text" style="max-width: 800px;"> lorem ipsum kuha</p>
+
+    
+</div>
+<footer class="footer">
+  <div style="font-size: 0.6em;" class="footer-box">
+    <p>Created by <a href="https://twitter.com/tj_keel" target="_blank" rel="noopener noreferrer">TJ Keel</a></p>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
+

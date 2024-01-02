@@ -84,6 +84,7 @@ ul {
   font-size: 1.5em;
 }
 
+
 .section-title {
   font-size: 1.5em;
   color: #fff;
@@ -374,8 +375,8 @@ a:hover {
 }
 
 .timeline-date {
-  background-color: #99C66D;
-  color: white;
+  background-color: #FBEA6A;
+  color: black;
   font-size: 1em;
   text-align: center;
   border-radius: 5px;
