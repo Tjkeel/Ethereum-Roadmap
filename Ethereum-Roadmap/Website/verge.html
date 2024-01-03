@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The Splurge</title>
+    <title>The Verge</title>
     <link rel="icon" type="image/png" href="ethlogo.png">
     <link rel="stylesheet" href="styles.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
@@ -12,38 +12,38 @@
     <div class="header-container">
         <a href="index.html" class="back-arrow">←</a>
     </div>
-    <h1 class="main-title" style="font-weight: 100;">The Splurge</h1>
+    <h1 class="main-title" style="font-weight: 100;">The Verge</h1>
         <!-- 1559 -->
-        <div class="section" onclick="openModal('modal-1559')">
-            <h2 class="upgrade-title" style="font-weight: 100;">EIP-1559</h2>
+        <div class="section" onclick="openModal('modal-dos')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Fix DoS Issues</h2>
 			 <i class="fas fa-check checkmark"></i>     
         </div>
         <!-- Modal for 1559 -->
-        <div id="modal-1559" class="modal">
+        <div id="modal-dos" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-1559')">&times;</span>
+                <span class="close" onclick="closeModal('modal-dos')">&times;</span>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                  
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
                 <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="https://ultrasound.money/" style="color: #fff;" target="_blank"><li>ultra sound money</li></a>
+                	<a href=""style="color: #fff;" target="_blank"><li></li></a>
                 </ul>
             </div>
         </div>
 
-        <!-- AA Section -->
-        <div class="section" onclick="openModal('modal-aa')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Account Abstraction</h2>
-				<i class="fas fa-exclamation-triangle" style="color: #FBEA6A;"></i>
+        <!-- Sync Committee Section -->
+        <div class="section" onclick="openModal('modal-sync')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Sync Committees</h2>
+			 <i class="fas fa-check checkmark"></i>     
         </div>
-        <!-- Modal for AA -->
-        <div id="modal-aa" class="modal">
+        <!-- Modal for Sync Committee -->
+        <div id="modal-sync" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-aa')">&times;</span>
+                <span class="close" onclick="closeModal('modal-sync')">&times;</span>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Implementation is underway, and enshrinement research is ongoing</p>                
+                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
                 <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
@@ -52,15 +52,15 @@
                 </ul>
             </div>
         </div>
-                <!-- EOF Section -->
-        <div class="section" onclick="openModal('modal-EOF')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Ethereum Object Format (EOF)</h2>
+                <!-- Verkle Section -->
+        <div class="section" onclick="openModal('modal-verkle')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Verkle Trees</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
-        <!-- Modal for EOF -->
-        <div id="modal-EOF" class="modal">
+        <!-- Modal for Verkle -->
+        <div id="modal-verkle" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-EOF')">&times;</span>
+                <span class="close" onclick="closeModal('modal-verkle')">&times;</span>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
@@ -71,15 +71,15 @@
                 </ul>
             </div>
         </div>
-                    <!-- VDF Section -->
-        <div class="section" onclick="openModal('modal-VDF')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Privacy, VDFs, and More</h2>
+                    <!-- SNARK Ethereum Section -->
+        <div class="section" onclick="openModal('modal-snark')">
+            <h2 class="upgrade-title" style="font-weight: 100;">SNARK Ethereum</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
-        <!-- Modal for VDF -->
-        <div id="modal-VDF" class="modal">
+        <!-- Modal for SNARK Ethereum -->
+        <div id="modal-snark" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-VDF')">&times;</span>
+                <span class="close" onclick="closeModal('modal-snark')">&times;</span>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
@@ -91,6 +91,25 @@
             </div>
         </div>
         
+                            <!-- STARK Ethereum Section -->
+        <div class="section" onclick="openModal('modal-stark')">
+            <h2 class="upgrade-title" style="font-weight: 100;">STARK Ethereum</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+        <!-- Modal for STARK Ethereum -->
+        <div id="modal-stark" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-stark')">&times;</span>
+                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
         
   <p class="intro-text" style="max-width: 800px;"> lorem ipsum kuha</p>
 

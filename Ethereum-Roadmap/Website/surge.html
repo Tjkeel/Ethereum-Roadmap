@@ -53,15 +53,16 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                 <p style="font-family: 'Open Sans', sans-serif; "> To move beyond Proto-danksharding, and into Danksharding where we may attach more than 6 blobs, it’s important that nodes only need to download a portion of the total blobs in a process referred to as data availability sampling. By doing so we can increase the number of blobs that may be attached to each block without increasing the load felt by each node operator. 
+                <br><br>In addition to increasing the number of blobs that may be attached to a block, Danksharding will also increase the size of each of these blobs. In a process referred to as erasure coding, each node will not have to verify an entire blob, only a portion of it.</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                	<a href="https://ethresear.ch/t/from-4844-to-danksharding-a-path-to-scaling-ethereum-da/18046" style="color: #fff;" target="_blank"><li>Ethresear.ch post by fradamt</li></a>
                 </ul>
             </div>
         </div>
     
-  <p class="intro-text" style="max-width: 800px;"> Ethereum's sharding roadmap has evolved from an idealistic, to a pragmatic, rollup centric approach. 
+  <p class="intro-text" style="max-width: 800px;"> Ethereum's sharding roadmap has evolved from an idealistic, to a pragmatic rollup centric approach. 
    As shown below in the Ideation chart, the Ethereum community original pursued sharding at the execution layer <span style="font-weight: bold;">(Full Sharding)</span>.
    Gradually, and in conjunction with the rollup centric roadmap, leading research began to favor sharding only on the data, or consensus, layer <span style="font-weight: bold;">(Data Sharding)</span>.
    Again, the community shifted in favor of <span style= "font-weight: bold;">Danksharding </span>, which is not technically sharding at all, but rather a probabilistic data sampling approach requiring
@@ -80,8 +81,7 @@
   </ul>
 </div>
  <p class="intro-text" style="max-width: 800px;"> Proto-Danksharding is slated for inclusion in the upcoming hard fork, Cancun-Deneb, as specified by EIP-4844. 
- It is likely that Full Danksharding will follow in a subsequent upgrade, and possibly by piecemeal. Beyond these two, it remains to be seen if additional upgrades will be required to further scale 
- Ethereum. In the medium term, it is reasonable to consider these two sufficient.</p>
+ It is likely that Full Danksharding will follow piecemeal in subsequent a upgrade(s). In the medium term, it is reasonable to predict Danksharding will sufficiently scale rollups, and that additional protocol changes won't be necessary.</p>
    <div class="timeline-container">
   <h2 class="timeline-title" style="font-weight: 100;">In Practice</h2>
   <ul class="timeline">
@@ -90,6 +90,8 @@
     <li style="pointer-events: none;">Danksharding</li>
   </ul>
 </div>
+
+<p class="intro-text" style="max-width: 800px;"> It's worth noting that Ethereum's base layer will continue to marginally scale as the gas limit is increased. Validators may choose to individually signal this at anytime, and Ethereum upgrades outside of 'The Merge' will increasingly make gas limit increases more palatable. </p>
     
 </div>
 <footer class="footer">

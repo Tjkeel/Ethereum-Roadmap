@@ -25,10 +25,17 @@
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <p style="font-family: 'Open Sans', sans-serif; "> 
+				Ethereum's Beacon Chain genesis was triggered after the deposit contract received 524,288 ETH from 16,384 validators. 
+				 This specific threshold was initially chosen with an eye toward Ethereum's future transition to shard chains, 
+				 requiring a robust, decentralized group of validators. In retrospect, this large number of validators was not necessary since sharding has been abandoned at the execution layer. 
+				 Nevertheless, this threshold successfully ensured a decentralized and secure initiation of the Beacon Chain, 
+				 marking a crucial step in Ethereum's shift to a proof of stake consensus mechanism. </p>
+				 
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                <a href="https://eth2book.info/" style="color: #fff;" target="_blank"><li>eth2book</li></a>
+                <a href="https://beaconcha.in/" style="color: #fff;" target="_blank"><li>beaconcha.in</li></a>
                 </ul>
             </div>
         </div>
@@ -45,10 +52,14 @@
                   <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <p style="font-family: 'Open Sans', sans-serif; ">  The Merge was executed through the mechanism of Total Terminal Difficulty (TTD). 
+                This process involved setting a specific TTD value, which represented the cumulative difficulty of all Ethereum blocks mined under the proof of work system. 
+                The Merge was programmed to occur once Ethereum’s mining activity reached this predetermined TTD threshold. 
+                The reaching of the TTD marked the moment when Ethereum's mainnet (execution layer) merged with the Beacon Chain (consensus layer), 
+                effectively ceasing proof of work activities and shifting the network's consensus mechanism to proof of stake. </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+             <ul style="font-family: 'Open Sans', sans-serif;">
+                <a href="https://bordel.wtf/" style="color: #fff;" target="_blank"><li>bordel.wtf</li></a>
                 </ul>
             </div>
         </div>
@@ -57,20 +68,33 @@
             <h2 class="upgrade-title" style="font-weight: 100;">Enable Withdrawals</h2>
 			 <i class="fas fa-check checkmark"></i>     
         </div>
-        <!-- Modal for Merge -->
+        <!-- Modal for Withdrawals -->
         <div id="modal-with" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
                 <span class="close" onclick="closeModal('modal-with')">&times;</span>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>              
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <p style="font-family: 'Open Sans', sans-serif; "> EIP-4895, included in the Shanghai-Capella hard fork, enabled support for validator withdrawals from the beacon chain to the EVM via a new "system-level" operation type.
+                This EIP completed the three part process of Ethereum's transition to a proof of stake consensus mechanism.</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+    
+                <a href="https://www.validatorqueue.com/" style="color: #fff;" target="_blank"><li>validator queue</li></a>
+                <a href="https://consensys.io/shanghai-capella-upgrade" style="color: #fff;" target="_blank"><li>guide to ETH withdrawals</li></a>
+
                 </ul>
             </div>
         </div>
+        
+        <p class="intro-text" style="max-width: 800px;"> Ethereum now utilizes a proof of stake consensus mechanism, and underwent this migration from proof of work in a three phase process, beginning with the launch of the Beacon Chain on <span style= "font-weight: bold;">December 1, 2020</span>.
+
+This newly formed consensus chain ran mostly independently of Ethereum’s proof of work chain (execution layer), until The Merge on <span style= "font-weight: bold;">September 15, 2022 </span>. <br><br>
+
+Technically, post-Merge Ethereum is still two tightly coupled blockchains. However the block trees of the execution layer and consensus layer have a 1:1 mapping, meaning that every EL block has one, and only one CL block which corresponds to it, and vice versa. This 1:1 mapping of EL and CL blocks means that we can think of post-Merge Ethereum as a single blockchain consisting of two layers.  <br><br>
+
+Finally, withdrawals were enabled on the consensus layer on <span style= "font-weight: bold;">April 12, 2023</span>, completing the final phase and creating an end-to-end proof of stake consensus mechanism.</p>
+
                     <!-- SSF Section -->
         <div class="section" onclick="openModal('modal-ssf')">
             <h2 class="upgrade-title" style="font-weight: 100;">Single Slot Finality</h2>
@@ -86,7 +110,7 @@
                 <p style="font-family: 'Open Sans', sans-serif; "> TBD
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                	<a href="https://ethresear.ch/t/sticking-to-8192-signatures-per-slot-post-ssf-how-and-why/17989" style="color: #fff;" target="_blank"><li>8192 Signatures <> SSF</li></a>
                 </ul>
             </div>
         </div>
@@ -102,26 +126,26 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                	<a href="https://ethresear.ch/t/sticking-to-8192-signatures-per-slot-post-ssf-how-and-why/17989" style="color: #fff;" target="_blank"><li>8192 Signatures <> SSF</li></a>
                 </ul>
             </div>
         </div>
                                     <!-- Quant Section -->
-        <div class="section" onclick="openModal('modal-more')">
+        <div class="section" onclick="openModal('modal-quant')">
             <h2 class="upgrade-title" style="font-weight: 100;">Quantum Safe / Signature Aggregation</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
          <!-- Modal for Quantum -->
         <div id="modal-quant" class="modal">
-            <div class="modal-quant" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
                 <span class="close" onclick="closeModal('modal-quant')">&times;</span>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>             
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
                 	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
@@ -130,7 +154,11 @@
         </div>
         
         
-  <p class="intro-text" style="max-width: 800px;"> lorem ipsum kuha</p>
+  <p class="intro-text" style="max-width: 800px;"> Where the first three upgrades were sequential and crucial to enabling PoS on Ethereum, the latter three are supplemental upgrades and non-sequential, yet highly dependent upon one another and intrinsically linked.</p>
+  
+  <p class="intro-text" style="max-width: 800px;">More validators mean processing a greater volume of signatures and data in each slot, which can slow down the finality process. 
+  Ethereum faces the technical challenge of efficiently coordinating numerous validators to achieve SSF (a potential boon for security) without sacrificing the network's decentralization (a high number of validators). Put another way, SSF would be much easier with small validator count, 
+  but this would deteriorate one of Ethereum's primary strengths. <br><br> Research and debates are on going to determine the optimal path forward to strike the appropriate balance.</p>
 
     
 </div>

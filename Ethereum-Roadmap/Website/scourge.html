@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>The Purge</title>
+    <title>The Sourge</title>
     <link rel="icon" type="image/png" href="ethlogo.png">
     <link rel="stylesheet" href="styles.css">
 	<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet">
@@ -12,37 +12,57 @@
     <div class="header-container">
         <a href="index.html" class="back-arrow">←</a>
     </div>
-    <h1 class="main-title" style="font-weight: 100;">The Purge</h1>
-     <!-- Gas Refunds -->
-        <div class="section" onclick="openModal('modal-gas')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Remove Gas Refunds</h2>
+    <h1 class="main-title" style="font-weight: 100;">The Scourge</h1>
+        <!-- MEV -->
+        <div class="section" onclick="openModal('modal-mev')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Extra Protocol MEV</h2>
 			 <i class="fas fa-check checkmark"></i>     
         </div>
-        <!-- Modal for Gas Refunds -->
-        <div id="modal-gas" class="modal">
+        <!-- Modal for MEV -->
+        <div id="modal-mev" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-gas')">&times;</span>
+                <span class="close" onclick="closeModal('modal-mev')">&times;</span>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
                 <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://mevboost.pics/" style="color: #fff;" target="_blank"><li>mevboost.pics</li></a>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Merge ens -->
+        <div class="section" onclick="openModal('modal-ens')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Enshrined PBS</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+        <!-- Modal for ens -->
+        <div id="modal-ens" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-ens')">&times;</span>
+                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
                 	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
                 </ul>
             </div>
         </div>
-         <!-- sync -->
-        <div class="section" onclick="openModal('modal-debt')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Fast Sync Clients</h2>
-			 <i class="fas fa-check checkmark"></i>     
+                <!-- Burn Section -->
+        <div class="section" onclick="openModal('modal-burn')">
+            <h2 class="upgrade-title" style="font-weight: 100;">MEV Burn</h2>
+			<i class="fas fa-times x-mark"></i>
         </div>
-        <!-- Modal sync -->
-        <div id="modal-sync" class="modal">
-            <div class="modal-sync" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-sync')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                
+        <!-- Modal for Burn -->
+        <div id="modal-burn" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-burn')">&times;</span>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>              
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
                 <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
@@ -51,18 +71,55 @@
                 </ul>
             </div>
         </div>
-    
-     <!-- debt -->
-        <div class="section" onclick="openModal('modal-debt')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Remove Technical Debt</h2>
-				<i class="fas fa-exclamation-triangle" style="color: #FBEA6A;"></i>
+                    <!-- Dist -->
+        <div class="section" onclick="openModal('modal-dist')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Distributed Block Building</h2>
+			<i class="fas fa-times x-mark"></i>
         </div>
-        <!-- Modal debt -->
-        <div id="modal-debt" class="modal">
+        <!-- Modal for Dist -->
+        <div id="modal-dist" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-debt')">&times;</span>
+                <span class="close" onclick="closeModal('modal-dist')">&times;</span>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
+                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+                            <!-- More Preconfirmations Section -->
+        <div class="section" onclick="openModal('modal-pre')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Preconfirmations</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+        <!-- Modal for Pre -->
+        <div id="modal-pre" class="modal">
+            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-pre')">&times;</span>
+                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                </ul>
+            </div>
+        </div>
+                                    <!-- LST Section -->
+        <div class="section" onclick="openModal('modal-lst')">
+            <h2 class="upgrade-title" style="font-weight: 100;">Prevent Staking Pool Centralization</h2>
+			<i class="fas fa-times x-mark"></i>
+        </div>
+         <!-- Modal for LST -->
+        <div id="modal-lst" class="modal">
+            <div class="modal-quant" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
+                <span class="close" onclick="closeModal('modal-lst')">&times;</span>
+                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
+                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>             
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
                 <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
@@ -72,86 +129,6 @@
             </div>
         </div>
         
-        <!-- history expiry -->
-        <div class="section" onclick="openModal('modal-his')">
-            <h2 class="upgrade-title" style="font-weight: 100;">History Expiry</h2>
-				<i class="fas fa-exclamation-triangle" style="color: #FBEA6A;"></i>
-        </div>
-        <!-- modal history expiry -->
-        <div id="modal-his" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-his')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                  
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
-                </ul>
-            </div>
-        </div>
-
-                <!-- state expiry  -->
-        <div class="section" onclick="openModal('modal-EOF')">
-            <h2 class="upgrade-title" style="font-weight: 100;">State Expiry</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for state expiry -->
-        <div id="modal-EOF" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-EOF')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
-                </ul>
-            </div>
-        </div>
-        
-                        <!-- log reform  -->
-        <div class="section" onclick="openModal('modal-log')">
-            <h2 class="upgrade-title" style="font-weight: 100;">LOG Reform</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for log reform -->
-        <div id="modal-log" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-log')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
-                </ul>
-            </div>
-        </div>
-
-                          <!-- SH  -->
-        <div class="section" onclick="openModal('modal-log')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Serialization Harmony</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for SH -->
-        <div id="modal-log" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-log')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
-                </ul>
-            </div>
-        </div>
-
         
   <p class="intro-text" style="max-width: 800px;"> lorem ipsum kuha</p>
 
