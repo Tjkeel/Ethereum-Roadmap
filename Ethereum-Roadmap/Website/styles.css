@@ -439,12 +439,12 @@ a:hover {
   display: block;
   width: 0; 
   height: 0; 
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid white; /* Color of the arrow pointing up */
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid white; /* Color of the arrow pointing up */
   position: absolute;
   bottom: -10px; /* Adjust this value to move arrow down from the top */
-  left: 10px; /* Adjust this value to move arrow right from the left */
+  left: 20%; /* Adjust this value to move arrow right from the left */
 }
 
 /* Positioning the bottom arrow inside the Single Slot Finality section */
@@ -453,12 +453,12 @@ a:hover {
   display: block;
   width: 0; 
   height: 0; 
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-top: 10px solid white; /* Color of the arrow pointing up */
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-top: 12px solid white; /* Color of the arrow pointing up */
   position: absolute;
   bottom: -10px; /* Adjust this value to move arrow up from the bottom */
-  right: 10px; /* Adjust this value to move arrow left from the right */
+  right: 20%; /* Adjust this value to move arrow left from the right */
 }
 
 /* Positioning the top arrow inside the Enable More Validators section */
@@ -467,12 +467,12 @@ a:hover {
   display: block;
   width: 0; 
   height: 0; 
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid white; /* Color of the arrow pointing down */
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white; /* Color of the arrow pointing down */
   position: absolute;
   top: -10px; /* Adjust this value to move arrow down from the top */
-  right: 10px; /* Adjust this value to move arrow left from the right */
+  right: 20%; /* Adjust this value to move arrow left from the right */
 }
 
 /* Positioning the bottom arrow inside the Enable More Validators section */
@@ -481,12 +481,10 @@ a:hover {
   display: block;
   width: 0; 
   height: 0; 
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid white; /* Color of the arrow pointing down */
+  border-left: 12px solid transparent;
+  border-right: 12px solid transparent;
+  border-bottom: 12px solid white; /* Color of the arrow pointing down */
   position: absolute;
   top: -10px; /* Adjust this value to move arrow up from the bottom */
-  left: 10px; /* Adjust this value to move arrow right from the left */
+  left: 20%; /* Adjust this value to move arrow right from the left */
 }
-
-
