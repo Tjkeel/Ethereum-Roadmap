@@ -60,7 +60,7 @@ h1 {
 
 .progress-bar {
   height: 20px;
-  background-color: #6A9BE7;
+  background-color: #99C66D;
   width: 0%;
   border-radius: 2px;
   transition: width 0.5s ease-in-out;
@@ -502,7 +502,7 @@ a:hover {
   padding: 10px;
   border-radius: 5px;
   text-align: center;
-  font-size: 1.2em;
+  font-size: 1em;
   transition: background-color 0.3s;
 
 }
