@@ -10,7 +10,7 @@
 <body>
 <div class="container">
     <div class="header-container">
-        <a href="index.html" class="back-arrow">←</a>
+        <a href="ethroadmap.com" class="back-arrow">←</a>
     </div>
     <h1 class="main-title" style="font-weight: 100;">The Splurge</h1>
         <!-- 1559 -->
@@ -32,10 +32,18 @@ The base fee was dynamically adjusted each block, targeting a consistent 50% cap
 to reduce transaction fee volatility and improve network efficiency. 
 Designed to create a more predictable fee structure, this approach aimed to align Ethereum's economic activity with 
 its token value by diminishing supply, while ensuring validators were 
-compensated for including transactions through the priority fee. </p>
+compensated for including transactions through the priority fee.
+
+<br><br>
+
+There are aspirations to enhance EIP-1559 in the future.
+
+ </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
                 	<a href="https://ultrasound.money/" style="color: #fff;" target="_blank"><li>ultra sound money</li></a>
+                    <a href="https://domothy.com/eip1559/" style="color: #fff;" target="_blank"><li>domothy post</li></a>
+
                 </ul>
             </div>
         </div>
@@ -62,19 +70,28 @@ compensated for including transactions through the priority fee. </p>
                 <!-- EOF Section -->
         <div class="section" onclick="openModal('modal-EOF')">
             <h2 class="upgrade-title" style="font-weight: 100;">Ethereum Object Format (EOF)</h2>
-			<i class="fas fa-times x-mark"></i>
+				<i class="fas fa-exclamation-triangle" style="color: #FBEA6A;"></i>
         </div>
         <!-- Modal for EOF -->
         <div id="modal-EOF" class="modal">
             <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
                 <span class="close" onclick="closeModal('modal-EOF')">&times;</span>
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
+                  <p style="font-family: 'Open Sans', sans-serif; ">The (5) EIPs are written, and were sought for inclusion in Shanghai. 
+                  Look for EOF to ship in an execution layer hard fork after Cancun.</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <p style="font-family: 'Open Sans', sans-serif; "> Ethereum Object Format (EOF) is inspired by the concept of "object file formats" in traditional programming, 
+                where an object file is a structured representation of machine code and data that's ready for use by the system. 
+                EOF aims to bring a similar structured approach to the EVM, organizing the bytecode of smart contracts into distinct, 
+                systematic sections for code, data, and other types. This structure contrasts with the current format, 
+                where such distinctions are less clear and systematic.
+				<br><br>
+				In EOF, this structured format would not only allow for more modular and efficient processing of smart contracts within the EVM, 
+				but would also introduce versioning like object file formats in computing. The format would support new functionalities like improved control flow
+ 				operations and stack validation, and enhance the overall efficiency and robustness of Ethereum's infrastructure. </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                	<a href="https://twitter.com/lightclients/status/1593270266909450241" style="color: #fff;" target="_blank"><li>Twitter Thread by @lightclients</li></a>
                 </ul>
             </div>
         </div>
