@@ -507,7 +507,37 @@ a:hover {
 
 }
 
+.team2 {
+  background: #78D0DE;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: background-color 0.3s;
+
+}
+
+.team3 {
+  background: #F1A196;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: background-color 0.3s;
+
+}
+
 .team:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+.team2:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+    text-decoration: none;
+}
+.team3:hover {
   background-color: rgba(255, 255, 255, 0.2);
     text-decoration: none;
 }
