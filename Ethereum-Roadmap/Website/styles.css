@@ -519,7 +519,7 @@ a:hover {
 }
 
 .team3 {
-  background: #F1A196;
+  background: #99C66D;
   color: #fff;
   padding: 10px;
   border-radius: 5px;
@@ -560,6 +560,22 @@ a:hover {
 }
 
 .estimate-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+.estimate-button2 {
+  background-color: #F1A196;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: background-color 0.3s;
+  text-decoration: none;
+}
+
+.estimate-button2:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
 }

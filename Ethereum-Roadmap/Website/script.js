@@ -35,6 +35,10 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
+
+// Update the countdown every second for Cancun-Deneb
+setInterval(updateCountdown, 1000);
+
 function updateCountdown() {
   const callDate = new Date('2024-03-31');
   const now = new Date();
@@ -54,7 +58,28 @@ function updateCountdown() {
 }
 
 // Update the countdown every second
-setInterval(updateCountdown, 1000);
+setInterval(updateCountdown2, 1000);
+
+function updateCountdown2() {
+  const callDate = new Date('2025-03-31');
+  const now = new Date();
+  const diff = callDate - now;
+
+  // Calculate days, hours, minutes, seconds
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  // Update the countdown display
+  document.getElementById('days2').textContent = days;
+  document.getElementById('hours2').textContent = hours;
+  document.getElementById('minutes2').textContent = minutes;
+  document.getElementById('seconds2').textContent = seconds;
+}
+
+// Update the countdown every second
+setInterval(updateCountdown2, 1000);
 
 //Code for Modals within each of the six development paths
 function openModal(modalId) {
