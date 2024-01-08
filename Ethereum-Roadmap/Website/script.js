@@ -1,24 +1,27 @@
 window.onload = function() {
-  // Hypothetical progress values for each section based on the most recent roadmap chart
-  setProgressBar('merge-progress', 70); // Assuming "The Merge" is about 80% complete
-  setProgressBar('surge-progress', 10,50,5); // Assuming "The Surge" is about 50% complete
-  setProgressBar('scourge-progress', 30); // Assuming "The Scourge" is about 30% complete
-  setProgressBar('verge-progress', 20); // Assuming "The Verge" is about 20% complete
-  setProgressBar('purge-progress', 10); // Assuming "The Purge" is about 10% complete
-  setProgressBar('splurge-progress', 45); // Assuming "The Splurge" is just starting, about 5% complete
+  setProgressBar('merge-progress', 30, 20, 20);
+  setProgressBar('surge-progress', 10, 60, 0); 
+  setProgressBar('scourge-progress', 30, 20, 20); 
+  setProgressBar('verge-progress', 30, 20, 20); 
+  setProgressBar('purge-progress', 30, 20, 20); 
+  setProgressBar('splurge-progress', 30, 20, 20); 
+
 };
 
-// Function to update the progress bar
-function setProgressBar(id, greenProgress, blueProgress, redProgress) {
+function setProgressBar(id, greenWidth, blueWidth, redWidth) {
   const progressBar = document.getElementById(id);
   if (progressBar) {
-    progressBar.innerHTML = `
-      <div class="progress-green" style="width: ${greenProgress}%"></div>
-      <div class="progress-blue" style="width: ${blueProgress}%"></div>
-      <div class="progress-red" style="width: ${redProgress}%"></div>
-    `;
+    const totalWidth = greenWidth + blueWidth + redWidth;
+    progressBar.style.width = `${totalWidth}%`; 
+    progressBar.style.setProperty('--blue-width', `${blueWidth / totalWidth * 100}%`);
+    progressBar.style.setProperty('--red-width', `${redWidth / totalWidth * 100}%`);
+    progressBar.style.setProperty('--green-width', `${greenWidth / totalWidth * 100}%`);
+
   }
 }
+
+
+
 
 // Get the modal
 var modal = document.getElementById("myModal");
