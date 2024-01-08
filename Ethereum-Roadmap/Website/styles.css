@@ -59,12 +59,27 @@ h1 {
 }
 
 .progress-bar {
+  display: flex; /* To align child divs horizontally */
   height: 20px;
-  background-color: #99C66D;
-  width: 0%;
   border-radius: 2px;
+}
+
+.progress-green, .progress-blue, .progress-red {
   transition: width 0.5s ease-in-out;
 }
+
+.progress-green {
+  background-color: #99C66D;
+}
+
+.progress-blue {
+  background-color: #6A9BE7;
+}
+
+.progress-red {
+  background-color: #F1A196;
+}
+
 
 ul {
   list-style-type: none;
@@ -519,8 +534,8 @@ a:hover {
 }
 
 .team3 {
-  background: #99C66D;
-  color: #fff;
+  background: #A8D5BA;
+  color: #000;
   padding: 10px;
   border-radius: 5px;
   text-align: center;

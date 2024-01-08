@@ -1,7 +1,7 @@
 window.onload = function() {
   // Hypothetical progress values for each section based on the most recent roadmap chart
   setProgressBar('merge-progress', 70); // Assuming "The Merge" is about 80% complete
-  setProgressBar('surge-progress', 60); // Assuming "The Surge" is about 50% complete
+  setProgressBar('surge-progress', 10,50,5); // Assuming "The Surge" is about 50% complete
   setProgressBar('scourge-progress', 30); // Assuming "The Scourge" is about 30% complete
   setProgressBar('verge-progress', 20); // Assuming "The Verge" is about 20% complete
   setProgressBar('purge-progress', 10); // Assuming "The Purge" is about 10% complete
@@ -9,12 +9,17 @@ window.onload = function() {
 };
 
 // Function to update the progress bar
-function setProgressBar(id, progress) {
+function setProgressBar(id, greenProgress, blueProgress, redProgress) {
   const progressBar = document.getElementById(id);
   if (progressBar) {
-    progressBar.style.width = progress + '%';
+    progressBar.innerHTML = `
+      <div class="progress-green" style="width: ${greenProgress}%"></div>
+      <div class="progress-blue" style="width: ${blueProgress}%"></div>
+      <div class="progress-red" style="width: ${redProgress}%"></div>
+    `;
   }
 }
+
 // Get the modal
 var modal = document.getElementById("myModal");
 
