@@ -21,8 +21,6 @@ function setProgressBar(id, greenWidth, blueWidth, redWidth) {
 }
 
 
-
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
