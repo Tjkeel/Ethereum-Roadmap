@@ -10,19 +10,12 @@ body, html {
   text-align: center;
   color: #fff;
   background-image: url('background.png');
-  background-position: center center;
+  background-position: top center;
   background-repeat: no-repeat;
   background-size: contain; 
   background-attachment: fixed; 
 }
 
-
-@media only screen and (max-width: 768px) {
-  body::before {
-    background-size: contain;
-    background-position: top center; /* Adjusts to show the image at the top */
-  }
-}
 
 .container {
   width: 80%;
