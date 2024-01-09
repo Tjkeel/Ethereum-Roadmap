@@ -13,7 +13,8 @@ body, html {
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain; 
-  background-attachment: fixed; 
+  overflow-x: hidden;
+  
 }
 
 
