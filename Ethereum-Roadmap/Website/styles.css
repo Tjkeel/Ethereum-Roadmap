@@ -16,28 +16,7 @@ body, html {
   background-attachment: fixed; /* For desktop */
 }
 
-@media only screen and (max-width: 768px) { /* Adjust this breakpoint as needed */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    z-index: -1;
-    display: block;
-    background-image: url('background.png');
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: cover; /* Or 'contain' based on your preference */
-  }
 
-  body {
-    background: none; /* Removes the background from the body tag on mobile */
-  }
-}
-
-/* Rest of your CSS */
 
 
 .container {
