@@ -9,15 +9,20 @@ body, html {
   height: 100%;
   text-align: center;
   color: #fff;
-  background-image: url('background.png'); /* Keeps the image for desktop */
+  background-image: url('background.png');
   background-position: center center;
   background-repeat: no-repeat;
-  background-size: contain; /* Or 'contain' based on your preference */
-  background-attachment: fixed; /* For desktop */
+  background-size: contain; 
+  background-attachment: fixed; 
 }
 
 
-
+@media only screen and (max-width: 768px) {
+  body::before {
+    background-size: contain;
+    background-position: top center; /* Adjusts to show the image at the top */
+  }
+}
 
 .container {
   width: 80%;
