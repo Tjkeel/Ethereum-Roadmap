@@ -1,10 +1,10 @@
 window.onload = function() {
-  setProgressBar('merge-progress', 30, 20, 20);
-  setProgressBar('surge-progress', 10, 60, 0); 
-  setProgressBar('scourge-progress', 30, 20, 20); 
-  setProgressBar('verge-progress', 30, 20, 20); 
-  setProgressBar('purge-progress', 30, 20, 20); 
-  setProgressBar('splurge-progress', 30, 20, 20); 
+  setProgressBar('merge-progress', 70, 5, 0);
+  setProgressBar('surge-progress', 10, 65, 0); 
+  setProgressBar('scourge-progress', 15, 0, 0); 
+  setProgressBar('verge-progress', 10, 0, 50); 
+  setProgressBar('purge-progress', 20, 5, 0); 
+  setProgressBar('splurge-progress', 35, 5, 0); 
 
 };
 
