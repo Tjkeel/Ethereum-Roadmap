@@ -7,14 +7,38 @@ body, html {
   font-family: 'Open Sans', sans-serif;
   font-weight: 100;
   height: 100%;
-  background-image: url('background.png');
+  text-align: center;
+  color: #fff;
+  background-image: url('background.png'); /* Keeps the image for desktop */
   background-position: center center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-size: contain;
-  color: #fff;
-  text-align: center;
+  background-size: contain; /* Or 'contain' based on your preference */
+  background-attachment: fixed; /* For desktop */
 }
+
+@media only screen and (max-width: 768px) { /* Adjust this breakpoint as needed */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    display: block;
+    background-image: url('background.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain; /* Or 'contain' based on your preference */
+  }
+
+  body {
+    background: none; /* Removes the background from the body tag on mobile */
+  }
+}
+
+/* Rest of your CSS */
+
 
 .container {
   width: 80%;
