@@ -46,7 +46,7 @@ span.onclick = function() {
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
-  const callDate = new Date('2024-03-31');
+  const callDate = new Date('2024-03-15');
   const now = new Date();
   const diff = callDate - now;
 
