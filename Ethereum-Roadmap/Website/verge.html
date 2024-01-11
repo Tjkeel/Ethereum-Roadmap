@@ -25,13 +25,31 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                  
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <p style="font-family: 'Open Sans', sans-serif; ">  Gas pricing and resource allocation were changed to prevent attackers from easily overwhelming
+                 the network with low-cost, high-computation transactions. This recalibration ensured
+                 that operations consuming more computational resources were priced appropriately,
+                  making it economically unfeasible for attackers to exploit these vulnerabilities. <br><br>
+                  Additionally, improvements were made in the EVM's code execution and state management processes, 
+                  enhancing its ability to handle a large number of requests without sacrificing speed or security. 
+                  This milestone significantly bolstered Ethereum's resilience against DoS attacks, a crucial step 
+                  in maintaining the network's stability and efficiency.
+                  
+ </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href=""style="color: #fff;" target="_blank"><li></li></a>
+                	<a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md"style="color: #fff;" target="_blank"><li>These changes were made in the Tangerine Whistle hard fork</li></a>
                 </ul>
             </div>
         </div>
+                <p class="intro-text" style="max-width: 800px;">
+        
+        The following four upgrades (have/will) happen sequentially, each relying upon the other to 
+        set the necessary groundwork. With each new iteration, Ethereum greatly broadens it's ability to allow network participants to interact with the network.
+        I.e., make it easier for lightweight devices to verify the state of Etheruem. Today, most users outsource this responsibility to third party RPC provider.
+        
+        <br><br>Sync committees were introduced in Altair. The first new upgrade, and possibly the core upgrade in Prague-Electra (depending on community consensus), could be the migration from  Merkle Patricia Trees
+        to Verkle Trees. 
+        </p>
 
         <!-- Sync Committee Section -->
         <div class="section" onclick="openModal('modal-sync')">
@@ -45,19 +63,17 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <p style="font-family: 'Open Sans', sans-serif; "> Sync committees are specialized groups of validators responsible for creating a condensed version of the blockchain state at regular intervals.
+                 By doing so, they enable (among other things) light clients to quickly sync with the current state of the blockchain without processing the entire chain history. 
+                 This dramatically reduces the computational and storage requirements for light clients, making it easier for devices with limited resources to participate in the network. 
+                 This upgrade allowed a broader range of devices to engage with the network efficiently. </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                	<a href="https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md"style="color: #fff;" target="_blank"><li>These changes were made in the Altair Hard Fork</li></a>
                 </ul>
             </div>
         </div>
-        <p class="intro-text" style="max-width: 800px;">
-        
-        The following three upgrades will happen sequentially, each relying upon the other to 
-        set the necessary groundwork. The first such upgrade, and possibly the core upgrade in Prague-Electra, will be the migration from  Merkle Patricia Trees
-        to Verkle Trees. 
-        </p>
+
                 <!-- Verkle Section -->
         <div class="section" onclick="openModal('modal-verkle')">
             <h2 class="upgrade-title" style="font-weight: 100;">Verkle Trees</h2>
@@ -71,10 +87,24 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Upgrade Ethereum's state structure from Patricia Merkle Trees to Verkle (verifiable Merkle) Trees </p>
+                <p style="font-family: 'Open Sans', sans-serif; "> Upgrade Ethereum's state structure from Patricia Merkle Trees to Verkle
+                 Trees via vector commitments, which will allow for a more compact and efficient proof structure.
+             <br><br>
+                In a Merkle tree, the proof size grows logarithmically with the number of elements, leading to larger proofs and more data on Ethereum over time.
+                Verkle trees, by contrast, leverage vector commitments to generate constant-sized proofs regardless of the number of elements.
+                 This feature drastically reduces the size of proofs required to verify the state of Ethereum, enhancing the efficiency of data storage and retrieval.
+             <br><br>
+                 The implementation of Verkle trees will markedly improve the functionality of light clients, which aim to allow network participants to independently verify 
+                 the state of Ethereum without running a node AND without relying on a third party RPC provider. After the migration to Verkle Trees, lightweight devices (cell phones) could
+                 sufficiently, securely, and independently verify the state of Ethereum.
+                
+                </p>
+                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
+                	<a href="https://verkle.info/" style="color: #fff;" target="_blank"><li>Verkle.info</li></a>
+                	<a href="https://www.youtube.com/watch?v=Q7rStTKwuYs" style="color: #fff;" target="_blank"><li>Talk by Guillaume Ballet</li></a>
+
                 </ul>
             </div>
         </div>
@@ -90,11 +120,13 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
-                </ul>
+                <p style="font-family: 'Open Sans', sans-serif; "> Assuming the successful implementation of Verkle Trees, Ethereum would subsequently turn its attention to SNARKs (within the context of The Verge).
+                <br><br>
+               
+Incorporating SNARKs into Ethereum would allow for batch processing of transactions and state changes, significantly reducing the data required per transaction. Theoretically this is a technical leap from Verkle Trees, which primarily optimize data storage and retrieval. SNARKs have the potential to condense multiple transactions into a single proof, enabling nodes to validate many transactions simultaneously with less computational effort.
+<br><br>
+Furthermore, integrating SNARKs directly into the EVM would enhance the execution of smart contracts. This integration would allow the EVM to process complex operations more efficiently by validating the correctness of computations without executing them in full. 
+                 </p>
             </div>
         </div>
         
@@ -110,16 +142,21 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
-                </ul>
+                <p style="font-family: 'Open Sans', sans-serif; "> 
+STARKs would enable the creation of proofs that are smaller and faster to verify, 
+significantly improving the efficiency of processing complex smart contracts 
+and managing high-volume transactions. 
+<br><br>
+
+They have the potential to attain quantum resistance using hash functions 
+and information-theoretic principles, independent of number-theoretic problems
+ vulnerable to quantum computing.
+
+</p>
+
             </div>
         </div>
         
-  <p class="intro-text" style="max-width: 800px;"> lorem ipsum kuha</p>
-
     
 </div>
 <footer class="footer">
