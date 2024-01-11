@@ -4,7 +4,7 @@ window.onload = function() {
   setProgressBar('scourge-progress', 15, 0, 0); 
   setProgressBar('verge-progress', 10, 0, 50); 
   setProgressBar('purge-progress', 20, 5, 0); 
-  setProgressBar('splurge-progress', 35, 5, 0); 
+  setProgressBar('splurge-progress', 35, 0, 0); 
 
 };
 
