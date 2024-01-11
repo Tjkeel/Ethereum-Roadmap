@@ -483,8 +483,8 @@ a:hover {
 }
 
 .timeline-date {
-  background-color: #FBEA6A;
-  color: black;
+  background-color: #trasparent;
+  color: white;
   font-size: 1em;
   text-align: center;
   border-radius: 5px;
