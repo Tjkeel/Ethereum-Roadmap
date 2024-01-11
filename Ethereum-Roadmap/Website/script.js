@@ -2,7 +2,7 @@ window.onload = function() {
   setProgressBar('merge-progress', 70, 5, 0);
   setProgressBar('surge-progress', 10, 65, 0); 
   setProgressBar('scourge-progress', 15, 0, 0); 
-  setProgressBar('verge-progress', 10, 0, 50); 
+  setProgressBar('verge-progress', 10, 0, 30); 
   setProgressBar('purge-progress', 20, 5, 0); 
   setProgressBar('splurge-progress', 35, 0, 0); 
 
