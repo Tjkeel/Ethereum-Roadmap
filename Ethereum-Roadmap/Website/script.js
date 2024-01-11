@@ -95,3 +95,10 @@ function openModal(modalId) {
 function closeModal(modalId) {
     document.getElementById(modalId).style.display = 'none';
 }
+
+document.addEventListener('DOMContentLoaded', (event) => {
+    const lastUpdated = document.getElementById('last-updated');
+    const lastModifiedDate = new Date(document.lastModified);
+    const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    lastUpdated.textContent = formattedDate;
+});
