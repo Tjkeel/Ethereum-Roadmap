@@ -638,16 +638,24 @@ a:hover {
 
 .team:hover {
   background-color: rgba(255, 255, 255, 0.2);
-    text-decoration: none;
+  text-decoration: none;
 }
+
+.team:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
 .team2:hover {
   background-color: rgba(255, 255, 255, 0.2);
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .team3:hover {
   background-color: rgba(255, 255, 255, 0.2);
-    text-decoration: none;
+  text-decoration: none;
 }
+
 .estimate-buttons {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
@@ -671,18 +679,62 @@ a:hover {
   color: #fff;
 }
 
+/* Prague-Electra Button Styles */
 .estimate-button2 {
   background-color: #F1A196;
   color: #fff;
-  padding: 10px;
   border-radius: 5px;
-  text-align: center;
   font-size: 1em;
-  transition: background-color 0.3s;
   text-decoration: none;
+  transition: background-color 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
 }
 
-.estimate-button2:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  color: #fff;
+.flip-container-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
+    margin: 20px 0;
 }
+
+.flip-container {
+    perspective: 1000px;
+    width: 100%;
+    height: 40px;
+}
+
+.flipper {
+  transition: 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.back {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+
+
