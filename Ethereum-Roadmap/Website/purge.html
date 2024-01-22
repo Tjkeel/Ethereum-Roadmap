@@ -72,6 +72,25 @@
             </div>
         </div>
         
+        <p class="intro-text" style="max-width: 800px;">
+        The <span style="font-weight:bold;">STATE</span> in Ethereum refers to the current information or status of all 
+        accounts and smart contracts on the blockchain. This includes account balances, 
+        contract code, and contract storage. The state is a representation of the cumulative outcomes 
+        of all transactions and smart contract executions up to the current block. 
+        It's dynamic and changes with every block added to the blockchain. 
+        State data is crucial for the network to process new transactions and interactions correctly, 
+        as it reflects the current 'truth' of the network.
+        
+        <br><br>
+        The <span style="font-weight:bold;">HISTORY</span> on Ethereum, on the other hand, 
+        refers to the record of all transactions and blocks that have been processed and 
+        confirmed on the blockchain since its inception. This includes details like transaction data, 
+        block headers, and receipts. The history is essentially a log of how the blockchain 
+        has evolved over time and how the current state has been reached. 
+        It's a comprehensive record but is not directly required for processing new transactions.
+        
+        </p>
+        
         <!-- history expiry -->
         <div class="section" onclick="openModal('modal-his')">
             <h2 class="upgrade-title" style="font-weight: 100;">History Expiry</h2>
@@ -107,7 +126,21 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <p style="font-family: 'Open Sans', sans-serif; "> State Expiry in Ethereum refers to the proposal to systematically remove
+                 or archive older state data from the active state of the Ethereum blockchain. 
+                 
+                 Currently Ethereum state keeps growing as it accumulates all account balances, 
+                 contract code, and contract storage from the genesis block. 
+                 State Expiry aims to move older state data, which is not frequently accessed or modified, 
+                 into a less readily accessible form of storage, effectively 'expiring' it from the active state.
+<br><br>
+The implementation of State Expiry involves categorizing state data into different epochs based on age, 
+with the older epochs being periodically archived. 
+This archived data would still be accessible, but not stored in the active state, 
+significantly reducing the amount of data a node needs to manage and process on a regular basis. 
+<br><br>
+This contrasts with History Expiry, which focuses on pruning historical 
+block data rather than the state data itself.  </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
                 	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
@@ -154,10 +187,6 @@
                 </ul>
             </div>
         </div>
-
-        
-  <p class="intro-text" style="max-width: 800px;"> lorem ipsum kuha</p>
-
     
 </div>
 <footer class="footer">
