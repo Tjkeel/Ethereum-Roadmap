@@ -45,7 +45,7 @@
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
                 <p style="font-family: 'Open Sans', sans-serif; "> Ethereum clients built 'checkpoint' sync functionality to greatly
-                speed up a node's initial sync with the Beacon chain. This was not accomplished via an EIP, but was rather a client
+                speed up a node's initial sync with the Beacon chain. This was not accomplished via an EIP, but was rather an
                 upgrade that client teams implemented ad-hoc.</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
@@ -66,7 +66,18 @@
                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> TBD </p>
+                <p style="font-family: 'Open Sans', sans-serif; "> This is a broad bucket where we can fit many small changes, such as removing old opcodes no longer in use, 
+                or removing EVM functionality that we now see, with hindsight, were ill-advised (such as SELFDESTRUCT). It also includes the removal of precompiles.
+             <br><br>
+Precompiles in Ethereum are specialized operations effectively subsidized by the network, 
+offering essential functions at a lower gas cost than if executed in from scratch, i.e., these operations are currently impractical to execute directly within the EvM. 
+With advancements to the EVM, these precompiles can be obfuscated away.
+                </p>
+                                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://eips.ethereum.org/EIPS/eip-6780" style="color: #fff;" target="_blank"><li>Remove Self Destruct</li></a>
+                    <a https://www.evm.codes/precompiled" style="color: #fff;" target="_blank"><li>Precompiles</li></a>
+
+                </ul>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
                 	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
