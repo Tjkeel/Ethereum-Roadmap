@@ -102,3 +102,14 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     lastUpdated.textContent = formattedDate;
 });
+
+// JavaScript to close modals when clicking on the modal background
+document.querySelectorAll('.modal').forEach(modal => {
+  modal.addEventListener('click', function(event) {
+    // Check if the clicked element is the modal background itself, not its children
+    if (event.target === modal) {
+      modal.style.display = 'none'; // or modal.classList.remove('your-show-modal-class')
+    }
+  });
+});
+
