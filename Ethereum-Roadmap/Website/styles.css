@@ -693,6 +693,31 @@ a:hover {
   text-align: center;
 
 }
+.estimate-button3 {
+  background-color: rgba(241, 161, 150, 0.5);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background-color 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.estimate-button4 {
+  background-color: rgba(241, 161, 150, 0.25);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: background-color 0s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 .flip-container-grid {
     display: grid;
