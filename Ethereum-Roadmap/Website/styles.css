@@ -707,7 +707,7 @@ a:hover {
 
 }
 .estimate-button4 {
-  background-color: rgba(241, 161, 150, 0.25);
+  background-color: rgba(241, 161, 150, 0.5);
   color: #fff;
   border-radius: 5px;
   font-size: 1em;
@@ -762,4 +762,34 @@ a:hover {
 }
 
 
+.cross-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF; /* White color */
+  pointer-events: none; /* To allow clicking on the button underneath */
+}
+
+.cross-overlay::before, .cross-overlay::after {
+  content: '';
+  position: absolute;
+  width: 20%; /* Significantly wider */
+  height: 2px; /* Height of the slash */
+  background-color: #FFFFFF; /* White color */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+}
+
+.cross-overlay::before {
+  transform: translate(-50%, -50%) rotate(45deg); /* Adjust positioning and angle */
+}
+
+.cross-overlay::after {
+  transform: translate(-50%, -50%) rotate(-45deg); /* Adjust positioning and angle */
+}
 
