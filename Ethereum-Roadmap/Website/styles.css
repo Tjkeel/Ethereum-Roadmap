@@ -54,6 +54,7 @@ h1 {
 
 .progress-bar {
   height: 20px;
+  bottom: 10px;
   width: 0;
   background-color: #99C66D; /* Green */
   border-radius: 2px;
