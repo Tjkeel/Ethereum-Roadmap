@@ -36,6 +36,20 @@ h1 {
   margin-bottom: 0.5em;
 }
 
+.section2 {
+  margin: 0px auto; /* Centered with auto margins on the left and right */
+  max-width: 800px; /* Example maximum width, adjust as needed */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+
+.section2:hover {
+  transform: translateY(-2px);
+}
 .section {
   background: rgba(0, 0, 0, 0.3);  color: #fff;
   margin: 10px auto; /* Centered with auto margins on the left and right */
