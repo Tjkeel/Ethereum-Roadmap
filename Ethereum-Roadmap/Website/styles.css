@@ -42,7 +42,7 @@ h1 {
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.2s ease;
+  transition: transform 0.5s ease, background-color 0.5s ease;
   position: relative;
 }
 
