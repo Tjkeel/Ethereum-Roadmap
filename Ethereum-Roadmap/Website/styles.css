@@ -9,12 +9,20 @@ body, html {
   height: 100%;
   text-align: center;
   color: #fff;
-  background-image: url('background.png');
-  background-position: top center;
-  background-repeat: no-repeat;
-  background-size: contain; 
   overflow-x: hidden;
-  
+  position: relative; /* Ensure positioning context for pseudo-element */
+}
+
+body::before {
+  content: '';
+  position: fixed; /* Use fixed instead of absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('background.png') top center / contain no-repeat fixed; /* Combine background properties */
+  filter: blur(10px); /* Adjust blur intensity as needed */
+  z-index: -1; /* Place it behind the content */
 }
 
 
@@ -190,6 +198,7 @@ a:hover {
 .image-container {
   text-align: center;
   margin: 20px 0 40px;
+  
 }
 
 .modal-image {
