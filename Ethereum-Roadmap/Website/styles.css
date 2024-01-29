@@ -49,6 +49,8 @@ h1 {
 
 .section2:hover {
   transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+
 }
 .section {
   background: rgba(0, 0, 0, 0.3);  color: #fff;
