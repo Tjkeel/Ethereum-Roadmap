@@ -578,61 +578,6 @@ transform: translateY(-2px);
   text-decoration: underline; /* Underline on hover for better UX */
 }
 
-/* Positioning the top arrow inside the Single Slot Finality section */
-#ssf-section::before {
-  content: '';
-  display: block;
-  width: 0; 
-  height: 0; 
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 12px solid white; /* Color of the arrow pointing up */
-  position: absolute;
-  bottom: -10px; /* Adjust this value to move arrow down from the top */
-  left: 20%; /* Adjust this value to move arrow right from the left */
-}
-
-/* Positioning the bottom arrow inside the Single Slot Finality section */
-#ssf-section::after {
-  content: '';
-  display: block;
-  width: 0; 
-  height: 0; 
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-top: 12px solid white; /* Color of the arrow pointing up */
-  position: absolute;
-  bottom: -10px; /* Adjust this value to move arrow up from the bottom */
-  right: 20%; /* Adjust this value to move arrow left from the right */
-}
-
-/* Positioning the top arrow inside the Enable More Validators section */
-#more-validators-section::before {
-  content: '';
-  display: block;
-  width: 0; 
-  height: 0; 
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 12px solid white; /* Color of the arrow pointing down */
-  position: absolute;
-  top: -10px; /* Adjust this value to move arrow down from the top */
-  right: 20%; /* Adjust this value to move arrow left from the right */
-}
-
-/* Positioning the bottom arrow inside the Enable More Validators section */
-#more-validators-section::after {
-  content: '';
-  display: block;
-  width: 0; 
-  height: 0; 
-  border-left: 12px solid transparent;
-  border-right: 12px solid transparent;
-  border-bottom: 12px solid white; /* Color of the arrow pointing down */
-  position: absolute;
-  top: -10px; /* Adjust this value to move arrow up from the bottom */
-  left: 20%; /* Adjust this value to move arrow right from the left */
-}
 
 .team-container {
   display: grid;

@@ -11,8 +11,10 @@
 <body>
 <div class="container">
     <h1 class="main-title" style="font-weight: 100;">The Merge</h1>
+    <div class="timeline-container">
+
         <!-- Launch the Beacon Chain -->
-        <div class="section" onclick="openModal('modal-beacon')">
+        <div class="section2" onclick="openModal('modal-beacon')">
             <h2 class="upgrade-title" style="font-weight: 100;">Launch the Beacon Chain</h2>
 			 <i class="fas fa-check checkmark"></i>     
         </div>
@@ -39,7 +41,7 @@
         </div>
 
         <!-- Merge Section -->
-        <div class="section" onclick="openModal('modal-merge')">
+        <div class="section2" onclick="openModal('modal-merge')">
             <h2 class="upgrade-title" style="font-weight: 100;">Merge Execution and Consensus Layers</h2>
 			 <i class="fas fa-check checkmark"></i>     
         </div>
@@ -61,7 +63,7 @@
             </div>
         </div>
                 <!-- Withdrawals Section -->
-        <div class="section" onclick="openModal('modal-with')">
+        <div class="section2" onclick="openModal('modal-with')">
             <h2 class="upgrade-title" style="font-weight: 100;">Enable Withdrawals</h2>
 			 <i class="fas fa-check checkmark"></i>     
         </div>
@@ -83,7 +85,7 @@
                 </ul>
             </div>
         </div>
-        
+        </div>
         <p class="intro-text" style="max-width: 800px;"> Ethereum now utilizes a proof of stake consensus mechanism, and underwent this migration from proof of work in a three phase process, beginning with the launch of the Beacon Chain on <span style= "font-weight: bold;">December 1, 2020</span>.
 
 This newly formed consensus chain ran mostly independently of Ethereum’s proof of work chain (execution layer), until The Merge on <span style= "font-weight: bold;">September 15, 2022 </span>. <br><br>
@@ -91,9 +93,10 @@ This newly formed consensus chain ran mostly independently of Ethereum’s proof
 Technically, post-Merge Ethereum is still two tightly coupled blockchains. However the block trees of the execution layer and consensus layer have a 1:1 mapping, meaning that every EL block has one, and only one CL block which corresponds to it, and vice versa. This 1:1 mapping of EL and CL blocks means that we can think of post-Merge Ethereum as a single blockchain consisting of two layers.  <br><br>
 
 Finally, withdrawals were enabled on the consensus layer on <span style= "font-weight: bold;">April 12, 2023</span>, completing the final phase and creating an end-to-end proof of stake consensus mechanism.</p>
-
+   
+    <div class="timeline-container">
                     <!-- SLE Section -->
-        <div class="section" onclick="openModal('modal-SLE')">
+        <div class="section2" onclick="openModal('modal-SLE')">
             <h2 class="upgrade-title" style="font-weight: 100;">Single Leader Election</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
@@ -115,7 +118,7 @@ Finally, withdrawals were enabled on the consensus layer on <span style= "font-w
         </div>
         
          <!-- SSF Section -->
-        <div id="ssf-section" class="section" onclick="openModal('modal-ssf')">
+        <div id="ssf-section" class="section2" onclick="openModal('modal-ssf')">
             <h2 class="upgrade-title" style="font-weight: 100;">Single Slot Finality</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
@@ -139,7 +142,7 @@ Finally, withdrawals were enabled on the consensus layer on <span style= "font-w
             </div>
         </div>
                             <!-- More Validators Section -->
-        <div id="more-validators-section" class="section" onclick="openModal('modal-more')">
+        <div id="more-validators-section" class="section2" onclick="openModal('modal-more')">
             <h2 class="upgrade-title" style="font-weight: 100;">Enable More Validators</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
@@ -173,7 +176,7 @@ Finally, withdrawals were enabled on the consensus layer on <span style= "font-w
                 </ul>
             </div>
         </div>
-        
+        </div>
             
         
   <p class="intro-text" style="max-width: 800px;"> Where the first three upgrades were sequential and crucial to enabling PoS on Ethereum, the remaining are supplemental upgrades and non-sequential, but in the case of SSF and Enabling More Validators, are highly dependent upon one another and intrinsically linked.</p>
@@ -182,8 +185,10 @@ Finally, withdrawals were enabled on the consensus layer on <span style= "font-w
   Ethereum faces the technical challenge of efficiently coordinating numerous validators to achieve SSF (a potential boon for security) without sacrificing the network's decentralization (a high number of validators). Put another way, SSF would be much easier with small validator count, 
   but this would deteriorate one of Ethereum's primary strengths. <br><br> Research and debates are ongoing to determine the optimal path forward to strike the appropriate balance.</p>
 
+    <div class="timeline-container">
+
                                     <!-- Quant Section -->
-        <div class="section" onclick="openModal('modal-quant')">
+        <div class="section2" onclick="openModal('modal-quant')">
             <h2 class="upgrade-title" style="font-weight: 100;">Quantum Safe / Signature Aggregation</h2>
 			<i class="fas fa-times x-mark"></i>
         </div>
@@ -203,6 +208,7 @@ Current initiatives involve exploring and potentially adopting cryptographic met
                 	<a href="hold" style="color: #fff;" target="_blank"><li>TBD</li></a>
                 </ul>
             </div>
+        </div>
         </div>
     
 </div>
