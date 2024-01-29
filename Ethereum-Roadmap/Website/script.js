@@ -28,7 +28,7 @@ var modal = document.getElementById("myModal");
 var img = document.getElementById("roadmapImage");
 var modalImg = document.getElementById("img01");
 var captionText = document.getElementById("caption");
-img.onclick = function() {
+img.onclick = function(){
   modal.style.display = "block";
   modalImg.src = this.src;
   captionText.innerHTML = this.alt;
@@ -41,14 +41,6 @@ var span = document.getElementsByClassName("close")[0];
 span.onclick = function() { 
   modal.style.display = "none";
 }
-
-// When the user clicks anywhere outside of the modal content, close the modal
-modal.addEventListener('click', function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-});
-
 
 
 
