@@ -21,7 +21,7 @@ body::before {
   right: 0;
   bottom: 0;
   background: url('background.png') top center / contain no-repeat fixed; /* Combine background properties */
-  filter: blur(10px); /* Adjust blur intensity as needed */
+  filter: blur(6px); /* Adjust blur intensity as needed */
   z-index: -1; /* Place it behind the content */
 }
 
