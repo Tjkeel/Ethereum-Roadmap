@@ -391,12 +391,14 @@ a:hover {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
 }
 
 .timeline li:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
+transform: translateY(-2px);
 }
 
 #cancun{
@@ -408,13 +410,15 @@ a:hover {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
 #cancun:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
+  transform: translateY(-2px);
+
 }
 
 #deneb{
@@ -426,13 +430,15 @@ a:hover {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
 #deneb:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
+  transform: translateY(-2px);
+
 }
 
 #prague{
@@ -444,13 +450,15 @@ a:hover {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
 #prague:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
+  transform: translateY(-2px);
+
 }
 
 #electra{
@@ -462,13 +470,15 @@ a:hover {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
 #electra:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
+  transform: translateY(-2px);
+
 }
 
 #futureforks{
@@ -480,13 +490,15 @@ a:hover {
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
 #futureforks:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
+  transform: translateY(-2px);
+
 }
 
 /* ... Additional Consensus Layer Timeline Content... */
@@ -636,7 +648,7 @@ a:hover {
   border-radius: 5px;
   text-align: center;
   font-size: 1em;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
@@ -647,7 +659,7 @@ a:hover {
   border-radius: 5px;
   text-align: center;
   font-size: 1em;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
@@ -658,28 +670,30 @@ a:hover {
   border-radius: 5px;
   text-align: center;
   font-size: 1em;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
 
 }
 
 .team:hover {
   background-color: rgba(255, 255, 255, 0.2);
   text-decoration: none;
+    transform: translateY(-2px);
+
 }
 
-.team:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-  text-decoration: none;
-}
 
 .team2:hover {
   background-color: rgba(255, 255, 255, 0.2);
   text-decoration: none;
+    transform: translateY(-2px);
+
 }
 
 .team3:hover {
   background-color: rgba(255, 255, 255, 0.2);
   text-decoration: none;
+    transform: translateY(-2px);
+
 }
 
 .estimate-buttons {
@@ -696,13 +710,15 @@ a:hover {
   border-radius: 5px;
   text-align: center;
   font-size: 1em;
-  transition: background-color 0.3s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
   text-decoration: none;
 }
 
 .estimate-button:hover {
   background-color: rgba(255, 255, 255, 0.2);
   color: #fff;
+      transform: translateY(-2px);
+
 }
 
 /* Prague-Electra Button Styles */
@@ -712,7 +728,7 @@ a:hover {
   border-radius: 5px;
   font-size: 1em;
   text-decoration: none;
-  transition: background-color 0s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -725,7 +741,7 @@ a:hover {
   border-radius: 5px;
   font-size: 1em;
   text-decoration: none;
-  transition: background-color 0s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -738,7 +754,7 @@ a:hover {
   border-radius: 5px;
   font-size: 1em;
   text-decoration: none;
-  transition: background-color 0s;
+  transition: transform 0.5s ease, background-color 0.5s ease;
   display: flex;
   justify-content: center;
   align-items: center;
