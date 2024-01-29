@@ -38,7 +38,7 @@ h1 {
 
 .section {
   background: rgba(0, 0, 0, 0.3);  color: #fff;
-  margin: 25px auto; /* Centered with auto margins on the left and right */
+  margin: 10px auto; /* Centered with auto margins on the left and right */
   max-width: 800px; /* Example maximum width, adjust as needed */
   padding: 10px;
   border-radius: 5px;
