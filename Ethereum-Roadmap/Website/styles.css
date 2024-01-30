@@ -793,13 +793,17 @@ transform: translateY(-2px);
 }
 
 .deployment-futurefork.has-checkmark:after {
-  content: '\f111'; /* FontAwesome checkmark */
+  content: '\f00c'; /* FontAwesome checkmark */
   color: #B4E087; /* Checkmark color */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* Solid style */
 }
 
 .deployment-futurefork.has-xmark:after {
-  content: '\f00d'; /* FontAwesome cross mark */
+  content: '\f00d'; /* FontAwesome X-mark */
   color: #F1A196; /* X-mark color */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* Solid style */
 }
 
 .deployment-futurefork {
