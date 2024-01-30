@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
 
 
 body, html {
@@ -780,3 +781,28 @@ transform: translateY(-2px);
   transform: translate(-50%, -50%) rotate(-45deg); /* Adjust positioning and angle */
 }
 
+/* ... existing styles ... */
+
+.deployment-futurefork.has-checkmark:after, .deployment-futurefork.has-xmark:after {
+  position: absolute;
+  left: 50%;
+  bottom: -25px; /* Adjust as needed */
+  transform: translateX(-50%);
+  font-size: 1.5em; /* Adjust as needed */
+  content: '';
+}
+
+.deployment-futurefork.has-checkmark:after {
+  content: '\f111'; /* FontAwesome checkmark */
+  color: #B4E087; /* Checkmark color */
+}
+
+.deployment-futurefork.has-xmark:after {
+  content: '\f00d'; /* FontAwesome cross mark */
+  color: #F1A196; /* X-mark color */
+}
+
+.deployment-futurefork {
+  position: relative;
+  margin-bottom: 30px; /* Adjust as needed to accommodate the icon */
+}
