@@ -812,14 +812,14 @@ transform: translateY(-2px);
 
 .deployment-futurefork.has-checkmark:after {
   content: '\f00c'; /* FontAwesome checkmark */
-  color: #B4E087; /* Checkmark color */
+  color: #fff; /* Checkmark color */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; /* Solid style */
 }
 
 .deployment-futurefork.has-xmark:after {
   content: '\f00d'; /* FontAwesome X-mark */
-  color: #F1A196; /* X-mark color */
+  color: #fff; /* X-mark color */
   font-family: 'Font Awesome 5 Free';
   font-weight: 900; /* Solid style */
 }
