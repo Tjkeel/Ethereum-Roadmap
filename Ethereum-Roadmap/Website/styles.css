@@ -12,6 +12,7 @@ body, html {
   color: #fff;
   overflow-x: hidden;
   position: relative; /* Ensure positioning context for pseudo-element */
+  scroll-behavior: smooth;
 }
 
 body::before {
@@ -96,15 +97,15 @@ h1 {
 }
 
 .progress-bar::before {
-  width: var(--blue-width, 0%);
-  background-color: #6A9BE7; /* Blue */
+  width: var(--purple-width, 0%);
+  background-color: #AE80B1; /* Purple */
   left: var(--green-width, 0%);
 }
 
 .progress-bar::after {
-  width: var(--red-width, 0%);
-  background-color: #F1A196; /* Red */
-  right: 0;
+    width: var(--blue-width, 0%);
+    background-color: #6A9BE7; /* Blue */
+    right: 0;
 }
 
 
@@ -400,6 +401,46 @@ a:hover {
   background-color: rgba(0, 0, 0, 0.3);
   color: #fff;
 transform: translateY(-2px);
+}
+
+#shanghai{
+  display: inline-block;
+  background-color: #AE90B1;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#shanghai:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#capella{
+  display: inline-block;
+  background-color: #AE90B1;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#capella:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
 }
 
 #cancun{
@@ -712,6 +753,20 @@ transform: translateY(-2px);
   text-align: center;
 
 }
+.estimate-buttonS {
+  background-color: #AE80B1;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
 .estimate-button3 {
   background-color: rgba(241, 161, 150, 0.5);
   color: #fff;

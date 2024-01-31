@@ -1,20 +1,20 @@
 window.onload = function() {
-  setProgressBar('merge-progress', 70, 5, 0);
-  setProgressBar('surge-progress', 10, 65, 0); 
+  setProgressBar('merge-progress', 50, 20, 5);
+  setProgressBar('surge-progress', 10, 0, 65); 
   setProgressBar('scourge-progress', 15, 0, 0); 
   setProgressBar('verge-progress', 10, 0, 0); 
-  setProgressBar('purge-progress', 20, 5, 0); 
+  setProgressBar('purge-progress', 20, 5, 5); 
   setProgressBar('splurge-progress', 35, 0, 0); 
 
 };
 
-function setProgressBar(id, greenWidth, blueWidth, redWidth) {
+function setProgressBar(id, greenWidth, purpleWidth, blueWidth) {
   const progressBar = document.getElementById(id);
   if (progressBar) {
-    const totalWidth = greenWidth + blueWidth + redWidth;
+    const totalWidth = greenWidth + purpleWidth + blueWidth;
     progressBar.style.width = `${totalWidth}%`; 
     progressBar.style.setProperty('--blue-width', `${blueWidth / totalWidth * 100}%`);
-    progressBar.style.setProperty('--red-width', `${redWidth / totalWidth * 100}%`);
+    progressBar.style.setProperty('--purple-width', `${purpleWidth / totalWidth * 100}%`);
     progressBar.style.setProperty('--green-width', `${greenWidth / totalWidth * 100}%`);
 
   }
@@ -42,6 +42,26 @@ span.onclick = function() {
   modal.style.display = "none";
 }
 
+// Update the countdown every second for Shanghai-Capella
+setInterval(updateCountdown3, 1000);
+
+function updateCountdown3() {
+  const callDate = new Date('2023-04-12');
+  const now = new Date();
+  const diff = callDate - now;
+
+  // Calculate days, hours, minutes, seconds
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.abs(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  const minutes = Math.abs(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+  const seconds = Math.abs(Math.floor((diff % (1000 * 60)) / 1000));
+
+  // Update the countdown display
+  document.getElementById('days3').textContent = days;
+  document.getElementById('hours3').textContent = hours;
+  document.getElementById('minutes3').textContent = minutes;
+  document.getElementById('seconds3').textContent = seconds;
+}
 
 
 // Update the countdown every second for Cancun-Deneb
@@ -65,7 +85,7 @@ function updateCountdown() {
   document.getElementById('seconds').textContent = seconds;
 }
 
-// Update the countdown every second
+// Update the countdown every second for Prague-Electra
 setInterval(updateCountdown2, 1000);
 
 function updateCountdown2() {
@@ -86,8 +106,6 @@ function updateCountdown2() {
   document.getElementById('seconds2').textContent = seconds;
 }
 
-// Update the countdown every second
-setInterval(updateCountdown2, 1000);
 
 //Code for Modals within each of the six development paths
 function openModal(modalId) {
