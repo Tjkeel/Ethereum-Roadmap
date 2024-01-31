@@ -754,7 +754,21 @@ transform: translateY(-2px);
 
 }
 .estimate-buttonS {
-  background-color: #AE80B1;
+  background-color: #B67EB4;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.estimate-buttonT {
+  background-color: #78D0DE;
   color: #fff;
   border-radius: 5px;
   font-size: 1em;
