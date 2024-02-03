@@ -17,7 +17,7 @@ body, html {
   overflow-x: hidden;
   position: relative; /* Ensure positioning context for pseudo-element */
   scroll-behavior: smooth;
-  animation: fadeIn 1s ease-out;
+  animation: fadeIn 2s ease-out;
 }
 
 body::before {
