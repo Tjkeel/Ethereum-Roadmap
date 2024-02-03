@@ -910,3 +910,29 @@ transform: translateY(-2px);
   position: relative;
   margin-bottom: 30px; /* Adjust as needed to accommodate the icon */
 }
+
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: -10px; /* Adjust as necessary */
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.tab {
+  padding: 5px 10px;
+  background: rgba(0, 0, 0, 0.3);  color: #fff;
+  color: #fff; /* White text */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.8rem; /* Smaller font size for compact tabs */
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
