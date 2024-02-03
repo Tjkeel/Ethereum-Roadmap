@@ -20,7 +20,6 @@ function setProgressBar(id, greenWidth, purpleWidth, blueWidth) {
   }
 }
 
-
 // Get the modal
 var modal = document.getElementById("myModal");
 
@@ -122,6 +121,5 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     lastUpdated.textContent = formattedDate;
 });
-
 
 
