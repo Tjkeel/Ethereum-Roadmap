@@ -32,7 +32,8 @@
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
                   <p style="font-family: 'Open Sans', sans-serif; ">Live</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> This upgrade primarily refers to EIP-3529, or the reduction in refunds, which went live in the London hard fork. </p>
+                <p style="font-family: 'Open Sans', sans-serif; "> This upgrade refers to EIP-3529, or the reduction in refunds, which went live in the London hard fork. 
+                This EIP fixed an exploit caused by large refund amounts.</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
                 	<a href="https://eips.ethereum.org/EIPS/eip-3529" style="color: #fff;" target="_blank"><li>EIP-3529</li></a>
@@ -71,9 +72,9 @@
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
                 <p style="font-family: 'Open Sans', sans-serif; "> This is a broad bucket where we can fit many small changes, such as removing EVM functionality
                  that we now see, with hindsight, were ill-advised (such as SELFDESTRUCT), or the simplification of gas mechanics.
-                  It also includes the removal of precompiled contracts:
+                  It also includes the future removal of precompiled contracts:
              <br><br>
-precompiles are specialized operations effectively subsidized by the network, 
+<span style="font-weight:bold;">PRECOMPILES</span> are specialized operations effectively subsidized by the network, 
 offering specific functions at a lower gas cost than if written from scratch.
 These precompiles can be replaced with direct EVM implementations.
                 </p>
@@ -182,6 +183,11 @@ block data rather than the state data itself.  </p>
             </div>
         </div>
 </div>
+        <p class="intro-text" style="max-width: 800px;">
+      
+      In a sense, where History Expiry has a clear tradeoff in archiving old data that will become less accessible, State Expiry has the potential
+      to be strictly positive, since it would only remove state trie nodes that have become obsolete.
+	</p>
 </div>
 </body>
 	<script src="script.js"></script>
