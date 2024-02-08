@@ -68,7 +68,7 @@ function updateCountdown3() {
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
-  const callDate = new Date('2024-03-13');
+  const callDate = new Date('2024-03-13T13:55:35Z');
   const now = new Date();
   const diff = callDate - now;
 
