@@ -936,3 +936,9 @@ transform: translateY(-2px);
   background: rgba(255, 255, 255, 0.1);
 }
 
+.crown-icon {
+  font-size: 0.5em; /* Smaller icon */
+  vertical-align: middle; /* Aligns icon with the middle of the text */
+  margin-left: 5px; /* Space between the text and the icon */
+}
+
