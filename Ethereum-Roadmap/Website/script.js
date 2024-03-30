@@ -1,22 +1,70 @@
 window.onload = function() {
-  setProgressBar('merge-progress', 50, 20, 5);
-  setProgressBar('surge-progress', 10, 0, 65); 
-  setProgressBar('scourge-progress', 15, 0, 0); 
-  setProgressBar('verge-progress', 10, 0, 0); 
-  setProgressBar('purge-progress', 20, 5, 5); 
-  setProgressBar('splurge-progress', 35, 0, 0); 
+  setProgressBar('merge-progress', [
+    { width: 50, color: '#99C66D' }, // Green
+    { width: 20, color: '#AE80B1' }, // Purple
+    { width: 5, color: '#6A9BE7' },  // Blue
+    { width: 10, color: '#F1A196' },  // Red
 
+    // Add more sections as needed
+  ]);
+
+  setProgressBar('surge-progress', [
+    { width: 10, color: '#99C66D' }, // Green
+    { width: 0, color: '#AE80B1' },  // Purple
+    { width: 65, color: '#6A9BE7' }, // Blue
+    // Add more sections as needed
+  ]);
+
+  setProgressBar('scourge-progress', [
+    { width: 15, color: '#99C66D' }, // Green
+    { width: 0, color: '#AE80B1' },  // Purple
+    { width: 0, color: '#6A9BE7' },  // Blue
+    // Add more sections as needed
+  ]);
+
+  setProgressBar('verge-progress', [
+    { width: 10, color: '#99C66D' }, // Green
+    { width: 0, color: '#AE80B1' },  // Purple
+    { width: 0, color: '#6A9BE7' },  // Blue
+    // Add more sections as needed
+  ]);
+
+  setProgressBar('purge-progress', [
+    { width: 20, color: '#99C66D' }, // Green
+    { width: 5, color: '#AE80B1' },  // Purple
+    { width: 5, color: '#6A9BE7' },  // Blue
+    // Add more sections as needed
+  ]);
+
+  setProgressBar('splurge-progress', [
+    { width: 35, color: '#99C66D' }, // Green
+    { width: 0, color: '#AE80B1' },  // Purple
+    { width: 0, color: '#6A9BE7' },  // Blue
+    // Add more sections as needed
+  ]);
 };
 
-function setProgressBar(id, greenWidth, purpleWidth, blueWidth) {
+function setProgressBar(id, sections) {
   const progressBar = document.getElementById(id);
   if (progressBar) {
-    const totalWidth = greenWidth + purpleWidth + blueWidth;
-    progressBar.style.width = `${totalWidth}%`; 
-    progressBar.style.setProperty('--blue-width', `${blueWidth / totalWidth * 100}%`);
-    progressBar.style.setProperty('--purple-width', `${purpleWidth / totalWidth * 100}%`);
-    progressBar.style.setProperty('--green-width', `${greenWidth / totalWidth * 100}%`);
+    progressBar.innerHTML = ''; // Clear existing sections
+    const totalWidth = sections.reduce((acc, section) => acc + section.width, 0);
+    progressBar.style.width = `${totalWidth}%`; // Set the total width of the progress bar
 
+    sections.forEach((section, index) => {
+      const sectionDiv = document.createElement('div');
+      sectionDiv.style.width = '0%'; // Initially set width to 0%
+      sectionDiv.style.height = '100%';
+      sectionDiv.style.backgroundColor = section.color;
+      sectionDiv.style.display = 'inline-block';
+      progressBar.appendChild(sectionDiv);
+
+      // Apply transition with a slight delay to ensure it's rendered
+      setTimeout(() => {
+        sectionDiv.style.transition = 'width 2s ease'; // Apply a transition to the width
+        sectionDiv.style.width = `${(section.width / totalWidth) * 100}%`; // Set to target width
+      }, 0);
+    });
   }
 }
 

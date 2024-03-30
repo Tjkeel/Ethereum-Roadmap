@@ -81,33 +81,19 @@ h1 {
 .progress-bar {
   height: 20px;
   bottom: 10px;
-  width: 0;
-  background-color: #99C66D; /* Green */
+  width: 100%; /* Ensure it fills the container */
+  background-color: transparent; /* No longer a single color */
   border-radius: 2px;
   position: relative;
   overflow: hidden;
   transition: width 0.5s ease-in-out;
+  text-align: left; /* Align text to the left */
+
 }
 
-.progress-bar::after, .progress-bar::before {
-  content: '';
-  position: absolute;
-  height: 100%;
-  top: 0;
+.progress-container {
+  direction: ltr; /* Ensure left-to-right text direction */
 }
-
-.progress-bar::before {
-  width: var(--purple-width, 0%);
-  background-color: #AE80B1; /* Purple */
-  left: var(--green-width, 0%);
-}
-
-.progress-bar::after {
-    width: var(--blue-width, 0%);
-    background-color: #6A9BE7; /* Blue */
-    right: 0;
-}
-
 
 ul {
   list-style-type: none;
