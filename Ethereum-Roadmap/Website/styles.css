@@ -509,6 +509,46 @@ transform: translateY(-2px);
 
 }
 
+#osaka{
+  display: inline-block;
+  background-color: #FBEA6A;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#osaka:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#funknown{
+  display: inline-block;
+  background-color: #FBEA6A;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#funknown:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
 #futureforks{
   display: inline-block;
   background-color: transparent;
@@ -655,8 +695,8 @@ transform: translateY(-2px);
 }
 
 .team3 {
-  background: #FBEA6A;
-  color: #000;
+  background: #78D0DE;
+  color: #fff;
   padding: 10px;
   border-radius: 5px;
   text-align: center;
@@ -724,6 +764,21 @@ transform: translateY(-2px);
   justify-content: center;
   align-items: center;
   text-align: center;
+}
+
+/* Osaka-f(unknown) */
+.estimate-buttonO {
+  background-color: #FBEA6A;
+  color: #000;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
 
 }
 .estimate-buttonK {

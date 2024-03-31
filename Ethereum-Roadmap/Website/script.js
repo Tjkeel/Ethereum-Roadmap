@@ -158,6 +158,27 @@ function updateCountdown2() {
   document.getElementById('seconds2').textContent = seconds;
 }
 
+// Update the countdown every second for Osaka-F(unkown)
+setInterval(updateCountdown4, 1000);
+
+function updateCountdown4() {
+  const callDate = new Date('2025-12-31');
+  const now = new Date();
+  const diff = callDate - now;
+
+  // Calculate days, hours, minutes, seconds
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  // Update the countdown display
+  document.getElementById('days4').textContent = days;
+  document.getElementById('hours4').textContent = hours;
+  document.getElementById('minutes4').textContent = minutes;
+  document.getElementById('seconds4').textContent = seconds;
+}
+
 
 //Code for Modals within each of the six development paths
 function openModal(modalId) {
