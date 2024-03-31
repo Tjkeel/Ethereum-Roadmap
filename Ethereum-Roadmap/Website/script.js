@@ -4,7 +4,6 @@ window.onload = function() {
     { width: 20, color: '#AE80B1' }, // Purple
     { width: 5, color: '#6A9BE7' },  // Blue
     { width: 10, color: '#F1A196' },  // Red
-
     // Add more sections as needed
   ]);
 
@@ -12,6 +11,7 @@ window.onload = function() {
     { width: 10, color: '#99C66D' }, // Green
     { width: 0, color: '#AE80B1' },  // Purple
     { width: 65, color: '#6A9BE7' }, // Blue
+    { width: 0, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 
@@ -19,6 +19,7 @@ window.onload = function() {
     { width: 15, color: '#99C66D' }, // Green
     { width: 0, color: '#AE80B1' },  // Purple
     { width: 0, color: '#6A9BE7' },  // Blue
+	{ width: 25, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 
@@ -26,6 +27,7 @@ window.onload = function() {
     { width: 10, color: '#99C66D' }, // Green
     { width: 0, color: '#AE80B1' },  // Purple
     { width: 0, color: '#6A9BE7' },  // Blue
+    { width: 0, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 
@@ -33,6 +35,7 @@ window.onload = function() {
     { width: 20, color: '#99C66D' }, // Green
     { width: 5, color: '#AE80B1' },  // Purple
     { width: 5, color: '#6A9BE7' },  // Blue
+    { width: 0, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 
@@ -40,6 +43,7 @@ window.onload = function() {
     { width: 35, color: '#99C66D' }, // Green
     { width: 0, color: '#AE80B1' },  // Purple
     { width: 0, color: '#6A9BE7' },  // Blue
+    { width: 0, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 };
