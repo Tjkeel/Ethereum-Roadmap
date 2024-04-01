@@ -195,3 +195,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
     const formattedDate = lastModifiedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
     lastUpdated.textContent = formattedDate;
 });
+
+//Code for ETH price in corner
+function fetchEthPrice() {
+  fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
+    .then(response => response.json())
+    .then(data => {
+      const ethPrice = data.ethereum.usd;
+      const priceElement = document.getElementById('eth-price');
+      priceElement.textContent = `$${Math.round(ethPrice)}`;
+    })
+    .catch(error => console.error('Error fetching ETH price:', error));
+}
+
+document.addEventListener('DOMContentLoaded', fetchEthPrice);

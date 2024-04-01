@@ -29,6 +29,7 @@ body::before {
 
 
 .container {
+  position: relative;
   width: 80%;
   margin: 40px auto;
   background: rgba(0, 0, 0, 0.5);
@@ -983,3 +984,28 @@ transform: translateY(-2px);
   margin-left: 5px; /* Space between the text and the icon */
 }
 
+#eth-price {
+  position: absolute;
+  right: 20px;
+
+}
+
+@media (max-width: 700px) {
+  #eth-price {
+    display: none;
+  }
+}
+
+#inprogress {
+color: #F1A196;
+position: absolute;
+left: 20px;
+font-weight: bold;
+
+}
+
+@media (max-width: 700px) {
+  #inprogress {
+    display: none;
+  }
+}
