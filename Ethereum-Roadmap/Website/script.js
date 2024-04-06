@@ -208,4 +208,7 @@ function fetchEthPrice() {
     .catch(error => console.error('Error fetching ETH price:', error));
 }
 
-document.addEventListener('DOMContentLoaded', fetchEthPrice);
+document.addEventListener('DOMContentLoaded', () => {
+  fetchEthPrice(); // Initial fetch when the document is loaded
+  setInterval(fetchEthPrice, 60000); // Refresh every minute
+});
