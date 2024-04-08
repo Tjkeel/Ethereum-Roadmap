@@ -29,7 +29,8 @@
   <a href="https://ethroadmap.com/verge.html" class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
   <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
   <a href="https://ethroadmap.com/splurge.html" class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
-    <span id="eth-price"> </span>
+ <div class="price-container"> <span id="gasPriceValue"> </span>  <span id="eth-price"> </span> </div>
+
 
 </div>
   <h1 style="font-weight: 100;">Ethereum Roadmap</h1>
@@ -669,32 +670,23 @@
     <a href="https://protocol-guild.readthedocs.io/en/latest/9-membership.html" target="_blank" class="team3">& More</a>
 
   </div>
-  
-  
 </div>
- <h1 style="font-weight: 100;">More</h1>
 
-<div class="timeline-container">
-<p>
-<a href="https://notes.ethereum.org/@domothy/roadmap" target="_blank"  style="color: #fff;" >Domothy's Annotated Roadmap</a>  
-</p>
-<p>
-<a href="https://etheralpha.org/" target="_blank"  style="color: #fff;" >EtherAlpha</a>  
-</p>
-<p>
-<a href="https://pbs.twimg.com/media/GCntEVFWwAAoWeI?format=jpg&name=medium" target="_blank"  style="color: #fff;" >Vitalik's Roadmap</a>  
-</p> 
-<p>
-<a href="https://github.com/ethereum/pm" target="_blank"  style="color: #fff;" >AllCoreDev call history</a>  
-</p>
-<p>
-<a href="https://www.youtube.com/playlist?list=PL4cwHXAawZxqu0PKKyMzG_3BJV_xZTi1F" target="_blank"  style="color: #fff;" >PEEPanEIP Youtube Channel</a>  
-</p>
-<p>
-<a href="https://twitter.com/ethresearchbot" target="_blank"  style="color: #fff;" >Ethresearchbot</a>  
-</p>
-
+<h1 style="font-weight: 100;">Network Stats</h1>
+<div class="calculation-container">
+	<div class="calculation-box"> <span style="font-weight:bold;"> Supply </span> <div id="ETH-supply-value">Loading...</div></div> 
+	<div class="calculation-box"> <span style="font-weight:bold;"> Gas Limit </span> <span> 30M</span></div> 
+	<div class="calculation-box"> <span style="font-weight:bold;"> ETH Staked </span> <div id="eth-staked">Loading...</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Lido Share </span> <div id="lido-share">Loading...</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Entry Queue </span> <div id="validator-queue">Loading...</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Slashed Props. </span> <div id="slashed">Loading...</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Consensus APR </span> <div id="APR">Loading...</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> L2s at Stage 2</span> <div> Zero</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Prysm Share </span> <div> 38% </div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Geth Share </span> <div> 63% </div></div>	
 </div>
+
+
 <div class="timeline-container">
 <p> Want to help map Ethereum? <a href="https://github.com/Tjkeel/Ethereum-Roadmap" target="_blank"  style="color: #fff; text-decoration: underline;">Github </a>
 </p>

@@ -985,14 +985,18 @@ transform: translateY(-2px);
   margin-left: 5px; /* Space between the text and the icon */
 }
 
-#eth-price {
+.price-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
   position: absolute;
-  right: 20px;
-
+  right: 20px; /* Position the container to the right */
+  top: 20px; /* Adjust the top position as needed */
 }
 
+
+
 @media (max-width: 700px) {
-  #eth-price {
+  .price-container {
     display: none;
   }
 }
@@ -1029,4 +1033,50 @@ font-weight: bold;
 
 .tab:hover .tooltip {
   visibility: visible;
+}
+
+.calculation-box {
+    width: 150px; 
+    height: 150px; 
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    font-size: 1em; /* Adjust text size as needed */
+    color: #fff; /* Text color */
+	flex-direction: column; /* Stack items vertically */
+
+}
+
+/* Additional styling for the text inside the boxes */
+.calculation-box p {
+    margin: 0;
+    padding: 10px;
+}
+
+.calculation-container {
+  margin: 25px auto;
+  background: rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap between boxes as needed */
+ justify-content: center; /* Center the boxes within the container */
+  padding: 20px; /* Add some padding around the container */
+  
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .calculation-box {
+        width: calc(50% - 10px); /* Adjust width for mobile, accounting for the gap */
+        height: calc(50% - 10px); /* Adjust height similarly to maintain square shape */
+        aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio to keep boxes square */
+        font-size: 0.9em; /* Optionally adjust font size for mobile */
+    }
 }

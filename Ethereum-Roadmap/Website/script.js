@@ -48,29 +48,71 @@ window.onload = function() {
   ]);
 };
 
-function setProgressBar(id, sections) {
-  const progressBar = document.getElementById(id);
+// Combined setProgressBar function
+function setProgressBar(progressBarId, sections) {
+  const progressBar = document.getElementById(progressBarId);
   if (progressBar) {
     progressBar.innerHTML = ''; // Clear existing sections
-    const totalWidth = sections.reduce((acc, section) => acc + section.width, 0);
-    progressBar.style.width = `${totalWidth}%`; // Set the total width of the progress bar
 
-    sections.forEach((section, index) => {
+    sections.forEach((section) => {
       const sectionDiv = document.createElement('div');
-      sectionDiv.style.width = '0%'; // Initially set width to 0%
+      sectionDiv.style.width = `${section.width}%`;
       sectionDiv.style.height = '100%';
-      sectionDiv.style.backgroundColor = section.color;
       sectionDiv.style.display = 'inline-block';
+
+      // Check if this is the section that needs the flashing effect
+      if (section.color === '#F1A196') {
+        // Apply the animation to the Pectra color section
+        sectionDiv.style.animation = 'fadeRed 3s infinite';
+      } else {
+        // Apply the standard background color for other sections
+        sectionDiv.style.backgroundColor = section.color;
+      }
+
+      // Initially set width to 0% for the animation effect
+      sectionDiv.style.width = '0%';
       progressBar.appendChild(sectionDiv);
 
       // Apply transition with a slight delay to ensure it's rendered
       setTimeout(() => {
         sectionDiv.style.transition = 'width 2s ease'; // Apply a transition to the width
-        sectionDiv.style.width = `${(section.width / totalWidth) * 100}%`; // Set to target width
-      }, 0);
+        sectionDiv.style.width = `${section.width}%`; // Set to target width
+      }, 100); // Slight delay to ensure rendering
     });
   }
 }
+
+// Inject CSS for the fadeRed animation
+function injectAnimationStyles() {
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  style.innerHTML = `
+    @keyframes fadeRed {
+      0% { background-color: #F1A196; }
+      50% { background-color: transparent; }
+      100% { background-color: #F1A196; }
+    }
+  `;
+  document.getElementsByTagName('head')[0].appendChild(style);
+}
+
+injectAnimationStyles();
+
+//Make Pectra color in progress bar flash transparent setup
+function injectAnimationStyles() {
+  const style = document.createElement('style');
+  style.type = 'text/css';
+  style.innerHTML = `
+    @keyframes fadeRed {
+      0% { background-color: #F1A196; }
+      50% { background-color: transparent; }
+      100% { background-color: #F1A196; }
+    }
+  `;
+  document.getElementsByTagName('head')[0].appendChild(style);
+}
+
+injectAnimationStyles();
 
 
 // Get the modal
@@ -212,3 +254,228 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchEthPrice(); // Initial fetch when the document is loaded
   setInterval(fetchEthPrice, 60000); // Refresh every minute
 });
+
+// Code for fetching the latest gas price
+async function fetchLatestGasPriceFromEtherscan() {
+  const apiKey = 'EA1Z2KQWATY3EWKNUDZ39A9QCVWAAT5RFA'; // Etherscan API key
+  // Using the 'gasoracle' action to get the recommended gas prices
+  const url = `https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=${apiKey}`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+
+    // Accessing the 'SafeGasPrice' value from the response
+    if (data && data.status === "1" && data.message === "OK" && data.result) {
+      const gasPriceValue = data.result.SafeGasPrice; // Using 'SafeGasPrice' as an example
+      // Display the 'SafeGasPrice' value directly without rounding as it's already in Gwei
+      document.getElementById('gasPriceValue').textContent = `${gasPriceValue} Gwei`;
+    } else {
+      console.error('Failed to fetch latest gas price from Etherscan:', data);
+      document.getElementById('gasPriceValue').textContent = 'Failed to load latest gas price.';
+    }
+  } catch (error) {
+    console.error('Error fetching latest gas price from Etherscan:', error);
+    document.getElementById('gasPriceValue').textContent = 'Error loading latest gas price.';
+  }
+}
+
+// Call the function immediately to fetch the latest gas price
+fetchLatestGasPriceFromEtherscan();
+
+// Then set it to run every minute
+setInterval(fetchLatestGasPriceFromEtherscan, 60000); // 60000 milliseconds = 1 minute
+
+//Code for total ETH supply
+async function fetchETHCirculatingSupply() {
+  const queryId = '2256134';
+  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa';
+  // Include the 'limit=1' parameter in the request URL
+  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'accept': 'application/json',
+        'x-dune-api-key': apiKey,
+      }
+    });
+    const data = await response.json();
+
+    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
+      const cirSupply = parseFloat(data.result.rows[0].cir_supply);
+      const formattedCirSupply = (Math.round(cirSupply / 1e6 * 10) / 10).toFixed(1); // Round to nearest million with one decimal place
+      document.getElementById('ETH-supply-value').textContent = `${formattedCirSupply}M ETH`;
+    } else {
+      console.error('Failed to fetch ETH Circulating Supply:', data);
+      document.getElementById('ETH-supply-value').textContent = 'Failed to load ETH Supply.';
+    }
+  } catch (error) {
+    console.error('Error fetching ETH Circulating Supply:', error);
+    document.getElementById('ETH-supply-value').textContent = 'Error loading ETH Supply.';
+  }
+}
+
+fetchETHCirculatingSupply();
+
+//Code for ETH staked with latest query result
+async function fetchLatestQueryResult() {
+  const queryId = '1933048'; // Provided query ID
+  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa'; // Provided Dune Analytics API key
+  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'x-dune-api-key': apiKey,
+      }
+    });
+    const data = await response.json();
+
+    // Accessing the 'total_validators' value within the 'rows' array of the 'result' object
+    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
+      const totalValidatorsValue = data.result.rows[0].total_validators;
+      // Round the 'total_validators' value to two decimal places
+      const totalValidatorsFormatted = totalValidatorsValue.toFixed(2);
+      document.getElementById('eth-staked').textContent = `${totalValidatorsFormatted}%`;
+    } else {
+      console.error('Failed to fetch latest query result:', data);
+      document.getElementById('eth-staked').textContent = 'Failed to load latest query result.';
+    }
+  } catch (error) {
+    console.error('Error fetching latest query result:', error);
+    document.getElementById('eth-staked').textContent = 'Error loading latest query result.';
+  }
+}
+
+fetchLatestQueryResult();
+
+//Code for Lido Share percentage
+async function fetchLidoShare() {
+  const queryId = '1933075'; // Provided query ID
+  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa'; // Provided Dune Analytics API key
+  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'x-dune-api-key': apiKey,
+      }
+    });
+    const data = await response.json();
+
+    // Accessing the 'lido_percentage' value within the 'rows' array of the 'result' object
+    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
+      const lidoPercentageValue = data.result.rows[0].lido_percentage;
+      // Round the 'lido_percentage' value to two decimal places
+      const lidoPercentageFormatted = lidoPercentageValue.toFixed(2);
+      document.getElementById('lido-share').textContent = `${lidoPercentageFormatted}%`;
+    } else {
+      console.error('Failed to fetch latest query result:', data);
+      document.getElementById('lido-share').textContent = 'Failed to load latest query result.';
+    }
+  } catch (error) {
+    console.error('Error fetching latest query result:', error);
+    document.getElementById('lido-share').textContent = 'Error loading latest query result.';
+  }
+}
+
+fetchLidoShare();
+
+//Code for entry queue
+async function fetchEnteringValidatorQueue() {
+  const url = `https://beaconcha.in/api/v1/validators/queue`;
+
+  try {
+    const response = await fetch(url);
+    const data = await response.json();
+    if (data.status === "OK" && data.data) {
+      const enteringValidators = data.data.beaconchain_entering;
+      // Round to the nearest thousand and append 'K Validators'
+      const roundedEnteringValidators = Math.round(enteringValidators / 1000) + 'K Validators';
+      document.getElementById('validator-queue').textContent = roundedEnteringValidators;
+    } else {
+      console.error('Failed to fetch entering validator queue:', data);
+      document.getElementById('validator-queue').textContent = 'Failed to load entering validator queue.';
+    }
+  } catch (error) {
+    console.error('Error fetching entering validator queue:', error);
+    document.getElementById('validator-queue').textContent = 'Error loading entering validator queue.';
+  }
+}
+
+fetchEnteringValidatorQueue();
+
+//Code for proposer slashes
+async function fetchProposerSlashingsCount() {
+  const queryId = '3428319';
+  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa';
+  const url = `https://api.dune.com/api/v1/query/${queryId}/results`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'accept': 'application/json',
+        'x-dune-api-key': apiKey,
+      }
+    });
+    const data = await response.json();
+
+    // Check if the data is in the expected format
+    if (data && data.result && data.result.rows) {
+      // Find the object for "Proposer Slashings"
+      const proposerSlashings = data.result.rows.find(row => row.type === "Proposer Slashings");
+      if (proposerSlashings) {
+        // Update the HTML element with the count
+        document.getElementById('slashed').textContent = proposerSlashings.count;
+      } else {
+        console.error('Proposer Slashings data not found');
+        document.getElementById('slashed').textContent = 'Data not available';
+      }
+    } else {
+      console.error('Unexpected data format:', data);
+      document.getElementById('slashed').textContent = 'Failed to load data.';
+    }
+  } catch (error) {
+    console.error('Error fetching Proposer Slashings count:', error);
+    document.getElementById('slashed').textContent = 'Error loading data.';
+  }
+}
+
+fetchProposerSlashingsCount();
+
+//Consensus APR
+async function fetchConsensusLayerAPR() {
+  const queryId = '2256134';
+  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa';
+  // Include the 'limit=1' parameter in the request URL
+  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
+
+  try {
+    const response = await fetch(url, {
+      method: 'GET',
+      headers: {
+        'accept': 'application/json',
+        'x-dune-api-key': apiKey,
+      }
+    });
+    const data = await response.json();
+
+    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
+      const consensusAprPercent = parseFloat(data.result.rows[0].consensus_apr_percent).toFixed(2);
+      document.getElementById('APR').textContent = `${consensusAprPercent}%`;
+    } else {
+      console.error('Failed to fetch Consensus Layer APR:', data);
+      document.getElementById('APR').textContent = 'Failed to load APR.';
+    }
+  } catch (error) {
+    console.error('Error fetching Consensus Layer APR:', error);
+    document.getElementById('APR').textContent = 'Error loading APR.';
+  }
+}
+
+fetchConsensusLayerAPR();
