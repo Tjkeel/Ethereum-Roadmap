@@ -370,9 +370,10 @@ async function fetchLidoShare() {
     // Accessing the 'lido_percentage' value within the 'rows' array of the 'result' object
     if (data && data.result && data.result.rows && data.result.rows.length > 0) {
       const lidoPercentageValue = data.result.rows[0].lido_percentage;
-      // Round the 'lido_percentage' value to two decimal places
-      const lidoPercentageFormatted = lidoPercentageValue.toFixed(2);
-      document.getElementById('lido-share').textContent = `${lidoPercentageFormatted}%`;
+      // Round the 'lido_percentage' value to the nearest whole number
+      const lidoPercentageRounded = Math.round(lidoPercentageValue);
+      // Include the icon after the percentage value
+      document.getElementById('lido-share').innerHTML = `${lidoPercentageRounded}%`;
     } else {
       console.error('Failed to fetch latest query result:', data);
       document.getElementById('lido-share').textContent = 'Failed to load latest query result.';
@@ -479,3 +480,8 @@ async function fetchConsensusLayerAPR() {
 }
 
 fetchConsensusLayerAPR();
+
+setInterval(() => {
+  const calcboxflipContainer = document.querySelector('.calcboxflip-container');
+  calcboxflipContainer.classList.toggle('flip');
+}, 5000); // 5000 milliseconds = 5 seconds

@@ -1080,3 +1080,42 @@ font-weight: bold;
         font-size: 0.9em; /* Optionally adjust font size for mobile */
     }
 }
+
+.calculation-box.hazard {
+  position: relative; /* Needed for absolute positioning of children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes fadeTransparency {
+  0% {
+    color: rgba(251, 234, 106, 0.0); /* Less transparent start */
+  }
+  50% {
+    color: rgba(251, 234, 106, 0.5); /* More transparent midpoint */
+  }
+  100% {
+    color: rgba(251, 234, 106, 0.0); /* Back to less transparent */
+  }
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em; /* Adjust size as needed */
+  color: rgba(251, 234, 106, 0.3); /* Initial color */
+  z-index: 1; /* Ensure the icon is behind the text */
+  animation: fadeTransparency 3s infinite; /* Apply the animation */
+}
+
+/* Ensure text is readable and prominently displayed */
+.calculation-box.hazard > span,
+.calculation-box.hazard > div {
+  position: relative;
+  z-index: 2; /* Higher z-index to ensure text appears above the icon */
+  color: #fff; /* Adjust text color for readability if necessary */
+}
