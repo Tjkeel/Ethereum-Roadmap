@@ -43,7 +43,7 @@ window.onload = function() {
     { width: 30, color: '#99C66D' }, // Green
     { width: 0, color: '#AE80B1' },  // Purple
     { width: 0, color: '#6A9BE7' },  // Blue
-    { width: 30, color: '#F1A196' },  // Red
+    { width: 20, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 };
