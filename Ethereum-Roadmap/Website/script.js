@@ -43,7 +43,7 @@ window.onload = function() {
     { width: 30, color: '#99C66D' }, // Green
     { width: 0, color: '#AE80B1' },  // Purple
     { width: 0, color: '#6A9BE7' },  // Blue
-    { width: 20, color: '#F1A196' },  // Red
+    { width: 30, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 };
@@ -286,12 +286,11 @@ fetchLatestGasPriceFromEtherscan();
 // Then set it to run every minute
 setInterval(fetchLatestGasPriceFromEtherscan, 60000); // 60000 milliseconds = 1 minute
 
-//Code for total ETH supply
-async function fetchETHCirculatingSupply() {
-  const queryId = '2256134';
-  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa';
-  // Include the 'limit=1' parameter in the request URL
-  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
+//Code for total inflation
+async function fetch30DayInflation() {
+  const queryId = '2410605'; // Your provided query ID
+  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa'; // Provided Dune Analytics API key
+  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`; // Limiting the results to the most recent
 
   try {
     const response = await fetch(url, {
@@ -303,21 +302,26 @@ async function fetchETHCirculatingSupply() {
     });
     const data = await response.json();
 
+    // Accessing the 'annaul_issue_30d' value within the 'rows' array of the 'result' object
     if (data && data.result && data.result.rows && data.result.rows.length > 0) {
-      const cirSupply = parseFloat(data.result.rows[0].cir_supply);
-      const formattedCirSupply = (Math.round(cirSupply / 1e6 * 10) / 10).toFixed(1); // Round to nearest million with one decimal place
-      document.getElementById('ETH-supply-value').textContent = `${formattedCirSupply}M ETH`;
+      const annualIssue30d = data.result.rows[0].annaul_issue_30d;
+      // Convert the value to a percentage and round to two decimal places
+      const annualIssue30dFormatted = (annualIssue30d * 100).toFixed(2); // Multiplies by 100 and formats to two decimal places
+
+      // Update the HTML element with the formatted percentage
+      document.getElementById('30DayInflation').textContent = `${annualIssue30dFormatted}%`;
     } else {
-      console.error('Failed to fetch ETH Circulating Supply:', data);
-      document.getElementById('ETH-supply-value').textContent = 'Failed to load ETH Supply.';
+      console.error('Failed to fetch 30-day annual issue:', data);
+      document.getElementById('30DayInflation').textContent = 'Data not available';
     }
   } catch (error) {
-    console.error('Error fetching ETH Circulating Supply:', error);
-    document.getElementById('ETH-supply-value').textContent = 'Error loading ETH Supply.';
+    console.error('Error fetching 30-day annual issue:', error);
+    document.getElementById('30DayInflation').textContent = 'Error loading data.';
   }
 }
 
-fetchETHCirculatingSupply();
+fetch30DayInflation(); // Call the function to execute the fetch and update
+
 
 //Code for ETH staked with latest query result
 async function fetchLatestQueryResult() {
@@ -337,8 +341,8 @@ async function fetchLatestQueryResult() {
     // Accessing the 'total_validators' value within the 'rows' array of the 'result' object
     if (data && data.result && data.result.rows && data.result.rows.length > 0) {
       const totalValidatorsValue = data.result.rows[0].total_validators;
-      // Round the 'total_validators' value to two decimal places
-      const totalValidatorsFormatted = totalValidatorsValue.toFixed(2);
+      // Round the 'total_validators' value to the nearest whole number
+      const totalValidatorsFormatted = Math.round(totalValidatorsValue);
       document.getElementById('eth-staked').textContent = `${totalValidatorsFormatted}%`;
     } else {
       console.error('Failed to fetch latest query result:', data);
@@ -350,7 +354,8 @@ async function fetchLatestQueryResult() {
   }
 }
 
-fetchLatestQueryResult();
+fetchLatestQueryResult(); // Calls the function to fetch and update the data
+
 
 //Code for Lido Share percentage
 async function fetchLidoShare() {
@@ -410,11 +415,11 @@ async function fetchEnteringValidatorQueue() {
 
 fetchEnteringValidatorQueue();
 
-//Code for proposer slashes
-async function fetchProposerSlashingsCount() {
-  const queryId = '3428319';
+//Code for percent restaked
+async function fetchRestakedRatio() {
+  const queryId = '3592784'; // Change this to your query's ID
   const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa';
-  const url = `https://api.dune.com/api/v1/query/${queryId}/results`;
+  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`; // Limiting the results to the most recent
 
   try {
     const response = await fetch(url, {
@@ -426,28 +431,28 @@ async function fetchProposerSlashingsCount() {
     });
     const data = await response.json();
 
-    // Check if the data is in the expected format
-    if (data && data.result && data.result.rows) {
-      // Find the object for "Proposer Slashings"
-      const proposerSlashings = data.result.rows.find(row => row.type === "Proposer Slashings");
-      if (proposerSlashings) {
-        // Update the HTML element with the count
-        document.getElementById('slashed').textContent = proposerSlashings.count;
-      } else {
-        console.error('Proposer Slashings data not found');
-        document.getElementById('slashed').textContent = 'Data not available';
-      }
+    // Check if the data is in the expected format and contains the necessary rows
+    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
+      const latestData = data.result.rows[0];
+      const restakedRatio = latestData.restaked_ratio;
+
+      // Convert ratio to percentage and round it
+      const restakedPercent = Math.round(restakedRatio * 100); // Multiplies by 100 and rounds to the nearest integer
+
+      // Update the HTML element with the percentage
+      document.getElementById('restaked').textContent = `${restakedPercent}%`;
     } else {
-      console.error('Unexpected data format:', data);
-      document.getElementById('slashed').textContent = 'Failed to load data.';
+      console.error('Restaked data not found or unexpected data format:', data);
+      document.getElementById('restaked').textContent = 'Data not available';
     }
   } catch (error) {
-    console.error('Error fetching Proposer Slashings count:', error);
-    document.getElementById('slashed').textContent = 'Error loading data.';
+    console.error('Error fetching restaked ratio:', error);
+    document.getElementById('restaked').textContent = 'Error loading data.';
   }
 }
 
-fetchProposerSlashingsCount();
+fetchRestakedRatio(); // Call the function to execute the fetch and update
+
 
 //Consensus APR
 async function fetchConsensusLayerAPR() {
