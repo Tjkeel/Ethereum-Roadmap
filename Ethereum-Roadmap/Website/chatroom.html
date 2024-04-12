@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Old-School Chat Room</title>
+<link rel="stylesheet" href="chatroom.css">
+</head>
+<body>
+<div id="login">
+    <label for="password">Enter Chatroom Password:</label>
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="enterChat()">Enter</button>
+</div>
+<div id="chatroom" style="display:none;">
+    <input type="text" id="senderName" placeholder="Your name">
+    <div id="messages" class="messages"></div>
+    <input type="text" id="messageInput" placeholder="Type a message...">
+    <button onclick="sendMessage()">Send</button>
+</div>
+<script src="chatroom.js"></script>
+</body>
+</html>
