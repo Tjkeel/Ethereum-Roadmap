@@ -3,7 +3,7 @@ window.onload = function() {
     { width: 50, color: '#99C66D' }, // Green
     { width: 20, color: '#AE80B1' }, // Purple
     { width: 5, color: '#6A9BE7' },  // Blue
-    { width: 5, color: '#F1A196' },  // Red
+    { width: 10, color: '#F1A196' },  // Red
     // Add more sections as needed
   ]);
 
