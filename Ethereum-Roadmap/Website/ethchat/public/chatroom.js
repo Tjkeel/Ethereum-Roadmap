@@ -1,5 +1,6 @@
-// Establish a connection to the server via Socket.IO
-const socket = io();
+// Determine if the page is loaded over HTTPS and use the appropriate WebSocket protocol
+const protocol = window.location.protocol === 'https:' ? 'wss://' : 'ws://';
+const socket = io(`${protocol}//${window.location.host}`, { secure: true });
 
 // Function to handle password entry and show chatroom
 function enterChat() {
