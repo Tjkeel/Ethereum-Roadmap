@@ -1,5 +1,5 @@
 // Establish a connection to the server via Socket.IO
-const socket = io('wss://67.84.57.112:3000');
+const socket = io();
 
 // Function to handle password entry and show chatroom
 function enterChat() {
