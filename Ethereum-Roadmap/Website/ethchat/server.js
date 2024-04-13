@@ -4,7 +4,7 @@ const socketIo = require('socket.io');
 
 const app = express();
 const server = http.createServer(app);
-const io = socketIo(server);
+const io = socketIoconst socket = io('https://ethroadmap.com:3000');
 
 // Serve static files from the public directory within ethchat
 app.use('/chatroom', express.static(__dirname + '/public'));
