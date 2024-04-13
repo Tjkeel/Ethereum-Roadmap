@@ -238,7 +238,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     lastUpdated.textContent = formattedDate;
 });
 
-//Code for Eth Price in corner
+//Code for Eth Price in corner NO API Key
 function fetchEthPrice() {
   fetch('https://api.coingecko.com/api/v3/simple/price?ids=ethereum&vs_currencies=usd')
     .then(response => response.json())
@@ -255,143 +255,145 @@ document.addEventListener('DOMContentLoaded', () => {
   setInterval(fetchEthPrice, 60000); // Refresh every minute
 });
 
-// Code for fetching the latest gas price
-async function fetchLatestGasPriceFromEtherscan() {
-  const apiKey = 'EA1Z2KQWATY3EWKNUDZ39A9QCVWAAT5RFA'; // Etherscan API key
-  // Using the 'gasoracle' action to get the recommended gas prices
-  const url = `https://api.etherscan.io/api?module=gastracker&action=gasoracle&apikey=${apiKey}`;
-
+// Code for fetching the latest gas price from Firebase Functions
+async function fetchLatestGasPriceFromFirebase() {
   try {
-    const response = await fetch(url);
+    const response = await fetch('/fetchGasPrice');
     const data = await response.json();
 
-    // Accessing the 'SafeGasPrice' value from the response
     if (data && data.status === "1" && data.message === "OK" && data.result) {
-      const gasPriceValue = data.result.SafeGasPrice; // Using 'SafeGasPrice' as an example
-      // Display the 'SafeGasPrice' value directly without rounding as it's already in Gwei
+      const gasPriceValue = data.result.SafeGasPrice;
       document.getElementById('gasPriceValue').textContent = `${gasPriceValue} Gwei`;
     } else {
-      console.error('Failed to fetch latest gas price from Etherscan:', data);
+      console.error('Failed to fetch latest gas price:', data);
       document.getElementById('gasPriceValue').textContent = 'Failed to load latest gas price.';
     }
   } catch (error) {
-    console.error('Error fetching latest gas price from Etherscan:', error);
+    console.error('Error fetching latest gas price:', error);
     document.getElementById('gasPriceValue').textContent = 'Error loading latest gas price.';
   }
 }
 
 // Call the function immediately to fetch the latest gas price
-fetchLatestGasPriceFromEtherscan();
+fetchLatestGasPriceFromFirebase();
+setInterval(fetchLatestGasPriceFromFirebase, 60000);
 
-// Then set it to run every minute
-setInterval(fetchLatestGasPriceFromEtherscan, 60000); // 60000 milliseconds = 1 minute
-
-//Code for total inflation
-async function fetch30DayInflation() {
-  const queryId = '2410605'; // Your provided query ID
-  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa'; // Provided Dune Analytics API key
-  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`; // Limiting the results to the most recent
-
+// Code for fetching total inflation from Firebase Functions
+async function fetch30DayInflationFromFirebase() {
   try {
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'accept': 'application/json',
-        'x-dune-api-key': apiKey,
-      }
-    });
+    const response = await fetch('/fetch30DayInflation');
     const data = await response.json();
 
-    // Accessing the 'annaul_issue_30d' value within the 'rows' array of the 'result' object
     if (data && data.result && data.result.rows && data.result.rows.length > 0) {
-      const annualIssue30d = data.result.rows[0].annaul_issue_30d;
-      // Convert the value to a percentage and round to two decimal places
-      const annualIssue30dFormatted = (annualIssue30d * 100).toFixed(2); // Multiplies by 100 and formats to two decimal places
-
-      // Update the HTML element with the formatted percentage
+      const annualIssue30d = data.result.rows[0].annual_issue_30d;
+      const annualIssue30dFormatted = (annualIssue30d * 100).toFixed(2);
       document.getElementById('30DayInflation').textContent = `${annualIssue30dFormatted}%`;
     } else {
-      console.error('Failed to fetch 30-day annual issue:', data);
+      console.error('Failed to fetch 30-day inflation:', data);
       document.getElementById('30DayInflation').textContent = 'Data not available';
     }
   } catch (error) {
-    console.error('Error fetching 30-day annual issue:', error);
+    console.error('Error fetching 30-day inflation:', error);
     document.getElementById('30DayInflation').textContent = 'Error loading data.';
   }
 }
 
-fetch30DayInflation(); // Call the function to execute the fetch and update
+fetch30DayInflationFromFirebase();
 
-
-//Code for ETH staked with latest query result
-async function fetchLatestQueryResult() {
-  const queryId = '1933048'; // Provided query ID
-  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa'; // Provided Dune Analytics API key
-  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
-
+// Code for fetching ETH staked information from Firebase Functions
+async function fetchEthStakedFromFirebase() {
   try {
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'x-dune-api-key': apiKey,
-      }
-    });
+    const response = await fetch('/fetchEthStaked');
     const data = await response.json();
 
-    // Accessing the 'total_validators' value within the 'rows' array of the 'result' object
     if (data && data.result && data.result.rows && data.result.rows.length > 0) {
       const totalValidatorsValue = data.result.rows[0].total_validators;
-      // Round the 'total_validators' value to the nearest whole number
       const totalValidatorsFormatted = Math.round(totalValidatorsValue);
       document.getElementById('eth-staked').textContent = `${totalValidatorsFormatted}%`;
     } else {
-      console.error('Failed to fetch latest query result:', data);
-      document.getElementById('eth-staked').textContent = 'Failed to load latest query result.';
+      console.error('Failed to fetch ETH staked data:', data);
+      document.getElementById('eth-staked').textContent = 'Failed to load data.';
     }
   } catch (error) {
-    console.error('Error fetching latest query result:', error);
-    document.getElementById('eth-staked').textContent = 'Error loading latest query result.';
+    console.error('Error fetching ETH staked data:', error);
+    document.getElementById('eth-staked').textContent = 'Error loading data.';
   }
 }
 
-fetchLatestQueryResult(); // Calls the function to fetch and update the data
+fetchEthStakedFromFirebase();
 
-
-//Code for Lido Share percentage
-async function fetchLidoShare() {
-  const queryId = '1933075'; // Provided query ID
-  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa'; // Provided Dune Analytics API key
-  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
-
+// Code for fetching Lido Share percentage from Firebase Functions
+async function fetchLidoShareFromFirebase() {
   try {
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'x-dune-api-key': apiKey,
-      }
-    });
+    const response = await fetch('/fetchLidoShare');
     const data = await response.json();
 
-    // Accessing the 'lido_percentage' value within the 'rows' array of the 'result' object
     if (data && data.result && data.result.rows && data.result.rows.length > 0) {
       const lidoPercentageValue = data.result.rows[0].lido_percentage;
-      // Round the 'lido_percentage' value to the nearest whole number
       const lidoPercentageRounded = Math.round(lidoPercentageValue);
-      // Include the icon after the percentage value
       document.getElementById('lido-share').innerHTML = `${lidoPercentageRounded}%`;
     } else {
-      console.error('Failed to fetch latest query result:', data);
-      document.getElementById('lido-share').textContent = 'Failed to load latest query result.';
+      console.error('Failed to fetch Lido share data:', data);
+      document.getElementById('lido-share').textContent = 'Failed to load data.';
     }
   } catch (error) {
-    console.error('Error fetching latest query result:', error);
-    document.getElementById('lido-share').textContent = 'Error loading latest query result.';
+    console.error('Error fetching Lido share data:', error);
+    document.getElementById('lido-share').textContent = 'Error loading data.';
   }
 }
 
-fetchLidoShare();
+fetchLidoShareFromFirebase();
 
-//Code for entry queue
+// Code for fetching percent restaked via Firebase Function
+async function fetchRestakedRatioFromFirebase() {
+  try {
+    const response = await fetch('/fetchRestakedRatio');
+    const data = await response.json();
+
+    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
+      const restakedRatio = data.result.rows[0].restaked_ratio;
+      const restakedPercent = Math.round(restakedRatio * 100);
+      document.getElementById('restaked').textContent = `${restakedPercent}%`;
+    } else {
+      console.error('Restaked data not found or unexpected data format:', data);
+      document.getElementById('restaked').textContent = 'Data not available';
+    }
+  } catch (error) {
+    console.error('Error fetching restaked ratio:', error);
+    document.getElementById('restaked').textContent = 'Error loading data.';
+  }
+}
+
+fetchRestakedRatioFromFirebase(); // Call the function to execute the fetch and update
+
+// Code for fetching Consensus APR via Firebase Function
+async function fetchConsensusLayerAPRFromFirebase() {
+  try {
+    const response = await fetch('/fetchConsensusAPR');
+    const data = await response.json();
+
+    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
+      const consensusAprPercent = parseFloat(data.result.rows[0].consensus_apr_percent).toFixed(2);
+      document.getElementById('APR').textContent = `${consensusAprPercent}%`;
+    } else {
+      console.error('Failed to fetch Consensus Layer APR:', data);
+      document.getElementById('APR').textContent = 'Failed to load APR.';
+    }
+  } catch (error) {
+    console.error('Error fetching Consensus Layer APR:', error);
+    document.getElementById('APR').textContent = 'Error loading APR.';
+  }
+}
+
+fetchConsensusLayerAPRFromFirebase();
+
+// Set an interval for periodic flipping of a container element as a separate behavior
+setInterval(() => {
+  const calcboxflipContainer = document.querySelector('.calcboxflip-container');
+  calcboxflipContainer.classList.toggle('flip');
+}, 5000); // 5000 milliseconds = 5 seconds
+
+//Code for entry queue NO API Key
 async function fetchEnteringValidatorQueue() {
   const url = `https://beaconcha.in/api/v1/validators/queue`;
 
@@ -414,79 +416,3 @@ async function fetchEnteringValidatorQueue() {
 }
 
 fetchEnteringValidatorQueue();
-
-//Code for percent restaked
-async function fetchRestakedRatio() {
-  const queryId = '3592784'; // Change this to your query's ID
-  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa';
-  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`; // Limiting the results to the most recent
-
-  try {
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'accept': 'application/json',
-        'x-dune-api-key': apiKey,
-      }
-    });
-    const data = await response.json();
-
-    // Check if the data is in the expected format and contains the necessary rows
-    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
-      const latestData = data.result.rows[0];
-      const restakedRatio = latestData.restaked_ratio;
-
-      // Convert ratio to percentage and round it
-      const restakedPercent = Math.round(restakedRatio * 100); // Multiplies by 100 and rounds to the nearest integer
-
-      // Update the HTML element with the percentage
-      document.getElementById('restaked').textContent = `${restakedPercent}%`;
-    } else {
-      console.error('Restaked data not found or unexpected data format:', data);
-      document.getElementById('restaked').textContent = 'Data not available';
-    }
-  } catch (error) {
-    console.error('Error fetching restaked ratio:', error);
-    document.getElementById('restaked').textContent = 'Error loading data.';
-  }
-}
-
-fetchRestakedRatio(); // Call the function to execute the fetch and update
-
-
-//Consensus APR
-async function fetchConsensusLayerAPR() {
-  const queryId = '2256134';
-  const apiKey = 'PKzYeXjqRjkuNFPnYO9deMCmTtf6MFUa';
-  // Include the 'limit=1' parameter in the request URL
-  const url = `https://api.dune.com/api/v1/query/${queryId}/results?limit=1`;
-
-  try {
-    const response = await fetch(url, {
-      method: 'GET',
-      headers: {
-        'accept': 'application/json',
-        'x-dune-api-key': apiKey,
-      }
-    });
-    const data = await response.json();
-
-    if (data && data.result && data.result.rows && data.result.rows.length > 0) {
-      const consensusAprPercent = parseFloat(data.result.rows[0].consensus_apr_percent).toFixed(2);
-      document.getElementById('APR').textContent = `${consensusAprPercent}%`;
-    } else {
-      console.error('Failed to fetch Consensus Layer APR:', data);
-      document.getElementById('APR').textContent = 'Failed to load APR.';
-    }
-  } catch (error) {
-    console.error('Error fetching Consensus Layer APR:', error);
-    document.getElementById('APR').textContent = 'Error loading APR.';
-  }
-}
-
-fetchConsensusLayerAPR();
-
-setInterval(() => {
-  const calcboxflipContainer = document.querySelector('.calcboxflip-container');
-  calcboxflipContainer.classList.toggle('flip');
-}, 5000); // 5000 milliseconds = 5 seconds
