@@ -1,6 +1,7 @@
 // Establish a connection to the server via Socket.IO
 // Updated to handle self-signed certificates in development environments
-const socket = io({secure: true, rejectUnauthorized: false});
+// Adjust the URL to your public IP or domain where your Node.js server is running
+const socket = io('67.84.57.112:443', {secure: true, rejectUnauthorized: false});
 
 // Function to handle password entry and show chatroom
 function enterChat() {

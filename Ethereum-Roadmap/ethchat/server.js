@@ -2,6 +2,7 @@ const express = require('express');
 const https = require('https');
 const fs = require('fs');
 const socketIo = require('socket.io');
+const cors = require('cors');
 const path = require('path');
 
 const app = express();
@@ -12,6 +13,13 @@ const options = {
 
 const server = https.createServer(options, app);
 const io = socketIo(server);
+
+// Apply CORS middleware to allow requests from your Firebase domain
+app.use(cors({
+    origin: ['https://ethroadmap.com'],  // Allow your Firebase domain
+    methods: ['GET', 'POST'],
+    credentials: true
+}));
 
 app.use(express.static(path.join(__dirname, 'public')));  // Serve static files
 
