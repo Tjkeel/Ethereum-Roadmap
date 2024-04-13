@@ -283,10 +283,10 @@ async function fetch30DayInflationFromFirebase() {
   try {
     const response = await fetch('/fetch30DayInflation');
     const data = await response.json();
-    console.log("Front-end received data:", data); // Log the data received by the front-end
 
     if (data && data.result && data.result.rows && data.result.rows.length > 0) {
-      const annualIssue30d = data.result.rows[0].annual_issue_30d;  // Ensure this matches the actual API response
+      // Make sure the field name matches exactly what's in the response
+      const annualIssue30d = data.result.rows[0].annual_issue_30d; // corrected field name if necessary
       const annualIssue30dFormatted = (annualIssue30d * 100).toFixed(2);
       document.getElementById('30DayInflation').textContent = `${annualIssue30dFormatted}%`;
     } else {
@@ -300,7 +300,6 @@ async function fetch30DayInflationFromFirebase() {
 }
 
 fetch30DayInflationFromFirebase();
-
 
 // Code for fetching ETH staked information from Firebase Functions
 async function fetchEthStakedFromFirebase() {
