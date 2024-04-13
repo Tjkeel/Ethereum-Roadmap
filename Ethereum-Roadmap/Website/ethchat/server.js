@@ -1,6 +1,7 @@
-const fs = require('fs');
-const https = require('https');
+const cors = require('cors');
 const express = require('express');
+const https = require('https');
+const fs = require('fs');
 const socketIo = require('socket.io');
 
 const app = express();
