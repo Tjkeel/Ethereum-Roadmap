@@ -1,29 +1,41 @@
+const fs = require('fs');
+const https = require('https');
 const express = require('express');
-const http = require('http');
 const socketIo = require('socket.io');
 
 const app = express();
-const server = http.createServer(app);
-const io = socketIoconst socket = io('https://ethroadmap.com:3000');
+const options = {
+  key: fs.readFileSync('server.key'), // Path to the key file
+  cert: fs.readFileSync('server.cert') // Path to the certificate file
+};
 
-// Serve static files from the public directory within ethchat
-app.use('/chatroom', express.static(__dirname + '/public'));
+// Apply CORS middleware to allow requests from your Firebase domain
+app.use(cors({
+  origin: 'https://ethroadmap.com' // Adjust if your domain is different
+}));
 
-app.get('/chatroom', (req, res) => {
-    res.sendFile(__dirname + '/public/chatroom.html');
+// Create HTTPS server
+const server = https.createServer(options, app);
+const io = socketIo(server);
+
+// Serve static files (adjust as needed for your setup)
+app.use(express.static('public'));
+
+// Define routes (adjust according to your needs)
+app.get('/', (req, res) => {
+  res.sendFile(__dirname + '/public/index.html');
 });
 
+// Socket.io connection setup
 io.on('connection', (socket) => {
-    console.log('A user connected');
-    socket.on('chat message', (msg) => {
-        io.emit('chat message', msg);
-    });
-    socket.on('disconnect', () => {
-        console.log('User disconnected');
-    });
+  console.log('A user connected');
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
 });
 
-const PORT = process.env.PORT || 3000;
+// Listen on HTTPS port 443
+const PORT = 443;
 server.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`);
+  console.log(`Server running on HTTPS on port ${PORT}`);
 });
