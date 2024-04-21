@@ -995,7 +995,7 @@ transform: translateY(-2px);
 
 
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   .price-container {
     display: none;
   }
@@ -1009,7 +1009,7 @@ font-weight: bold;
 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 800px) {
   #inprogress {
     display: none;
   }
@@ -1067,7 +1067,6 @@ font-weight: bold;
   flex-wrap: wrap;
   gap: 10px; /* Adjust the gap between boxes as needed */
  justify-content: center; /* Center the boxes within the container */
-  padding: 20px; /* Add some padding around the container */
   
 }
 
@@ -1119,3 +1118,18 @@ font-weight: bold;
   z-index: 2; /* Higher z-index to ensure text appears above the icon */
   color: #fff; /* Adjust text color for readability if necessary */
 }
+
+.tabdivider {
+  height: 20px;  /* This controls the height of the line */
+  width: 2px;    /* This controls the thickness of the line */
+  background-color: #fff;  /* White color, adjust as necessary */
+  border-radius: 1px;  /* Optionally round the edges slightly */
+  margin: 0 0px;  /* Space it out from the tabs, adjust as needed */
+  align-self: center;  /* Center it vertically */
+  display: inline-block;  /* Display inline with the tabs */
+}
+
+
+
+
+

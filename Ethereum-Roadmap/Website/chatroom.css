@@ -4,33 +4,59 @@ body {
     background-color: #000;
     color: #0f0;
     font-size: 16px;
+    margin: 0; /* Ensures no default margin */
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
 }
 
 #login {
-    margin: 100px auto;
+    display: flex; /* Use flexbox to align children inline */
+    align-items: center; /* Align items vertically in the center */
     text-align: center;
+    width: auto; /* Adjust width based on content */
 }
 
 input[type="password"], input[type="text"] {
     background-color: #000;
     color: #0f0;
     border: 1px solid #0f0;
-    padding: 8px;
+    padding: 6px 8px; /* Adjusted padding */
+    margin-right: 10px; /* Add space between the input and the button */
+    max-width: 40vw; /* Set width */
+    min-width: 150px;
+    height: 38px; /* Explicit height setting */
+    box-sizing: border-box; /* Include border and padding in the height calculation */
 }
+
+
 
 button {
     background-color: #000;
     border: 1px solid #0f0;
     color: #0f0;
-    padding: 10px 20px;
+    padding: 6px 20px; /* Adjust padding to match input height */
     cursor: pointer;
+    height: 38px; /* Explicit height to match inputs */
+    box-sizing: border-box; /* Include border and padding in the height calculation */
 }
 
 .messages {
-    height: 300px;
+    width: 90vw; /* Responsive width, adjusted for better layout */
     overflow: auto;
     background-color: #000;
-    border: 1px solid #0f0;
-    margin-bottom: 10px;
     padding: 10px;
+    height: 80vh; /* 80% of the viewport height */
+    margin-top: 20px; /* Space between login and messages */
+}
+
+#messageInput {
+    width: 90vw; /* Full width of the container */
+    box-sizing: border-box; /* Include padding and border in width calculation */
+}
+
+.message-time, .message-name {
+    color: white; /* Sets the color of the date and time to white */
 }
