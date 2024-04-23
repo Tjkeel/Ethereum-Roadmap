@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+  <body>
+    <!-- container -->
+    <div class="container">
+      <h1>Ethereum Road Map</h1>
+      <div class="roadmap">
+        <div class="rowGroup">
+          <div class="past">
+            <div class="gap"></div><img class="arrowL" src="arrow.png"><img class="lineH" src="line.png"><div class="gap">The<br>past</div><div class="gap"></div>
+          </div>
+          <div class="merge">
+            <div class="description"><h2>The Merge</h2> Goal: have an ideal, simple, robust<br>
+              and decentralized <b>proof-of-stake<br>
+              consensus</b>
+            </div>
+            <div class="step" id="mergeA">Beacon chain <br>launch</div>
+            <div class="arrowRight" id="merge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="mergeB">Warmup fork <br>(Altair)</div>
+            <img class="lineH" id="merge2" src="line.png">
+            <div class="arrowUp" id="merge3"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+            <div class="mile" id="mergeC">Merge! <br>No more <br>PoW</div>
+            <img class="lineH" id="merge4" src="line.png">
+            <img class="lineV" id="merge5" src="lineV.png">
+            <div class="arrowRight" id="merge6"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="mergeD">Distributed <br>validators</div>
+            <div class="step" id="mergeE">Withdrawals</div>
+            <img class="lineV" id="merge7" src="lineV.png">
+            <div class="step" id="mergeF">Secret leader <br>election</div>
+            <div class="step" id="mergeG">Per-slot <br>participant <br>selection</div>
+            <div class="arrowRight" id="merge8"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="mergeH">SSF <br>specification</div>
+            <img class="lineH" id="merge9" src="line.png">
+            <div class="arrowDown" id="merge10"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
+            <div class="step" id="mergeI">Implmentation</div>
+            <img class="lineH" id="merge11" src="line.png">
+            <div class="arrowUp" id="merge12"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+            <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
+            <img class="lineH" id="merge13" src="line.png">
+            <img class="lineV" id="merge14" src="lineV.png">
+            <div class="arrowRight" id="merge15"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="quant" id="mergeK">Ideal quantum-<br>safe signatures</div>
+            <div class="step" id="mergeL">Increase <br>validator count</div>
+          </div>
+          <div class="future">
+            <div class="gap"></div><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"><div class="gap">The<br>future</div><div class="gap"></div>
+          </div>
+        </div>
+        <div class="rowGroup">
+          <div class="past">
+            <div class="gap"></div><img class="arrowL" src="arrow.png"><img class="lineH" src="line.png"><div class="gap">The<br>past</div><div class="gap"></div>
+          </div>
+          <div class="surge">
+            <div class="description"><h2>The Surge</h2> Goal: 100,000 <b>transactions per<br>
+              second</b> and beyond (on rollups)
+            </div>
+            <div class="step" id="surgeA">Optimistic rollup fraud provers</div>
+            <div class="step" id="surgeB">ZK-EVMs</div>
+            <div class="step" id="surgeC">EIP-4844 <br>specification</div>
+            <div class="arrowRight" id="surge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <img class="lineV" id="surge2" src="lineV.png">
+            <div class="track" id="surgeD">Prototype</div>
+            <div class="step" id="surgeE">EIP-4844 <br>implementation</div>
+            <div class="arrowRight" id="surge3"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="mile" id="surgeF">Basic <br>rollup <br>scaling</div>
+            <div class="arrowUp" id="surge4"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+            <img class="lineV" id="surge5" src="lineV.png">
+            <div class="track" id="surgeG">Limited training wheels <br>(diverse 6-of-8 or stricter)</div>
+            <div class="step" id="surgeH">peerDAS</div>
+            <div class="step" id="surgeI">Efficient DA <br>self-healing</div>
+            <div class="arrowRight" id="surge6"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <img class="lineH" id="surge7" src="line.png">
+            <img class="lineV" id="surge8" src="lineV.png">
+            <div class="mile" id="surgeJ">Full<br>rollup <br>scaling</div>
+            <div class="track" id="surgeK">No training <br>wheels</div>
+            <img class="lineH" id="surge9" src="line.png">
+            <img class="lineH" id="surge10" src="line.png">
+            <div class="arrowUp" id="surge11"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+            <div class="dashH" id="surge12"></div> 
+            <div class="quant" id="surgeL">Q-sale, no-setup <br>commitments</div>
+            <div class="step" id="surgeM">Improve cross-<br>rollup standards <br>+ interop</div>
+          </div>
+          <div class="future">
+            <div class="future future5">
+              <div class="gap"></div><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"><div class="gap">The<br>future</div><div class="gap"></div>
+              <div class="dashV" id="surge13"></div> 
+            </div>
+          </div>
+        </div>
+        <div class="rowGroup">
+          <div class="past">
+            <div class="gap"></div><img class="arrowL" src="arrow.png"><img class="lineH" src="line.png"><div class="gap">The<br>past</div><div class="gap"></div>
+          </div>
+          <div class="scourge">
+            <div class="description"><h2>The Scourge</h2> Goal: mitigate <b>centralization<br>
+              concerns</b> in Ethereum PoS<br>
+              design, particularly around <b>MEV</b><br>
+              and <b>liquid staking / pooling</b>
+            </div>
+            <div class="trackGroup" id="scourgeA">
+              <div class="track" id="scourgeB">MEV track</div>
+              <div class="step" id="scourgeC">Extra-protocol <br>MEV markets</div>
+              <div class="arrowRight" id="scourge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+              <div class="step" id="scourgeD">Inclusion lists</div>
+              <img class="lineH" id="scourge2" src="line.png">
+              <img class="lineV" id="scourge3" src="lineV.png">
+              <div class="arrowRight" id="scourge4"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+              <div class="step" id="scourgeE">Explore ePBS</div>
+              <div class="arrowRight" id="scourge5"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+              <div class="step" id="scourgeF">Explore MEV <br>burn in ePBS</div>
+              <img class="lineH" id="scourge6" src="line.png">
+              <img class="lineV" id="scourge7" src="lineV.png">
+              <div class="step" id="scourgeG">Distributed block <br>building</div>
+              <img class="lineH" id="scourge8" src="line.png">
+              <img class="lineV" id="scourge9" src="lineV.png">
+              <div class="step" id="scourgeH">Exsplore <br>execution tickets</div>
+              <img class="lineH" id="scourge10" src="line.png">
+              <img class="lineV" id="scourge11" src="lineV.png">
+              <div class="mile" id="scourgeI">Endgame block <br>production <br>pipeline</div>
+              <div class="step" id="scourgeJ">App-layer MEV <br>minimzation</div>
+              <div class="step" id="scourgeK">Explore <br>preconfimations</div>
+            </div>
+            <div class="trackGroup" id="scourgeL">
+              <div class="track" id="scourgeM">Staking economics / <br>experiance track</div>
+              <div class="step" id="scourgeN">Raise max <br>effective balance</div>
+              <div class="step" id="scourgeO">Improve node <br>operator usability</div>
+              <div class="step" id="scourgeP">Explore total <br>stake capping</div>
+              <div class="step" id="scourgeQ">Explore solutions <br>to liquid staking <br>centralization</div>
+            </div>
+            <img class="lineV" id="scourge12" src="lineV.png">
+            <div class="arrowUp" id="scourge14"><img class="arrowU" src="arrowDash.png"><div class="dashV"></div></div>
+          </div>
+          <div class="future">
+            <div class="gap"></div><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"><div class="gap">The<br>future</div><div class="gap"></div>
+            <div class="dashV" id="scourge13"></div> 
+          </div>
+        </div>
+        <div class="rowGroup">
+          <div class="past">
+            <div class="gap"></div><img class="arrowL" src="arrow.png"><img class="lineH" src="line.png"><div class="gap">The<br>past</div><div class="gap"></div>
+          </div>
+          <div class="verge">
+            <div class="description"><h2>The Verge</h2> Goal: <b>verifying</b> blocks should be super easy - download<br>
+              N bytes of data, perform a few basic computations, verify<br>
+              a SNARK and you're done</b>
+            </div>
+            <div class="step" id="vergeA">Most serious <br>EVM DoS <br>issues solved</div>
+            <div class="step" id="vergeB">Basic light <br>client support <br>(sync <br>committees)</div>
+            <div class="arrowRight" id="verge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="vergeC">Verkle tree <br>spec + impl</div>
+            <div class="arrowRight" id="verge2"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="vergeD">SNARK based <br>light clients</div>
+            <img class="lineH" id="verge3" src="line.png">
+            <img class="lineV" id="verge4" src="lineV.png">
+            <img class="lineH" id="verge5" src="line.png">
+            <img class="lineV" id="verge6" src="lineV.png">
+            <div class="arrowRight" id="verge7"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="arrowDown" id="verge8"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
+            <div class="arrowUp" id="verge9"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+            <div class="step" id="vergeE">Code chunking + gas cost updates</div>
+            <div class="mile" id="vergeF">Verkle <br>trees</div>
+            <div class="arrowRight" id="verge10"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="vergeG">Transition spec <br>+ impl</div>
+            <div class="step" id="vergeH">SNARK for L1 <br>EVM</div>
+            <div class="arrowRight" id="verge11"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="arrowDown" id="verge12"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
+            <div class="step" id="vergeI">SNARK for <br>Verkle proofs</div>
+            <div class="arrowRight" id="verge13"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="vergeJ">SNARK for <br>consensus state <br>transition</div>
+            <img class="lineH" id="verge14" src="line.png">
+            <div class="arrowUp" id="verge15"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+            <div class="mile" id="vergeK">Fully <br>SNARKed <br>Ethereum</div>
+            <div class="arrowRight" id="verge16"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="vergeL">SNARK / <br>STARK ASICs</div>
+            <div class="step" id="vergeM">Explore EVM <br>verification <br>precompile</div>
+            <div class="mile" id="vergeN">Quantum-safe <br>SNARKs (eg. <br>STARKs)</div>
+            <div class="dashH" id="verge17"></div> 
+            <div class="dashV" id="verge19"></div> 
+            <div class="dashV" id="verge21"></div>
+            <div class="dashV" id="verge22"></div>
+            <div class="dashH" id="verge23"></div>
+            <div class="arrowRight" id="verge20"><img class="dashH" src="lineDash.png"><img class="arrowR" src="arrowDash.png"></div>
+            <div class="dashH" id="verge24"></div>
+            <div class="arrowUp" id="verge25"><img class="arrowU" src="arrowDash.png"><div class="dashV"></div></div>
+            <div class="dashV" id="verge26"></div>
+          </div>
+          <div class="future">
+            <div class="future future3">
+              <div class="gap"></div><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"><div class="gap">The<br>future</div><div class="gap"></div>
+              <div class="dashV" id="verge18"></div> 
+            </div>
+          </div>
+        </div>
+        <div class="rowGroup">
+          <div class="past">
+            <div class="gap"></div><img class="arrowL" src="arrow.png"><img class="lineH" src="line.png"><div class="gap">The<br>past</div><div class="gap"></div>
+          </div>
+          <div class="purge">
+            <div class="description"><h2>The Purge</h2> Goal: <b>simplify</b> the protocol, <b>eliminate technical<br>
+              debt</b> amd <b>limit costs</b> of participating in the network by<br>
+              clearing old history</b>
+            </div>
+            <div class="step" id="purgeA">Eliminate most <br>gas refunds</div>
+            <div class="step" id="purgeB">EIP-4444 <br>specification</div>
+            <div class="arrowRight" id="purge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="purgeC">Beacon chain <br>fast sync</div>
+            <img class="lineH" id="purge2" src="line.png">
+            <img class="lineV" id="purge3" src="lineV.png">
+            <img class="lineH" id="purge4" src="line.png">
+            <img class="lineH" id="purge5" src="line.png">
+            <img class="lineV" id="purge6" src="lineV.png">
+            <div class="step" id="purgeD">EIP-4444 <br>implementation</div>
+            <img class="lineH" id="purge7" src="line.png">
+            <img class="lineV" id="purge8" src="lineV.png">
+            <div class="arrowRight" id="purge9"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="purgeE">P2P history <br>(eg. Portal)</div>
+            <img class="lineH" id="purge10" src="line.png">
+            <img class="lineV" id="purge11" src="lineV.png">
+            <div class="trackGroup" id="purgeF"> 
+              <div class="track" id="purgeG">EVM simplification track</div>
+              <div class="step" id="purgeH">Ban SELF- <br>DESTRUCT</div>
+              <div class="step" id="purgeI">Simplify gas <br>mechanics</div>
+              <div class="step" id="purgeJ">Precompiles <br>EVM impls</div>
+            </div>
+            <img class="lineH" id="purge16" src="line.png">
+            <img class="lineV" id="purge17" src="lineV.png">
+            <div class="mile" id="purgeK">History <br>expiry <br>(EIP-4444)</div>
+            <div class="step" id="purgeL">Address space <br>extension</div>
+            <div class="arrowRight" id="purge12"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="purgeM">LOG reform </div>
+            <div class="step" id="purgeN">Remove old tx <br>types</div>
+            <div class="arrowRight" id="purge13"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="step" id="purgeO">State expiry </div>
+            <div class="step" id="purgeP">Serialization <br>harmonization</div>
+            <div class="dashH" id="purge14"></div>
+            <div class="dashV" id="purge15"></div>
+          </div>
+          <div class="future">
+            <div class="future future3">
+              <div class="gap"></div><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"><div class="gap">The<br>future</div><div class="gap"></div>
+            </div>
+          </div>
+        </div>
+        <div class="rowGroup">
+          <div class="past">
+            <div class="gap"></div><img class="arrowL" src="arrow.png"><img class="lineH" src="line.png"><div class="gap">The<br>past</div><div class="gap"></div>
+          </div>
+          <div class="splurge">
+            <div class="description"><h2>The Splurge</h2> Goal: fix <b>everything else</b></div>
+            <div id="ingap">.<br>.<br>.<br>.<br>.<br>.<br>.<br></div>
+            <div class="step" id="splurgeA">EIP-1559</div>
+            <div class="arrowRight" id="splurge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div id="splurgeBB">
+              <div class="step" id="splurgeB">EIP-4337 <br>specification</div>
+            </div>
+            <div class="arrowRight" id="splurge2"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="trackGroup" id="splurgeC">
+              <div class="track" id="splurgeD">EVM improvements track</div>
+              <div class="step" id="splurgeE">EOF</div>
+              <div class="step" id="splurgeF">Big modular <br>arithmetic</div>
+              <div class="step" id="splurgeG">Further EVM <br>improvements</div>
+            </div>
+            <div class="arrowRight" id="splurge5"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="trackGroup" id="splurgeH">
+              <div class="track" id="splurgeI">Account abstraction track</div>
+              <div class="step" id="splurgeJ">ERC-4337</div>
+              <div class="arrowRight" id="splurge3"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+              <div class="step" id="splurgeK">Voluntary <br>EOA <br>conversion</div>
+              <div class="arrowRight" id="splurge4"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+              <div class="step" id="splurgeL">In-protocol <br>enshrining</div>
+            </div>
+            <div class="arrowRight" id="splurge6"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+            <div class="mile" id="splurgeM">Endgame <br>EVM</div>
+            <div class="step" id="splurgeN">Endgame <br>EIP-1559</div>
+            <div class="mile" id="splurgeO">Endgame <br>account <br>abstraction</div>
+            <div class="step" id="splurgeP">Explore deep <br>crypto (eg. <br>obfuscation)</div>
+            <div class="step" id="splurgeQ">Explore delay- <br>encrypted</div>
+            <div class="step" id="splurgeR">VDFs</div>
+            <div class="arrowDown" id="splurge7"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
+          </div>
+          <div class="future">
+            <div class="gap"></div><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"><div class="gap">The<br>future</div><div class="gap"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="bottomSpace"></div>
+    <script type="text/javascript" src="status.js"></script>
+  </body>
+</html>
+
+
+
+
+
