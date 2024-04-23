@@ -1,0 +1,1552 @@
+h1 {
+  text-align: center;
+}
+
+.roadmap {
+  margin: 20px;
+  display: grid;
+  grid-gap: 40px;
+}
+
+.rowGroup {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 15fr 1fr;
+}
+
+.past, .future {
+  display: grid;
+  grid-template-columns: 20px 1fr 20px;
+  grid-template-rows: 1fr 20px 1fr;
+}
+
+.gap {
+  grid-column: 1/5;
+  justify-self: center;
+}
+
+.description {
+  grid-column: 1/9;
+  grid-row: span 2;
+  font-size: calc(0.1em + 0.6vw);
+}
+
+.past, .future {
+  & .arrowL, .lineH, .arrowR {
+    align-self: center;
+  }
+}
+
+.future {
+  & .arrowR {
+    grid-column: 3;
+    grid-row: 1 / -1;
+  }
+  & .lineH {
+    grid-column: 2;
+    grid-row: 1 / -1;
+  }
+  & .gap {
+    grid-row: 3;
+  }
+}
+
+.future5 {
+  grid-template-rows: repeat(5, 1fr);
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  & .arrowR, .lineH  {
+    grid-row: 3;
+  }
+  & .gap {
+    grid-row: 4;
+    margin-top: -20%;
+  }
+}
+
+.future3 {
+  grid-template-rows: repeat(3, 1fr);
+  grid-row: 1 / -1;
+  grid-column: 1 / -1;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  & .arrowR, .lineH  {
+    grid-row: 2;
+  }
+  & .gap {
+    grid-row: 3;
+    margin-top: -20%;
+  }
+}
+
+.step,.mile, .quant, .track {
+  border: 2px solid black;
+  border-radius: 5px;
+  grid-column: span 2;
+  text-align: center;
+  width: calc(100% - 5px);
+  margin: auto;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  word-wrap: break-word;
+  font-size: calc(0.1em + 0.7vw);
+}
+
+.step {
+  background-color: white;
+  z-index: 1;
+}
+
+.mile {
+  padding-top: 0px;
+  padding-bottom: 0px;
+  height: calc(100% - 2px);
+  align-content: center;
+  border-radius: 20%;
+}
+
+.quant {
+  border-radius: unset;
+}
+
+.track, .trackGroup {
+  background-color: #fff1d1;
+  border: unset;
+}
+
+.track {
+  border-radius: unset;
+  padding: 3px;
+}
+
+.arrowRight, .arrowLeft, .arrowUp, .arrowDown {
+  display: grid;
+  align-items: center;
+}
+
+.arrowRight {
+  grid-template-columns: 1fr 20px;
+}
+
+.arrowLeft {
+  grid-template-columns: 20px 1fr;
+}
+
+.arrowUp {
+  grid-template-rows: 20px 1fr;
+}
+
+.arrowDown {
+  grid-template-rows: 1fr 20px;
+}
+
+.arrowL {
+  transform: rotate(180deg);
+}
+
+.arrowU {
+  transform: rotate(270deg);
+}
+
+.arrowD {
+  transform: rotate(90deg);
+}
+
+.lineH {
+  width: 100%;
+  height: 20px;
+}
+
+.lineV {
+  width: 20px;
+  height: 100%;
+}
+
+.merge {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(3, 1fr) 25px;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px 50px;
+}
+
+.progress-bar {
+  grid-row: -1;
+  grid-column: 1 / -1;
+}
+
+/*Beacon chain launch*/
+#mergeA {
+  grid-column: 1 / 5;
+}
+
+#merge1{
+  grid-column: 5 / 8;
+  width: 80%;
+  grid-row: 3;
+}
+
+/*Warmup fork (Altair)*/
+#mergeB {
+  grid-column: 7 / 12;
+  grid-row: 3;
+  width: 80%;
+}
+
+#merge2{
+  align-self: center;
+  grid-column: 11 / 16;
+  width: 90%;
+  justify-self: end;
+  grid-row: 3;
+}
+
+#merge3 {
+  grid-column: 15 / 17;
+  grid-row: 3 / 4;
+  justify-self: center;
+  & .lineV {
+    height: calc(50% - 10px);
+    align-self: start;
+  }
+}
+
+/*Merge! No more PoW*/
+#mergeC {
+  grid-column: 14 / 18;
+  grid-row: 2;
+}
+
+#merge4 {
+  align-self: center;
+  grid-row: 2;
+  grid-column: 18 / 20;
+  width: 75%;
+}
+
+#merge5 {
+  grid-row: 2;
+  grid-column: 19 / 20;
+  justify-self: center;
+  align-self: end;
+  height: 50%;
+}
+
+#merge6 {
+  grid-row: 2;
+  grid-column: 19 / 21;
+  width: 75%;
+  justify-self: end;
+  align-self: end;
+  margin-bottom: -10px;
+}
+
+/*Distributed validators*/
+#mergeD {
+  grid-column: 21 / 25;
+  grid-row: 1 / 3;
+}
+
+/*Withdrawals*/
+#mergeE {
+  grid-column: 21 / 25;
+  grid-row: 2 / 4;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+#merge7 {
+  grid-row: 1 / -1;
+  grid-column: 26 / 27;
+  justify-self: center;
+  margin-top: -10px;
+  height: calc(100% + 20px);
+}
+
+/*Secret leader election*/
+#mergeF {
+  grid-column: 28 / 32;
+  grid-row: 1 / 3;
+}
+
+/*Per-slot participant selection*/
+#mergeG {
+  grid-row: 2;
+  grid-column: 34 / 37;
+}
+
+#merge8 {
+  grid-row: 2;
+  grid-column: 37 / 42;
+}
+
+/*SSF specification*/
+#mergeH {
+  grid-row: 1;
+  grid-column: 37 / 41;
+  width: calc(100% - 20px);
+}
+
+#merge9 {
+  grid-row: 1;
+  grid-column: 41 / 44;
+  align-self: center;
+  margin-left: -10px;
+  width: calc(100% + 10px);
+}
+
+#merge10 {
+  grid-row: 1;
+  grid-column: 43 / 45;
+  align-self: end;
+  justify-self: center;
+  height:50%;
+  & .lineV {
+    align-self: end;
+  }
+}
+
+/*Implmentation*/
+#mergeI {
+  grid-row: 3;
+  grid-column: 37 / 41;
+  width: calc(100% - 20px);
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+#merge11 {
+  grid-row: 3;
+  grid-column: 41 / 44;
+  align-self: center;
+  margin-left: -10px;
+  width: calc(100% + 10px);
+}
+
+#merge12 {
+  grid-row: 3;
+  grid-column: 43 / 45;
+  align-self: start;
+  justify-self: center;
+  height:50%;
+  & .lineV {
+    align-self: start;
+  }
+}
+
+/*Single slot finality (SSF)*/
+#mergeJ {
+  grid-row: 2;
+  grid-column: 42 / 46;
+}
+
+#merge13 {
+  grid-row: 2;
+  grid-column: 46 / 48;
+  width: 75%;
+  align-self: center;
+}
+
+#merge14 {
+  height: 50%;
+  grid-row: 2;
+  grid-column: 47 / 48;
+  align-self: end;
+  justify-self: center;
+}
+
+#merge15 {
+  grid-row: 2 / 4;
+  grid-column: 47 / 49;
+  justify-self: end;
+  width: 75%;
+}
+
+/*Ideal quantum-safe signatures*/
+#mergeK {
+  grid-row: 1 / 3;
+  grid-column: 49 / 53;
+}
+
+/*Increase validator count*/
+#mergeL {
+  grid-row: 2 / 4;
+  grid-column: 49 / 53;
+}
+
+.surge {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px 50px;
+  & .description {
+    grid-row: span 3;
+  }
+}
+
+/*Optimistic rollup fraud provers*/
+#surgeA {
+  grid-row: 4;
+  grid-column: 9 / 41;
+  width: 95%;
+  height: 16px;
+}
+
+/*ZK-EVMs*/
+#surgeB {
+  grid-row: 5;
+  grid-column:9 / 41;
+  width: 95%;
+  height: 16px;
+}
+
+/*EIP-4844 specification*/
+#surgeC {
+  grid-row: 1 / 3;
+  grid-column: 14 / 18;
+}
+
+#surge1 {
+  grid-column: 18 / 21;
+  grid-row: 1 / 3;
+}
+
+#surge2 {
+  grid-column: 19 / 20;
+  grid-row: 1 / -1;
+  justify-self: center;
+  margin-top: -10px;
+  height: calc(100% + 20px);
+  z-index: 2;
+}
+
+/*Prototype*/
+#surgeD {
+  grid-row: 3;
+  grid-column: 18 / 21;
+  width: 100%;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  z-index: 3;
+}
+
+/*EIP-4844 implementation*/
+#surgeE {
+  grid-row: 1 / 3;
+  grid-column: 21 / 25;
+}
+
+#surge3 {
+  grid-row: 1 / 3;
+  grid-column: 25 / 28;
+}
+
+/*Basic rollup scaling*/
+#surgeF {
+  grid-row: 1 / 3;
+  grid-column: 28 / 32;
+  height: 50%;
+}
+
+#surge4 {
+  justify-self: center;
+  grid-column: 29 / 31;
+  grid-row: 2 / 5;
+  height: calc(67% + 7px);
+  align-self: center;
+  margin-bottom: -16px;
+  z-index: 2;
+}
+
+#surge5 {
+  justify-self: center;
+  grid-column: 29 / 31;
+  grid-row: 5;
+  height: 20px;
+  align-self: center;
+  z-index: 2;
+}
+
+/*Limited training wheels (diverse 6-of-8 or stricter)*/
+#surgeG {
+  grid-row: 3;
+  grid-column: 26 / 34;
+  width: 75%;
+  z-index: 3;
+}
+
+/*peerDAS*/
+#surgeH {
+  grid-column: 35 / 39;
+  grid-row: 1 / 3;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+/*Efficient DA self-healing*/
+#surgeI {
+  grid-column: 35 / 39;
+  grid-row: 2 / 4;
+}
+
+#surge6 {
+  grid-column: 39 / 42;
+  grid-row: 1 / 3;
+}
+
+#surge7 {
+  grid-column: 39 / 41;
+  width: 75%;
+  grid-row: 2 / 4;
+  align-self: center;
+}
+
+#surge8 {
+  grid-column: 40 / 41;
+  grid-row: 2;
+  justify-self: center;
+}
+
+/*Full rollup scaling*/
+#surgeJ {
+  grid-column: 42 / 46;
+  grid-row: 1 / 3;
+  height: 50%;
+}
+
+/*No training wheels*/
+#surgeK {
+  grid-column: 40 / 44;
+  grid-row: 3;
+  width: 75%;
+}
+
+#surge9 {
+  grid-row: 4;
+  grid-column: 40 / 44;
+  width: 94.5%;
+  align-self: center;
+  justify-self: end;
+}
+
+#surge10 {
+  grid-row: 5;
+  grid-column: 40 / 44;
+  width: 94.5%;
+  align-self: center;
+  justify-self: end;
+}
+
+#surge11 {
+  grid-row: 2 / 6;
+  grid-column: 43 / 45;
+  justify-self: center;
+  height: 75%;
+  align-self: center;
+}
+
+.dashH {
+  position: relative;
+}
+
+.dashH::after {
+  content: '';
+  position: absolute;
+  top: 47%;
+  left: 0;
+  background-image: url('lineDash.png');
+  background-repeat: repeat-x;
+  height: 2px;
+  width: 100%;
+}
+
+#surge12 {
+  grid-row: 5;
+  grid-column: 44 / -1;
+  margin-right: -65px;
+}
+
+.dashV {
+  position: relative;
+}
+
+.dashV::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  background-image: url(lineDashV.png);
+  background-repeat: repeat-y;
+  width: 2px;
+  height: 100%;
+}
+
+#surge13 {
+  grid-row: 5;
+  top: 50%;
+  height: calc(50% + 50px);
+}
+
+/*Q-sale, no-setup commitments*/
+#surgeL {
+  grid-column: 49 / 53;
+  grid-row: 1 / 3;
+}
+
+
+/*Improve cross-rollup standards + interop*/
+#surgeM {
+  grid-column: 49 / 53;
+  grid-row: 3;
+}
+
+
+.scourge {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: 2fr 1fr;
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px 50px;
+  & .description {
+    grid-row: span 1;
+  }
+}
+
+/*Track container (MEV track)*/
+#scourgeA {
+  grid-column: 13 / 53;
+  display: grid;
+  grid-template-columns: repeat(40, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border-radius: 10px;
+  margin-right: -15px;
+  padding-right: 15px;
+  grid-row: 1 / 2;
+}
+
+/*MEV track*/
+#scourgeB {
+  grid-row: 1;
+  grid-column: 2 / 6;
+  text-align: left;
+}
+
+/*Extra-protocol MEV markets*/
+#scourgeC {
+  grid-column: 2 / 6;
+  grid-row: 2;
+}
+
+#scourge1 {
+  grid-column: 6 / 9;
+  grid-row: 2;
+}
+
+/*Inclusion lists*/
+#scourgeD {
+  grid-column: 9 / 13;
+  grid-row: 1;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+#scourge2 {
+  grid-column: 13 / 21;
+  grid-row: 1;
+  align-self: center;
+}
+
+#scourge3 {
+  grid-column: 21;
+  grid-row: 1 / 2;
+  align-self: end;
+  height: 50%;
+  margin-left: -10px;
+}
+
+#scourge4 {
+  grid-column: 21 / 30;
+  grid-row: 1 / 3;
+}
+
+/*Explore ePBS*/
+#scourgeE {
+  grid-column: 9 / 13;
+  grid-row: 2;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
+#scourge5 {
+  grid-column: 13 / 16;
+  grid-row: 2;
+}
+
+/*Explore MEV burn in ePBS*/
+#scourgeF {
+  grid-column: 16 / 20;
+  grid-row: 2;
+}
+
+#scourge6 {
+  grid-column: 20;
+  grid-row: 2 / 3;
+  align-self: center;
+}
+
+#scourge7 {
+  grid-column: 21;
+  grid-row: 2 / 3;
+  align-self: start;
+  height: 50%;
+  margin-left: -10px;
+}
+
+
+/*Distributed block building*/
+#scourgeG {
+  grid-column: 23 / 27;
+  grid-row: 1;
+}
+
+#scourge8 {
+  grid-column: 27 / 29;
+  width: 75%;
+  grid-row: 1 / 2;
+  align-self: center;
+}
+
+#scourge9 {
+  grid-column: 27 / 30;
+  grid-row: 1 / 2;
+  align-self: end;
+  height: 50%;
+  justify-self: center;
+}
+
+/*Exsplore execution tickets*/
+#scourgeH {
+  grid-column: 23 / 27;
+  grid-row: 2;
+}
+
+#scourge10 {
+  grid-column: 27 / 30;
+  grid-row: 2 / 3;
+  width: 50%;
+  align-self: center;
+}
+
+#scourge11 {
+  grid-column: 27 / 30;
+  grid-row: 2 / 3;
+  height: 50%;
+  justify-self: center;
+}
+
+/*Endgame block production <br>pipeline*/
+#scourgeI {
+  grid-column: 30 / 34;
+  grid-row: 1 / 3;
+  height: 50%;
+}
+
+/*App-layer MEV minimzation*/
+#scourgeJ {
+  grid-column: 37 / 41;
+  grid-row: 1;
+}
+
+/*Explore preconfimations*/
+#scourgeK {
+  grid-column: 37 / 41;
+  grid-row: 2;
+}
+
+
+/*Track container (Staking economics / experiance track)*/
+#scourgeL {
+  display: grid;
+  grid-template-columns: repeat(34, 1fr);
+  grid-column: 13 / 47;
+  grid-row: 2;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  border-radius: 10px;
+}
+
+/*Staking economics / experiance track*/
+ #scourgeM {
+  grid-column: 2 / 6;
+  text-align: left;
+ }
+
+/*Raise max effective balance*/
+#scourgeN {
+  grid-column: 9 / 13;
+}
+
+/*Improve node operator usability*/
+#scourgeO {
+  grid-column: 16 / 20;
+}
+
+/*Explore total stake capping*/
+#scourgeP {
+  grid-column: 23 / 27;
+}
+
+/*Explore solutions to liquid staking centralization*/
+#scourgeQ {
+  grid-column: 30 / 34;
+}
+
+#scourge12 {
+  grid-column: 19 / 20;
+  grid-row: 1 / -1;
+  justify-self: center;
+  margin-top: -10px;
+  height: calc(100% + 20px);
+}
+
+#scourge13 {
+  grid-row: 1 / -1;
+  grid-column: 1;
+}
+
+#scourge14 {
+  align-self: end;
+  height: calc(25% + 30px);
+  margin-bottom: -30px;
+  grid-row: 2;
+  grid-column: 29 / 31;
+  justify-self: center;
+  & .dashV {
+    height: 100%;
+  }
+}
+
+.verge {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px 50px;
+  & .description {
+    grid-column: 1 / 16;
+    grid-row: 1 / 3;
+  }
+}
+
+/*Most serious EVM DoS issues solved*/
+#vergeA {
+  grid-column: 7 / 11;
+  grid-row: 3;
+}
+
+/*Basic light client support (sync <br>committees)*/
+#vergeB {
+  grid-column: 14 / 18;
+  grid-row: 3;
+}
+
+#verge1 {
+  grid-column: 18 / 21;
+  grid-row: 3;
+}
+
+/*Verkle tree spec + impl*/
+#vergeC {
+  grid-column: 21 / 25;
+  grid-row: 2;
+}
+
+#verge2 {
+  grid-column: 25 / 28;
+  grid-row: 2;
+}
+
+/*SNARK based light clients*/
+#vergeD {
+  grid-column: 21 / 25;
+  grid-row: 3;
+}
+
+#verge3 {
+  grid-column: 25 / 26;
+  grid-row: 3;
+  align-self: center;
+}
+
+#verge4 {
+  grid-column: 25 / 27;
+  grid-row: 3;
+  justify-self: center;
+  align-self: end;
+  height: calc(50% + 2px);
+  margin-bottom: -2px;
+}
+
+#verge5 {
+  grid-column: 26 / 33;
+  grid-row: 3;
+  align-self: end;
+  margin-bottom: -11px;
+}
+
+#verge6 {
+  grid-column: 32 / 34;
+  grid-row: 3;
+  justify-self: center;
+  align-self: end;
+  height: calc(50% + 2px);
+  margin-bottom: -2px;
+}
+
+#verge7 {
+  grid-column: 33 / 35;
+  grid-row: 3;
+}
+
+#verge8 {
+  grid-column: 29 / 31;
+  grid-row: 1;
+  justify-self: center;
+  height: 50%;
+  align-self: end;
+}
+
+#verge9 {
+  grid-column: 29 / 31;
+  grid-row: 3;
+  justify-self: center;
+  height: 50%;
+  align-self: start;
+}
+
+/*Code chunking + gas cost updates*/
+#vergeE {
+  grid-column: 28 / 32;
+  grid-row: 1;
+}
+
+/*Verkle trees*/
+#vergeF {
+  grid-column: 28 / 32;
+  grid-row: 2;
+}
+
+#verge10 {
+  grid-column: 32 / 35;
+  grid-row: 2;
+}
+
+/*Transition spec+ impl*/
+#vergeG {
+  grid-column: 28 / 32;
+  grid-row: 3;
+}
+
+/*SNARK for L1 EVM*/
+#vergeH {
+  grid-column: 35 / 39;
+  grid-row: 1;
+}
+
+#verge11 {
+  grid-column: 39 / 49;
+  grid-row: 1;
+}
+
+#verge12 {
+  grid-column: 39 / 42;
+  grid-row: 1 / 3;
+  height: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+/*SNARK for Verkle proofs*/
+#vergeI {
+  grid-column: 35 / 39;
+  grid-row: 2;
+}
+
+#verge13 {
+  grid-column: 39 / 42;
+  grid-row: 1 / 4;
+  align-self: center;
+}
+
+/*SNARK for consensus state transition*/
+#vergeJ {
+  grid-column: 35 / 39;
+  grid-row: 3;
+}
+
+#verge14 {
+  grid-column: 39 / 41;
+  grid-row: 3;
+  width: 75%;
+  align-self: center;
+}
+
+#verge15 {
+  grid-column: 39 / 42;
+  grid-row: 2 / 4;
+  height: 50%;
+  align-self: center;
+  justify-self: center;
+}
+
+/*Fully SNARKed Ethereum*/
+#vergeK {
+  grid-column: 42 / 46;
+  grid-row: 2;
+}
+
+#verge16 {
+  grid-column: 46 / 49;
+  grid-row: 2;
+}
+
+/*SNARK / STARK ASICs*/
+#vergeL {
+  grid-column: 42 / 46;
+  grid-row: 3;
+}
+
+/*Explore EVM verification precompile*/
+#vergeM {
+  grid-column: 49 / 53;
+  grid-row: 1;
+}
+
+/*Quantum-safe SNARKs (eg. <br>STARKs)*/
+#vergeN {
+  grid-column: 49 / 53;
+  grid-row: 2;
+}
+
+#verge17 {
+  grid-column: 34 / 53;
+  grid-row: 1;
+  align-self: start;
+  margin-right: -64px;
+}
+
+#verge18 {
+  align-self: end;
+  grid-row: 1;
+  bottom: 100%;
+  height: 50px;
+}
+
+#verge19 {
+  grid-column: 33 / 35;
+  grid-row: 1;
+  height: 50%;
+}
+
+#verge20 {
+  grid-column: 34 / 35;
+  grid-row: 1;
+}
+
+#verge21 {
+  grid-column: 32 / 34;
+  grid-row: 1 / 3;
+  height: calc(75% + 35px);
+  margin-top: -35px;
+}
+
+#verge22 {
+  grid-column: 43 / 45;
+  grid-row: 1 / 3;
+  height: calc(50% + 35px);
+  margin-top: -35px;
+}
+
+#verge23 {
+  margin-top: -35px;
+  align-self: start;
+  grid-column: 30 / 44;
+  grid-row: 1;
+}
+
+#verge24 {
+  grid-row: 2 / 4;
+  grid-column: 19 / 27;
+}
+
+#verge25 {
+  grid-row: 2;
+  grid-column: 26 / 28;
+  height: 45%;
+  align-self: end;
+  margin-bottom: 5%;
+  align-items: unset;
+  & .arrowU {
+    justify-self: center;
+  }
+}
+
+#verge26 {
+  grid-column: 18 / 20;
+  grid-row: 3 / -1;
+  height: calc(100% + 10px);
+  margin-top: -7%;
+}
+
+.purge {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px 50px;
+  & .description {
+    grid-column: 1 / 11;
+  }
+}
+
+/*Eliminate most gas refunds*/
+#purgeA {
+  grid-column: 7 / 11;
+  grid-row: 4;
+}
+
+/*EIP-4444 specification*/
+#purgeB {
+  grid-column: 14 / 18;
+  grid-row: 3;
+}
+
+#purge1 {
+  grid-column: 18 / 21;
+  grid-row: 3;
+}
+
+/*Beacon chain fast sync*/
+#purgeC {
+  grid-column: 14 / 18;
+  grid-row: 4;
+}
+
+#purge2 {
+  grid-column: 18 / 20;
+  grid-row: 4;
+  align-self: center;
+  width: 75%;
+}
+
+#purge3 {
+  grid-column: 19 / 20;
+  grid-row: 4;
+  justify-self: center;
+  align-self: end;
+  height: calc(50% + 5px);
+  margin-bottom: -5px;
+}
+
+#purge4 {
+  grid-column: 19 / 20;
+  grid-row: 4;
+  align-self: end;
+  margin-bottom: -15px;
+  width: 50%;
+  justify-self: end;
+}
+
+#purge5 {
+  grid-column: 20 / 26;
+  grid-row: 4;
+  align-self: end;
+  margin-bottom: -15px;
+}
+
+#purge6 {
+  grid-column: 25 / 27;
+  grid-row: 4;
+  align-self: end;
+  margin-bottom: -5px;
+  justify-self: center;
+}
+
+
+/*EIP-4444 implementation*/
+#purgeD {
+  grid-column: 21 / 25;
+  grid-row: 3;
+}
+
+#purge7 {
+  grid-column: 25 / 26;
+  grid-row: 3;
+  align-self: center;
+}
+
+#purge8 {
+  grid-column: 25 / 27;
+  grid-row: 3;
+  height: 50%;
+  align-self: end;
+  justify-self: center;
+}
+
+#purge9 {
+  grid-column: 26 / 28;
+  grid-row: 3 / 5;
+}
+
+/*P2P history (eg. Portal)*/
+#purgeE {
+  grid-column: 21 / 25;
+  grid-row: 4;
+}
+
+#purge10 {
+  grid-column: 25 / 26;
+  grid-row: 4;
+  align-self: center;
+}
+
+#purge11 {
+  grid-column: 25 / 27;
+  grid-row: 4;
+  align-self: start;
+  justify-self: center;
+}
+
+/*track group: EVM simplification track*/
+#purgeF {
+  grid-column: 22 / 38;
+  grid-row: 1 / 3;
+  height: 75%;
+  align-self: center;
+  display: grid;
+  grid-template-rows: 14px 1fr;
+  grid-template-columns: repeat(16, 1fr);
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/*EVM simplification track*/
+#purgeG {
+  grid-column: 1 / -1;
+  grid-row: 1;
+}
+
+/*Ban SELF-DESTRUCT*/
+#purgeH {
+  grid-column: 1 / 5;
+  grid-row: 2;
+
+}
+
+/*Simplify gas mechanics*/
+#purgeI {
+  grid-column: 7 / 11;
+  width: 100%;
+  grid-row: 2;
+}
+
+/*Precompiles EVM impls*/
+#purgeJ {
+  grid-column: 13 / 17;
+  grid-row: 2;
+}
+
+#purge16 {
+  grid-column: 38 / 40;
+  grid-row: 1 / 3;
+  align-self: center;
+}
+
+#purge17 {
+  grid-column: 39 / 41;
+  grid-row: 2 / 5;
+  justify-self: center;
+  height: calc(100% + 70px);
+}
+
+/*History expiry (EIP-4444)*/
+#purgeK {
+  grid-column: 28 / 32;
+  grid-row: 3 / 5;
+  height: 75%;
+}
+
+/*Address space extension*/
+#purgeL {
+  grid-column: 42 / 46;
+  grid-row: 1;
+}
+
+#purge12 {
+  grid-column: 46 / 49;
+  grid-row: 1;
+}
+
+/*LOG reform*/
+#purgeM {
+  grid-column: 42 / 46;
+  grid-row: 2 / 4;
+  height: 30%;
+  align-content: center;
+}
+
+/*Remove old tx types*/
+#purgeN {
+  grid-column: 42 / 46;
+  grid-row: 4;
+}
+
+#purge13 {
+  grid-column: 46 / 49;
+  grid-row: 4;
+}
+
+/*State expiry*/
+#purgeO {
+  grid-column: 49 / 53;
+  grid-row: 1;
+  align-content: center;
+  height: 65%;
+}
+
+/*Serialization harmonization*/
+#purgeP {
+  grid-column: 49 / 53;
+  grid-row: 4;
+}
+
+#purge14 {
+  grid-column: 19 / 23;
+  grid-row: 1 / 3;
+  height: calc(100% + 14px);
+  margin-right: -10%;
+}
+
+#purge15 {
+  grid-column: 18 / 20;
+  grid-row: 1;
+  margin-bottom: -6px;
+  margin-top: -55px;
+}
+
+.splurge {
+  display: grid;
+  grid-template-columns: repeat(52, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 10px 50px;
+  & .description {
+    grid-row: 1;
+  }
+}
+
+/* -> needs to be same as bacground background-color*/
+#ingap {
+  grid-row: 2;
+  grid-column: 1/3;
+  color: whitesmoke;
+}
+
+/*EIP-1559*/
+#splurgeA {
+  grid-row: 1 / 3;
+  grid-column: 7 / 11;
+  height: 15%;
+  align-content: center;
+}
+
+#splurge1 {
+  grid-row: 1 / 3;
+  grid-column: 11 / 42;
+}
+
+/*container EIP-4337 specification*/
+#splurgeBB {
+  grid-row: 2;
+  grid-column: 14 / 18;
+  display: grid;
+  grid-template-rows: 14px 1fr;
+  grid-template-columns: repeat(4, 1fr);
+  align-self: center;
+}
+
+/*EIP-4337 specification*/
+#splurgeB {
+  grid-row: 2;
+  grid-column: 1 / 5;
+}
+
+#splurge2 {
+  grid-row: 2;
+  grid-column: 18 / 22;
+  margin-top: 14px;
+  z-index: 2;
+  margin-right: -7px;
+}
+
+/*track group EVM improvements track*/
+#splurgeC {
+  display: grid;
+  grid-template-rows: 14px 1fr;
+  grid-template-columns: repeat(16, 1fr);
+  grid-row: 1;
+  grid-column: 22 / 38;
+  height: 75%;
+  align-self: center;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/*EVM improvements track*/
+#splurgeD {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+/*EOF*/
+#splurgeE {
+  grid-row: 2;
+  grid-column: 1 / 5;
+  align-content: center;
+  height: 35%;
+}
+
+/*Big modular arithmetic*/
+#splurgeF {
+  grid-row: 2;
+  grid-column: 7 / 11;
+  width: 100%;
+}
+
+/*Further EVM improvements*/
+#splurgeG {
+  grid-row: 2;
+  grid-column: 13 / 17;
+}
+
+#splurge5 {
+  grid-row: 1;
+  grid-column: 38 / 42;
+}
+
+/*Account abstraction track*/
+#splurgeH {
+  display: grid;
+  grid-template-rows: 14px 1fr;
+  grid-template-columns: repeat(16, 1fr);
+  grid-row: 2;
+  grid-column: 22 / 38;
+  height: 75%;
+  align-self: center;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+/*EVM improvements track*/
+#splurgeI {
+  grid-row: 1;
+  grid-column: 1 / -1;
+}
+
+/*ERC-4337*/
+#splurgeJ {
+  grid-row: 2;
+  grid-column: 1 / 5;
+  align-content: center;
+  height: 35%;
+}
+
+#splurge3 {
+  grid-row: 2;
+  grid-column: 5 / 7;
+}
+
+/*Voluntary EOA conversion*/
+#splurgeK {
+  grid-row: 2;
+  grid-column: 7 / 11;
+  width: 100%;
+}
+
+#splurge4 {
+  grid-row: 2;
+  grid-column: 11 / 13;
+}
+
+/*In-protocol enshrining*/
+#splurgeL {
+  grid-row: 2;
+  grid-column: 13 / 17;
+}
+
+#splurge6 {
+  grid-row: 2;
+  grid-column: 38 / 42;
+}
+
+/*Endgame EVM*/
+#splurgeM {
+  grid-row: 1;
+  grid-column: 42 / 46;
+  height: 50%;
+}
+
+/*Endgame EIP-1559*/
+#splurgeN {
+  grid-row: 1 / 3;
+  grid-column: 42 / 46;
+}
+
+/*Endgame account abstraction*/
+#splurgeO {
+  grid-row: 2;
+  grid-column: 42 / 46;
+  height: 50%;
+}
+
+/*Explore deep crypto (eg. <br>obfuscation)*/
+#splurgeP {
+  grid-row: 1;
+  grid-column: 49 / 53;
+}
+
+/*Explore delay- encrypted*/
+#splurgeQ {
+  grid-row: 1 / 3;
+  grid-column: 49 / 53;
+}
+
+/*VDFs*/
+#splurgeR {
+  grid-row: 2;
+  grid-column: 49 / 53;
+  height: 30%;
+  align-content: center;
+}
+
+#splurge7 {
+  grid-row: 1;
+  height: 50%;
+  grid-column: 39 / 41;
+  justify-self: center;
+}
+
+
