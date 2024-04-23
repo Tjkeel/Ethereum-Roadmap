@@ -176,6 +176,9 @@ h1 {
 .progress-bar {
   grid-row: -1;
   grid-column: 1 / -1;
+  outline: solid;
+  outline-color: white;
+  border-radius: 5px;
 }
 
 /*Beacon chain launch*/
