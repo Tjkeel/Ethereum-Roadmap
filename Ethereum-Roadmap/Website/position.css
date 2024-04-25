@@ -168,17 +168,16 @@ h1 {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
   grid-template-rows: repeat(3, 1fr) 25px;
-  border: 2px solid black;
-  border-radius: 25px;
   padding: 10px 50px;
+  background: rgba(0, 0, 0, 0.3);
+  padding: 10px;
+  border-radius: 10px;
+
 }
 
 .progress-bar {
   grid-row: -1;
   grid-column: 1 / -1;
-  outline: solid;
-  outline-color: white;
-  border-radius: 5px;
 }
 
 /*Beacon chain launch*/
