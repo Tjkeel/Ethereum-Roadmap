@@ -11,18 +11,7 @@ h1 {
 .rowGroup {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 15fr 1fr;
-}
-
-.past, .future {
-  display: grid;
-  grid-template-columns: 20px 1fr 20px;
-  grid-template-rows: 1fr 20px 1fr;
-}
-
-.gap {
-  grid-column: 1/5;
-  justify-self: center;
+  grid-template-columns: 1fr;
 }
 
 .description {
@@ -31,58 +20,13 @@ h1 {
   font-size: calc(0.1em + 0.6vw);
 }
 
-.past, .future {
-  & .arrowL, .lineH, .arrowR {
-    align-self: center;
-  }
-}
-
-.future {
-  & .arrowR {
-    grid-column: 3;
-    grid-row: 1 / -1;
-  }
-  & .lineH {
-    grid-column: 2;
-    grid-row: 1 / -1;
-  }
-  & .gap {
-    grid-row: 3;
-  }
-}
-
-.future5 {
-  grid-template-rows: repeat(5, 1fr);
-  grid-row: 1 / -1;
-  grid-column: 1 / -1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  & .arrowR, .lineH  {
-    grid-row: 3;
-  }
-  & .gap {
-    grid-row: 4;
-    margin-top: -20%;
-  }
-}
-
-.future3 {
-  grid-template-rows: repeat(3, 1fr);
-  grid-row: 1 / -1;
-  grid-column: 1 / -1;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  & .arrowR, .lineH  {
-    grid-row: 2;
-  }
-  & .gap {
-    grid-row: 3;
-    margin-top: -20%;
-  }
+.gap {
+  grid-column: 1/5;
+  justify-self: center;
 }
 
 .step,.mile, .quant, .track {
-  border: 2px solid black;
+  border: 2px solid white;
   border-radius: 5px;
   grid-column: span 2;
   text-align: center;
@@ -91,18 +35,18 @@ h1 {
   padding-top: 2px;
   padding-bottom: 2px;
   word-wrap: break-word;
-  font-size: calc(0.1em + 0.7vw);
+  font-size: calc(0.1em + 0.6vw);
 }
 
 .step {
-  background-color: white;
   z-index: 1;
+  background-color: rgb(89 89 89);
 }
 
 .mile {
   padding-top: 0px;
   padding-bottom: 0px;
-  height: calc(100% - 2px);
+  height: calc(100% - 4px);
   align-content: center;
   border-radius: 20%;
 }
@@ -127,41 +71,75 @@ h1 {
 }
 
 .arrowRight {
-  grid-template-columns: 1fr 20px;
+  grid-template-columns: 1fr 10px;
+  & .lineH {
+    width: calc(100% + 10px);
+    height: 50%;
+    align-self: end;
+  }
 }
 
 .arrowLeft {
-  grid-template-columns: 20px 1fr;
+  grid-template-columns: 10px 1fr;
+  & .lineH {
+    width: calc(100% + 10px);
+  }
 }
 
 .arrowUp {
-  grid-template-rows: 20px 1fr;
+  grid-template-rows: 10px 1fr;
+  margin-top: 1px;
+  & .lineV {
+    width: 0px;
+    justify-self: center;
+    height: calc(100% + 10px);
+    margin-top: -10px;
+    align-self: start;
+  }
 }
 
 .arrowDown {
-  grid-template-rows: 1fr 20px;
+  grid-template-rows: 1fr 10px;
+  margin-bottom: 1px;
+  & .lineV {
+    width: 0px;
+    justify-self: center;
+    height: calc(100% + 10px);
+    margin-bottom: -10px;
+    align-self: end;
+  }
+}
+
+.arrowR {
+  margin-top: -2px;
+  align-self: center;
 }
 
 .arrowL {
   transform: rotate(180deg);
+  align-self: center;
 }
 
 .arrowU {
   transform: rotate(270deg);
+  justify-self: center;
 }
 
 .arrowD {
   transform: rotate(90deg);
+  justify-self: center;
 }
 
 .lineH {
   width: 100%;
-  height: 20px;
+  border-top: 2px solid white;
+  height: 0px;
+  align-self: center;
 }
 
 .lineV {
-  width: 20px;
   height: 100%;
+  border-left: 2px solid white;
 }
 
 .merge {
@@ -183,13 +161,20 @@ h1 {
 /*Beacon chain launch*/
 #mergeA {
   grid-column: 1 / 5;
-}
-
-#merge1{
-  grid-column: 5 / 8;
-  width: 80%;
   grid-row: 3;
 }
+
+#merge1 {
+  grid-column: 5 / 8;
+  grid-row: 3;
+  width: 80%;
+}
+
+#merge1Arrow {
+  grid-column: 5 / 8;
+  grid-row: 3;
+}
+
 
 /*Warmup fork (Altair)*/
 #mergeB {
@@ -199,10 +184,7 @@ h1 {
 }
 
 #merge2{
-  align-self: center;
   grid-column: 11 / 16;
-  width: 90%;
-  justify-self: end;
   grid-row: 3;
 }
 
@@ -210,10 +192,7 @@ h1 {
   grid-column: 15 / 17;
   grid-row: 3 / 4;
   justify-self: center;
-  & .lineV {
-    height: calc(50% - 10px);
-    align-self: start;
-  }
+  height: 50%;
 }
 
 /*Merge! No more PoW*/
@@ -223,7 +202,6 @@ h1 {
 }
 
 #merge4 {
-  align-self: center;
   grid-row: 2;
   grid-column: 18 / 20;
   width: 75%;
@@ -232,15 +210,16 @@ h1 {
 #merge5 {
   grid-row: 2;
   grid-column: 19 / 20;
-  justify-self: center;
+  justify-self: end;
   align-self: end;
   height: 50%;
+  width: 50%;
 }
 
 #merge6 {
   grid-row: 2;
   grid-column: 19 / 21;
-  width: 75%;
+  width: calc(75% + 2px);
   justify-self: end;
   align-self: end;
   margin-bottom: -10px;
@@ -277,27 +256,24 @@ h1 {
 /*Per-slot participant selection*/
 #mergeG {
   grid-row: 2;
-  grid-column: 34 / 37;
+  grid-column: 34 / 38;
 }
 
 #merge8 {
   grid-row: 2;
-  grid-column: 37 / 42;
+  grid-column: 38 / 42;
 }
 
 /*SSF specification*/
 #mergeH {
   grid-row: 1;
   grid-column: 37 / 41;
-  width: calc(100% - 20px);
 }
 
 #merge9 {
   grid-row: 1;
   grid-column: 41 / 44;
   align-self: center;
-  margin-left: -10px;
-  width: calc(100% + 10px);
 }
 
 #merge10 {
@@ -315,7 +291,6 @@ h1 {
 #mergeI {
   grid-row: 3;
   grid-column: 37 / 41;
-  width: calc(100% - 20px);
   padding-top: 9px;
   padding-bottom: 9px;
 }
@@ -324,8 +299,6 @@ h1 {
   grid-row: 3;
   grid-column: 41 / 44;
   align-self: center;
-  margin-left: -10px;
-  width: calc(100% + 10px);
 }
 
 #merge12 {
@@ -354,10 +327,11 @@ h1 {
 
 #merge14 {
   height: 50%;
+  width: 50%;
   grid-row: 2;
   grid-column: 47 / 48;
   align-self: end;
-  justify-self: center;
+  justify-self: end;
 }
 
 #merge15 {
@@ -1364,7 +1338,7 @@ h1 {
 #ingap {
   grid-row: 2;
   grid-column: 1/3;
-  color: whitesmoke;
+  color: #ffffff00;
 }
 
 /*EIP-1559*/

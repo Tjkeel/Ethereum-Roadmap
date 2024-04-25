@@ -41,7 +41,7 @@ function progress(group) {
     if (group[step][1] != false) {
       ident = group[step][0]
       prog = group[step][1].slice(-1)
-      grad = `linear-gradient(90deg, rgb(213 232 212) ${prog}%, rgb(250 250 250 / 0%) ${prog}%)`
+      grad = `linear-gradient(90deg, rgb(153 198 109) ${prog}%, rgb(250 250 250 / 0%) ${prog}%)`
       document.getElementById(ident).style.background = grad;
     }
   }
