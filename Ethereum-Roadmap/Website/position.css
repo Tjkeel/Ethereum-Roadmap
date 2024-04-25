@@ -20,6 +20,15 @@ h1 {
   font-size: calc(0.1em + 0.6vw);
 }
 
+.description-container {
+  margin: 25px auto;
+  background: rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
 .gap {
   grid-column: 1/5;
   justify-self: center;

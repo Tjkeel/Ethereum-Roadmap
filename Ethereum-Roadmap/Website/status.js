@@ -48,3 +48,28 @@ function progress(group) {
 }
 
 progress(mergeStatus)
+
+// Function to toggle display of description containers
+function toggleDisplay(id) {
+    var element = document.getElementById(id);
+    if (element.style.display === 'none' || element.style.display === '') {
+        element.style.display = 'block'; // Show the container
+    } else {
+        element.style.display = 'none'; // Hide the container
+    }
+}
+
+// Add event listeners to steps after DOM is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+    const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+
+    // Iterate over each step and setup event listeners
+    steps.forEach(function(step) {
+        let stepId = 'merge' + step; // ID of the step, e.g., 'mergeA'
+        let descriptionId = stepId + '-description'; // ID of the corresponding description, e.g., 'mergeA-description'
+
+        document.getElementById(stepId).addEventListener('click', function() {
+            toggleDisplay(descriptionId);
+        });
+    });
+});
