@@ -47,7 +47,7 @@ h1 {
 .step:hover, .mile:hover, .quant:hover {
   filter: brightness(1.15);
   backdrop-filter: brightness(1.1);
-  border: 3px solid white;
+  border-width: 3px;
 }
 
 .mile {
@@ -61,6 +61,10 @@ h1 {
 .quant {
   border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
   border-image-slice: 1;
+}
+
+.mile, .quant {
+  background-color: #00000069;;
 }
 
 .track, .trackGroup {
