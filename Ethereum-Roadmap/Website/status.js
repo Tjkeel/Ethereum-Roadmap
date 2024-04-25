@@ -66,6 +66,21 @@ function showDescription(id) {
         element.style.display = 'block'; // Set display to block before adding 'show'
         setTimeout(() => { element.classList.add('show'); }, 10); // Add 'show' class to start fade in
     }, 500); // Ensure other descriptions fade out before showing the new one
+    updateActiveStep(id);
+}
+
+// Update the active step style
+function updateActiveStep(activeDescriptionId) {
+    const allSteps = document.querySelectorAll('.step');
+    allSteps.forEach(step => {
+        // Extract description ID from step ID
+        const descriptionId = `merge${step.id.replace('merge', '')}-description`;
+        if (descriptionId === activeDescriptionId) {
+            step.classList.add('active'); // Add active class if it's the current step
+        } else {
+            step.classList.remove('active'); // Remove active class from other steps
+        }
+    });
 }
 
 // Variables to manage automatic cycling and user interaction
@@ -87,7 +102,6 @@ function startCyclingDescriptions() {
 
 // Add event listeners to steps after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    // Delay the initial display and cycling of descriptions
     setTimeout(() => {
         showDescription('mergeA-description'); // Show the first description with fade in
         startCyclingDescriptions(); // Start cycling descriptions after initial display
@@ -105,5 +119,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+
 
 
