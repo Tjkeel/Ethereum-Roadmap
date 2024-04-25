@@ -57,7 +57,7 @@
             <div class="step" id="mergeH">SSF <br>specification</div>
             <div class="lineH" id="merge9"></div>
             <div class="arrowDown" id="merge10"><div class="lineV"></div><img class="arrowD" src="arrow.png"></div>
-            <div class="step" id="mergeI">Implmentation</div>
+            <div class="step" id="mergeI">Implementation</div>
             <div class="lineH" id="merge11"></div>
             <div class="arrowUp" id="merge12"><img class="arrowU" src="arrow.png"><div class="lineV"></div></div>
             <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
@@ -72,16 +72,28 @@
       </div>
 	<div class="description-container" id="mergeA-description">
             <h2 class="upgrade-title" style="font-weight: 100;">Beacon Chain Launch</h2>
+            <h3 style="font-family: 'Open Sans', sans-serif;"> December 1, 2020 </h3>
  			<p style="font-family: 'Open Sans', sans-serif; "> 
 				Ethereum's Beacon Chain genesis was triggered after the deposit contract received 524,288 ETH from 16,384 validators. 
-				 This specific threshold was initially chosen with an eye toward Ethereum's future transition to sharding, 
+				 This specific threshold was initially chosen with an eye towards Ethereum's future transition to execution sharding, 
 				 requiring a robust, decentralized group of validators. In retrospect, this large number of validators was not necessary since sharding has been abandoned at the execution layer. 
-				 Nevertheless, this threshold successfully ensured a decentralized and secure initiation of the Beacon Chain, 
-				 marking a crucial step in Ethereum's shift to a proof of stake consensus mechanism. </p>
+				 <br><br>Nevertheless, this threshold successfully ensured a decentralized and secure initiation of the Beacon Chain, 
+				 marking a crucial step in Ethereum's shift to a proof of stake consensus mechanism. <br><br>
+				 This newly formed consensus chain ran mostly independently of Ethereum’s proof of work chain (execution layer), 
+				 until The Merge.
+				 
+				 </p>
+				<h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                <a href="https://eth2book.info/" style="color: #fff;" target="_blank"><li>eth2book</li></a>
+                <a href="https://beaconcha.in/" style="color: #fff;" target="_blank"><li>beaconcha.in</li></a>
+                </ul>
+				 
 	</div>
 	<div class="description-container" id="mergeB-description">
             <h2 class="upgrade-title" style="font-weight: 100;">Altair Warmup</h2>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                <h3 style="font-family: 'Open Sans', sans-serif;"> October 27, 2021 </h3>
+                <p style="font-family: 'Open Sans', sans-serif; ">  The first upgrade to the Beacon Chain. It introduced several improvements, including sync committees. <br>
                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
@@ -89,10 +101,21 @@
 	</div>
 	<div class="description-container" id="mergeC-description">
             <h2 class="upgrade-title" style="font-weight: 100;">The Merge!</h2>
+        		<h3 style="font-family: 'Open Sans', sans-serif;"> September 15, 2022 </h3>
                 <p style="font-family: 'Open Sans', sans-serif; ">  The Merge was executed through a mechanism called Total Terminal Difficulty (TTD). 
                 This process involved setting a specific TTD value, which represented the cumulative difficulty of all Ethereum blocks mined under the proof of work system. 
                 After this theshold was reached,  Ethereum's execution layer merged with the Beacon chain (consensus layer), 
-                effectively ceasing proof of work activities and shifting the network's consensus mechanism to proof of stake. </p>
+                effectively ceasing proof of work activities and shifting the network's consensus mechanism to proof of stake. <br><br>
+                Technically, post-Merge Ethereum is still two tightly coupled blockchains. 
+                However the block trees of the execution layer and consensus layer have a 1:1 mapping, meaning that every EL block has one, 
+                and only one CL block which corresponds to it, and vice versa. This 1:1 mapping of EL and CL blocks means that we can think of post-Merge 
+                Ethereum as a single blockchain consisting of two layers.
+                </p>
+                
+             <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+             <ul style="font-family: 'Open Sans', sans-serif;">
+                <a href="https://bordel.wtf/" style="color: #fff;" target="_blank"><li>bordel.wtf</li></a>
+            </ul>
 
 	</div>
 	<div class="description-container" id="mergeD-description">
@@ -105,18 +128,29 @@
 	</div>
 	<div class="description-container" id="mergeE-description">
             <h2 class="upgrade-title" style="font-weight: 100;">Withdrawals</h2>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        		<h3 style="font-family: 'Open Sans', sans-serif;"> April 12, 2023 </h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> EIP-4895, included in the Shanghai-Capella hard fork, enabled support
+                 for validator withdrawals from the Beacon chain to the EVM via a new "system-level" operation type.
+                This EIP completed the three part process of Ethereum's transition to a proof of stake consensus mechanism.</p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+    
+                <a href="https://www.validatorqueue.com/" style="color: #fff;" target="_blank"><li>validator queue</li></a>
+                <a href="https://consensys.io/shanghai-capella-upgrade" style="color: #fff;" target="_blank"><li>guide to ETH withdrawals</li></a>
+
+                </ul>
 
 	</div>
 	<div class="description-container" id="mergeF-description">
             <h2 class="upgrade-title" style="font-weight: 100;">Secret Leader Election</h2>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+        		<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> Single Leader Election (SLE) and Secret Single Leader Election (SSLE) are used somewhat interchangeably, and both attempt to resolve the same issue:
+                a block proposer is known to the network slightly in advance of proposing the block. There is therefore a security vulnerability during this window where the proposer may be targeted by attackers.</p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                
+                     <a href="https://ethresear.ch/t/whisk-a-practical-shuffle-based-ssle-protocol-for-ethereum/11763" style="color: #fff;" target="_blank"><li> Whisk</li></a>
+               </ul>
 
 	</div>
 	<div class="description-container" id="mergeG-description">
@@ -129,26 +163,47 @@
 	</div>
 	<div class="description-container" id="mergeH-description">
             <h2 class="upgrade-title" style="font-weight: 100;">SSF Specification</h2>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+   		<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> A slot is a fixed period of time (12 seconds), during which a new block can be proposed. 
+                A given slot will not necessarily contain a block, as some are missed or otherwise not included. 
+                <br><br>
+                There are 32 slots per epoch. Therefore, a given epoch is ~ 6.4 minutes. As it exists today, Ethereum finalizes after two epochs (or roughly every 12.8 minutes). 
+                Single slot finality would attempt to drastically lower finality times to a single 12 second slot. </p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                     <a href="https://notes.ethereum.org/@vbuterin/single_slot_finality" style="color: #fff;" target="_blank"><li>Single Slot Finality</li></a>
+                	<a href="https://ethresear.ch/t/sticking-to-8192-signatures-per-slot-post-ssf-how-and-why/17989" style="color: #fff;" target="_blank"><li>8192 Signatures <> SSF</li></a>
+                </ul>
 
 	</div>
 	<div class="description-container" id="mergeI-description">
-            <h2 class="upgrade-title" style="font-weight: 100;">SSF Implmentation</h2>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+            <h2 class="upgrade-title" style="font-weight: 100;">SSF Implementation</h2>
+        		<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> A slot is a fixed period of time (12 seconds), during which a new block can be proposed. 
+                A given slot will not necessarily contain a block, as some are missed or otherwise not included. 
+                <br><br>
+                There are 32 slots per epoch. Therefore, a given epoch is ~ 6.4 minutes. As it exists today, Ethereum finalizes after two epochs (or roughly every 12.8 minutes). 
+                Single slot finality would attempt to drastically lower finality times to a single 12 second slot. </p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                     <a href="https://notes.ethereum.org/@vbuterin/single_slot_finality" style="color: #fff;" target="_blank"><li>Single Slot Finality</li></a>
+                	<a href="https://ethresear.ch/t/sticking-to-8192-signatures-per-slot-post-ssf-how-and-why/17989" style="color: #fff;" target="_blank"><li>8192 Signatures <> SSF</li></a>
+                </ul>
 
 	</div>
 	<div class="description-container" id="mergeJ-description">
             <h2 class="upgrade-title" style="font-weight: 100;">SSF!</h2>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+   		<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> A slot is a fixed period of time (12 seconds), during which a new block can be proposed. 
+                A given slot will not necessarily contain a block, as some are missed or otherwise not included. 
+                <br><br>
+                There are 32 slots per epoch. Therefore, a given epoch is ~ 6.4 minutes. As it exists today, Ethereum finalizes after two epochs (or roughly every 12.8 minutes). 
+                Single slot finality would attempt to drastically lower finality times to a single 12 second slot. </p>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                     <a href="https://notes.ethereum.org/@vbuterin/single_slot_finality" style="color: #fff;" target="_blank"><li>Single Slot Finality</li></a>
+                	<a href="https://ethresear.ch/t/sticking-to-8192-signatures-per-slot-post-ssf-how-and-why/17989" style="color: #fff;" target="_blank"><li>8192 Signatures <> SSF</li></a>
+                </ul>
 
 	</div>
 	<div class="description-container" id="mergeK-description">
@@ -161,10 +216,28 @@
 	</div>
 	<div class="description-container" id="mergeL-description">
             <h2 class="upgrade-title" style="font-weight: 100;">Increase Validator Count</h2>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                 incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                 ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                 Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. </p>
+   			<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+              <p style="font-family: 'Open Sans', sans-serif; "> From the perspective of decentralization and network health, 
+                increasing the number of validators on the Beacon Chain presents a paradox. 
+                Ideally, more validators mean greater redundancy, a broader range of proposers, a wider array of attestors, 
+                and overall increased resilience. However, the reality is more complex, as a high number of validators can also lead to state-size bloat, 
+                placing additional strain on each node as they strive to keep track of their peers. As the consensus client software is currently written, 
+                Prysm, Lighthouse, etc., struggle to maintain adequate performance past 2 million validators.
+				<br><br>
+				The validator entry churn limit was capped at 8 per-epoch in the Cancun-Deneb hard fork via EIP-7514. 
+				However, as this roadmap item implies, there is ongoing research, and several live proposals being debated, as to how to best expand the validator set. 
+				<br><br>
+				Solutions like EIP-7251, which would increase the MAX_EFFECTIVE_BALANCE of validators, could allow for some consolidation of the existing validator set, and therefore allow additional 'new' validators to come online. 
+				</p>
+				
+				
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://ethresear.ch/t/sticking-to-8192-signatures-per-slot-post-ssf-how-and-why/17989" style="color: #fff;" target="_blank"><li>8192 Signatures <> SSF</li></a>
+                	<a href="https://notes.ethereum.org/@dankrad/churn-limit" style="color: #fff;" target="_blank"><li>Dankrad's Thoughts on the Churn Limit</li></a>
+                	<a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-4-eip-7514-and-eip-1153" style="color: #fff;" target="_blank"><li>EIP-7514 Write Up</li></a>
+
+                </ul>
 
 	</div>
 </div>
