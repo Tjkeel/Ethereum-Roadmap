@@ -49,27 +49,61 @@ function progress(group) {
 
 progress(mergeStatus)
 
-// Function to toggle display of description containers
-function toggleDisplay(id) {
-    var element = document.getElementById(id);
-    if (element.style.display === 'none' || element.style.display === '') {
-        element.style.display = 'block'; // Show the container
-    } else {
-        element.style.display = 'none'; // Hide the container
+// Function to hide all description containers smoothly
+function hideAllDescriptions() {
+    const descriptions = document.querySelectorAll('.description-container');
+    descriptions.forEach(function(description) {
+        description.classList.remove('show'); // Remove 'show' class to start fade out
+        setTimeout(() => { description.style.display = 'none'; }, 500); // Set display to none after transition completes
+    });
+}
+
+// Function to show a specific description container smoothly
+function showDescription(id) {
+    const element = document.getElementById(id);
+    hideAllDescriptions(); // First hide all containers smoothly
+    setTimeout(() => {
+        element.style.display = 'block'; // Set display to block before adding 'show'
+        setTimeout(() => { element.classList.add('show'); }, 10); // Add 'show' class to start fade in
+    }, 500); // Ensure other descriptions fade out before showing the new one
+}
+
+// Variables to manage automatic cycling and user interaction
+let currentIndex = 0; // Start with the first description
+const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']; // Steps that have descriptions
+let cycleTimer; // Timer for cycling descriptions
+
+// Function to start or restart the cycling of descriptions with initial delay
+function startCyclingDescriptions() {
+    if (cycleTimer) {
+        clearInterval(cycleTimer); // Clear existing timer if it exists
     }
+    cycleTimer = setInterval(() => {
+        currentIndex = (currentIndex + 1) % steps.length; // Move to the next index, wrap around at the end
+        let descriptionId = `merge${steps[currentIndex]}-description`;
+        showDescription(descriptionId);
+    }, 10000); // Change description every 10 seconds
 }
 
 // Add event listeners to steps after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
-    const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+    // Delay the initial display and cycling of descriptions
+    setTimeout(() => {
+        showDescription('mergeA-description'); // Show the first description with fade in
+        startCyclingDescriptions(); // Start cycling descriptions after initial display
+    }, 1000); // Delay before starting everything
 
-    // Iterate over each step and setup event listeners
+    // Setup event listeners for each step
     steps.forEach(function(step) {
         let stepId = 'merge' + step; // ID of the step, e.g., 'mergeA'
-        let descriptionId = stepId + '-description'; // ID of the corresponding description, e.g., 'mergeA-description'
+        let descriptionId = stepId + '-description'; // Corresponding description ID
 
         document.getElementById(stepId).addEventListener('click', function() {
-            toggleDisplay(descriptionId);
+            showDescription(descriptionId);
+            currentIndex = steps.indexOf(step); // Update current index to this step
+            clearInterval(cycleTimer); // Stop automatic cycling on user click
         });
     });
 });
+
+

@@ -21,13 +21,21 @@ h1 {
 }
 
 .description-container {
-  margin: 25px auto;
-  background: rgba(0, 0, 0, 0.3);
-  max-width: 800px;
-  padding: 10px;
-  border-radius: 10px;
-  
+    margin: 25px auto;
+    background: rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    padding: 10px;
+    border-radius: 10px;
+    display: none;  /* Start as not displayed */
+    opacity: 0;     /* Start as fully transparent */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
 }
+
+.description-container.show {
+    display: block; /* Make it block to show */
+    opacity: 1;     /* Fully visible */
+}
+
 
 .gap {
   grid-column: 1/5;
