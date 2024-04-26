@@ -52,36 +52,55 @@ progress(mergeStatus)
 // The below functions are all for the descriptions and their features
 
 
-// Function to hide all description containers smoothly
-function hideAllDescriptions() {
-    const descriptions = document.querySelectorAll('.description-container');
-    descriptions.forEach(function(description) {
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Cache for description and step elements
+let descriptionElements = document.querySelectorAll('.description-container');
+let stepElements = {};
+const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+steps.forEach(step => {
+    stepElements[step] = document.getElementById(`merge${step}`);
+});
+
+// Function to hide all description containers smoothly, then perform callback
+function hideAllDescriptions(callback) {
+    descriptionElements.forEach(description => {
         description.classList.remove('show');
-        setTimeout(() => { description.style.display = 'none'; }, 500);
+        setTimeout(() => { description.style.display = 'none'; }, 490);
     });
+    setTimeout(callback, 500);
 }
 
 // Function to show a specific description container smoothly
 function showDescription(id) {
-    const element = document.getElementById(id);
-    hideAllDescriptions();
-    setTimeout(() => {
+    hideAllDescriptions(() => {
+        const element = document.getElementById(id);
         element.style.display = 'block';
         setTimeout(() => { element.classList.add('show'); }, 10);
-    }, 500);
-    updateActiveStep(id);
+        updateActiveStep(id);
+        resetAutoAdvanceTimer(); // Reset the auto-advance timer when a new description is shown
+    });
 }
 
 // Update the active step style
 function updateActiveStep(activeDescriptionId) {
-    const allSteps = document.querySelectorAll('.step');
-    allSteps.forEach(step => {
-        const descriptionId = `merge${step.id.replace('merge', '')}-description`;
-        step.classList.toggle('active', descriptionId === activeDescriptionId);
+    Object.keys(stepElements).forEach(step => {
+        stepElements[step].classList.toggle('active', `${step}-description` === activeDescriptionId);
     });
 }
 
-// Function to navigate descriptions using arrows and reset the cycling timer
+// Function to navigate descriptions using arrows and swipe gestures
 function navigateDescription(direction) {
     if (direction === 'next') {
         currentIndex = (currentIndex + 1) % steps.length;
@@ -90,52 +109,70 @@ function navigateDescription(direction) {
     }
     let descriptionId = `merge${steps[currentIndex]}-description`;
     showDescription(descriptionId);
-    resetCyclingTimer(); // Reset the timer whenever an arrow is clicked
 }
 
-// Variables to manage automatic cycling and user interaction
+// Add swipe functionality
+function addSwipeEvents(element) {
+    let touchstartX = 0;
+    let touchendX = 0;
+
+    element.addEventListener('touchstart', e => {
+        touchstartX = e.changedTouches[0].screenX;
+    }, false);
+
+    element.addEventListener('touchend', e => {
+        touchendX = e.changedTouches[0].screenX;
+        if (touchendX + 50 < touchstartX) {
+            navigateDescription('next');
+        }
+        if (touchendX - 50 > touchstartX) {
+            navigateDescription('prev');
+        }
+    }, false);
+}
+
+// Variables to manage user interaction and automatic cycling
 let currentIndex = 0;
-const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
-let cycleTimer;
+let autoAdvanceTimer;
 
-// Function to reset the cycling timer
-function resetCyclingTimer() {
-    clearInterval(cycleTimer);
-    cycleTimer = setInterval(() => {
-        currentIndex = (currentIndex + 1) % steps.length;
-        showDescription(`merge${steps[currentIndex]}-description`);
-    }, 15000); // Change description every 15 seconds
+// Function to reset the auto-advance timer
+function resetAutoAdvanceTimer() {
+    clearInterval(autoAdvanceTimer);
+    autoAdvanceTimer = setInterval(() => {
+        navigateDescription('next');
+    }, 25000); // Change description every 25 seconds
 }
 
-// Function to start or restart the cycling of descriptions with initial delay
-function startCyclingDescriptions() {
-    resetCyclingTimer(); // Start cycling descriptions after initial display
-}
-
-// Add event listeners to steps and arrows after DOM is fully loaded
+// Initialize and add event listeners
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         showDescription('mergeA-description');
-        startCyclingDescriptions();
+        resetAutoAdvanceTimer(); // Start the auto-advance timer after initial display
     }, 1000);
 
-    steps.forEach(function(step) {
-        let stepId = 'merge' + step;
-        let descriptionId = stepId + '-description';
-        let stepElement = document.getElementById(stepId);
+    steps.forEach(step => {
+        let descriptionId = `merge${step}-description`;
+        let stepElement = stepElements[step];
 
-        stepElement.addEventListener('click', function() {
+        stepElement.addEventListener('click', () => {
             showDescription(descriptionId);
             currentIndex = steps.indexOf(step);
-            resetCyclingTimer(); // Reset the timer whenever a step is clicked
+            resetAutoAdvanceTimer(); // Reset timer on manual navigation
         });
     });
 
-    document.querySelectorAll('.description-container').forEach(container => {
+    descriptionElements.forEach(container => {
+        addSwipeEvents(container);
         let leftArrow = container.querySelector('.left-arrow-pointer');
         let rightArrow = container.querySelector('.right-arrow-pointer');
 
-        leftArrow.addEventListener('click', () => navigateDescription('prev'));
-        rightArrow.addEventListener('click', () => navigateDescription('next'));
+        leftArrow.addEventListener('click', () => {
+            navigateDescription('prev');
+            resetAutoAdvanceTimer(); // Reset timer on arrow click
+        });
+        rightArrow.addEventListener('click', () => {
+            navigateDescription('next');
+            resetAutoAdvanceTimer(); // Reset timer on arrow click
+        });
     });
 });

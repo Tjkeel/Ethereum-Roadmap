@@ -23,13 +23,19 @@ h1 {
 .description-container {
     position: relative;
     margin: 25px auto;
-    background: rgba(0, 0, 0, 0.3);
     max-width: 800px;
-    padding: 10px;
     border-radius: 10px;
-    display: none;  /* Initially hidden */
-    opacity: 0;     /* Initially transparent */
-    transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
+    display: none; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+ 	transition: opacity 0.5s ease-in-out, transform 0.2s ease;
+    will-change: opacity, transform; /* Hint to browsers to optimize handling of these properties */    height: 500px; /* Set a fixed height for the entire container */
+    background: rgba(0, 0, 0, 0.3); /* Background of the container */
+    padding: 10px; /* Padding inside the container */
+}
+
+.description-content {
+    height: 100%; /* Take up all the available height of the parent */
+    overflow-y: auto; /* Scroll inside the content area only */
 }
 
 .description-container.show {
@@ -38,23 +44,31 @@ h1 {
 }
 
 .left-arrow-pointer, .right-arrow-pointer {
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+    position: absolute;
+    top: 50%; /* Center vertically */
     font-size: 35px;
     color: #fff;
     z-index: 100;
-    visibility: visible !important; /* Ensures it's not hidden */
-    position: absolute !important;
-    font-family: Arial, sans-serif; /* Override the font-family */
+    transition: transform 0.3s ease; 
+
 }
 
 .left-arrow-pointer {
     left: -80px;
 }
 
+.left-arrow-pointer:hover {
+    transform: scale(1.2); /* Increase the size slightly on hover */
+    cursor: pointer; /* Ensure it's clear the arrow is interactive */
+}
+
 .right-arrow-pointer {
     right: -80px;
+}
+
+.right-arrow-pointer:hover {
+    transform: scale(1.1); /* Increase the size slightly on hover */
+    cursor: pointer; /* Ensure it's clear the arrow is interactive */
 }
 
 /* Hide arrows on mobile devices */
