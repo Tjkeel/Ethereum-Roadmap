@@ -21,19 +21,47 @@ h1 {
 }
 
 .description-container {
+    position: relative;
     margin: 25px auto;
     background: rgba(0, 0, 0, 0.3);
     max-width: 800px;
     padding: 10px;
     border-radius: 10px;
-    display: none;  /* Start as not displayed */
-    opacity: 0;     /* Start as fully transparent */
+    display: none;  /* Initially hidden */
+    opacity: 0;     /* Initially transparent */
     transition: opacity 0.5s ease-in-out; /* Smooth transition for opacity */
 }
 
 .description-container.show {
-    display: block; /* Make it block to show */
-    opacity: 1;     /* Fully visible */
+    display: block; /* Display when active */
+    opacity: 1;     /* Fully opaque when active */
+}
+
+.left-arrow-pointer, .right-arrow-pointer {
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 35px;
+    color: #fff;
+    z-index: 100;
+    visibility: visible !important; /* Ensures it's not hidden */
+    position: absolute !important;
+    font-family: Arial, sans-serif; /* Override the font-family */
+}
+
+.left-arrow-pointer {
+    left: -80px;
+}
+
+.right-arrow-pointer {
+    right: -80px;
+}
+
+/* Hide arrows on mobile devices */
+@media (max-width: 1200px) {
+    .left-arrow-pointer, .right-arrow-pointer {
+        display: none;
+    }
 }
 
 

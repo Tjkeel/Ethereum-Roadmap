@@ -49,23 +49,26 @@ function progress(group) {
 
 progress(mergeStatus)
 
+// The below functions are all for the descriptions and their features
+
+
 // Function to hide all description containers smoothly
 function hideAllDescriptions() {
     const descriptions = document.querySelectorAll('.description-container');
     descriptions.forEach(function(description) {
-        description.classList.remove('show'); // Remove 'show' class to start fade out
-        setTimeout(() => { description.style.display = 'none'; }, 500); // Set display to none after transition completes
+        description.classList.remove('show');
+        setTimeout(() => { description.style.display = 'none'; }, 500);
     });
 }
 
 // Function to show a specific description container smoothly
 function showDescription(id) {
     const element = document.getElementById(id);
-    hideAllDescriptions(); // First hide all containers smoothly
+    hideAllDescriptions();
     setTimeout(() => {
-        element.style.display = 'block'; // Set display to block before adding 'show'
-        setTimeout(() => { element.classList.add('show'); }, 10); // Add 'show' class to start fade in
-    }, 500); // Ensure other descriptions fade out before showing the new one
+        element.style.display = 'block';
+        setTimeout(() => { element.classList.add('show'); }, 10);
+    }, 500);
     updateActiveStep(id);
 }
 
@@ -73,52 +76,66 @@ function showDescription(id) {
 function updateActiveStep(activeDescriptionId) {
     const allSteps = document.querySelectorAll('.step');
     allSteps.forEach(step => {
-        // Extract description ID from step ID
         const descriptionId = `merge${step.id.replace('merge', '')}-description`;
-        if (descriptionId === activeDescriptionId) {
-            step.classList.add('active'); // Add active class if it's the current step
-        } else {
-            step.classList.remove('active'); // Remove active class from other steps
-        }
+        step.classList.toggle('active', descriptionId === activeDescriptionId);
     });
+}
+
+// Function to navigate descriptions using arrows and reset the cycling timer
+function navigateDescription(direction) {
+    if (direction === 'next') {
+        currentIndex = (currentIndex + 1) % steps.length;
+    } else if (direction === 'prev') {
+        currentIndex = (currentIndex - 1 + steps.length) % steps.length;
+    }
+    let descriptionId = `merge${steps[currentIndex]}-description`;
+    showDescription(descriptionId);
+    resetCyclingTimer(); // Reset the timer whenever an arrow is clicked
 }
 
 // Variables to manage automatic cycling and user interaction
-let currentIndex = 0; // Start with the first description
-const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L']; // Steps that have descriptions
-let cycleTimer; // Timer for cycling descriptions
+let currentIndex = 0;
+const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
+let cycleTimer;
+
+// Function to reset the cycling timer
+function resetCyclingTimer() {
+    clearInterval(cycleTimer);
+    cycleTimer = setInterval(() => {
+        currentIndex = (currentIndex + 1) % steps.length;
+        showDescription(`merge${steps[currentIndex]}-description`);
+    }, 15000); // Change description every 15 seconds
+}
 
 // Function to start or restart the cycling of descriptions with initial delay
 function startCyclingDescriptions() {
-    if (cycleTimer) {
-        clearInterval(cycleTimer); // Clear existing timer if it exists
-    }
-    cycleTimer = setInterval(() => {
-        currentIndex = (currentIndex + 1) % steps.length; // Move to the next index, wrap around at the end
-        let descriptionId = `merge${steps[currentIndex]}-description`;
-        showDescription(descriptionId);
-    }, 10000); // Change description every 10 seconds
+    resetCyclingTimer(); // Start cycling descriptions after initial display
 }
 
-// Add event listeners to steps after DOM is fully loaded
+// Add event listeners to steps and arrows after DOM is fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
-        showDescription('mergeA-description'); // Show the first description with fade in
-        startCyclingDescriptions(); // Start cycling descriptions after initial display
-    }, 1000); // Delay before starting everything
+        showDescription('mergeA-description');
+        startCyclingDescriptions();
+    }, 1000);
 
-    // Setup event listeners for each step
     steps.forEach(function(step) {
-        let stepId = 'merge' + step; // ID of the step, e.g., 'mergeA'
-        let descriptionId = stepId + '-description'; // Corresponding description ID
+        let stepId = 'merge' + step;
+        let descriptionId = stepId + '-description';
+        let stepElement = document.getElementById(stepId);
 
-        document.getElementById(stepId).addEventListener('click', function() {
+        stepElement.addEventListener('click', function() {
             showDescription(descriptionId);
-            currentIndex = steps.indexOf(step); // Update current index to this step
-            clearInterval(cycleTimer); // Stop automatic cycling on user click
+            currentIndex = steps.indexOf(step);
+            resetCyclingTimer(); // Reset the timer whenever a step is clicked
         });
     });
+
+    document.querySelectorAll('.description-container').forEach(container => {
+        let leftArrow = container.querySelector('.left-arrow-pointer');
+        let rightArrow = container.querySelector('.right-arrow-pointer');
+
+        leftArrow.addEventListener('click', () => navigateDescription('prev'));
+        rightArrow.addEventListener('click', () => navigateDescription('next'));
+    });
 });
-
-
-
