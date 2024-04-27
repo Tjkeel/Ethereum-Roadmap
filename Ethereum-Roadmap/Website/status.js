@@ -8,10 +8,10 @@ mergeStatus = [
   // Merge! No more PoW
   ["mergeC", false],
 
-  // Distributed validators
+ // Withdrawals
   ["mergeD",[100]],
 
-  // Withdrawals
+  // Distributed validators
   ["mergeE",[100]],
 
   // Secret leader election
