@@ -197,21 +197,25 @@ h1 {
 .arrowR {
   margin-top: -2px;
   align-self: center;
+  filter: drop-shadow(2px 4px 6px black)
 }
 
 .arrowL {
   transform: rotate(180deg);
   align-self: center;
+  filter: drop-shadow(2px 4px 6px black)
 }
 
 .arrowU {
   transform: rotate(270deg);
   justify-self: center;
+  filter: drop-shadow(2px 4px 6px black)
 }
 
 .arrowD {
   transform: rotate(90deg);
   justify-self: center;
+  filter: drop-shadow(2px 4px 6px black)
 }
 
 .lineH {
@@ -219,11 +223,13 @@ h1 {
   border-top: 2px solid white;
   height: 0px;
   align-self: center;
+  filter: drop-shadow(2px 4px 6px black)
 }
 
 .lineV {
   height: 100%;
   border-left: 2px solid white;
+  filter: drop-shadow(2px 4px 6px black)
 }
 
 .merge {
