@@ -87,8 +87,8 @@ h1 {
   justify-self: center;
 }
 
-.step,.mile, .quant, .track {
-  border: 2px solid white;
+.step, .mile, .quant, .track {
+  border: 2px solid #1f1d1d;
   border-radius: 5px;
   grid-column: span 2;
   text-align: center;
@@ -98,6 +98,7 @@ h1 {
   padding-bottom: 2px;
   word-wrap: break-word;
   font-size: calc(0.1em + 0.6vw);
+  filter: drop-shadow(2px 4px 6px black);
   transition: filter 0.05s, backdrop-filter 0.05s;
 }
 
@@ -106,10 +107,16 @@ h1 {
   background-color: rgb(89 89 89);
 }
 
-.step:hover, .mile:hover, .quant:hover, .step.active {
-  filter: brightness(1.15);
-  backdrop-filter: brightness(1.1);
+.step:hover, .mile:hover, .quant:hover, .step.active, .mile.active, .quant.active {
+  filter: contrast(1.2);
+  backdrop-filter: brightness(1.5);
   border-width: 3px;
+  border-color: white;
+}
+
+.mile.active, .mile:hover {
+  filter: contrast(1.1);
+  backdrop-filter: brightness(1.1);
 }
 
 .mile {
@@ -142,6 +149,7 @@ h1 {
 .arrowRight, .arrowLeft, .arrowUp, .arrowDown {
   display: grid;
   align-items: center;
+  filter: drop-shadow(2px 4px 6px black);
 }
 
 .arrowRight {
