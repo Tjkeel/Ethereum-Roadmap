@@ -3,7 +3,7 @@ h1 {
 }
 
 .roadmap {
-  margin: 20px;
+  margin: 20px auto;
   display: grid;
   grid-gap: 40px;
 }
