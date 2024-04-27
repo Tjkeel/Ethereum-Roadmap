@@ -30,12 +30,15 @@ h1 {
  	transition: opacity 0.5s ease-in-out, transform 0.2s ease;
     will-change: opacity, transform; /* Hint to browsers to optimize handling of these properties */    height: 500px; /* Set a fixed height for the entire container */
     background: rgba(0, 0, 0, 0.3); /* Background of the container */
-    padding: 10px; /* Padding inside the container */
+
 }
 
 .description-content {
     height: 100%; /* Take up all the available height of the parent */
     overflow-y: auto; /* Scroll inside the content area only */
+    padding-left:12.5%;
+    padding-right:12.5%;
+
 }
 
 .description-container.show {
@@ -45,7 +48,7 @@ h1 {
 
 .left-arrow-pointer, .right-arrow-pointer {
     position: absolute;
-    top: 50%; /* Center vertically */
+    top: 45%; /* Center vertically */
     font-size: 35px;
     color: #fff;
     z-index: 100;

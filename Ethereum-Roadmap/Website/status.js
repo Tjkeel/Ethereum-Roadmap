@@ -95,8 +95,15 @@ function showDescription(id) {
 
 // Update the active step style
 function updateActiveStep(activeDescriptionId) {
+    // First, remove 'active' class from all steps to ensure only the current one is marked active
     Object.keys(stepElements).forEach(step => {
-        stepElements[step].classList.toggle('active', `${step}-description` === activeDescriptionId);
+        stepElements[step].classList.remove('active');
+    });
+    // Then, add 'active' class only to the current step
+    Object.keys(stepElements).forEach(step => {
+        if (`merge${step}-description` === activeDescriptionId) {
+            stepElements[step].classList.add('active');
+        }
     });
 }
 
@@ -148,7 +155,7 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         showDescription('mergeA-description');
         resetAutoAdvanceTimer(); // Start the auto-advance timer after initial display
-    }, 1000);
+    }, 500);
 
     steps.forEach(step => {
         let descriptionId = `merge${step}-description`;
