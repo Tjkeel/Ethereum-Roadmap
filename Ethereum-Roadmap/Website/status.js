@@ -1,68 +1,169 @@
-mergeStatus = [
-  // Beacon chain launch
-  ["mergeA",[100]],
 
-  // Warmup fork (Altair)
-  ["mergeB",[100]],
-
-  // Merge! No more PoW
-  ["mergeC", false],
-
- // Withdrawals
-  ["mergeD",[100]],
-
-  // Distributed validators
-  ["mergeE",[100]],
-
-  // Secret leader election
-  ["mergeF",[60]], 
-
-  // Per-slot participant selection
-  ["mergeG",[50]],
-
-  // SSF specification
-  ["mergeH",[35]],
-
-  // Implmentation
-  ["mergeI",[0]],
-
-  // Single slot finality (SSF)
-  ["mergeJ", false],
-
-  // Ideal quantum-safe signatures
-  ["mergeK", false],
-
-  // Increase validator count
-  ["mergeL",[0]]
-]
-
-function progress(group) {
-  for (step=0; step < group.length; step++) {
-    if (group[step][1] != false) {
-      ident = group[step][0]
-      prog = group[step][1].slice(-1)
-      grad = `linear-gradient(90deg, rgb(153 198 109) ${prog}%, rgb(250 250 250 / 0%) ${prog}%)`
-      document.getElementById(ident).style.background = grad;
-    }
-  }
+// colors
+progColor = {
+    green: '#99C66D', purple: '#AE80B1', blue: '#6A9BE7', red: '#F1A196' // Add more sections as needed
 }
 
+
+// true = Hard forks - uses color(s)
+// false = TTD & extra protocol - uses dark shading
+
+mergeStatus = [
+
+  // Beacon chain launch
+  ["mergeA", true, {
+    green: 100, // Green
+    purple: 0, // Purple
+    blue: 0,  // Blue
+    red: 0  // Red
+    // Add more sections as needed
+    }
+  ],
+
+  // Warmup fork (Altair)
+  ["mergeB", true, {
+    green: 100, // Green
+    purple: 0, // Purple
+    blue: 0,  // Blue
+    red: 0  // Red
+    // Add more sections as needed
+    }
+  ],
+
+  // Merge! No more PoW
+  ["mergeC", false,
+    100 // % complete 
+  ],
+
+ // Withdrawals
+  ["mergeD", true, {
+    green: 0, // Green
+    purple: 100, // Purple
+    blue: 0,  // Blue
+    red: 0  // Red
+    // Add more sections as needed
+    }
+  ],
+
+  // Distributed validators
+  ["mergeE", false,
+    100 // % complete 
+  ],
+
+  // Secret leader election
+  ["mergeF", true, {
+    green: 60, // Green
+    purple: 0, // Purple
+    blue: 0,  // Blue
+    red: 0  // Red
+    // Add more sections as needed
+    }
+  ],
+
+  // Per-slot participant selection
+  ["mergeG", true, {
+    green: 50, // Green
+    purple: 0, // Purple
+    blue: 0,  // Blue
+    red: 0  // Red
+    // Add more sections as needed
+    }
+  ],
+
+  // SSF specification
+  ["mergeH", true, {
+    green: 35, // Green
+    purple: 0, // Purple
+    blue: 0,  // Blue
+    red: 0  // Red
+    // Add more sections as needed
+    }
+  ],
+
+  // Implmentation
+  ["mergeI", true, {
+    green: 10, // Green
+    purple: 15, // Purple
+    blue: 0,  // Blue
+    red: 5  // Red
+    // Add more sections as needed
+    }
+  ],
+
+  // Single slot finality (SSF)
+  ["mergeJ", false,
+    20 // % complete 
+  ],
+
+  // Ideal quantum-safe signatures
+  ["mergeK", false,
+    20 // % complete 
+  ],
+
+  // Increase validator count
+  ["mergeL", true, {
+    green: 0, // Green
+    purple: 0, // Purple
+    blue: 0,  // Blue
+    red: 0  // Red
+    // Add more sections as needed
+    }
+  ]
+]
+
+// Store to flash red on
+yesRed = [] // [[ID: gradient], [ID: gradient] ... ] <--- FLASH on
+
+// Store to flash red off 
+noRed = [] // [[ID: gradient], [ID: gradient] ... ] <--- FLASH off
+
+function progress(group) {
+    for (step=0; step < group.length; step++) {
+        ident = group[step][0]
+        if (group[step][1] != false) {
+            progGreen = group[step][2].green
+            progPurple = group[step][2].purple
+            progBlue = group[step][2].blue
+            progRed = group[step][2].red
+            progStart = 0
+            progEnd = progGreen
+            grad = `linear-gradient(90deg, ${progColor.green} ${progEnd}%, ` // Green
+            progStart = progEnd
+            progEnd += progPurple
+            grad += `${progColor.purple} ${progStart}%, ${progColor.purple} ${progEnd}%, ` // Purple
+            progStart = progEnd
+            progEnd += progBlue
+            grad += `${progColor.blue} ${progStart}%, ${progColor.blue} ${progEnd}%, ` // Blue
+            progStart = progEnd
+            if (progRed > 0) { // if progress includes red store a gradient without red in noRed <--- FLASH off
+                noRed.push([ident, grad + `rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)`])
+            }
+            progEnd += progRed
+            grad += `${progColor.red} ${progStart}%, ${progColor.red} ${progEnd}%, ` // Red
+            progStart = progEnd
+            grad += `rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)` // Remaing (transparent)
+            if (progRed > 0) { // if progress includes red store a gradient with red in yesRed <--- FLASH on
+                yesRed.push([ident, grad])
+            }
+            document.getElementById(ident).style.background = grad;
+        }
+        else {
+            progStart = group[step][2]
+            grad = `linear-gradient(90deg, #00000069 ${progStart}%, rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)` // dark shading
+            document.getElementById(ident).style.background = grad;
+        }
+    }
+}
+
+
+// call function on merge
 progress(mergeStatus)
 
+
+
+
+
 // The below functions are all for the descriptions and their features
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Cache for description and step elements
