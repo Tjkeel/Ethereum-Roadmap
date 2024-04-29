@@ -140,14 +140,14 @@ h1 {
 }
 
 .track, .trackGroup {
-  background-color: #fff1d1;
+  background-color: #7f7f7f;
   border: unset;
-  color: black;
 }
 
 .track {
   border-radius: unset;
   z-index: 2;
+  color: black;
 }
 
 .arrowRight, .arrowLeft, .arrowUp, .arrowDown {
@@ -158,7 +158,7 @@ h1 {
 
 .arrowRight {
   grid-template-columns: 1fr 10px;
-  & .lineH {
+  & .lineH, .dashLineH {
     width: calc(100% + 10px);
     height: 50%;
     align-self: end;
@@ -167,7 +167,7 @@ h1 {
 
 .arrowLeft {
   grid-template-columns: 10px 1fr;
-  & .lineH {
+  & .lineH, .dashLineH {
     width: calc(100% + 10px);
   }
 }
@@ -175,7 +175,7 @@ h1 {
 .arrowUp {
   grid-template-rows: 10px 1fr;
   margin-top: 1px;
-  & .lineV {
+  & .lineV, .dashLineV {
     width: 0px;
     justify-self: center;
     height: calc(100% + 10px);
@@ -187,7 +187,7 @@ h1 {
 .arrowDown {
   grid-template-rows: 1fr 10px;
   margin-bottom: 1px;
-  & .lineV {
+  & .lineV, .dashLineV {
     width: 0px;
     justify-self: center;
     height: calc(100% + 10px);
@@ -228,9 +228,23 @@ h1 {
   filter: drop-shadow(2px 4px 6px black)
 }
 
+.dashLineH {
+  width: 100%;
+  border-top: 2px dashed white;
+  height: 0px;
+  align-self: center;
+  filter: drop-shadow(2px 4px 6px black)
+}
+
 .lineV {
   height: 100%;
   border-left: 2px solid white;
+  filter: drop-shadow(2px 4px 6px black)
+}
+
+.dashLineV {
+  height: 100%;
+  border-left: 2px dashed white;
   filter: drop-shadow(2px 4px 6px black)
 }
 
@@ -531,9 +545,9 @@ h1 {
   justify-self: center;
   grid-column: 29 / 31;
   grid-row: 2 / 5;
-  height: calc(67% + 8px);
+  height: calc(67% + 7px);
   align-self: center;
-  margin-bottom: -10px;
+  margin-bottom: -12px;
   z-index: 2;
 }
 
@@ -619,44 +633,15 @@ h1 {
   grid-row: 2 / 6;
   grid-column: 43 / 45;
   justify-self: center;
-  height: 75%;
+  height: calc(75% - 3px);
+  margin-bottom: -3px;
   align-self: center;
-}
-
-.dashH {
-  position: relative;
-}
-
-.dashH::after {
-  content: '';
-  position: absolute;
-  top: 47%;
-  left: 0;
-  background-image: url('lineDash.png');
-  background-repeat: repeat-x;
-  height: 2px;
-  width: 100%;
 }
 
 #surge12 {
   grid-row: 5;
   grid-column: 44 / -1;
   margin-right: -65px;
-}
-
-.dashV {
-  position: relative;
-}
-
-.dashV::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  background-image: url(lineDashV.png);
-  background-repeat: repeat-y;
-  width: 2px;
-  height: 100%;
 }
 
 #surge13 {
@@ -700,8 +685,8 @@ h1 {
   margin-top: 15px;
   margin-bottom: 15px;
   border-radius: 10px;
-  margin-right: -15px;
-  padding-right: 15px;
+  margin-right: -5px;
+  padding-right: 5px;
   grid-row: 1 / 2;
 }
 
@@ -710,6 +695,7 @@ h1 {
   grid-row: 1;
   grid-column: 2 / 6;
   text-align: left;
+  filter: unset;
 }
 
 /*Extra-protocol MEV markets*/
@@ -738,11 +724,11 @@ h1 {
 }
 
 #scourge3 {
-  grid-column: 21;
+  grid-column: 20 / 22;
   grid-row: 1 / 2;
   align-self: end;
   height: 50%;
-  margin-left: -10px;
+  justify-self: center;
 }
 
 #scourge4 {
@@ -776,11 +762,11 @@ h1 {
 }
 
 #scourge7 {
-  grid-column: 21;
+  grid-column: 20 / 22;
   grid-row: 2 / 3;
   align-self: start;
   height: 50%;
-  margin-left: -10px;
+  justify-self: center;
 }
 
 
@@ -862,6 +848,7 @@ h1 {
  #scourgeM {
   grid-column: 2 / 6;
   text-align: left;
+  filter: unset;
  }
 
 /*Raise max effective balance*/
@@ -899,12 +886,12 @@ h1 {
 
 #scourge14 {
   align-self: end;
-  height: calc(25% + 30px);
-  margin-bottom: -30px;
+  height: calc(25% + 8px);
+  margin-bottom: -10px;
   grid-row: 2;
   grid-column: 29 / 31;
   justify-self: center;
-  & .dashV {
+  & .dashLine {
     height: 100%;
   }
 }
