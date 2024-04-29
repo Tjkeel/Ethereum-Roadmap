@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SDPK9BWVR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-0SDPK9BWVR');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ethereum Roadmap</title>
+<link rel="icon" type="image/png" href="/ethlogo.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" type="text/css" href="position.css">
+<link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">  
+
+<div class="tabs-container">
+ <span id="inprogress"><span style="color:white; font-weight: normal;">Next Upgrade</span><br><a href="#pectra sticky" style= "color:#F1A196; text-decoration:none;">Prague-Electra</span></a>
+  <a href="https://ethroadmap.com/" style="background: rgba(255, 255, 255, 0.1);" class="tab"><i class="fas fa-home"></i> <span class="tooltip">Home</span></a>
+  <a href="https://ethroadmap.com/chatroom.html" class="tab"><i class="fas fa-comment-dots"></i><span class="tooltip">Chat</span></a>
+  <span class="tabdivider"></span>
+  <a href="https://ethroadmap.com/merge.html" class="tab"><i class="fas fa-code-branch"></i> <span class="tooltip">Merge</span> </a>
+  <a href="https://ethroadmap.com/surge.html" class="tab"><i class="fas fa-water"></i> <span class="tooltip">Surge</span> </a>
+  <a href="https://ethroadmap.com/scourge.html" class="tab"><i class="fas fa-biohazard"></i> <span class="tooltip">Scourge</span> </a>
+  <a href="https://ethroadmap.com/verge.html" class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
+  <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
+  <a href="https://ethroadmap.com/splurge.html" class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
+ <div class="price-container"> <span id="gasPriceValue"> </span>  <span id="eth-price"> </span> </div>
+
+
+</div>
+  <h1 style="font-weight: 100;">Ethereum Roadmap</h1>
+    <div class="image-container">
+    <img src="roadmap.jpeg" id="roadmapImage" class="modal-image" style="display: none;">
+  </div>
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <span class="close">&times;</span>
+    <img class="modal-content" id="img01">
+    <div id="caption"></div>
+  </div>
+<div class="timeline-container wideWidth">
+  <div id="roadmap" style="font-weight: 100;">
+    <!-- Each section is clickable and redirects to a new page for more details. -->
+    <div class="rowGroup">
+      <div class="merge">
+        <div class="goalText">
+           <b>Goal:</b> have an ideal, simple, robust<br>
+           and decentralized <b>proof-of-stake<br>
+           consensus</b>
+        </div>
+        <div id="ingap">.<br>.<br>.</div>
+        <div class="step" id="mergeA">Beacon chain <br>launch</div>
+        <div class="arrowRight" id="merge1">
+           <div class="lineH"></div>
+           <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="mergeB">Warmup fork <br>(Altair)</div>
+        <div class="lineH" id="merge2"></div>
+        <div class="arrowUp" id="merge3">
+           <img class="arrowU" src="arrow.png">
+           <div class="lineV"></div>
+        </div>
+        <div class="mile" id="mergeC">Merge! <br>No more <br>PoW</div>
+        <div class="lineH" id="merge4"></div>
+        <div class="lineV" id="merge5"></div>
+        <div class="arrowRight" id="merge6">
+           <div class="lineH"></div>
+           <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="mergeD">Withdrawals</div>
+        <div class="step" id="mergeE">Distributed <br>validators</div>
+        <div class="step" id="mergeF">Secret leader <br>election</div>
+        <div class="step" id="mergeG">Per-slot <br>participant <br>selection</div>
+        <div class="arrowRight" id="merge8">
+           <div class="lineH"></div>
+           <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="mergeH">SSF <br>specification</div>
+        <div class="lineH" id="merge9"></div>
+        <div class="arrowDown" id="merge10">
+           <div class="lineV"></div>
+           <img class="arrowD" src="arrow.png">
+        </div>
+        <div class="step" id="mergeI">Implementation</div>
+        <div class="lineH" id="merge11"></div>
+        <div class="arrowUp" id="merge12">
+           <img class="arrowU" src="arrow.png">
+           <div class="lineV"></div>
+        </div>
+        <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
+        <div class="lineH" id="merge13"></div>
+        <div class="lineV" id="merge14"></div>
+        <div class="arrowRight" id="merge15">
+           <div class="lineH"></div>
+           <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="quant" id="mergeK">Ideal quantum-<br>safe signatures</div>
+        <div class="step" id="mergeL">Increase <br>validator count</div>
+        <div class="progress-bar" id="merge-progress"></div>
+      </div>
+      </div>
+
+
+
+    <div class="rowGroup">
+      <div class="surge">
+        <div class="goalText"><b>Goal:</b> 100,000 <b>transactions per<br>
+          second</b> and beyond (on rollups)
+        </div>
+        <div id="ingap">.<br>.</div>
+        <div class="step" id="surgeA">Optimistic rollup fraud provers</div>
+        <div class="step" id="surgeB">ZK-EVMs</div>
+        <div class="step" id="surgeC">EIP-4844 <br>specification</div>
+        <div class="arrowRight" id="surge1">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <!-- <img class="lineV" id="surge2" src="lineV.png"> -->
+
+        <div class="track" id="surgeD">Prototype</div>
+        <div class="step" id="surgeE">EIP-4844 <br>implementation</div>
+        <div class="arrowRight" id="surge3">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="mile" id="surgeF">Basic <br>rollup <br>scaling</div>
+        <div class="arrowUp" id="surge4">
+          <img class="arrowU" src="arrow.png">
+          <div class="lineV"></div>
+        </div>
+        <div class="lineV" id="surge5" src="lineV.png"></div>
+        <div class="track" id="surgeG">Limited training wheels <br>(diverse 6-of-8 or stricter)</div>
+        <div class="step" id="surgeH">peerDAS</div>
+        <div class="step" id="surgeI">Efficient DA <br>self-healing</div>
+        <div class="arrowRight" id="surge6">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="lineH" id="surge7"></div>
+        <div class="lineV" id="surge8"></div>
+        <div class="mile" id="surgeJ">Full<br>rollup <br>scaling</div>
+        <div class="track" id="surgeK">No training <br>wheels</div>
+        <div class="lineH" id="surge9"></div>
+        <div class="lineH" id="surge10"></div>
+        <div class="arrowUp" id="surge11">
+          <img class="arrowU" src="arrow.png">
+          <div class="lineV"></div>
+        </div>
+        <div class="dashH" id="surge12"></div> 
+        <div class="quant" id="surgeL">Q-sale, no-setup <br>commitments</div>
+        <div class="step" id="surgeM">Improve cross-<br>rollup standards <br>+ interop</div>
+      </div>
+      </div>
+
+
+
+      <!-- <div class="rowGroup">
+      <div class="scourge">
+      <div class="goalText"><b>Goal:</b> mitigate <b>centralization<br>
+        concerns</b> in Ethereum PoS<br>
+        design, particularly around <b>MEV</b><br>
+        and <b>liquid staking / pooling</b>
+      </div>
+      <div class="trackGroup" id="scourgeA">
+        <div class="track" id="scourgeB">MEV track</div>
+        <div class="step" id="scourgeC">Extra-protocol <br>MEV markets</div>
+        <div class="arrowRight" id="scourge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+        <div class="step" id="scourgeD">Inclusion lists</div>
+        <img class="lineH" id="scourge2" src="line.png">
+        <img class="lineV" id="scourge3" src="lineV.png">
+        <div class="arrowRight" id="scourge4"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+        <div class="step" id="scourgeE">Explore ePBS</div>
+        <div class="arrowRight" id="scourge5"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+        <div class="step" id="scourgeF">Explore MEV <br>burn in ePBS</div>
+        <img class="lineH" id="scourge6" src="line.png">
+        <img class="lineV" id="scourge7" src="lineV.png">
+        <div class="step" id="scourgeG">Distributed block <br>building</div>
+        <img class="lineH" id="scourge8" src="line.png">
+        <img class="lineV" id="scourge9" src="lineV.png">
+        <div class="step" id="scourgeH">Exsplore <br>execution tickets</div>
+        <img class="lineH" id="scourge10" src="line.png">
+        <img class="lineV" id="scourge11" src="lineV.png">
+        <div class="mile" id="scourgeI">Endgame block <br>production <br>pipeline</div>
+        <div class="step" id="scourgeJ">App-layer MEV <br>minimzation</div>
+        <div class="step" id="scourgeK">Explore <br>preconfimations</div>
+      </div>
+      <div class="trackGroup" id="scourgeL">
+        <div class="track" id="scourgeM">Staking economics / <br>experiance track</div>
+        <div class="step" id="scourgeN">Raise max <br>effective balance</div>
+        <div class="step" id="scourgeO">Improve node <br>operator usability</div>
+        <div class="step" id="scourgeP">Explore total <br>stake capping</div>
+        <div class="step" id="scourgeQ">Explore solutions <br>to liquid staking <br>centralization</div>
+      </div>
+      <img class="lineV" id="scourge12" src="lineV.png">
+      <div class="arrowUp" id="scourge14"><img class="arrowU" src="arrowDash.png"><div class="dashV"></div></div>
+      </div>
+      </div>
+      <div class="rowGroup">
+      <div class="verge">
+      <div class="goalText"><b>Goal:</b> <b>verifying</b> blocks should be super easy - download<br>
+        N bytes of data, perform a few basic computations, verify<br>
+        a SNARK and you're done</b>
+      </div>
+      <div class="step" id="vergeA">Most serious <br>EVM DoS <br>issues solved</div>
+      <div class="step" id="vergeB">Basic light <br>client support <br>(sync <br>committees)</div>
+      <div class="arrowRight" id="verge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="vergeC">Verkle tree <br>spec + impl</div>
+      <div class="arrowRight" id="verge2"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="vergeD">SNARK based <br>light clients</div>
+      <img class="lineH" id="verge3" src="line.png">
+      <img class="lineV" id="verge4" src="lineV.png">
+      <img class="lineH" id="verge5" src="line.png">
+      <img class="lineV" id="verge6" src="lineV.png">
+      <div class="arrowRight" id="verge7"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="arrowDown" id="verge8"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
+      <div class="arrowUp" id="verge9"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+      <div class="step" id="vergeE">Code chunking + gas cost updates</div>
+      <div class="mile" id="vergeF">Verkle <br>trees</div>
+      <div class="arrowRight" id="verge10"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="vergeG">Transition spec <br>+ impl</div>
+      <div class="step" id="vergeH">SNARK for L1 <br>EVM</div>
+      <div class="arrowRight" id="verge11"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="arrowDown" id="verge12"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
+      <div class="step" id="vergeI">SNARK for <br>Verkle proofs</div>
+      <div class="arrowRight" id="verge13"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="vergeJ">SNARK for <br>consensus state <br>transition</div>
+      <img class="lineH" id="verge14" src="line.png">
+      <div class="arrowUp" id="verge15"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
+      <div class="mile" id="vergeK">Fully <br>SNARKed <br>Ethereum</div>
+      <div class="arrowRight" id="verge16"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="vergeL">SNARK / <br>STARK ASICs</div>
+      <div class="step" id="vergeM">Explore EVM <br>verification <br>precompile</div>
+      <div class="mile" id="vergeN">Quantum-safe <br>SNARKs (eg. <br>STARKs)</div>
+      <div class="dashH" id="verge17"></div> 
+      <div class="dashV" id="verge19"></div> 
+      <div class="dashV" id="verge21"></div>
+      <div class="dashV" id="verge22"></div>
+      <div class="dashH" id="verge23"></div>
+      <div class="arrowRight" id="verge20"><img class="dashH" src="lineDash.png"><img class="arrowR" src="arrowDash.png"></div>
+      <div class="dashH" id="verge24"></div>
+      <div class="arrowUp" id="verge25"><img class="arrowU" src="arrowDash.png"><div class="dashV"></div></div>
+      <div class="dashV" id="verge26"></div>
+      </div>
+      </div>
+      <div class="rowGroup">
+      <div class="purge">
+      <div class="goalText"><b>Goal:</b> <b>simplify</b> the protocol, <b>eliminate technical<br>
+        debt</b> amd <b>limit costs</b> of participating in the network by<br>
+        clearing old history</b>
+      </div>
+      <div class="step" id="purgeA">Eliminate most <br>gas refunds</div>
+      <div class="step" id="purgeB">EIP-4444 <br>specification</div>
+      <div class="arrowRight" id="purge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="purgeC">Beacon chain <br>fast sync</div>
+      <img class="lineH" id="purge2" src="line.png">
+      <img class="lineV" id="purge3" src="lineV.png">
+      <img class="lineH" id="purge4" src="line.png">
+      <img class="lineH" id="purge5" src="line.png">
+      <img class="lineV" id="purge6" src="lineV.png">
+      <div class="step" id="purgeD">EIP-4444 <br>implementation</div>
+      <img class="lineH" id="purge7" src="line.png">
+      <img class="lineV" id="purge8" src="lineV.png">
+      <div class="arrowRight" id="purge9"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="purgeE">P2P history <br>(eg. Portal)</div>
+      <img class="lineH" id="purge10" src="line.png">
+      <img class="lineV" id="purge11" src="lineV.png">
+      <div class="trackGroup" id="purgeF"> 
+        <div class="track" id="purgeG">EVM simplification track</div>
+        <div class="step" id="purgeH">Ban SELF- <br>DESTRUCT</div>
+        <div class="step" id="purgeI">Simplify gas <br>mechanics</div>
+        <div class="step" id="purgeJ">Precompiles <br>EVM impls</div>
+      </div>
+      <img class="lineH" id="purge16" src="line.png">
+      <img class="lineV" id="purge17" src="lineV.png">
+      <div class="mile" id="purgeK">History <br>expiry <br>(EIP-4444)</div>
+      <div class="step" id="purgeL">Address space <br>extension</div>
+      <div class="arrowRight" id="purge12"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="purgeM">LOG reform </div>
+      <div class="step" id="purgeN">Remove old tx <br>types</div>
+      <div class="arrowRight" id="purge13"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="step" id="purgeO">State expiry </div>
+      <div class="step" id="purgeP">Serialization <br>harmonization</div>
+      <div class="dashH" id="purge14"></div>
+      <div class="dashV" id="purge15"></div>
+      </div>
+      </div>
+      <div class="rowGroup">
+      <div class="splurge">
+      <div class="goalText"><b>Goal:</b> fix <b>everything else</b></div>
+      <div id="ingap">.<br>.<br>.<br>.<br>.<br>.<br>.<br></div>
+      <div class="step" id="splurgeA">EIP-1559</div>
+      <div class="arrowRight" id="splurge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div id="splurgeBB">
+        <div class="step" id="splurgeB">EIP-4337 <br>specification</div>
+      </div>
+      <div class="arrowRight" id="splurge2"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="trackGroup" id="splurgeC">
+        <div class="track" id="splurgeD">EVM improvements track</div>
+        <div class="step" id="splurgeE">EOF</div>
+        <div class="step" id="splurgeF">Big modular <br>arithmetic</div>
+        <div class="step" id="splurgeG">Further EVM <br>improvements</div>
+      </div>
+      <div class="arrowRight" id="splurge5"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="trackGroup" id="splurgeH">
+        <div class="track" id="splurgeI">Account abstraction track</div>
+        <div class="step" id="splurgeJ">ERC-4337</div>
+        <div class="arrowRight" id="splurge3"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+        <div class="step" id="splurgeK">Voluntary <br>EOA <br>conversion</div>
+        <div class="arrowRight" id="splurge4"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+        <div class="step" id="splurgeL">In-protocol <br>enshrining</div>
+      </div>
+      <div class="arrowRight" id="splurge6"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
+      <div class="mile" id="splurgeM">Endgame <br>EVM</div>
+      <div class="step" id="splurgeN">Endgame <br>EIP-1559</div>
+      <div class="mile" id="splurgeO">Endgame <br>account <br>abstraction</div>
+      <div class="step" id="splurgeP">Explore deep <br>crypto (eg. <br>obfuscation)</div>
+      <div class="step" id="splurgeQ">Explore delay- <br>encrypted</div>
+      <div class="step" id="splurgeR">VDFs</div>
+      <div class="arrowDown" id="splurge7"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
+      </div>
+      </div> -->
+  </div>
+  </div>
+
+<!-- Execution Layer Timeline -->
+<h1 style="font-weight: 100;">Hard Fork Timeline</h1>
+<div class="timeline-container">
+  <h2 class="timeline-title" style="font-weight: 100;">Execution Layer Hard Forks</h2>
+  <ul class="timeline" style="font-weight: 100;">
+	<a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/homestead.md" target="_blank"><li>Homestead</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+	<a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/dao-fork.md" target="_blank"><li>DAO Fork</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+	<a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md" target="_blank"><li>Tangerine Whistle</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+	<a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/spurious-dragon.md" target="_blank"><li>Spurious Dragon</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/byzantium.md" target="_blank"><li>Byzantium</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/constantinople.md" target="_blank"><li>Constantinople</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/berlin.md" target="_blank"><li>Berlin</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/london.md" target="_blank"><li>London</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#shapella sticky"><li id="shanghai">Shanghai</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#dencun sticky"><li id="cancun">Cancun</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#pectra sticky"><li id="prague">Prague</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#osaka sticky"><li id="osaka">Osaka</li></a>
+  </ul>
+  
+<div class="detailed-timeline">
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Genesis</span><br>July 30, 2015</div>
+      <div class="timeline-content">
+        <p>Ethereum's first block, also known as Frontier, occurred nearly two years after its ideation.</p>
+      </div>
+    </div>
+        <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Hack and Fork</span><br>June - July, 2016</div>
+      <div class="timeline-content">
+        <p>A large VC fund (The DAO) crowdsourced by the Ethereum community was hacked. A controversial hard fork was implemented to recover the lost funds.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">EVM Upgrades</span><br>2016 - 2021</div>
+      <div class="timeline-content">
+        <p>Six hard forks over five years upgraded the EVM and were independent of the Beacon chain, although a few changes at the end were preparatory.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Shanghai</span><br>Apr 12, 2023</div>
+      <div class="timeline-content">
+        <p>Enabled validator withdrawals from the Beacon Chain, completing the transition to PoS.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Cancun</span><br>Mar 13, 2024</div>
+      <div class="timeline-content">
+        <p>Scaled Layer2s through EIP-4844 with Blobs + other auxiliary improvements.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Prague</span><br>End of 2024</div>
+      <div class="timeline-content">
+        <p>The community is still debating what exactly to include. Could go live at the end of 2024.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Osaka</span><br>End of 2025</div>
+      <div class="timeline-content">
+        <p>Far out. Who knows! Verkle Trees are getting some love</p>
+      </div>
+    </div>
+    </div><br>
+
+</div>
+<!-- Consensus Layer Timeline -->
+<div class="timeline-container">
+  <h2 class="timeline-title" style="font-weight: 100;">Consensus Layer Hard Forks</h2>
+  <ul class="timeline" style="font-weight: 100;">
+    <a href="https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md" target="_blank"><li>Altair</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="https://github.com/ethereum/consensus-specs/blob/dev/specs/bellatrix/beacon-chain.md" target="_blank"><li>Bellatrix</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#shapella sticky"><li id="capella">Capella</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#dencun sticky"><li id="deneb">Deneb</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#pectra sticky"><li id="electra">Electra</li></a>
+    <li style="pointer-events: none; background-color: transparent;" class="arrow"><i class="fas fa-arrow-right"></i></li>
+    <a href="#osaka sticky"><li id="funknown">(F) tbd</li></a>
+  </ul>
+  <!-- New Detailed Consensus Layer Timeline -->
+  <div class="detailed-timeline">
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Launch</span><br>Dec 1, 2020</div>
+      <div class="timeline-content">
+        <p>This marked the beginning of Ethereum's transition to a proof-of-stake consensus mechanism, and the genesis of what is now the consensus layer.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Altair</span><br>Oct 27, 2021</div>
+      <div class="timeline-content">
+        <p>The first upgrade to the Beacon Chain. It introduced several improvements, including sync committees.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Bellatrix</span><br>Sep 6, 2022</div>
+      <div class="timeline-content">
+        <p>A preparatory upgrade for the Beacon Chain that set the stage for the merge.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Merge </span><br> Sep 15, 2022</div>
+      <div class="timeline-content">
+        <p>The transition from proof-of-work to proof-of-stake, triggered by reaching the Terminal Total Difficulty, and was not a hard fork.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Capella </span><br> Apr 12, 2023</div>
+      <div class="timeline-content">
+        <p>Enabled validator withdrawals from the Beacon Chain, completing the transition to PoS.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Deneb </span><br> Mar 13, 2024</div>
+      <div class="timeline-content">
+        <p>Scaled Layer2s through EIP-4844 with Blobs + other auxiliary improvements.</p>
+      </div>
+    </div>
+    <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">Electra </span><br> End of 2024</div>
+      <div class="timeline-content">
+        <p>The community is still debating what exactly to include. Could go live at the end of 2024.</p>
+      </div>
+    </div>
+  </div>  
+      <div class="timeline-event">
+      <div class="timeline-date"><span style= "font-weight: bold;">F(tbd)</span><br>End of 2025</div>
+      <div class="timeline-content">
+        <p>Far out. Who knows! Verkle Trees are getting some love</p>
+      </div>
+    </div>
+  <br>
+</div>
+
+<h1 style="font-weight: 100;">Recent Hard Forks</h1>
+
+<div class="timeline-container">
+  <h2 class="timeline-title" id="dencun sticky" style="font-weight: 100;">Cancun-Deneb</h2>
+<div class="countdown-container" >
+    <div id="countdown" style="font-weight: 100; color: #fff;" >
+      <span class="countdown-time" id="days" style="font-weight: 100;"></span> days
+      <span class="countdown-time" id="hours" style="font-weight: 100;"></span> hours
+      <span class="countdown-time" id="minutes" style="font-weight: 100;"></span> minutes
+      <span class="countdown-time" id="seconds" style="font-weight: 100;"></span> seconds
+    </div> 
+  </div>
+<div class="flip-container-grid">
+      <a href="https://eips.ethereum.org/EIPS/eip-4844" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-4844</div>
+        <div class="back estimate-buttonK">Blobs</div>
+      </div>
+    </div>
+    </a> 
+      <a href="https://eips.ethereum.org/EIPS/eip-7516" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-7516</div>
+        <div class="back estimate-buttonK">BLOBBASEFEE</div>
+      </div>
+    </div>
+  </a> 
+     <a href="https://eips.ethereum.org/EIPS/eip-4788" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-4788</div>
+        <div class="back estimate-buttonK">Beacon Root EVM</div>
+      </div>
+    </div>
+ </a> 
+ <a href="https://eips.ethereum.org/EIPS/eip-7044" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-7044</div>
+        <div class="back estimate-buttonK">Perp Valid Exits</div>
+      </div>
+  </div>
+</a> 
+ <a href="https://eips.ethereum.org/EIPS/eip-7045" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-7045</div>
+        <div class="back estimate-buttonK">Incr Att Incl Slot</div>
+      </div>
+    </div>
+ </a>
+  <a href="https://eips.ethereum.org/EIPS/eip-7514" target="_blank">   
+      <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-7514</div>
+        <div class="back estimate-buttonK">Cap Churn Limit</div>
+      </div>
+  </div>
+  </a>
+   <a href="https://eips.ethereum.org/EIPS/eip-6780" target="_blank">
+      <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-6780</div>
+        <div class="back estimate-buttonK">Fix SELFDESTR.</div>
+      </div>
+  </div>
+  </a>
+     <a href="https://eips.ethereum.org/EIPS/eip-1153" target="_blank">
+      <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-1153</div>
+        <div class="back estimate-buttonK">Transient Storage</div>
+      </div>
+  </div>
+  </a>
+   <a href="https://eips.ethereum.org/EIPS/eip-5656" target="_blank">
+      <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonK">EIP-5656</div>
+        <div class="back estimate-buttonK">MCOPY</div>
+      </div>
+    </div>
+    </a>
+</div>
+<h2 class="timeline-title" style="font-weight: 100;">Deployment</h2>
+  <ul class="timeline" style="font-weight: 100;">
+    <li id="futureforks2" class="deployment-futurefork has-checkmark">Devnets</li>
+    <li id="futureforks2" class="deployment-futurefork has-checkmark">Goerli</li>
+    <li id="futureforks2" class="deployment-futurefork has-checkmark">Sepolia</li>
+    <li id="futureforks2" class="deployment-futurefork has-checkmark" >Holesky</li>
+    <li id="futureforks2" class="deployment-futurefork has-checkmark">Live</li>
+  </ul><br>
+<h2 class="timeline-title" style="font-weight: 100;">Explainer Series</h2>
+<p>
+<a href="https://consensys.io/blog/ethereum-dencun-upgrade-explained-part-1" target="_blank"  style="color: #fff;" >Part I</a>,
+<a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-2-eip-7044-eip-7045" target="_blank"  style="color: #fff;" >Part II</a>,  
+<a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-3-eip-4788" target="_blank"  style="color: #fff;" >Part III</a>, 
+<a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-4-eip-7514-and-eip-1153" target="_blank"  style="color: #fff;" >Part IV</a>,  
+<a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-5-eip-4844" target="_blank"  style="color: #fff;" >Part V</a>
+</p><br>
+</div>
+
+<div class="timeline-container">
+  <h2 class="timeline-title" id="shapella sticky" style="font-weight: 100;">Shanghai-Capella</h2>
+<div class="countdown-container" >
+    <div id="countdown3" style="font-weight: 100; color: #fff;" > 
+      <span class="countdown-time" id="days3" style="font-weight: 100;"></span> days
+      <span class="countdown-time" id="hours3" style="font-weight: 100;"></span> hours
+      <span class="countdown-time" id="minutes3" style="font-weight: 100;"></span> minutes
+      <span class="countdown-time" id="seconds3" style="font-weight: 100;"></span> seconds
+    </div> 
+  </div>
+<div class="flip-container-grid">
+      <a href="https://eips.ethereum.org/EIPS/eip-4895" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonS">EIP-4895</div>
+        <div class="back estimate-buttonS">Withdrawals</div>
+      </div>
+    </div>
+    </a> 
+      <a href="https://eips.ethereum.org/EIPS/eip-3651" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonS">EIP-3651</div>
+        <div class="back estimate-buttonS">Warm COINBASE</div>
+      </div>
+    </div>
+  </a> 
+     <a href="https://eips.ethereum.org/EIPS/eip-3855" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonS">EIP-3855</div>
+        <div class="back estimate-buttonS">PUSH0</div>
+      </div>
+    </div>
+ </a> 
+ <a href="https://eips.ethereum.org/EIPS/eip-3860" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonS">EIP-3860</div>
+        <div class="back estimate-buttonS">Limit initcode</div>
+      </div>
+  </div>
+</a> 
+ <a href="https://eips.ethereum.org/EIPS/eip-6049" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonS">EIP-6049</div>
+        <div class="back estimate-buttonS">Warn SELFDESTR.</div>
+      </div>
+    </div>
+ </a>
+</div>
+<h2 class="timeline-title" style="font-weight: 100;">Deployment</h2>
+  <ul class="timeline" style="font-weight: 100;">
+    <li id="futureforks2" class="deployment-futurefork has-checkmark">Devnets</li>
+    <li id="futureforks2" class="deployment-futurefork has-checkmark">Sepolia</li>
+    <li id="futureforks2" class="deployment-futurefork has-checkmark" >Goerli</li>
+    <li id="futureforks2" class="deployment-futurefork has-checkmark">Live</li>
+  </ul><br>
+</div>
+  
+<h1 style="font-weight: 100;">Upcoming Hard Forks</h1>
+ 
+<div class="timeline-container">
+  <h2 class="timeline-title" id="pectra sticky" style="font-weight: 100;">Prague-Electra</h2>
+  <div class="countdown-container">
+    <div id="countdown2" style="font-weight: 100; color: #fff;">
+      <span class="countdown-time" id="days2" style="font-weight: 100;"></span> days
+      <span class="countdown-time" id="hours2" style="font-weight: 100;"></span> hours
+      <span class="countdown-time" id="minutes2" style="font-weight: 100;"></span> minutes
+      <span class="countdown-time" id="seconds2" style="font-weight: 100;"></span> seconds ?
+    </div>
+  </div>
+<div class="flip-container-grid">
+      <a href="https://eips.ethereum.org/EIPS/eip-2537" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-button2">BLS12-381</div>
+        <div class="back estimate-button2">Included</div>
+      </div>
+    </div>
+    </a> 
+    <a href="https://eips.ethereum.org/EIPS/eip-2935" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-button2">Pre Verkle Spec</div>
+        <div class="back estimate-button2">Included</div>
+      </div>
+    </div>
+    </a> 
+    <a href="https://eips.ethereum.org/EIPS/eip-3075" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-button2">Account Abstr.</div>
+        <div class="back estimate-button2">Included</div>
+      </div>
+    </div>
+    </a> 
+      <a href="https://eips.ethereum.org/EIPS/eip-6110" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-button2">On-chain Deps</div>
+        <div class="back estimate-button2">Included</div>
+      </div>
+    </div>
+    </a> 
+      <a href="https://eips.ethereum.org/EIPS/eip-7002" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-button2">Triggerable Exits</div>
+        <div class="back estimate-button2">Included</div>
+      </div>
+    </div>
+  </a> 
+     <a href="https://eips.ethereum.org/EIPS/eip-7251" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-button2">Increase Max EB</div>
+        <div class="back estimate-button2">Included</div>
+      </div>
+    </div>
+ </a> 
+ <a href="https://eips.ethereum.org/EIPS/eip-7549" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-button2">Move Attests.</div>
+        <div class="back estimate-button2">Included</div>
+      </div>
+  </div>
+</a> 
+  <a href="https://eips.ethereum.org/EIPS/eip-7623" target="_blank">
+  <div class="flip-container">
+  <div class="flipper">
+    <div class="front estimate-button3"> + Calldata Cost </div>
+    <div class="back estimate-button3"> Maybe </div>
+  </div>
+</div>
+</a>
+  <a href="https://eips.ethereum.org/EIPS/eip-7600 target="_blank">
+  <div class="flip-container">
+  <div class="flipper">
+    <div class="front estimate-button3"> EOF (10 EIPs) </div>
+    <div class="back estimate-button3"> Maybe </div>
+  </div>
+</div>
+</a>
+  <a href="https://eips.ethereum.org/EIPS/eip-7547" target="_blank">
+  <div class="flip-container">
+  <div class="flipper">
+    <div class="front estimate-button4"> Inclusion Lists </div>
+    <div class="back estimate-button4"> Unlikely </div>
+  </div>
+</div>
+</a>
+</div>
+<h2 class="timeline-title" style="font-weight: 100;">Deployment</h2>
+  <ul class="timeline" style="font-weight: 100;">
+    <li id="futureforks2" class="deployment-futurefork has-xmark">Devnets</li>
+    <li id="futureforks2" class="deployment-futurefork has-xmark">Sepolia</li>
+    <li id="futureforks2" class="deployment-futurefork has-xmark" >Holesky</li>
+    <li id="futureforks2" class="deployment-futurefork has-xmark">Live</li>
+  </ul><br>
+</div>
+  
+  
+<div class="timeline-container">
+  <h2 class="timeline-title" id="osaka sticky" style="font-weight: 100;">Osaka-F(unknown)</h2>
+  <div class="countdown-container">
+    <div id="countdown4" style="font-weight: 100; color: #fff;">
+      <span class="countdown-time" id="days4" style="font-weight: 100;"></span> days
+      <span class="countdown-time" id="hours4" style="font-weight: 100;"></span> hours
+      <span class="countdown-time" id="minutes4" style="font-weight: 100;"></span> minutes
+      <span class="countdown-time" id="seconds4" style="font-weight: 100;"></span> seconds ?
+    </div>
+  </div>
+<div class="flip-container-grid">
+      <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">Verkle Trees</div>
+        <div class="back estimate-buttonO">Maybe</div>
+      </div>
+    </div>
+    </a> 
+      <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">?</div>
+        <div class="back estimate-buttonO">?</div>
+      </div>
+    </div>
+    </a> 
+      <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">?</div>
+        <div class="back estimate-buttonO">?</div>
+      </div>
+    </div>
+    </a> 
+      <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">?</div>
+        <div class="back estimate-buttonO">?</div>
+      </div>
+    </div>
+    </a> 
+      <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">?</div>
+        <div class="back estimate-buttonO">?</div>
+      </div>
+    </div>
+    </a> 
+      <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">?</div>
+        <div class="back estimate-buttonO">?</div>
+      </div>
+    </div>
+    </a> 
+          <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">?</div>
+        <div class="back estimate-buttonO">?</div>
+      </div>
+    </div>
+    </a> 
+          <a href="" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonO">?</div>
+        <div class="back estimate-buttonO">?</div>
+      </div>
+    </div>
+    </a> 
+    </a> 
+</div>
+<h2 class="timeline-title" style="font-weight: 100;">Deployment</h2>
+  <ul class="timeline" style="font-weight: 100;">
+    <li id="futureforks2" class="deployment-futurefork has-xmark">Devnets</li>
+    <li id="futureforks2" class="deployment-futurefork has-xmark">Sepolia</li>
+    <li id="futureforks2" class="deployment-futurefork has-xmark" >Holesky</li>
+    <li id="futureforks2" class="deployment-futurefork has-xmark">Live</li>
+  </ul><br>
+</div>
+
+
+ <h1 style="font-weight: 100;">Key Organizations</h1>
+ <p class="intro-text" style="font-weight: 100; max-width: 800px;">
+ For decentralization and redundancy sake, Ethereum opted for a multi-client approach. Every Ethereum upgrade must
+ be coordinated and developed in tandem with the five teams in the appropriate layer.
+</p>
+<div class="timeline-container">
+  <h2 class="timeline-title" id="shapella sticky" style="font-weight: 100;">Client Teams</h2>
+<div class="flip-container-grid">
+      <a href="https://geth.ethereum.org/" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Geth</div>
+        <div class="back estimate-buttonT">Execution Layer</div>
+      </div>
+    </div>
+    </a> 
+      <a href="https://www.nethermind.io/" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Nethermind</div>
+        <div class="back estimate-buttonT">Execution Layer</div>
+      </div>
+    </div>
+  </a> 
+     <a href="https://besu.hyperledger.org/" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Besu</div>
+        <div class="back estimate-buttonT">Execution Layer</div>
+      </div>
+    </div>
+ </a> 
+ <a href="https://erigon.tech/" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Erigon</div>
+        <div class="back estimate-buttonT">Execution Layer</div>
+      </div>
+  </div>
+</a> 
+ <a href="https://www.paradigm.xyz/2022/12/reth" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Reth</div>
+        <div class="back estimate-buttonT">Execution Layer</div>
+      </div>
+    </div>
+ </a>
+       <a href="https://prysmaticlabs.com/" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Prysm</div>
+        <div class="back estimate-buttonT">Consensus Layer</div>
+      </div>
+    </div>
+    </a> 
+      <a href="https://lighthouse.sigmaprime.io/" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Lighthouse</div>
+        <div class="back estimate-buttonT">Consensus Layer</div>
+      </div>
+    </div>
+  </a> 
+     <a href="https://consensys.io/teku" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Teku</div>
+        <div class="back estimate-buttonT">Consensus Layer</div>
+      </div>
+    </div>
+ </a> 
+ <a href="https://nimbus.team/" target="_blank">
+        <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Nimbus</div>
+        <div class="back estimate-buttonT">Consensus Layer</div>
+      </div>
+  </div>
+</a> 
+ <a href="https://lodestar.chainsafe.io/" target="_blank">
+    <div class="flip-container">
+      <div class="flipper">
+        <div class="front estimate-buttonT">Lodestar</div>
+        <div class="back estimate-buttonT">Consensus Layer</div>
+      </div>
+    </div>
+ </a>
+</div>
+
+  <h2 class="timeline-title" style="font-weight: 100;">Other Teams</h2>
+  <div class="team-container">
+    <a href="https://ethereum.foundation/" target="_blank" class="team3">Foundation</a>
+    <a href="https://ethereum.org/" target="_blank" class="team3">Ethereum.org</a>
+    <a href="https://www.ethereumcatherders.com/" target="_blank" class="team3">Cat Herders</a>
+    <a href="https://ethereum-magicians.org/" target="_blank" class="team3">Magicians</a>
+    <a href="https://ethglobal.com/" target="_blank" class="team3">EthGlobal</a>
+    <a href="https://consensys.io" target="_blank" class="team3">Consensys</a>
+    <a href="https://protocol-guild.readthedocs.io/en/latest/9-membership.html" target="_blank" class="team3">& More</a>
+
+  </div>
+</div>
+
+<h1 style="font-weight: 100;">Network Health</h1>
+<div class="calculation-container">
+	<div class="calculation-box"> <span style="font-weight:bold;"> 30 Day Inflation </span> <div id="30DayInflation">Loading...</div></div> 
+	<div class="calculation-box"> <span style="font-weight:bold;"> Gas Limit </span> <span> 30M</span></div> 
+	<div class="calculation-box"> <span style="font-weight:bold;"> ETH Staked </span> <div id="eth-staked">Loading...</div></div>	
+	<div class="calculation-box hazard"> <span style="font-weight:bold;"> Lido Share </span> <div id="lido-share">Loading...</div> <i class="fas fa-exclamation-triangle icon-overlay"></i> </div>
+	<div class="calculation-box"> <span style="font-weight:bold;"> Entry Queue </span> <div id="validator-queue">Loading...</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Restaked Share </span> <div id="restaked">Loading...</div></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Consensus APR </span> <div id="APR">Loading...</div></div>	
+	<div class="calculation-box hazard"> <span style="font-weight:bold;"> L2s at Stage 2</span> <div> Zero</div> <i class="fas fa-exclamation-triangle icon-overlay"></i></div>	
+	<div class="calculation-box"> <span style="font-weight:bold;"> Prysm Share </span> <div> 38% </div></div>	
+	<div class="calculation-box hazard"> <span style="font-weight:bold;"> Geth Share </span> <div> 63% </div><i class="fas fa-exclamation-triangle icon-overlay"></i></div>	
+</div>
+
+<p style="color: white; text-decoration: none;">
+    <a href="https://player.vimeo.com/video/936475688" style="color: white; text-decoration: ;" target="_blank">Cool Video</a>
+</p>
+
+</div>
+
+<footer class="footer">
+   <div style="font-size: .8em;" class="footer-box">
+<p>Last <a href="https://github.com/Tjkeel/Ethereum-Roadmap" style="color:white; text-decoration:;" target="_blank">updated </a> on <span id="last-updated"></span> by <a href="https://twitter.com/tj_keel" target="_blank" rel="noopener noreferrer">tjk</a> </p>  </div>
+</footer>
+</body>
+<script src="script.js"></script>
+
+</html>
+
