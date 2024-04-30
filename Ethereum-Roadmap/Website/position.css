@@ -245,7 +245,8 @@ h1 {
 .dashLineV {
   height: 100%;
   border-left: 2px dashed white;
-  filter: drop-shadow(2px 4px 6px black)
+  filter: drop-shadow(2px 4px 6px black);
+  justify-self: center;
 }
 
 .wideWidth {
@@ -944,39 +945,44 @@ h1 {
 }
 
 #verge3 {
-  grid-column: 25 / 26;
+  grid-column: 25 / 27;
+  width: 75%;
   grid-row: 3;
   align-self: center;
 }
 
 #verge4 {
-  grid-column: 25 / 27;
+  grid-column: 26 / 27;
   grid-row: 3;
   justify-self: center;
   align-self: end;
   height: calc(50% + 2px);
-  margin-bottom: -2px;
+  margin-bottom: -1px;
 }
 
 #verge5 {
-  grid-column: 26 / 33;
+  grid-column: 26 / 34;
   grid-row: 3;
   align-self: end;
-  margin-bottom: -11px;
+  margin-bottom: -1px;
+  width: 88%;
+  justify-self: center;
 }
 
 #verge6 {
-  grid-column: 32 / 34;
+  grid-column: 33 / 34;
   grid-row: 3;
   justify-self: center;
   align-self: end;
   height: calc(50% + 2px);
-  margin-bottom: -2px;
+  margin-bottom: -1px;
 }
 
 #verge7 {
   grid-column: 33 / 35;
   grid-row: 3;
+  width: 75%;
+  justify-self: end;
 }
 
 #verge8 {
@@ -1156,7 +1162,6 @@ h1 {
   height: 45%;
   align-self: end;
   margin-bottom: 5%;
-  align-items: unset;
   & .arrowU {
     justify-self: center;
   }
@@ -1166,7 +1171,6 @@ h1 {
   grid-column: 18 / 20;
   grid-row: 3 / -1;
   height: calc(100% + 10px);
-  margin-top: -7%;
 }
 
 .purge {

@@ -210,53 +210,92 @@
     </div>
 
 
-      <!-- <div class="rowGroup">
+    <div class="rowGroup">
       <div class="verge">
-      <div class="goalText"><b>Goal:</b> <b>verifying</b> blocks should be super easy - download<br>
-        N bytes of data, perform a few basic computations, verify<br>
-        a SNARK and you're done</b>
+        <div class="goalText"><b>Goal:</b> <b>verifying</b> blocks should be super easy - download<br>
+          N bytes of data, perform a few basic computations, verify<br>
+          a SNARK and you're done</b>
+        </div>
+        <div class="step" id="vergeA">Most serious <br>EVM DoS <br>issues solved</div>
+        <div class="step" id="vergeB">Basic light <br>client support <br>(sync <br>committees)</div>
+        <div class="arrowRight" id="verge1">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="vergeC">Verkle tree <br>spec + impl</div>
+        <div class="arrowRight" id="verge2">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="vergeD">SNARK based <br>light clients</div>
+        <div class="lineH" id="verge3"></div>
+        <div class="lineV" id="verge4"></div>
+        <div class="lineH" id="verge5"></div>
+        <div class="lineV" id="verge6"></div>
+        <div class="arrowRight" id="verge7">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="arrowDown" id="verge8">
+          <div class="lineV"></div>
+          <img class="arrowD" src="arrow.png">
+        </div>
+        <div class="arrowUp" id="verge9">
+          <div class="arrowU"></div>
+          <img class="lineV" src="lineV.png">
+        </div>
+        <div class="step" id="vergeE">Code chunking + gas cost updates</div>
+        <div class="mile" id="vergeF">Verkle <br>trees</div>
+        <div class="arrowRight" id="verge10">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="vergeG">Transition spec <br>+ impl</div>
+        <div class="step" id="vergeH">SNARK for L1 <br>EVM</div>
+        <div class="arrowRight" id="verge11">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="arrowDown" id="verge12">
+          <div class="lineV"></div>
+          <img class="arrowD" src="arrow.png">
+        </div>
+        <div class="step" id="vergeI">SNARK for <br>Verkle proofs</div>
+        <div class="arrowRight" id="verge13">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="vergeJ">SNARK for <br>consensus state <br>transition</div>
+        <div class="lineH" id="verge14"></div>
+        <div class="arrowUp" id="verge15">
+          <img class="arrowU" src="arrow.png">
+          <div class="lineV"></div>
+        </div>
+        <div class="mile" id="vergeK">Fully <br>SNARKed <br>Ethereum</div>
+        <div class="arrowRight" id="verge16">
+          <div class="lineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="step" id="vergeL">SNARK / <br>STARK ASICs</div>
+        <div class="step" id="vergeM">Explore EVM <br>verification <br>precompile</div>
+        <div class="mile" id="vergeN">Quantum-safe <br>SNARKs (eg. <br>STARKs)</div>
+        <div class="dashLineH" id="verge17"></div> 
+        <div class="dashLineV" id="verge19"></div> 
+        <div class="dashLineV" id="verge21"></div>
+        <div class="dashLineV" id="verge22"></div>
+        <div class="dashLineH" id="verge23"></div>
+        <div class="arrowRight" id="verge20">
+          <div class="dashLineH"></div>
+          <img class="arrowR" src="arrow.png">
+        </div>
+        <div class="dashLineH" id="verge24"></div>
+        <div class="arrowUp" id="verge25">
+          <img class="arrowU" src="arrow.png">
+          <div class="dashLineV"></div>
+        </div>
+        <div class="dashLineV" id="verge26"></div>
       </div>
-      <div class="step" id="vergeA">Most serious <br>EVM DoS <br>issues solved</div>
-      <div class="step" id="vergeB">Basic light <br>client support <br>(sync <br>committees)</div>
-      <div class="arrowRight" id="verge1"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
-      <div class="step" id="vergeC">Verkle tree <br>spec + impl</div>
-      <div class="arrowRight" id="verge2"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
-      <div class="step" id="vergeD">SNARK based <br>light clients</div>
-      <img class="lineH" id="verge3" src="line.png">
-      <img class="lineV" id="verge4" src="lineV.png">
-      <img class="lineH" id="verge5" src="line.png">
-      <img class="lineV" id="verge6" src="lineV.png">
-      <div class="arrowRight" id="verge7"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
-      <div class="arrowDown" id="verge8"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
-      <div class="arrowUp" id="verge9"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
-      <div class="step" id="vergeE">Code chunking + gas cost updates</div>
-      <div class="mile" id="vergeF">Verkle <br>trees</div>
-      <div class="arrowRight" id="verge10"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
-      <div class="step" id="vergeG">Transition spec <br>+ impl</div>
-      <div class="step" id="vergeH">SNARK for L1 <br>EVM</div>
-      <div class="arrowRight" id="verge11"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
-      <div class="arrowDown" id="verge12"><img class="lineV" src="lineV.png"><img class="arrowD" src="arrow.png"></div>
-      <div class="step" id="vergeI">SNARK for <br>Verkle proofs</div>
-      <div class="arrowRight" id="verge13"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
-      <div class="step" id="vergeJ">SNARK for <br>consensus state <br>transition</div>
-      <img class="lineH" id="verge14" src="line.png">
-      <div class="arrowUp" id="verge15"><img class="arrowU" src="arrow.png"><img class="lineV" src="lineV.png"></div>
-      <div class="mile" id="vergeK">Fully <br>SNARKed <br>Ethereum</div>
-      <div class="arrowRight" id="verge16"><img class="lineH" src="line.png"><img class="arrowR" src="arrow.png"></div>
-      <div class="step" id="vergeL">SNARK / <br>STARK ASICs</div>
-      <div class="step" id="vergeM">Explore EVM <br>verification <br>precompile</div>
-      <div class="mile" id="vergeN">Quantum-safe <br>SNARKs (eg. <br>STARKs)</div>
-      <div class="dashLineH" id="verge17"></div> 
-      <div class="dashLineV" id="verge19"></div> 
-      <div class="dashLineV" id="verge21"></div>
-      <div class="dashLineV" id="verge22"></div>
-      <div class="dashLineH" id="verge23"></div>
-      <div class="arrowRight" id="verge20"><img class="dashLineH" src="lineDash.png"><img class="arrowR" src="arrowDash.png"></div>
-      <div class="dashLineH" id="verge24"></div>
-      <div class="arrowUp" id="verge25"><img class="arrowU" src="arrowDash.png"><div class="dashLineV"></div></div>
-      <div class="dashLineV" id="verge26"></div>
-      </div>
-      </div> -->
+    </div>
 
 
       <!-- <div class="rowGroup">
