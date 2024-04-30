@@ -95,19 +95,19 @@ mergeStatus = [
     20 // % complete 
   ],
 
-  // Ideal quantum-safe signatures
-  ["mergeK", false,
-    20 // % complete 
-  ],
-
   // Increase validator count
-  ["mergeL", true, {
+  ["mergeK", true, {
     green: 0, // Green
     purple: 0, // Purple
     blue: 0,  // Blue
     red: 50  // Red
-    // Add more sections as needed
     }
+  ],
+
+  // Ideal quantum-safe signatures
+  ["mergeL", false,
+    20 // % complete
+    // Add more sections as needed 
   ]
 ]
 

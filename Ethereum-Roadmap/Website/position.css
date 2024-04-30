@@ -20,7 +20,7 @@ h1 {
   grid-row: span 2;
   font-size: calc(0.1em + 0.6vw);
   align-content: center;
-  color: black;
+  color: white;
 }
 
 .description-container {
@@ -454,15 +454,15 @@ h1 {
   width: 75%;
 }
 
-/*Ideal quantum-safe signatures*/
+/*Increase validator count*/
 #mergeK {
-  grid-row: 1 / 3;
+  grid-row: 2 / 4;
   grid-column: 49 / 53;
 }
 
-/*Increase validator count*/
+/*Ideal quantum-safe signatures*/
 #mergeL {
-  grid-row: 2 / 4;
+  grid-row: 1 / 3;
   grid-column: 49 / 53;
 }
 
