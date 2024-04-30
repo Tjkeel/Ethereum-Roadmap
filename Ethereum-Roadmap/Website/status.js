@@ -105,7 +105,7 @@ mergeStatus = [
     green: 0, // Green
     purple: 0, // Purple
     blue: 0,  // Blue
-    red: 0  // Red
+    red: 50  // Red
     // Add more sections as needed
     }
   ]
