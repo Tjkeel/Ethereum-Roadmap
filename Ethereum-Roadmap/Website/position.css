@@ -470,7 +470,7 @@ h1 {
 .surge {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr) 15px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -669,7 +669,7 @@ h1 {
 .scourge {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-template-rows: 2fr 1fr;
+  grid-template-rows: 2fr 1fr 25px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -901,7 +901,7 @@ h1 {
 .verge {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr) 25px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -1182,7 +1182,7 @@ h1 {
 .purge {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr) 25px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
@@ -1418,7 +1418,7 @@ h1 {
 .splurge {
   display: grid;
   grid-template-columns: repeat(52, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr) 15px;
   padding: 10px;
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
