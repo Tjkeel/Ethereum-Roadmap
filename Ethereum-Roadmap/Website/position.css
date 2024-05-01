@@ -1188,6 +1188,7 @@ h1 {
   border-radius: 10px;
   & .goalText {
     grid-column: 1 / 11;
+    grid-row: 1 / 4;
   }
 }
 
@@ -1226,15 +1227,13 @@ h1 {
   grid-row: 4;
   justify-self: center;
   align-self: end;
-  height: calc(50% + 5px);
-  margin-bottom: -5px;
+  height: 50%;
 }
 
 #purge4 {
   grid-column: 19 / 20;
   grid-row: 4;
   align-self: end;
-  margin-bottom: -15px;
   width: 50%;
   justify-self: end;
 }
@@ -1243,14 +1242,13 @@ h1 {
   grid-column: 20 / 26;
   grid-row: 4;
   align-self: end;
-  margin-bottom: -15px;
+/*  margin-bottom: -5px;*/
 }
 
 #purge6 {
   grid-column: 25 / 27;
   grid-row: 4;
   align-self: end;
-  margin-bottom: -5px;
   justify-self: center;
 }
 
@@ -1316,6 +1314,7 @@ h1 {
 #purgeG {
   grid-column: 1 / -1;
   grid-row: 1;
+  filter: unset;
 }
 
 /*Ban SELF-DESTRUCT*/
