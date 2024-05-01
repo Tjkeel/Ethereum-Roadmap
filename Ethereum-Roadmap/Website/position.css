@@ -1489,6 +1489,8 @@ h1 {
 #splurgeD {
   grid-row: 1;
   grid-column: 1 / -1;
+  filter: unset;
+  z-index: 1;
 }
 
 /*EOF*/
@@ -1534,6 +1536,8 @@ h1 {
 #splurgeI {
   grid-row: 1;
   grid-column: 1 / -1;
+  filter: unset;
+  z-index: 1;
 }
 
 /*ERC-4337*/
