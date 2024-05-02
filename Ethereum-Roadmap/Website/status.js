@@ -151,9 +151,12 @@ function progress(group) {
             document.getElementById(ident).style.transition = "background-position 2s";
         }
         else {
-            progStart = group[step][2]
+            progStart = group[step][2] / 2
             grad = `linear-gradient(90deg, #00000069 ${progStart}%, rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)` // dark shading
             document.getElementById(ident).style.background = grad;
+            document.getElementById(ident).style.backgroundSize = '200%';
+            document.getElementById(ident).style.backgroundPosition = '100%';
+            document.getElementById(ident).style.transition = "background-position 2s";
         }
     }
     for (step = 0; step < group.length; step++) {
