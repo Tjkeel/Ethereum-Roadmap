@@ -126,19 +126,19 @@ function progress(group) {
             progBlue = group[step][2].blue
             progRed = group[step][2].red
             progStart = 0
-            progEnd = progGreen
+            progEnd = progGreen / 2
             grad = `linear-gradient(90deg, ${progColor.green} ${progEnd}%, ` // Green
             progStart = progEnd
-            progEnd += progPurple
+            progEnd += progPurple / 2
             grad += `${progColor.purple} ${progStart}%, ${progColor.purple} ${progEnd}%, ` // Purple
             progStart = progEnd
-            progEnd += progBlue
+            progEnd += progBlue / 2
             grad += `${progColor.blue} ${progStart}%, ${progColor.blue} ${progEnd}%, ` // Blue
             progStart = progEnd
             if (progRed > 0) { // if progress includes red store a gradient without red in noRed <--- FLASH off
                 noRed.push([ident, grad + `rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)`])
             }
-            progEnd += progRed
+            progEnd += progRed / 2
             grad += `${progColor.red} ${progStart}%, ${progColor.red} ${progEnd}%, ` // Red
             progStart = progEnd
             grad += `rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)` // Remaing (transparent)
@@ -146,12 +146,21 @@ function progress(group) {
                 yesRed.push([ident, grad])
             }
             document.getElementById(ident).style.background = grad;
+            document.getElementById(ident).style.backgroundSize = '200%';
+            document.getElementById(ident).style.backgroundPosition = '100%';
+            document.getElementById(ident).style.transition = "background-position 2s";
         }
         else {
             progStart = group[step][2]
             grad = `linear-gradient(90deg, #00000069 ${progStart}%, rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)` // dark shading
             document.getElementById(ident).style.background = grad;
         }
+    }
+    for (step = 0; step < group.length; step++) {
+        let ident = group[step][0]
+        setTimeout(() => {
+            document.getElementById(ident).style.backgroundPosition = '0%';
+        }, 100);
     }
 }
 
