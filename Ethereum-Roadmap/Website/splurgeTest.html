@@ -125,13 +125,22 @@ There are aspirations to enhance EIP-1559 in the future.
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">ERC-4337 Specification</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> March 1, 2023 </h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> An account abstraction standard.</p>
-<h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+An Account Abstraction standard, and is not a hard fork requiring EIP. Where an EIP requires changes to the Ethereum protocol itself, an ERC, such as ERC-20 (for tokens), 
+proposes standards for contracts on the Ethereum blockchain that operate within the existing framework.<br><br>
+
+Instead of introducing new core features and altering the foundational transaction type, 
+ERC-4337 presents a novel approach through a higher-layer mechanism. 
+This approach utilizes a pseudo-transaction object called a UserOperation. 
+Users transmit these UserOperation objects to a new, distinct mempool. 
+From there, entities known as bundlers aggregate these objects into a single transaction by invoking a specialized contract. 
+This consolidated transaction is then incorporated into a block as usual.
+
+ </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="https://www.erc4337.io/" style="color: #fff;" target="_blank">
-                     <li>ERC4337.io</li>
-                  </a>
-               </ul>
+                	<a href="https://www.erc4337.io/" style="color: #fff;" target="_blank"><li>erc4337.io</li></a>
+                </ul>
             </div>
             <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
             <!-- Right arrow -->
@@ -140,21 +149,45 @@ There are aspirations to enhance EIP-1559 in the future.
             <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
             <!-- Left arrow -->
             <div class="description-content">
-               <h2 class="upgrade-title" style="font-weight: 100;">The Merge!</h2>
-               <h3 style="font-family: 'Open Sans', sans-serif;"> September 15, 2022 </h3>
-               <p style="font-family: 'Open Sans', sans-serif; ">  The Merge was executed through a mechanism called Total Terminal Difficulty (TTD). 
-                  This process involved setting a specific TTD value, which represented the cumulative difficulty of all Ethereum blocks mined under the proof of work system. 
-                  After this theshold was reached,  Ethereum's execution layer merged with the Beacon Chain (consensus layer), 
-                  effectively ceasing proof of work activities and shifting the network's consensus mechanism to proof of stake. <br><br>
-                  Technically, post-Merge Ethereum is still two tightly coupled blockchains. 
-                  However the block trees of the execution layer and consensus layer have a 1:1 mapping, meaning that every EL block has one, 
-                  and only one CL block which corresponds to it, and vice versa. This 1:1 mapping of EL and CL blocks means that we can think of post-Merge 
-                  Ethereum as a single blockchain consisting of two layers.
-               </p>
+               <h2 class="upgrade-title" style="font-weight: 100;">ERC-4337</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> March 1, 2023 </h3>
+                              <p style="font-family: 'Open Sans', sans-serif; "> 
+An Account Abstraction standard, and is not a hard fork requiring EIP. Where an EIP requires changes to the Ethereum protocol itself, an ERC, such as ERC-20 (for tokens), 
+proposes standards for contracts on the Ethereum blockchain that operate within the existing framework.<br><br>
+
+Instead of introducing new core features and altering the foundational transaction type, 
+ERC-4337 presents a novel approach through a higher-layer mechanism. 
+This approach utilizes a pseudo-transaction object called a UserOperation. 
+Users transmit these UserOperation objects to a new, distinct mempool. 
+From there, entities known as bundlers aggregate these objects into a single transaction by invoking a specialized contract. 
+This consolidated transaction is then incorporated into a block as usual.
+
+ </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="https://bordel.wtf/" style="color: #fff;" target="_blank">
-                     <li>bordel.wtf</li>
+                	<a href="https://www.erc4337.io/" style="color: #fff;" target="_blank"><li>erc4337.io</li></a>
+                </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="mergeD-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Voluntary EOA Conversion</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Soon | Prague - Electra</h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  ERC-4337 probably isn't going to be enshrined in the protocol anymore. Instead Core Devs have decided to include
+               EIP-3074 in the Prague-Electra hard fork, which will allow externally owned accounts to delegate control to a smart contract. It does this by introducing two new instructions: 
+               AUTH and AUTHCALL to the EVM.
+               
+               <br><br>Therefore, EIP-3074 covers two steps in published roadmap: it allows for voluntary EOA conversion, and that conversion is enshrined in the protocol. It is likely that EIP-3074 conversions will enhance the existing
+               ERC-4337 standard, by more easily allowing existing EOAs to convert to the aforementioned ERC standard.
+           
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                 <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="https://eips.ethereum.org/EIPS/eip-3074" style="color: #fff;" target="_blank">
+                     <li>EIP-3074</li>
                   </a>
                </ul>
             </div>
@@ -165,33 +198,19 @@ There are aspirations to enhance EIP-1559 in the future.
             <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
             <!-- Left arrow -->
             <div class="description-content">
-               <h2 class="upgrade-title" style="font-weight: 100;">Distributed Validators</h2>
-               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
-               </p>
-            </div>
-            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
-            <!-- Right arrow -->
-         </div>
-         <div class="description-container" id="mergeD-description">
-            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
-            <!-- Left arrow -->
-            <div class="description-content">
-               <h2 class="upgrade-title" style="font-weight: 100;">Withdrawals</h2>
-               <h3 style="font-family: 'Open Sans', sans-serif;"> April 12, 2023 </h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> EIP-4895, included in the Shanghai-Capella hard fork, enabled support
-                  for validator withdrawals from the Beacon chain to the EVM via a new "system-level" operation type.
-                  This EIP completed the three part process of Ethereum's transition to a proof of stake consensus mechanism.
-               </p>
-               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-               <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="https://www.validatorqueue.com/" style="color: #fff;" target="_blank">
-                     <li>validator queue</li>
-                  </a>
-                  <a href="https://consensys.io/shanghai-capella-upgrade" style="color: #fff;" target="_blank">
-                     <li>guide to ETH withdrawals</li>
+               <h2 class="upgrade-title" style="font-weight: 100;">In-Protocol Enshrining</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Soon | Prague - Electra</h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  ERC-4337 probably isn't going to be enshrined in the protocol anymore. Instead Core Devs have decided to include
+               EIP-3074 in the Prague-Electra hard fork, which will allow externally owned accounts to delegate control to a smart contract. It does this by introducing two new instructions: 
+               AUTH and AUTHCALL to the EVM.
+               
+               <br><br>Therefore, EIP-3074 covers two steps in published roadmap: it allows for voluntary EOA conversion, and that conversion is enshrined in the protocol. It is likely that EIP-3074 conversions will enhance the existing
+               ERC-4337 standard, by more easily allowing existing EOAs to convert to the aforementioned ERC standard.
+               
+                                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                 <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="https://eips.ethereum.org/EIPS/eip-3074" style="color: #fff;" target="_blank">
+                     <li>EIP-3074</li>
                   </a>
                </ul>
             </div>
