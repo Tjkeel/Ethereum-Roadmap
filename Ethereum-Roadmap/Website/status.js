@@ -1,7 +1,7 @@
 
 // colors
 progColor = {
-    green: '#99C66D', purple: '#AE80B1', blue: '#6A9BE7', red: '#F1A196' // Add more sections as needed
+    green: '#99C66D', purple: '#AE80B1', blue: '#6A9BE7', red: 'rgb(250 250 250 / 0%)' // Add more sections as needed (flash needs to be transparent)
 }
 
 
@@ -111,11 +111,6 @@ mergeStatus = [
   ]
 ]
 
-// Store to flash red on
-yesRed = [] // [[ID: gradient], [ID: gradient] ... ] <--- FLASH on
-
-// Store to flash red off 
-noRed = [] // [[ID: gradient], [ID: gradient] ... ] <--- FLASH off
 
 function progress(group) {
     for (step=0; step < group.length; step++) {
@@ -127,7 +122,7 @@ function progress(group) {
             progRed = group[step][2].red
             progStart = 0
             progEnd = progGreen / 2
-            grad = `linear-gradient(90deg, ${progColor.green} ${progEnd}%, ` // Green
+            grad = `${progColor.green} ${progEnd}%, ` // Green
             progStart = progEnd
             progEnd += progPurple / 2
             grad += `${progColor.purple} ${progStart}%, ${progColor.purple} ${progEnd}%, ` // Purple
@@ -135,20 +130,16 @@ function progress(group) {
             progEnd += progBlue / 2
             grad += `${progColor.blue} ${progStart}%, ${progColor.blue} ${progEnd}%, ` // Blue
             progStart = progEnd
-            if (progRed > 0) { // if progress includes red store a gradient without red in noRed <--- FLASH off
-                noRed.push([ident, grad + `rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)`])
-            }
             progEnd += progRed / 2
             grad += `${progColor.red} ${progStart}%, ${progColor.red} ${progEnd}%, ` // Red
             progStart = progEnd
-            grad += `rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)` // Remaing (transparent)
-            if (progRed > 0) { // if progress includes red store a gradient with red in yesRed <--- FLASH on
-                yesRed.push([ident, grad])
-            }
-            document.getElementById(ident).style.background = grad;
+            grad += `rgb(89 89 89) ${progStart}%, rgb(89 89 89) 100%)` // Remaing (transparent)
+            grads = `linear-gradient(90deg, ${grad}`
+            document.getElementById(ident).style.background = grads;
             document.getElementById(ident).style.backgroundSize = '200%';
             document.getElementById(ident).style.backgroundPosition = '100%';
             document.getElementById(ident).style.transition = "background-position 2s";
+            document.getElementById(ident).style.animation = "fadeReds 3s ease infinite";
         }
         else {
             progStart = group[step][2] / 2
@@ -162,7 +153,7 @@ function progress(group) {
     for (step = 0; step < group.length; step++) {
         let ident = group[step][0]
         setTimeout(() => {
-            document.getElementById(ident).style.backgroundPosition = '0%';
+            document.getElementById(ident).style.backgroundPosition = '0%'; // animate at start to slide in
         }, 100);
     }
 }
@@ -172,7 +163,8 @@ function progress(group) {
 progress(mergeStatus)
 
 
-
+// // Saving regex if needed
+// // /#[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, rgb\(250 250 250 \/ 0%\) ([0-9.]*)%/g;
 
 
 // The below functions are all for the descriptions and their features
