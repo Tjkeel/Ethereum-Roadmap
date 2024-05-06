@@ -642,28 +642,39 @@ transform: translateY(-2px);
 
 /* ... footer... */
 
-.footer-box {
-  display: inline-block; /* Only as wide as its content */
-  background: rgba(0, 0, 0, 0.5); /* Same grey transparent background as the container */
-  padding: 10px; /* Padding around the text */
-  border-radius: 5px; /* Rounded corners like other boxes */
-  color: #fff; /* White text color */
-  margin-top: 10px; /* Adds a bit of margin above the footer box */
-  margin-bottom: 20px;
+.footer {
+    display: flex; /* Use flexbox to manage layout */
+    justify-content: space-between; /* Space between the boxes */
+    align-items: center; /* Align items vertically */
+    width: 100%; /* Full width of its container */
+    padding: 10px 0; /* Padding around the footer */
+    box-sizing: border-box; /* Include padding in width calculation */
 }
 
+.footer-box {
+    display: flex; /* Enables the content to be centered */
+    justify-content: center; /* Center horizontally in the box */
+    align-items: center; /* Center vertically in the box */
+    width: 33.33%; /* Each box takes up one-third of the footer */
+    text-align: center; /* Center the text inside */
+    padding: 10px; /* Padding inside each box */
+    background: transparent; /* Background is transparent */
+}
+
+.footer-box a {
+    color: black; /* Ensures links are black */
+}
+
+
 .footer p {
+    color: black; /* Ensures links are black */
   margin: 0; /* Removes default paragraph margin */
 }
 
 .footer a {
-  color: #fff; /* Ensures the text link is white */
-  text-decoration: none; /* No underline on the link */
+  color: #000; /* Ensures the text link is white */
 }
 
-.footer a:hover {
-  text-decoration: underline; /* Underline on hover for better UX */
-}
 
 
 .team-container {

@@ -252,7 +252,7 @@ function resetAutoAdvanceTimer() {
     clearInterval(autoAdvanceTimer);
     autoAdvanceTimer = setInterval(() => {
         navigateDescription('next');
-    }, 25000); // Change description every 25 seconds
+    }, 30000); // Change description every 25 seconds
 }
 
 // Initialize and add event listeners
