@@ -148,6 +148,7 @@ function progress(group) {
             document.getElementById(ident).style.backgroundSize = '200%';
             document.getElementById(ident).style.backgroundPosition = '100%';
             document.getElementById(ident).style.transition = "background-position 2s";
+            document.getElementById(ident).classList.add("greyOut")
         }
     }
     for (step = 0; step < group.length; step++) {

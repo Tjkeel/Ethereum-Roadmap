@@ -124,9 +124,9 @@ h1 {
   border-color: white;
 }
 
-.mile.active, .mile:hover {
+.greyOut.active, .greyOut:hover {
   filter: contrast(1.1);
-  backdrop-filter: brightness(1);
+  backdrop-filter: brightness(1.05);
 }
 
 .mile {
