@@ -1,182 +1,94 @@
-
-// colors
-progColor = {
-    green: '#99C66D', purple: '#AE80B1', blue: '#6A9BE7', red: 'rgb(250 250 250 / 0%)' // Add more sections as needed (flash needs to be transparent)
-}
-
+// Color definitions for visual progress indicators
+const progColor = {
+    green: '#99C66D',
+    purple: '#AE80B1',
+    blue: '#6A9BE7',
+    red: 'rgb(250 250 250 / 0%)'  // Add more sections as needed (flash needs to be transparent)
+};
 
 // true = Hard forks - uses color(s)
 // false = TTD & extra protocol - uses dark shading
-
-mergeStatus = [
-
-  // Beacon chain launch
-  ["mergeA", true, {
-    green: 100, // Green
-    purple: 0, // Purple
-    blue: 0,  // Blue
-    red: 0  // Red
-    // Add more sections as needed
-    }
-  ],
-
-  // Warmup fork (Altair)
-  ["mergeB", true, {
-    green: 100, // Green
-    purple: 0, // Purple
-    blue: 0,  // Blue
-    red: 0  // Red
-    // Add more sections as needed
-    }
-  ],
-
-  // Merge! No more PoW
-  ["mergeC", false,
-    100 // % complete 
-  ],
-
- // Withdrawals
-  ["mergeD", true, {
-    green: 0, // Green
-    purple: 100, // Purple
-    blue: 0,  // Blue
-    red: 0  // Red
-    // Add more sections as needed
-    }
-  ],
-
-  // Distributed validators
-  ["mergeE", false,
-    100 // % complete 
-  ],
-
-  // Secret leader election
-  ["mergeF", true, {
-    green: 60, // Green
-    purple: 0, // Purple
-    blue: 0,  // Blue
-    red: 0  // Red
-    // Add more sections as needed
-    }
-  ],
-
-  // Per-slot participant selection
-  ["mergeG", true, {
-    green: 50, // Green
-    purple: 0, // Purple
-    blue: 0,  // Blue
-    red: 0  // Red
-    // Add more sections as needed
-    }
-  ],
-
-  // SSF specification
-  ["mergeH", true, {
-    green: 35, // Green
-    purple: 0, // Purple
-    blue: 0,  // Blue
-    red: 0  // Red
-    // Add more sections as needed
-    }
-  ],
-
-  // Implmentation
-  ["mergeI", true, {
-    green: 10, // Green
-    purple: 15, // Purple
-    blue: 0,  // Blue
-    red: 5  // Red
-    // Add more sections as needed
-    }
-  ],
-
-  // Single slot finality (SSF)
-  ["mergeJ", false,
-    20 // % complete 
-  ],
-
-  // Increase validator count
-  ["mergeK", true, {
-    green: 0, // Green
-    purple: 0, // Purple
-    blue: 0,  // Blue
-    red: 50  // Red
-    }
-  ],
-
-  // Ideal quantum-safe signatures
-  ["mergeL", false,
-    20 // % complete
-    // Add more sections as needed 
-  ]
-]
-
+const mergeStatus = [
+    ["mergeA", true, { green: 100, purple: 0, blue: 0, red: 0 }],
+    ["mergeB", true, { green: 100, purple: 0, blue: 0, red: 0 }],
+    ["mergeC", false, 100],
+    ["mergeD", true, { green: 0, purple: 100, blue: 0, red: 0 }],
+    ["mergeE", false, 100],
+    ["mergeF", true, { green: 60, purple: 0, blue: 0, red: 0 }],
+    ["mergeG", true, { green: 50, purple: 0, blue: 0, red: 0 }],
+    ["mergeH", true, { green: 35, purple: 0, blue: 0, red: 0 }],
+    ["mergeI", true, { green: 10, purple: 15, blue: 0, red: 5 }],
+    ["mergeJ", false, 20],
+    ["mergeK", true, { green: 0, purple: 0, blue: 0, red: 50 }],
+    ["mergeL", false, 20]
+];
 
 function progress(group) {
-    for (step=0; step < group.length; step++) {
-        ident = group[step][0]
-        if (group[step][1] != false) {
-            progGreen = group[step][2].green
-            progPurple = group[step][2].purple
-            progBlue = group[step][2].blue
-            progRed = group[step][2].red
-            progStart = 0
-            progEnd = progGreen / 2
-            grad = `${progColor.green} ${progEnd}%, ` // Green
-            progStart = progEnd
-            progEnd += progPurple / 2
-            grad += `${progColor.purple} ${progStart}%, ${progColor.purple} ${progEnd}%, ` // Purple
-            progStart = progEnd
-            progEnd += progBlue / 2
-            grad += `${progColor.blue} ${progStart}%, ${progColor.blue} ${progEnd}%, ` // Blue
-            progStart = progEnd
-            progEnd += progRed / 2
-            grad += `${progColor.red} ${progStart}%, ${progColor.red} ${progEnd}%, ` // Red
-            progStart = progEnd
-            grad += `rgb(89 89 89) ${progStart}%, rgb(89 89 89) 100%)` // Remaing (transparent)
-            grads = `linear-gradient(90deg, ${grad}`
-            document.getElementById(ident).style.background = grads;
-            document.getElementById(ident).style.backgroundSize = '200%';
-            document.getElementById(ident).style.backgroundPosition = '100%';
-            document.getElementById(ident).style.transition = "background-position 2s";
-            document.getElementById(ident).style.animation = "fadeReds 3s ease infinite";
-        }
-        else {
-            progStart = group[step][2] / 2
-            grad = `linear-gradient(90deg, #00000069 ${progStart}%, rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)` // dark shading
+    group.forEach(item => {
+        const ident = item[0];
+        const isHardFork = item[1];
+        if (isHardFork) {
+            let progStart = 0;
+            let grad = 'linear-gradient(90deg, ';
+            Object.entries(item[2]).forEach(([color, value], index, array) => {
+                const progEnd = progStart + (value / 2);
+                grad += `${progColor[color]} ${progStart}%, ${progColor[color]} ${progEnd}%`;
+                progStart = progEnd;
+                if (index !== array.length - 1) {
+                    grad += ', ';
+                }
+            });
+            grad += `, rgb(89 89 89) ${progStart}%, rgb(89 89 89) 100%)`;
             document.getElementById(ident).style.background = grad;
             document.getElementById(ident).style.backgroundSize = '200%';
             document.getElementById(ident).style.backgroundPosition = '100%';
             document.getElementById(ident).style.transition = "background-position 2s";
-            document.getElementById(ident).classList.add("greyOut")
+            document.getElementById(ident).style.animation = "fadeReds 3s ease infinite";
+        } else {
+            const progStart = item[2] / 2;
+            const grad = `linear-gradient(90deg, #00000069 ${progStart}%, rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)`;
+            document.getElementById(ident).style.background = grad;
+            document.getElementById(ident).style.backgroundSize = '200%';
+            document.getElementById(ident).style.backgroundPosition = '100%';
+            document.getElementById(ident).style.transition = "background-position 2s";
+            document.getElementById(ident).classList.add("greyOut");
         }
-    }
-    for (step = 0; step < group.length; step++) {
-        let ident = group[step][0]
-        setTimeout(() => {
-            document.getElementById(ident).style.backgroundPosition = '0%'; // animate at start to slide in
-        }, 100);
-    }
+    });
+
+    setTimeout(() => {
+        group.forEach(step => {
+            document.getElementById(step[0]).style.backgroundPosition = '0%'; // Animate at start to slide in
+        });
+    }, 100);
 }
 
-
-// call function on merge
-progress(mergeStatus)
-
-
-// // Saving regex if needed
-// // /#[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, #[0-9A-Z]* ([0-9.]*)%, rgb\(250 250 250 \/ 0%\) ([0-9.]*)%/g;
-
-
-// The below functions are all for the descriptions and their features
-
+// Call function on merge
+progress(mergeStatus);
 
 // Cache for description and step elements
 let descriptionElements = document.querySelectorAll('.description-container');
 let stepElements = {};
+const sections = ['merge', 'surge', 'scourge', 'verge', 'purge', 'splurge'];
 const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
-steps.forEach(step => {
-    stepElements[step] = document.getElementById(`merge${step}`);
+
+sections.forEach(section => {
+    steps.forEach(step => {
+        const stepId = `${section}${step}`;
+        const descId = `${stepId}-description`;
+        stepElements[stepId] = document.getElementById(stepId);
+        if (stepElements[stepId]) {
+            stepElements[stepId].addEventListener('click', () => {
+                // Hide all descriptions
+                descriptionElements.forEach(desc => desc.style.display = 'none');
+                // Show the clicked step's description
+                const descElement = document.getElementById(descId);
+                if (descElement) {
+                    descElement.style.display = 'block';
+                    descElement.classList.add('show');
+                }
+            });
+        }
+    });
 });
 
 // Function to hide all description containers smoothly, then perform callback
@@ -192,35 +104,31 @@ function hideAllDescriptions(callback) {
 function showDescription(id) {
     hideAllDescriptions(() => {
         const element = document.getElementById(id);
-        element.style.display = 'block';
-        setTimeout(() => { element.classList.add('show'); }, 10);
-        updateActiveStep(id);
-        resetAutoAdvanceTimer(); // Reset the auto-advance timer when a new description is shown
+        if (element) {
+            element.style.display = 'block';
+            setTimeout(() => { element.classList.add('show'); }, 10);
+            updateActiveStep(id);
+            resetAutoAdvanceTimer(); // Reset the auto-advance timer when a new description is shown
+        }
     });
 }
 
 // Update the active step style
 function updateActiveStep(activeDescriptionId) {
     // First, remove 'active' class from all steps to ensure only the current one is marked active
-    Object.keys(stepElements).forEach(step => {
-        stepElements[step].classList.remove('active');
+    Object.keys(stepElements).forEach(stepId => {
+        if (stepElements[stepId]) stepElements[stepId].classList.remove('active');
     });
     // Then, add 'active' class only to the current step
-    Object.keys(stepElements).forEach(step => {
-        if (`merge${step}-description` === activeDescriptionId) {
-            stepElements[step].classList.add('active');
-        }
-    });
+    const activeStep = stepElements[activeDescriptionId.replace('-description', '')];
+    if (activeStep) activeStep.classList.add('active');
 }
 
 // Function to navigate descriptions using arrows and swipe gestures
 function navigateDescription(direction) {
-    if (direction === 'next') {
-        currentIndex = (currentIndex + 1) % steps.length;
-    } else if (direction === 'prev') {
-        currentIndex = (currentIndex - 1 + steps.length) % steps.length;
-    }
-    let descriptionId = `merge${steps[currentIndex]}-description`;
+    const indexList = Object.keys(stepElements);
+    currentIndex = (currentIndex + (direction === 'next' ? 1 : -1) + indexList.length) % indexList.length;
+    const descriptionId = `${indexList[currentIndex]}-description`;
     showDescription(descriptionId);
 }
 
@@ -259,20 +167,9 @@ function resetAutoAdvanceTimer() {
 // Initialize and add event listeners
 document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
-        showDescription('mergeA-description');
+        showDescription(`${sections[0]}A-description`);
         resetAutoAdvanceTimer(); // Start the auto-advance timer after initial display
     }, 500);
-
-    steps.forEach(step => {
-        let descriptionId = `merge${step}-description`;
-        let stepElement = stepElements[step];
-
-        stepElement.addEventListener('click', () => {
-            showDescription(descriptionId);
-            currentIndex = steps.indexOf(step);
-            resetAutoAdvanceTimer(); // Reset timer on manual navigation
-        });
-    });
 
     descriptionElements.forEach(container => {
         addSwipeEvents(container);
