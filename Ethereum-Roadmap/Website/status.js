@@ -63,7 +63,9 @@ function progress(group) {
 }
 
 // Call function on merge
-progress(mergeStatus);
+if (document.getElementById('mergeA')) {
+    progress(mergeStatus);
+}
 
 // Cache for description and step elements
 let descriptionElements = document.querySelectorAll('.description-container');
