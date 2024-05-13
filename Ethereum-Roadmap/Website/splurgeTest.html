@@ -13,6 +13,7 @@
       <link rel="icon" type="image/png" href="ethlogo.png">
       <link rel="stylesheet" type="text/css" href="styles.css">
       <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
       <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -33,61 +34,60 @@
          <h1 class="main-title" style="font-weight: 100;">The Splurge</h1>
          <div class="roadmap">
             <div class="rowGroup">
-               <div class="merge">
-                  <div class="goalText">
-                     <b>Goal:</b> have an ideal, simple, robust<br>
-                     and decentralized <b>proof-of-stake<br>
-                     consensus</b>
-                  </div>
-                  <div id="ingap">.<br>.</div>
-                  <div class="step" id="mergeA">Beacon chain <br>launch</div>
-                  <div class="arrowRight" id="merge1">
+               <div class="splurge">
+                 <div class="goalText"><b>Goal:</b> fix <b>everything else</b></div>
+                 <div id="ingap">.<br>.<br>.<br>.<br></div>
+                 <div class="step" id="splurgeA">EIP-1559</div>
+                 <div class="arrowRight" id="splurge1">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div id="splurgeBB">
+                   <div class="step" id="splurgeB">EIP-4337 <br>specification</div>
+                 </div>
+                 <div class="arrowRight" id="splurge2">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="trackGroup" id="splurgeTrackA">
+                   <div class="track" id="splurgeTrackAText">Account abstraction track</div>
+                   <div class="step" id="splurgeC">ERC-4337</div>
+                   <div class="arrowRight" id="splurge3">
                      <div class="lineH"></div>
                      <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeB">Warmup fork <br>(Altair)</div>
-                  <div class="lineH" id="merge2"></div>
-                  <div class="arrowUp" id="merge3">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeC">Merge! <br>No more <br>PoW</div>
-                  <div class="lineH" id="merge4"></div>
-                  <div class="lineV" id="merge5"></div>
-                  <div class="arrowRight" id="merge6">
+                   </div>
+                   <div class="step" id="splurgeD">Voluntary <br>EOA <br>conversion</div>
+                   <div class="arrowRight" id="splurge4">
                      <div class="lineH"></div>
                      <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeD">Withdrawals</div>
-                  <div class="step" id="mergeE">Distributed <br>validators</div>
-                  <div class="step" id="mergeF">Secret leader <br>election</div>
-                  <div class="step" id="mergeG">Per-slot <br>participant <br>selection</div>
-                  <div class="arrowRight" id="merge8">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeH">SSF <br>specification</div>
-                  <div class="lineH" id="merge9"></div>
-                  <div class="arrowDown" id="merge10">
-                     <div class="lineV"></div>
-                     <img class="arrowD" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeI">Implementation</div>
-                  <div class="lineH" id="merge11"></div>
-                  <div class="arrowUp" id="merge12">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
-                  <div class="lineH" id="merge13"></div>
-                  <div class="lineV" id="merge14"></div>
-                  <div class="arrowRight" id="merge15">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeK">Increase <br>validator count</div>
-                  <div class="quant" id="mergeL">Ideal quantum-<br>safe signatures</div>
-                  <div class="progress-bar" id="merge-progress"></div>
+                   </div>
+                   <div class="step" id="splurgeE">In-protocol <br>enshrining</div>
+                 </div>
+                 <div class="trackGroup" id="splurgeTrackB">
+                   <div class="track" id="splurgeTrackBText">EVM improvements track</div>
+                   <div class="step" id="splurgeG">EOF</div>
+                   <div class="step" id="splurgeH">Big modular <br>arithmetic</div>
+                   <div class="step" id="splurgeI">Further EVM <br>improvements</div>
+                 </div>
+                 <div class="arrowRight" id="splurge5">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="arrowRight" id="splurge6">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="mile" id="splurgeJ">Endgame <br>EVM</div>
+                 <div class="step" id="splurgeK">Endgame <br>EIP-1559</div>
+                 <div class="mile" id="splurgeF">Endgame <br>account <br>abstraction</div>
+                 <div class="step" id="splurgeL">Explore deep <br>crypto (eg. <br>obfuscation)</div>
+                 <div class="step" id="splurgeM">Explore delay- <br>encrypted</div>
+                 <div class="step" id="splurgeN">VDFs</div>
+                 <div class="arrowDown hideLinks" id="splurge7">
+                   <div class="lineV"></div>
+                   <img class="arrowD" src="arrow.png">
+                 </div>
+                 <div class="progress-bar" id="splurge-progress"></div>
                </div>
             </div>
          <div class="description-container" id="mergeA-description">
