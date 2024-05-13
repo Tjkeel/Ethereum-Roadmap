@@ -137,18 +137,23 @@
             <!-- Left arrow -->
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">EIP-4844 Specification</h2>
-             <h3 style="font-family: 'Open Sans', sans-serif;"> TBD </h3>
-             <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+             <h3 style="font-family: 'Open Sans', sans-serif;"> March 13, 2024 </h3>
+             <p style="font-family: 'Open Sans', sans-serif; ">  Ethereum's sharding roadmap has evolved from an idealistic, 
+             to a pragmatic rollup centric approach. The Ethereum community originally pursued 
+             sharding at the execution layer (Full Sharding). Gradually, and in conjunction with the rollup centric roadmap, 
+             leading research began to favor sharding only on the consensus layer (Data Sharding). 
+             Again, the community shifted in favor of Danksharding , which is not technically sharding at all, 
+             but rather a probabilistic data sampling approach requiring the introduction of second transaction type, blobs. EIP-4844, 
+             Proto-Danksharding, is the first iteration of this approach.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-               <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
-                  </a>
-               </ul>
+              <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://eips.ethereum.org/EIPS/eip-4844" style="color: #fff;" target="_blank"><li>Official EIP-4844 Spec</li></a>
+                   <a href="https://www.eip4844.com/" style="color: #fff;" target="_blank"><li>EIP-4844 Advocacy Page</li></a>
+                   <a href="https://domothy.com/blobspace/" style="color: #fff;" target="_blank"><li>Blobspace 101 by Domothy</li></a>
+                   <a href="https://www.youtube.com/watch?v=4lyb02wZQQ4" style="color: #fff;" target="_blank"><li>PEEPanEIP #104: EIP-4844</li></a>
+                   <a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-5-eip-4844" style="color: #fff;" target="_blank"><li>Ethereum Evolved: Dencun Upgrade Part 5, EIP-4844</li></a>
+                </ul>
             </div>
             <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
             <!-- Right arrow -->
@@ -158,18 +163,26 @@
             <!-- Left arrow -->
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">EIP-4844 Inclusion</h2>
-				 <h3 style="font-family: 'Open Sans', sans-serif;"> TBD </h3>
-             <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+				 <h3 style="font-family: 'Open Sans', sans-serif;"> March 13, 2024 </h3>
+             <p style="font-family: 'Open Sans', sans-serif; ">  EIP-4844 introduced a new transaction type that carries large data "blobs," 
+             which are cheap to include on the consensus layer but are not processed by Ethereum's execution layer. Each blob is stored on the consensus layer for 4096 epochs, or ~18 days. Extra protocol solutions can, and do
+             store this blob data indefinitely. 
+             
+            <br><br>
+             This ephemeral approach limits the computational burden on nodes, as they only store these blobs for a limited time. Under EIP-4844, a max of 6 blobs may be attached to a given block, although the
+             blob market is designed to target 3 per blob; each blob adds 128kb of temporary storage to each block.<br><br>
+             
+             Proto-Danksharding lays the groundwork for future scalability upgrades, particularly full Danksharding, 
+             by setting up the necessary cryptographic and technical infrastructure. In later EIPs, we expect to be able to increase both the size, and the number of blobs that may be attached to a block.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-               <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
-                  </a>
-               </ul>
+              <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://eips.ethereum.org/EIPS/eip-4844" style="color: #fff;" target="_blank"><li>Official EIP-4844 Spec</li></a>
+                   <a href="https://www.eip4844.com/" style="color: #fff;" target="_blank"><li>EIP-4844 Advocacy Page</li></a>
+                   <a href="https://domothy.com/blobspace/" style="color: #fff;" target="_blank"><li>Blobspace 101 by Domothy</li></a>
+                   <a href="https://www.youtube.com/watch?v=4lyb02wZQQ4" style="color: #fff;" target="_blank"><li>PEEPanEIP #104: EIP-4844</li></a>
+                   <a href="https://consensys.io/blog/ethereum-evolved-dencun-upgrade-part-5-eip-4844" style="color: #fff;" target="_blank"><li>Ethereum Evolved: Dencun Upgrade Part 5, EIP-4844</li></a>
+                </ul>
             </div>
             <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
             <!-- Right arrow -->
@@ -179,16 +192,26 @@
             <!-- Left arrow -->
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Basic Rollup Scalling Complete</h2>
-  					<h3 style="font-family: 'Open Sans', sans-serif;"> TBD </h3>
-             <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+  					<h3 style="font-family: 'Open Sans', sans-serif;"> March 13, 2024 </h3>
+             <p style="font-family: 'Open Sans', sans-serif; ">  While blobs have drastically reduced the costs L2s must pay Ethereum to inherit its security, we must still address existing caveats. 
+             These caveats are perhaps best described by the L2beat organization, which propose three stages to categorize a rollup's maturity: Stage 0, Stage 1, and Stage 2.
+             In their current form, all rollups remain either in Stage 0, or Stage 1 <br><br>
+             
+             Quoting directly from an L2beat blog post: 
+             <br><br>
+             <span style="font-weight:bold;"> Stage 0 </span>— Full Training Wheels: At this stage, the rollup is effectively run by the operators. 
+             Still, there is an source-available software that allows for the reconstruction of the state from the data posted on L1, 
+             used to compare state roots with the proposed ones.
+             <br><br>
+			<span style="font-weight:bold;">Stage 1 </span>— Limited Training Wheels: In this stage, the rollup transitions to being governed by smart contracts. However, a Security Council might remain in place to address potential bugs. This stage is characterized by the implementation of a fully functional proof system, decentralization of fraud proof submission, and provision for user exits without operator coordination. The Security Council, comprised of a diverse set of participants, provides a safety net, but its power also poses a potential risk.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://l2beat.com/scaling/summary" style="color: #fff;" target="_blank">
+                     <li>L2beat</li>
+                  </a>
+                 <a href="https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe" style="color: #fff;" target="_blank">
+                     <li>L2beat Stages</li>
                   </a>
                </ul>
             </div>
@@ -243,15 +266,23 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Full Rollup Scaling Complete</h2>
  				<h3 style="font-family: 'Open Sans', sans-serif;"> TBD </h3>
-             <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+             <p style="font-family: 'Open Sans', sans-serif; ">  
+             This roadmap item boils down to two items: ship additional optimizations to Ethereum's consensus layer to further reduce blob costs for rollups, and have
+             the rollups themselves mature to point where they may be considered Stage 2, per L2beat's definitions. In other words, utilize their scalabilty benefits without sacraficing security.
+             <br><br>
+             Quoting directly from an L2beat blog post:
+             <br><br>
+             <span style="font-weight:bold;"> "Stage 2 </span>— No Training Wheels: This is the final stage where the rollup becomes fully managed by smart contracts. 
+             At this point, the fraud proof system is permissionless, and users are given ample time to exit in the event of unwanted upgrades. 
+             The Security Council’s role is strictly confined to addressing soundness errors that can be adjudicated on-chain, and users are protected from governance attacks."
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://l2beat.com/scaling/summary" style="color: #fff;" target="_blank">
+                     <li>L2beat</li>
+                  </a>
+                 <a href="https://medium.com/l2beat/introducing-stages-a-framework-to-evaluate-rollups-maturity-d290bb22befe" style="color: #fff;" target="_blank">
+                     <li>L2beat Stages</li>
                   </a>
                </ul>
             </div>

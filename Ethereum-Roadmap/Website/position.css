@@ -103,7 +103,6 @@ h1 {
   font-size: calc(0.1em + 0.6vw);
   filter: drop-shadow(2px 4px 6px black);
   transition: filter 0.05s, backdrop-filter 0.05s;
-  font-family: cursive;
 }
 
 @keyframes fadeReds {
