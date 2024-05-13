@@ -13,6 +13,7 @@
       <link rel="icon" type="image/png" href="ethlogo.png">
       <link rel="stylesheet" type="text/css" href="styles.css">
       <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
       <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -33,61 +34,59 @@
          <h1 class="main-title" style="font-weight: 100;">The Purge</h1>
          <div class="roadmap">
             <div class="rowGroup">
-               <div class="merge">
-                  <div class="goalText">
-                     <b>Goal:</b> have an ideal, simple, robust<br>
-                     and decentralized <b>proof-of-stake<br>
-                     consensus</b>
-                  </div>
-                  <div id="ingap">.<br>.</div>
-                  <div class="step" id="mergeA">Beacon chain <br>launch</div>
-                  <div class="arrowRight" id="merge1">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeB">Warmup fork <br>(Altair)</div>
-                  <div class="lineH" id="merge2"></div>
-                  <div class="arrowUp" id="merge3">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeC">Merge! <br>No more <br>PoW</div>
-                  <div class="lineH" id="merge4"></div>
-                  <div class="lineV" id="merge5"></div>
-                  <div class="arrowRight" id="merge6">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeD">Withdrawals</div>
-                  <div class="step" id="mergeE">Distributed <br>validators</div>
-                  <div class="step" id="mergeF">Secret leader <br>election</div>
-                  <div class="step" id="mergeG">Per-slot <br>participant <br>selection</div>
-                  <div class="arrowRight" id="merge8">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeH">SSF <br>specification</div>
-                  <div class="lineH" id="merge9"></div>
-                  <div class="arrowDown" id="merge10">
-                     <div class="lineV"></div>
-                     <img class="arrowD" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeI">Implementation</div>
-                  <div class="lineH" id="merge11"></div>
-                  <div class="arrowUp" id="merge12">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
-                  <div class="lineH" id="merge13"></div>
-                  <div class="lineV" id="merge14"></div>
-                  <div class="arrowRight" id="merge15">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeK">Increase <br>validator count</div>
-                  <div class="quant" id="mergeL">Ideal quantum-<br>safe signatures</div>
-                  <div class="progress-bar" id="merge-progress"></div>
+               <div class="purge">
+                 <div class="goalText"><b>Goal:</b> <b>simplify</b> the protocol, <b>eliminate technical<br>
+                   debt</b> amd <b>limit costs</b> of participating in the network by<br>
+                   clearing old history</b>
+                 </div>
+                 <div id="ingap">.<br>.</div>
+                 <div class="step" id="purgeA">Eliminate most <br>gas refunds</div>
+                 <div class="step" id="purgeB">EIP-4444 <br>specification</div>
+                 <div class="arrowRight" id="purge1">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="purgeC">EIP-4444 <br>implementation</div>
+                 <div class="lineH" id="purge2"></div>
+                 <div class="lineV" id="purge3"></div>
+                 <div class="lineH" id="purge4"></div>
+                 <div class="lineH" id="purge5"></div>
+                 <div class="lineV" id="purge6"></div>
+                 <div class="step" id="purgeD">Beacon chain <br>fast sync</div>
+                 <div class="lineH" id="purge7"></div>
+                 <div class="lineV" id="purge8"></div>
+                 <div class="arrowRight" id="purge9">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="purgeE">P2P history <br>(eg. Portal)</div>
+                 <div class="lineH" id="purge10"></div>
+                 <div class="lineV" id="purge11"></div>
+                 <div class="trackGroup" id="purgeTrackA"> 
+                   <div class="track" id="purgeTrackAText">EVM simplification track</div>
+                   <div class="step" id="purgeG">Ban SELF- <br>DESTRUCT</div>
+                   <div class="step" id="purgeH">Simplify gas <br>mechanics</div>
+                   <div class="step" id="purgeI">Precompiles <br>EVM impls</div>
+                 </div>
+                 <div class="lineH hideLinks" id="purge16"></div>
+                 <div class="lineV hideLinks" id="purge17"></div>
+                 <div class="mile" id="purgeF">History <br>expiry <br>(EIP-4444)</div>
+                 <div class="step" id="purgeJ">Address space <br>extension</div>
+                 <div class="arrowRight" id="purge12">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="purgeL">LOG reform </div>
+                 <div class="step" id="purgeM">Remove old tx <br>types</div>
+                 <div class="arrowRight" id="purge13">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="purgeK">State expiry </div>
+                 <div class="step" id="purgeN">Serialization <br>harmonization</div>
+                 <div class="dashLineH hideLinks" id="purge14"></div>
+                 <div class="dashLineV hideLinks" id="purge15"></div>
+                 <div class="progress-bar" id="purge-progress"></div>
                </div>
             </div>
          <div class="description-container" id="mergeA-description">
