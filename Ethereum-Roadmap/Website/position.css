@@ -945,7 +945,7 @@ h1 {
 }
 
 /*Verkle tree spec + impl*/
-#vergeC {
+#vergeE {
   grid-column: 21 / 25;
   grid-row: 2;
 }
@@ -956,7 +956,7 @@ h1 {
 }
 
 /*SNARK based light clients*/
-#vergeD {
+#vergeC {
   grid-column: 21 / 25;
   grid-row: 3;
 }
@@ -1021,13 +1021,13 @@ h1 {
 }
 
 /*Code chunking + gas cost updates*/
-#vergeE {
+#vergeF {
   grid-column: 28 / 32;
   grid-row: 1;
 }
 
 /*Verkle trees*/
-#vergeF {
+#vergeH {
   grid-column: 28 / 32;
   grid-row: 2;
   height: 50%;
@@ -1045,7 +1045,7 @@ h1 {
 }
 
 /*SNARK for L1 EVM*/
-#vergeH {
+#vergeJ {
   grid-column: 35 / 39;
   grid-row: 1;
 }
@@ -1076,7 +1076,7 @@ h1 {
 }
 
 /*SNARK for consensus state transition*/
-#vergeJ {
+#vergeD {
   grid-column: 35 / 39;
   grid-row: 3;
 }
@@ -1097,7 +1097,7 @@ h1 {
 }
 
 /*Fully SNARKed Ethereum*/
-#vergeK {
+#vergeL {
   z-index: 1;
   grid-column: 42 / 46;
   grid-row: 2;
@@ -1110,22 +1110,23 @@ h1 {
 }
 
 /*SNARK / STARK ASICs*/
-#vergeL {
+#vergeN {
   grid-column: 42 / 46;
   grid-row: 3;
 }
 
 /*Explore EVM verification precompile*/
-#vergeM {
+#vergeK {
   grid-column: 49 / 53;
   grid-row: 1;
 }
 
 /*Quantum-safe SNARKs (eg. <br>STARKs)*/
-#vergeN {
+#vergeM {
   grid-column: 49 / 53;
   grid-row: 2;
-  height: 75%;
+  height: 60%;
+  align-content: center;
 }
 
 #verge17 {
