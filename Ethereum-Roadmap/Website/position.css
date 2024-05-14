@@ -648,13 +648,16 @@ h1 {
 #surge12 {
   grid-row: 5;
   grid-column: 44 / -1;
-  margin-right: -65px;
+  width: calc(100% + 20px);
 }
 
 #surge13 {
+  position: relative;
+  grid-column: -1;
+  left: 19px;
   grid-row: 5;
   top: 50%;
-  height: calc(50% + 50px);
+  height: calc(50% + 55px);
 }
 
 /*Q-sale, no-setup commitments*/
