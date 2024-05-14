@@ -13,6 +13,7 @@
       <link rel="icon" type="image/png" href="ethlogo.png">
       <link rel="stylesheet" type="text/css" href="styles.css">
       <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
       <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -33,61 +34,91 @@
          <h1 class="main-title" style="font-weight: 100;">The Verge</h1>
          <div class="roadmap">
             <div class="rowGroup">
-               <div class="merge">
-                  <div class="goalText">
-                     <b>Goal:</b> have an ideal, simple, robust<br>
-                     and decentralized <b>proof-of-stake<br>
-                     consensus</b>
-                  </div>
-                  <div id="ingap">.<br>.</div>
-                  <div class="step" id="mergeA">Beacon chain <br>launch</div>
-                  <div class="arrowRight" id="merge1">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeB">Warmup fork <br>(Altair)</div>
-                  <div class="lineH" id="merge2"></div>
-                  <div class="arrowUp" id="merge3">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeC">Merge! <br>No more <br>PoW</div>
-                  <div class="lineH" id="merge4"></div>
-                  <div class="lineV" id="merge5"></div>
-                  <div class="arrowRight" id="merge6">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeD">Withdrawals</div>
-                  <div class="step" id="mergeE">Distributed <br>validators</div>
-                  <div class="step" id="mergeF">Secret leader <br>election</div>
-                  <div class="step" id="mergeG">Per-slot <br>participant <br>selection</div>
-                  <div class="arrowRight" id="merge8">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeH">SSF <br>specification</div>
-                  <div class="lineH" id="merge9"></div>
-                  <div class="arrowDown" id="merge10">
-                     <div class="lineV"></div>
-                     <img class="arrowD" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeI">Implementation</div>
-                  <div class="lineH" id="merge11"></div>
-                  <div class="arrowUp" id="merge12">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
-                  <div class="lineH" id="merge13"></div>
-                  <div class="lineV" id="merge14"></div>
-                  <div class="arrowRight" id="merge15">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeK">Increase <br>validator count</div>
-                  <div class="quant" id="mergeL">Ideal quantum-<br>safe signatures</div>
-                  <div class="progress-bar" id="merge-progress"></div>
+               <div class="verge">
+                 <div class="goalText"><b>Goal:</b> <b>verifying</b> blocks should be super easy - download<br>
+                   N bytes of data, perform a few basic computations, verify<br>
+                   a SNARK and you're done</b>
+                 </div>
+                 <div id="ingap">.<br>.<br>.</div>
+                 <div class="step" id="vergeA">Most serious <br>EVM DoS <br>issues solved</div>
+                 <div class="step" id="vergeB">Basic light <br>client support <br>(sync <br>committees)</div>
+                 <div class="arrowRight" id="verge1">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeE">Verkle tree <br>spec + impl</div>
+                 <div class="arrowRight" id="verge2">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeC">SNARK based <br>light clients</div>
+                 <div class="lineH" id="verge3"></div>
+                 <div class="lineV" id="verge4"></div>
+                 <div class="lineH" id="verge5"></div>
+                 <div class="lineV" id="verge6"></div>
+                 <div class="arrowRight" id="verge7">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="arrowDown" id="verge8">
+                   <div class="lineV"></div>
+                   <img class="arrowD" src="arrow.png">
+                 </div>
+                 <div class="arrowUp" id="verge9">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="lineV"></div>
+                 </div>
+                 <div class="step" id="vergeF">Code chunking + gas cost updates</div>
+                 <div class="mile" id="vergeH">Verkle <br>trees</div>
+                 <div class="arrowRight" id="verge10">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeG">Transition spec <br>+ impl</div>
+                 <div class="step" id="vergeJ">SNARK for L1 <br>EVM</div>
+                 <div class="arrowRight" id="verge11">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="arrowDown" id="verge12">
+                   <div class="lineV"></div>
+                   <img class="arrowD" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeI">SNARK for <br>Verkle proofs</div>
+                 <div class="arrowRight" id="verge13">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeD">SNARK for <br>consensus state <br>transition</div>
+                 <div class="lineH" id="verge14"></div>
+                 <div class="arrowUp" id="verge15">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="lineV"></div>
+                 </div>
+                 <div class="mile" id="vergeL">Fully <br>SNARKed <br>Ethereum</div>
+                 <div class="arrowRight" id="verge16">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeN">SNARK / <br>STARK ASICs</div>
+                 <div class="step" id="vergeK">Explore EVM <br>verification <br>precompile</div>
+                 <div class="quant" id="vergeM">Quantum-safe <br>SNARKs (eg. <br>STARKs)</div>
+                 <div class="dashLineH hideLinks" id="verge17"></div> 
+                 <div class="dashLineV hideLinks" id="verge19"></div> 
+                 <div class="dashLineV hideLinks" id="verge21"></div>
+                 <div class="dashLineV hideLinks" id="verge22"></div>
+                 <div class="dashLineH hideLinks" id="verge23"></div>
+                 <div class="arrowRight hideLinks" id="verge20">
+                   <div class="dashLineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="dashLineH hideLinks" id="verge24"></div>
+                 <div class="arrowUp hideLinks" id="verge25">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="dashLineV"></div>
+                 </div>
+                 <div class="dashLineV hideLinks" id="verge26"></div>
+                 <div class="progress-bar" id="verge-progress"></div>
                </div>
             </div>
          <div class="description-container" id="mergeA-description">
