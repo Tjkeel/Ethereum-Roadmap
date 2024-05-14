@@ -895,15 +895,23 @@ h1 {
 }
 
 #scourge14 {
-  align-self: end;
-  height: calc(25% + 8px);
-  margin-bottom: -10px;
-  grid-row: 2;
+  height: calc(100% + 21px);
+  margin-top: -16px;
+  grid-row: 3 / 5;
   grid-column: 29 / 31;
   justify-self: center;
   & .dashLine {
     height: 100%;
   }
+}
+
+#scourge15 {
+  grid-column: -1;
+  position: relative;
+  left: 19px;
+  grid-row: 1 / -1;
+  height: calc(100% + 80px);
+  bottom: 18px;
 }
 
 .verge {
