@@ -520,8 +520,8 @@ h1 {
   z-index: 2;
 }
 
-/*Prototype*/
-#surgeD {
+/* track Prototype*/
+#surgeTrackA {
   grid-row: 3;
   grid-column: 18 / 21;
   width: 100%;
@@ -531,7 +531,7 @@ h1 {
 }
 
 /*EIP-4844 implementation*/
-#surgeE {
+#surgeD {
   grid-row: 1 / 3;
   grid-column: 21 / 25;
 }
@@ -542,7 +542,7 @@ h1 {
 }
 
 /*Basic rollup scaling*/
-#surgeF {
+#surgeE {
   grid-row: 1 / 3;
   grid-column: 28 / 32;
   height: 50%;
@@ -567,15 +567,15 @@ h1 {
   z-index: 2;
 }
 
-/*Limited training wheels (diverse 6-of-8 or stricter)*/
-#surgeG {
+/* track Limited training wheels (diverse 6-of-8 or stricter)*/
+#surgeTrackB {
   grid-row: 3;
   grid-column: 26 / 34;
   width: 75%;
 }
 
 /*peerDAS*/
-#surgeH {
+#surgeF {
   grid-column: 35 / 39;
   grid-row: 1 / 3;
   padding-top: 9px;
@@ -583,7 +583,7 @@ h1 {
 }
 
 /*Efficient DA self-healing*/
-#surgeI {
+#surgeG {
   grid-column: 35 / 39;
   grid-row: 2 / 4;
 }
@@ -607,14 +607,14 @@ h1 {
 }
 
 /*Full rollup scaling*/
-#surgeJ {
+#surgeH {
   grid-column: 42 / 46;
   grid-row: 1 / 3;
   height: 50%;
 }
 
 /*No training wheels*/
-#surgeK {
+#surgeTrackC {
   grid-column: 40 / 44;
   grid-row: 3;
   width: 75%;
@@ -658,14 +658,14 @@ h1 {
 }
 
 /*Q-sale, no-setup commitments*/
-#surgeL {
+#surgeJ {
   grid-column: 49 / 53;
   grid-row: 1 / 3;
 }
 
 
 /*Improve cross-rollup standards + interop*/
-#surgeM {
+#surgeI {
   grid-column: 49 / 53;
   grid-row: 3;
 }
