@@ -687,7 +687,7 @@ h1 {
 }
 
 /*Track container (MEV track)*/
-#scourgeA {
+#scourgeTrackA {
   grid-column: 13 / 53;
   display: grid;
   grid-template-columns: repeat(40, 1fr);
@@ -701,7 +701,7 @@ h1 {
 }
 
 /*MEV track*/
-#scourgeB {
+#scourgeTrackAText {
   grid-row: 1;
   grid-column: 2 / 6;
   text-align: left;
@@ -709,7 +709,7 @@ h1 {
 }
 
 /*Extra-protocol MEV markets*/
-#scourgeC {
+#scourgeA {
   grid-column: 2 / 6;
   grid-row: 2;
 }
@@ -720,7 +720,7 @@ h1 {
 }
 
 /*Inclusion lists*/
-#scourgeD {
+#scourgeC {
   grid-column: 9 / 13;
   grid-row: 1;
   padding-top: 9px;
@@ -747,7 +747,7 @@ h1 {
 }
 
 /*Explore ePBS*/
-#scourgeE {
+#scourgeB {
   grid-column: 9 / 13;
   grid-row: 2;
   padding-top: 9px;
@@ -760,7 +760,7 @@ h1 {
 }
 
 /*Explore MEV burn in ePBS*/
-#scourgeF {
+#scourgeD {
   grid-column: 16 / 20;
   grid-row: 2;
 }
@@ -781,7 +781,7 @@ h1 {
 
 
 /*Distributed block building*/
-#scourgeG {
+#scourgeE {
   grid-column: 23 / 27;
   grid-row: 1;
 }
@@ -802,7 +802,7 @@ h1 {
 }
 
 /*Exsplore execution tickets*/
-#scourgeH {
+#scourgeF {
   grid-column: 23 / 27;
   grid-row: 2;
 }
@@ -822,27 +822,27 @@ h1 {
 }
 
 /*Endgame block production <br>pipeline*/
-#scourgeI {
+#scourgeG {
   grid-column: 30 / 34;
   grid-row: 1 / 3;
   height: 45%;
 }
 
 /*App-layer MEV minimzation*/
-#scourgeJ {
+#scourgeH {
   grid-column: 37 / 41;
   grid-row: 1;
 }
 
 /*Explore preconfimations*/
-#scourgeK {
+#scourgeI {
   grid-column: 37 / 41;
   grid-row: 2;
 }
 
 
 /*Track container (Staking economics / experiance track)*/
-#scourgeL {
+#scourgeTrackB {
   display: grid;
   grid-template-columns: repeat(34, 1fr);
   grid-column: 13 / 47;
@@ -855,29 +855,29 @@ h1 {
 }
 
 /*Staking economics / experiance track*/
- #scourgeM {
+ #scourgeTrackBText {
   grid-column: 2 / 6;
   text-align: left;
   filter: unset;
  }
 
 /*Raise max effective balance*/
-#scourgeN {
+#scourgeJ {
   grid-column: 9 / 13;
 }
 
 /*Improve node operator usability*/
-#scourgeO {
+#scourgeK {
   grid-column: 16 / 20;
 }
 
 /*Explore total stake capping*/
-#scourgeP {
+#scourgeL {
   grid-column: 23 / 27;
 }
 
 /*Explore solutions to liquid staking centralization*/
-#scourgeQ {
+#scourgeM {
   grid-column: 30 / 34;
 }
 
