@@ -13,6 +13,7 @@
       <link rel="icon" type="image/png" href="ethlogo.png">
       <link rel="stylesheet" type="text/css" href="styles.css">
       <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
       <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -33,61 +34,59 @@
          <h1 class="main-title" style="font-weight: 100;">The Scourge</h1>
          <div class="roadmap">
             <div class="rowGroup">
-               <div class="merge">
-                  <div class="goalText">
-                     <b>Goal:</b> have an ideal, simple, robust<br>
-                     and decentralized <b>proof-of-stake<br>
-                     consensus</b>
-                  </div>
-                  <div id="ingap">.<br>.</div>
-                  <div class="step" id="mergeA">Beacon chain <br>launch</div>
-                  <div class="arrowRight" id="merge1">
+               <div class="scourge">
+                 <div class="goalText"><b>Goal:</b> mitigate <b>centralization<br>
+                   concerns</b> in Ethereum PoS<br>
+                   design, particularly around <b>MEV</b><br>
+                   and <b>liquid staking / pooling</b>
+                 </div>
+                 <div id="ingap">.<br>.<br>.</div>
+                 <div class="trackGroup" id="scourgeTrackA">
+                   <div class="track" id="scourgeTrackAText">MEV track</div>
+                   <div class="step" id="scourgeA">Extra-protocol <br>MEV markets</div>
+                   <div class="arrowRight" id="scourge1">
                      <div class="lineH"></div>
                      <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeB">Warmup fork <br>(Altair)</div>
-                  <div class="lineH" id="merge2"></div>
-                  <div class="arrowUp" id="merge3">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeC">Merge! <br>No more <br>PoW</div>
-                  <div class="lineH" id="merge4"></div>
-                  <div class="lineV" id="merge5"></div>
-                  <div class="arrowRight" id="merge6">
+                   </div>
+                   <div class="step" id="scourgeC">Inclusion lists</div>
+                   <div class="lineH" id="scourge2"></div>
+                   <div class="lineV" id="scourge3"></div>
+                   <div class="arrowRight" id="scourge4">
                      <div class="lineH"></div>
                      <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeD">Withdrawals</div>
-                  <div class="step" id="mergeE">Distributed <br>validators</div>
-                  <div class="step" id="mergeF">Secret leader <br>election</div>
-                  <div class="step" id="mergeG">Per-slot <br>participant <br>selection</div>
-                  <div class="arrowRight" id="merge8">
+                   </div>
+                   <div class="step" id="scourgeB">Explore ePBS</div>
+                   <div class="arrowRight" id="scourge5">
                      <div class="lineH"></div>
                      <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeH">SSF <br>specification</div>
-                  <div class="lineH" id="merge9"></div>
-                  <div class="arrowDown" id="merge10">
-                     <div class="lineV"></div>
-                     <img class="arrowD" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeI">Implementation</div>
-                  <div class="lineH" id="merge11"></div>
-                  <div class="arrowUp" id="merge12">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
-                  <div class="lineH" id="merge13"></div>
-                  <div class="lineV" id="merge14"></div>
-                  <div class="arrowRight" id="merge15">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeK">Increase <br>validator count</div>
-                  <div class="quant" id="mergeL">Ideal quantum-<br>safe signatures</div>
-                  <div class="progress-bar" id="merge-progress"></div>
+                   </div>
+                   <div class="step" id="scourgeD">Explore MEV <br>burn in ePBS</div>
+                   <div class="lineH" id="scourge6"></div>
+                   <div class="lineV" id="scourge7"></div>
+                   <div class="step" id="scourgeE">Distributed block <br>building</div>
+                   <div class="lineH" id="scourge8"></div>
+                   <div class="lineV" id="scourge9"></div>
+                   <div class="step" id="scourgeF">Exsplore <br>execution tickets</div>
+                   <div class="lineH" id="scourge10"></div>
+                   <div class="lineV" id="scourge11"></div>
+                   <div class="mile" id="scourgeG">Endgame block <br>production <br>pipeline</div>
+                   <div class="step" id="scourgeH">App-layer MEV <br>minimzation</div>
+                   <div class="step" id="scourgeI">Explore <br>preconfimations</div>
+                 </div>
+                 <div class="trackGroup" id="scourgeTrackB">
+                   <div class="track" id="scourgeTrackBText">Staking economics / <br>experiance track</div>
+                   <div class="step" id="scourgeJ">Raise max <br>effective balance</div>
+                   <div class="step" id="scourgeK">Improve node <br>operator usability</div>
+                   <div class="step" id="scourgeL">Explore total <br>stake capping</div>
+                   <div class="step" id="scourgeM">Explore solutions <br>to liquid staking <br>centralization</div>
+                 </div>
+                 <!-- <div class="lineV" id="scourge12"></div> -->
+                 <div class="arrowUp hideLinks" id="scourge14">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="dashLineV"></div>
+                 </div>
+                 <div class="dashLineV hideLinks" id="scourge15"></div>
+                 <div class="progress-bar" id="scourge-progress"></div>
                </div>
             </div>
          <div class="description-container" id="mergeA-description">
