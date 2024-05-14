@@ -13,6 +13,7 @@
       <link rel="icon" type="image/png" href="ethlogo.png">
       <link rel="stylesheet" type="text/css" href="styles.css">
       <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
       <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
    </head>
@@ -33,61 +34,53 @@
          <h1 class="main-title" style="font-weight: 100;">The Surge</h1>
          <div class="roadmap">
             <div class="rowGroup">
-               <div class="merge">
-                  <div class="goalText">
-                     <b>Goal:</b> have an ideal, simple, robust<br>
-                     and decentralized <b>proof-of-stake<br>
-                     consensus</b>
-                  </div>
-                  <div id="ingap">.<br>.</div>
-                  <div class="step" id="mergeA">Beacon chain <br>launch</div>
-                  <div class="arrowRight" id="merge1">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeB">Warmup fork <br>(Altair)</div>
-                  <div class="lineH" id="merge2"></div>
-                  <div class="arrowUp" id="merge3">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeC">Merge! <br>No more <br>PoW</div>
-                  <div class="lineH" id="merge4"></div>
-                  <div class="lineV" id="merge5"></div>
-                  <div class="arrowRight" id="merge6">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeD">Withdrawals</div>
-                  <div class="step" id="mergeE">Distributed <br>validators</div>
-                  <div class="step" id="mergeF">Secret leader <br>election</div>
-                  <div class="step" id="mergeG">Per-slot <br>participant <br>selection</div>
-                  <div class="arrowRight" id="merge8">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeH">SSF <br>specification</div>
-                  <div class="lineH" id="merge9"></div>
-                  <div class="arrowDown" id="merge10">
-                     <div class="lineV"></div>
-                     <img class="arrowD" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeI">Implementation</div>
-                  <div class="lineH" id="merge11"></div>
-                  <div class="arrowUp" id="merge12">
-                     <img class="arrowU" src="arrow.png">
-                     <div class="lineV"></div>
-                  </div>
-                  <div class="mile" id="mergeJ">Single <br>slot finality<br>(SSF)</div>
-                  <div class="lineH" id="merge13"></div>
-                  <div class="lineV" id="merge14"></div>
-                  <div class="arrowRight" id="merge15">
-                     <div class="lineH"></div>
-                     <img class="arrowR" src="arrow.png">
-                  </div>
-                  <div class="step" id="mergeK">Increase <br>validator count</div>
-                  <div class="quant" id="mergeL">Ideal quantum-<br>safe signatures</div>
-                  <div class="progress-bar" id="merge-progress"></div>
+               <div class="surge">
+                 <div class="goalText"><b>Goal:</b> 100,000 <b>transactions per<br>
+                   second</b> and beyond (on rollups)
+                 </div>
+                 <div id="ingap">.<br>.</div>
+                 <div class="step" id="surgeA">Optimistic rollup fraud provers</div>
+                 <div class="step" id="surgeB">ZK-EVMs</div>
+                 <div class="step" id="surgeC">EIP-4844 <br>specification</div>
+                 <div class="arrowRight" id="surge1">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <!-- <img class="lineV" id="surge2" src="lineV.png"> -->
+                 <div class="track" id="surgeTrackA">Prototype</div>
+                 <div class="step" id="surgeD">EIP-4844 <br>implementation</div>
+                 <div class="arrowRight" id="surge3">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="mile" id="surgeE">Basic <br>rollup <br>scaling</div>
+                 <div class="arrowUp" id="surge4">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="lineV"></div>
+                 </div>
+                 <div class="lineV" id="surge5" src="lineV.png"></div>
+                 <div class="track" id="surgeTrackB">Limited training wheels <br>(diverse 6-of-8 or stricter)</div>
+                 <div class="step" id="surgeF">peerDAS</div>
+                 <div class="step" id="surgeG">Efficient DA <br>self-healing</div>
+                 <div class="arrowRight" id="surge6">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="lineH" id="surge7"></div>
+                 <div class="lineV" id="surge8"></div>
+                 <div class="mile" id="surgeH">Full<br>rollup <br>scaling</div>
+                 <div class="track" id="surgeTrackC">No training <br>wheels</div>
+                 <div class="lineH" id="surge9"></div>
+                 <div class="lineH" id="surge10"></div>
+                 <div class="arrowUp" id="surge11">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="lineV"></div>
+                 </div>
+                 <div class="dashLineH hideLinks" id="surge12"></div>
+                 <div class="dashLineV hideLinks" id="surge13"></div>
+                 <div class="quant" id="surgeJ">Q-sale, no-setup <br>commitments</div>
+                 <div class="step" id="surgeI">Improve cross-<br>rollup standards <br>+ interop</div>
+                 <div class="progress-bar" id="surge-progress"></div>
                </div>
             </div>
          <div class="description-container" id="mergeA-description">
