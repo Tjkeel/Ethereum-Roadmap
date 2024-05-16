@@ -35,6 +35,20 @@ const statusList = [
     ["surgeH", false, 50],                                        /*Full rollup scaling*/
     ["surgeI", true, { green: 30, purple: 0, blue: 0, red: 0 }],  /*Improve cross-rollup standards + interop*/
     ["surgeJ", false, 20],                                        /*Q-sale, no-setup commitments*/
+    // Scourge
+    ["scourgeA", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Extra-protocol MEV markets*/
+    ["scourgeB", true, { green: 50, purple: 0, blue: 0, red: 0 }],  /*Explore ePBS*/
+    ["scourgeC", true, { green: 80, purple: 0, blue: 0, red: 0 }],  /*Inclusion lists*/
+    ["scourgeD", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Explore MEV burn in ePBS*/
+    ["scourgeE", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Distributed block building*/
+    ["scourgeF", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Exsplore execution tickets*/
+    ["scourgeG", false, 50],                                        /*Endgame block production <br>pipeline*/
+    ["scourgeH", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*App-layer MEV minimzation*/
+    ["scourgeI", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Explore preconfimations*/
+    ["scourgeJ", true, { green: 30, purple: 0, blue: 0, red: 0 }],  /*Raise max effective balance*/
+    ["scourgeK", true, { green: 30, purple: 0, blue: 0, red: 0 }],  /*Improve node operator usability*/
+    ["scourgeL", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Explore total stake capping*/
+    ["scourgeM", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Explore solutions to liquid staking centralization*/
 ];
 
 
