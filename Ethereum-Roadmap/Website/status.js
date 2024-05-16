@@ -4,29 +4,32 @@ const progColor = {
     purple: '#AE80B1',
     blue: '#6A9BE7',
     red: 'rgb(250 250 250 / 0%)'  // Add more sections as needed (flash needs to be transparent)
+    // flash color set in position.css - /*flash color*/
 };
+
 
 // true = Hard forks - uses color(s)
 // false = TTD & extra protocol - uses dark shading
-const mergeStatus = [
-    ["mergeA", true, { green: 100, purple: 0, blue: 0, red: 0 }],
-    ["mergeB", true, { green: 100, purple: 0, blue: 0, red: 0 }],
-    ["mergeC", false, 100],
-    ["mergeD", true, { green: 0, purple: 100, blue: 0, red: 0 }],
-    ["mergeE", false, 100],
-    ["mergeF", true, { green: 60, purple: 0, blue: 0, red: 0 }],
-    ["mergeG", true, { green: 50, purple: 0, blue: 0, red: 0 }],
-    ["mergeH", true, { green: 35, purple: 0, blue: 0, red: 0 }],
-    ["mergeI", true, { green: 10, purple: 15, blue: 0, red: 5 }],
-    ["mergeJ", false, 20],
-    ["mergeK", true, { green: 0, purple: 0, blue: 0, red: 50 }],
-    ["mergeL", false, 20]
+const statusList = [
+    ["mergeA", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Beacon chain launch*/
+    ["mergeB", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Warmup fork (Altair)*/
+    ["mergeC", false, 100], /*Merge! No more PoW*/
+    ["mergeD", true, { green: 0, purple: 100, blue: 0, red: 0 }], /*Withdrawals*/
+    ["mergeE", false, 100], /*Distributed validators*/
+    ["mergeF", true, { green: 60, purple: 0, blue: 0, red: 0 }], /*Secret leader election*/
+    ["mergeG", true, { green: 50, purple: 0, blue: 0, red: 0 }], /*Per-slot participant selection*/
+    ["mergeH", true, { green: 35, purple: 0, blue: 0, red: 0 }], /*SSF specification*/
+    ["mergeI", true, { green: 10, purple: 15, blue: 0, red: 5 }], /*Implmentation*/
+    ["mergeJ", false, 20], /*Single slot finality (SSF)*/
+    ["mergeK", true, { green: 0, purple: 0, blue: 0, red: 50 }], /*Increase validator count*/
+    ["mergeL", false, 20], /*Ideal quantum-safe signatures*/
 ];
 
-function progress(group) {
-    group.forEach(item => {
-        const ident = item[0];
-        const isHardFork = item[1];
+
+statusList.forEach(item => {
+    const ident = item[0];
+    const isHardFork = item[1];
+    if (document.getElementById(ident)) {
         if (isHardFork) {
             let progStart = 0;
             let grad = 'linear-gradient(90deg, ';
@@ -53,19 +56,20 @@ function progress(group) {
             document.getElementById(ident).style.transition = "background-position 2s";
             document.getElementById(ident).classList.add("greyOut");
         }
-    });
+    }
+});
 
-    setTimeout(() => {
-        group.forEach(step => {
+setTimeout(() => {
+    statusList.forEach(step => {
+        const ident = step[0];
+        if (document.getElementById(ident)) {
             document.getElementById(step[0]).style.backgroundPosition = '0%'; // Animate at start to slide in
-        });
-    }, 100);
-}
+        }
+    });
+}, 100);
 
-// Call function on merge
-if (document.getElementById('mergeA')) {
-    progress(mergeStatus);
-}
+
+
 
 
 //Dividing the logic between graphic and description

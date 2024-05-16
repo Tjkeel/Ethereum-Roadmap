@@ -105,6 +105,7 @@ h1 {
   transition: filter 0.05s, backdrop-filter 0.05s;
 }
 
+/*flash color*/
 @keyframes fadeReds {
   0%, 100% { background-color: rgb(241, 161, 150); }
   50% { background-color: #595959; }
