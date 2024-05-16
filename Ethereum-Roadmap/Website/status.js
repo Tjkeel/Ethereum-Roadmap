@@ -49,6 +49,21 @@ const statusList = [
     ["scourgeK", true, { green: 30, purple: 0, blue: 0, red: 0 }],  /*Improve node operator usability*/
     ["scourgeL", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Explore total stake capping*/
     ["scourgeM", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Explore solutions to liquid staking centralization*/
+    // Verge
+    ["vergeA", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Most serious EVM DoS issues solved*/
+    ["vergeB", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Basic light client support (sync <br>committees)*/
+    ["vergeC", true, { green: 80, purple: 0, blue: 0, red: 0 }],  /*SNARK based light clients*/
+    ["vergeD", true, { green: 0, purple: 0, blue: 0, red: 0 }],   /*SNARK for consensus state transition*/
+    ["vergeE", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Verkle tree spec + impl*/
+    ["vergeF", true, { green: 50, purple: 0, blue: 0, red: 0 }],  /*Code chunking + gas cost updates*/
+    ["vergeG", true, { green: 80, purple: 0, blue: 0, red: 0 }],  /*Transition spec+ impl*/
+    ["vergeH", false, 50],                                        /*Verkle trees*/
+    ["vergeI", true, { green: 0, purple: 0, blue: 0, red: 0 }],   /*SNARK for Verkle proofs*/
+    ["vergeJ", true, { green: 0, purple: 0, blue: 0, red: 0 }],   /*SNARK for L1 EVM*/
+    ["vergeK", true, { green: 0, purple: 0, blue: 0, red: 0 }],   /*Explore EVM verification precompile*/
+    ["vergeL", false, 10],                                        /*Fully SNARKed Ethereum*/
+    ["vergeM", false, 10],                                        /*Quantum-safe SNARKs (eg. <br>STARKs)*/
+    ["vergeN", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*SNARK / STARK ASICs*/
 ];
 
 
