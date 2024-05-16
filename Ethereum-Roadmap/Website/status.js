@@ -79,6 +79,21 @@ const statusList = [
     ["purgeL", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*LOG reform*/
     ["purgeM", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Remove old tx types*/
     ["purgeN", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Serialization harmonization*/
+    // Splurge
+    ["splurgeA", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*EIP-1559*/
+    ["splurgeB", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*EIP-4337 specification*/
+    ["splurgeC", true, { green: 80, purple: 0, blue: 0, red: 0 }],  /*ERC-4337*/
+    ["splurgeD", true, { green: 40, purple: 0, blue: 0, red: 0 }],  /*Voluntary EOA conversion*/
+    ["splurgeE", true, { green: 40, purple: 0, blue: 0, red: 0 }],  /*In-protocol enshrining*/
+    ["splurgeF", false, 50],                                        /*Endgame account abstraction*/
+    ["splurgeG", true, { green: 90, purple: 0, blue: 0, red: 0 }],  /*EOF*/
+    ["splurgeH", true, { green: 75, purple: 0, blue: 0, red: 0 }],  /*Big modular arithmetic*/
+    ["splurgeI", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Further EVM improvements*/
+    ["splurgeJ", false, 50],                                        /*Endgame EVM*/
+    ["splurgeK", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Endgame EIP-1559*/
+    ["splurgeL", true, { green: 10, purple: 0, blue: 0, red: 0 }],  /*Explore deep crypto (eg. <br>obfuscation)*/
+    ["splurgeM", true, { green: 10, purple: 0, blue: 0, red: 0 }],  /*Explore delay- encrypted*/
+    ["splurgeN", true, { green: 40, purple: 0, blue: 0, red: 0 }],  /*VDFs*/
 ];
 
 
