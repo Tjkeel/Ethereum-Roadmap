@@ -11,18 +11,30 @@ const progColor = {
 // true = Hard forks - uses color(s)
 // false = TTD & extra protocol - uses dark shading
 const statusList = [
+    // Merge
     ["mergeA", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Beacon chain launch*/
     ["mergeB", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Warmup fork (Altair)*/
-    ["mergeC", false, 100], /*Merge! No more PoW*/
+    ["mergeC", false, 100],                                       /*Merge! No more PoW*/
     ["mergeD", true, { green: 0, purple: 100, blue: 0, red: 0 }], /*Withdrawals*/
-    ["mergeE", false, 100], /*Distributed validators*/
-    ["mergeF", true, { green: 60, purple: 0, blue: 0, red: 0 }], /*Secret leader election*/
-    ["mergeG", true, { green: 50, purple: 0, blue: 0, red: 0 }], /*Per-slot participant selection*/
-    ["mergeH", true, { green: 35, purple: 0, blue: 0, red: 0 }], /*SSF specification*/
+    ["mergeE", false, 100],                                       /*Distributed validators*/
+    ["mergeF", true, { green: 60, purple: 0, blue: 0, red: 0 }],  /*Secret leader election*/
+    ["mergeG", true, { green: 50, purple: 0, blue: 0, red: 0 }],  /*Per-slot participant selection*/
+    ["mergeH", true, { green: 35, purple: 0, blue: 0, red: 0 }],  /*SSF specification*/
     ["mergeI", true, { green: 10, purple: 15, blue: 0, red: 5 }], /*Implmentation*/
-    ["mergeJ", false, 20], /*Single slot finality (SSF)*/
-    ["mergeK", true, { green: 0, purple: 0, blue: 0, red: 50 }], /*Increase validator count*/
-    ["mergeL", false, 20], /*Ideal quantum-safe signatures*/
+    ["mergeJ", false, 20],                                        /*Single slot finality (SSF)*/
+    ["mergeK", true, { green: 0, purple: 0, blue: 0, red: 50 }],  /*Increase validator count*/
+    ["mergeL", false, 20],                                        /*Ideal quantum-safe signatures*/
+    // Surge
+    ["surgeA", true, { green: 66, purple: 0, blue: 0, red: 0 }],  /*Optimistic rollup fraud provers*/
+    ["surgeB", true, { green: 55, purple: 0, blue: 0, red: 0 }],  /*ZK-EVMs*/
+    ["surgeC", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*EIP-4844 specification*/
+    ["surgeD", true, { green: 95, purple: 0, blue: 0, red: 0 }],  /*EIP-4844 implementation*/
+    ["surgeE", false, 100],                                       /*Basic rollup scaling*/
+    ["surgeF", true, { green: 60, purple: 0, blue: 0, red: 0 }],  /*peerDAS*/
+    ["surgeG", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Efficient DA self-healing*/
+    ["surgeH", false, 50],                                        /*Full rollup scaling*/
+    ["surgeI", true, { green: 30, purple: 0, blue: 0, red: 0 }],  /*Improve cross-rollup standards + interop*/
+    ["surgeJ", false, 20],                                        /*Q-sale, no-setup commitments*/
 ];
 
 
