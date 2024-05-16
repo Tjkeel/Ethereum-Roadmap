@@ -15,12 +15,40 @@ h1 {
   grid-template-columns: 1fr;
 }
 
+.inIcon {
+  position: relative;
+  top: 5px;
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.sectionTitle {
+  position: relative;
+  text-align: left;
+  grid-column: 1 / -1;
+  grid-row: 1;
+  left: 35px;
+  bottom: 4px; 
+  margin-block-start: 0px;
+  z-index: 10;
+}
+
+@media (max-width: 1000px) {
+  .sectionTitle {
+    font-size: 1.1em;
+    bottom: 0px;
+  }
+}
+
 .goalText {
+  text-align: left;
+  left: 5px;
   grid-column: 1/9;
   grid-row: span 2;
   font-size: calc(0.1em + 0.6vw);
-  align-content: center;
   color: white;
+  position: relative;
+  top: 35px;
 }
 
 .description-container {
@@ -683,7 +711,7 @@ h1 {
   background: rgba(0, 0, 0, 0.3);
   border-radius: 10px;
   & .goalText {
-    grid-row: span 1;
+    grid-row: 1;
   }
 }
 
