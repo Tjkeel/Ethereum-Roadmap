@@ -67,124 +67,93 @@ if (document.getElementById('mergeA')) {
     progress(mergeStatus);
 }
 
-// Cache for description and step elements
-let descriptionElements = document.querySelectorAll('.description-container');
-let stepElements = {};
-const sections = ['merge', 'surge', 'scourge', 'verge', 'purge', 'splurge'];
-const steps = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L'];
 
-sections.forEach(section => {
-    steps.forEach(step => {
-        const stepId = `${section}${step}`;
-        const descId = `${stepId}-description`;
-        stepElements[stepId] = document.getElementById(stepId);
-        if (stepElements[stepId]) {
-            stepElements[stepId].addEventListener('click', () => {
-                // Hide all descriptions
-                descriptionElements.forEach(desc => desc.style.display = 'none');
-                // Show the clicked step's description
-                const descElement = document.getElementById(descId);
-                if (descElement) {
-                    descElement.style.display = 'block';
-                    descElement.classList.add('show');
-                }
-            });
-        }
-    });
-});
+//Dividing the logic between graphic and description
 
-// Function to hide all description containers smoothly, then perform callback
-function hideAllDescriptions(callback) {
-    descriptionElements.forEach(description => {
-        description.classList.remove('show');
-        setTimeout(() => { description.style.display = 'none'; }, 490);
-    });
-    setTimeout(callback, 500);
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const sections = ['merge', 'surge', 'scourge', 'verge', 'purge', 'splurge'];
+    const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let currentSection = sections.find(section => document.getElementById(`${section}A`));
+    let currentSteps = [];
+    let currentIndex = 0;
 
-// Function to show a specific description container smoothly
-function showDescription(id) {
-    hideAllDescriptions(() => {
-        const element = document.getElementById(id);
+    if (currentSection) {
+        alphabet.split('').forEach(letter => {
+            let stepId = `${currentSection}${letter}`;
+            if (document.getElementById(stepId)) {
+                currentSteps.push(stepId); // Store step IDs directly
+            }
+        });
+    }
+
+    function showDescription(stepId) {
+        let descId = `${stepId}-description`;
+        document.querySelectorAll('.description-container').forEach(desc => {
+            desc.style.display = 'none';
+            desc.classList.remove('show');
+        });
+        const element = document.getElementById(descId);
         if (element) {
             element.style.display = 'block';
-            setTimeout(() => { element.classList.add('show'); }, 10);
-            updateActiveStep(id);
-            resetAutoAdvanceTimer(); // Reset the auto-advance timer when a new description is shown
+            setTimeout(() => element.classList.add('show'), 10);
         }
-    });
-}
-
-// Update the active step style
-function updateActiveStep(activeDescriptionId) {
-    // First, remove 'active' class from all steps to ensure only the current one is marked active
-    Object.keys(stepElements).forEach(stepId => {
-        if (stepElements[stepId]) stepElements[stepId].classList.remove('active');
-    });
-    // Then, add 'active' class only to the current step
-    const activeStep = stepElements[activeDescriptionId.replace('-description', '')];
-    if (activeStep) activeStep.classList.add('active');
-}
-
-// Function to navigate descriptions using arrows and swipe gestures
-function navigateDescription(direction) {
-    const indexList = Object.keys(stepElements);
-    currentIndex = (currentIndex + (direction === 'next' ? 1 : -1) + indexList.length) % indexList.length;
-    const descriptionId = `${indexList[currentIndex]}-description`;
-    showDescription(descriptionId);
-}
-
-// Add swipe functionality
-function addSwipeEvents(element) {
-    let touchstartX = 0;
-    let touchendX = 0;
-
-    element.addEventListener('touchstart', e => {
-        touchstartX = e.changedTouches[0].screenX;
-    }, false);
-
-    element.addEventListener('touchend', e => {
-        touchendX = e.changedTouches[0].screenX;
-        if (touchendX + 50 < touchstartX) {
-            navigateDescription('next');
-        }
-        if (touchendX - 50 > touchstartX) {
-            navigateDescription('prev');
-        }
-    }, false);
-}
-
-// Variables to manage user interaction and automatic cycling
-let currentIndex = 0;
-let autoAdvanceTimer;
-
-// Function to reset the auto-advance timer
-function resetAutoAdvanceTimer() {
-    clearInterval(autoAdvanceTimer);
-    autoAdvanceTimer = setInterval(() => {
-        navigateDescription('next');
-    }, 30000); // Change description every 25 seconds
-}
-
-// Initialize and add event listeners
-document.addEventListener('DOMContentLoaded', function() {
-    setTimeout(() => {
-        showDescription(`${sections[0]}A-description`);
-        resetAutoAdvanceTimer(); // Start the auto-advance timer after initial display
-    }, 500);
-
-    descriptionElements.forEach(container => {
-        addSwipeEvents(container);
-        let leftArrow = container.querySelector('.left-arrow-pointer');
-        let rightArrow = container.querySelector('.right-arrow-pointer');
-
-        leftArrow.addEventListener('click', () => {
-            navigateDescription('prev');
-            resetAutoAdvanceTimer(); // Reset timer on arrow click
+        // Ensure all steps are marked inactive then mark the current step active
+        currentSteps.forEach(id => {
+            document.getElementById(id).classList.remove('active');
         });
-        rightArrow.addEventListener('click', () => {
-            navigateDescription('next');
-            resetAutoAdvanceTimer(); // Reset timer on arrow click
-        });
+        document.getElementById(stepId).classList.add('active');
+        currentIndex = currentSteps.indexOf(stepId); // Update currentIndex
+    }
+
+    // Arrow navigation using delegated event handling on the document
+    document.addEventListener('click', function(event) {
+        if (event.target.matches('.left-arrow-pointer') || event.target.closest('.left-arrow-pointer')) {
+            let prevIndex = (currentIndex - 1 + currentSteps.length) % currentSteps.length;
+            showDescription(currentSteps[prevIndex]);
+        } else if (event.target.matches('.right-arrow-pointer') || event.target.closest('.right-arrow-pointer')) {
+            let nextIndex = (currentIndex + 1) % currentSteps.length;
+            showDescription(currentSteps[nextIndex]);
+        }
     });
+
+    // Add swipe functionality
+    document.addEventListener('touchstart', handleTouchStart, false);
+    document.addEventListener('touchmove', handleTouchMove, false);
+
+    let xDown = null;
+    let yDown = null;
+
+    function handleTouchStart(evt) {
+        const firstTouch = evt.touches[0];
+        xDown = firstTouch.clientX;
+        yDown = firstTouch.clientY;
+    }
+
+    function handleTouchMove(evt) {
+        if (!xDown || !yDown) {
+            return;
+        }
+
+        let xUp = evt.touches[0].clientX;
+        let yUp = evt.touches[0].clientY;
+        let xDiff = xDown - xUp;
+        let yDiff = yDown - yUp;
+
+        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+            if (xDiff > 0) { // Left swipe
+                let nextIndex = (currentIndex + 1) % currentSteps.length;
+                showDescription(currentSteps[nextIndex]);
+            } else { // Right swipe
+                let prevIndex = (currentIndex - 1 + currentSteps.length) % currentSteps.length;
+                showDescription(currentSteps[prevIndex]);
+            }
+        }
+        xDown = null; // Reset values
+        yDown = null;
+    }
+
+    // Automatically display the first description for the detected section
+    if (currentSection && currentSteps.length > 0) {
+        showDescription(currentSteps[0]);
+    }
 });
