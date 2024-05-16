@@ -64,6 +64,21 @@ const statusList = [
     ["vergeL", false, 10],                                        /*Fully SNARKed Ethereum*/
     ["vergeM", false, 10],                                        /*Quantum-safe SNARKs (eg. <br>STARKs)*/
     ["vergeN", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*SNARK / STARK ASICs*/
+    // Purge
+    ["purgeA", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Eliminate most gas refunds*/
+    ["purgeB", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*EIP-4444 specification*/
+    ["purgeC", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*EIP-4444 implementation*/
+    ["purgeD", true, { green: 100, purple: 0, blue: 0, red: 0 }], /*Beacon chain fast sync*/
+    ["purgeE", true, { green: 60, purple: 0, blue: 0, red: 0 }],  /*P2P history (eg. Portal)*/
+    ["purgeF", false, 50],                                        /*History expiry (EIP-4444)*/
+    ["purgeG", true, { green: 60, purple: 0, blue: 0, red: 0 }],  /*Ban SELF-DESTRUCT*/
+    ["purgeH", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Simplify gas mechanics*/
+    ["purgeI", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Precompiles EVM impls*/
+    ["purgeJ", true, { green: 30, purple: 0, blue: 0, red: 0 }],  /*Address space extension*/
+    ["purgeK", true, { green: 30, purple: 0, blue: 0, red: 0 }],  /*State expiry*/
+    ["purgeL", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*LOG reform*/
+    ["purgeM", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Remove old tx types*/
+    ["purgeN", true, { green: 20, purple: 0, blue: 0, red: 0 }],  /*Serialization harmonization*/
 ];
 
 
