@@ -18,7 +18,9 @@ h1 {
 .inIcon {
   position: relative;
   top: 5px;
-  grid-column: 1;
+  grid-column: 1 / 3;
+  justify-self: start;
+  left: 6px;
   grid-row: 1;
 }
 
@@ -316,7 +318,7 @@ h1 {
 #merge1 {
   grid-column: 5 / 8;
   grid-row: 3;
-  width: 80%;
+  width: calc(80% - 1px);
 }
 
 #merge1Arrow {
@@ -1674,4 +1676,49 @@ h1 {
   justify-self: center;
 }
 
+/*Smaller arrows when screen < 1000px*/
+@media (max-width: 1000px) {
+  .arrowR {
+    width: 7px;
+    margin-left: 3px;
+  } 
+  .arrowL {
+    width: 7px;
+    margin-right: 3px;
+  }
+  .arrowU {
+    width: 7px;
+    margin-bottom: 3px;
+  }
+  .arrowD {
+    width: 7px;
+    margin-top: 3px;
+  }
+  #merge6 {
+    margin-bottom: -7px;
+  }
+}
+
+/*Smaller arrows when screen < 550px*/
+@media (max-width: 550px) {
+  .arrowR {
+    width: 6px;
+    margin-left: 4px;
+  } 
+  .arrowL {
+    width: 6px;
+    margin-right: 4px;
+  }
+  .arrowU {
+    width: 6px;
+    margin-bottom: 4px;
+  }
+  .arrowD {
+    width: 6px;
+    margin-top: 4px;
+  }
+  #merge6 {
+    margin-bottom: -6px;
+  }
+}
 
