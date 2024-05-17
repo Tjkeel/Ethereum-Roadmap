@@ -1,82 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SDPK9BWVR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0SDPK9BWVR');
-</script>
-    <title>The Sourge</title>
-    <link rel="icon" type="image/png" href="ethlogo.png">
-    <link rel="stylesheet" href="styles.css">
-<link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<div class="container">
-   <div class="tabs-container">
-  <a href="https://ethroadmap.com/" class="tab"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
-  <a href="https://ethroadmap.com/chatroom.html" class="tab"><i class="fas fa-comment-dots"></i><span class="tooltip">Chat</span></a>
-  <span class="tabdivider"></span>
-  <a href="https://ethroadmap.com/merge.html" class="tab"><i class="fas fa-code-branch"></i> <span class="tooltip">Merge</span></a>
-  <a href="https://ethroadmap.com/surge.html" class="tab"><i class="fas fa-water"></i><span class="tooltip">Surge</span> </a>
-  <a href="https://ethroadmap.com/scourge.html" style="background: rgba(255, 255, 255, 0.1);" class="tab"><i class="fas fa-biohazard"></i><span class="tooltip">Scourge</span> </a>
-  <a href="https://ethroadmap.com/verge.html" class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
-  <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
-  <a href="https://ethroadmap.com/splurge.html" class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
-</div>
-    <h1 class="main-title" style="font-weight: 100;">The Scourge</h1>
-        <!-- MEV -->
-         <p class="intro-text" style="max-width: 800px;">
-        The Scourge aims to remove negative, and largely unpredicted, phenomena that have emerged as Ethereum has grown
-        in economic and geopolitical prominence: roadmap items here primarily attempt to rectify malicious MEV, network censorship,
-        and staking pool centralization.
-         </p>
-     <div class="timeline-container">
-        <div class="section2" onclick="openModal('modal-mev')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Extra Protocol MEV</h2>
-			 <i class="fas fa-check checkmark"></i>     
-        </div>
-        <!-- Modal for MEV -->
-        <div id="modal-mev" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-mev')">&times;</span>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> MEV is inherent in any system with sufficient economic activity, 
+<html>
+   <head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SDPK9BWVR"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-0SDPK9BWVR');
+      </script>
+      <title>The Scourge</title>
+      <link rel="icon" type="image/png" href="ethlogo.png">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
+      <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <!-- container -->
+      <div class="container">
+         <div class="tabs-container">
+            <a href="https://ethroadmap.com/" class="tab"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
+            <a href="https://ethroadmap.com/chatroom.html" class="tab"><i class="fas fa-comment-dots"></i><span class="tooltip">Chat</span></a>
+            <span class="tabdivider"></span>
+            <a href="https://ethroadmap.com/merge.html" class="tab"><i class="fas fa-code-branch"></i> <span class="tooltip">Merge</span></a>
+            <a href="https://ethroadmap.com/surge.html" class="tab"><i class="fas fa-water"></i><span class="tooltip">Surge</span> </a>
+            <a href="https://ethroadmap.com/scourge.html" style="background: rgba(255, 255, 255, 0.1);" class="tab"><i class="fas fa-biohazard"></i><span class="tooltip">Scourge</span> </a>
+            <a href="https://ethroadmap.com/verge.html" class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
+            <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
+            <a href="https://ethroadmap.com/splurge.html" class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
+         </div>
+         <h1 class="main-title" style="font-weight: 100;">The Scourge</h1>
+         <div class="roadmap">
+            <div class="rowGroup">
+               <div class="scourge">
+                 <i class="fas fa-biohazard inIcon"></i>
+                 <h2 class="sectionTitle hideLinks">The Scourge</h2>
+                 <div class="goalText"><b>Goal:</b> mitigate <b>centralization
+                   concerns</b> in Ethereum PoS
+                   design, particularly around <b>MEV</b>
+                   and <b>liquid staking / pooling</b>
+                 </div>
+                 <div id="ingap">.<br>.<br>.</div>
+                 <div class="trackGroup" id="scourgeTrackA">
+                   <div class="track" id="scourgeTrackAText">MEV track</div>
+                   <div class="step" id="scourgeA">Extra-protocol <br>MEV markets</div>
+                   <div class="arrowRight" id="scourge1">
+                     <div class="lineH"></div>
+                     <img class="arrowR" src="arrow.png">
+                   </div>
+                   <div class="step" id="scourgeC">Inclusion lists</div>
+                   <div class="lineH" id="scourge2"></div>
+                   <div class="lineV" id="scourge3"></div>
+                   <div class="arrowRight" id="scourge4">
+                     <div class="lineH"></div>
+                     <img class="arrowR" src="arrow.png">
+                   </div>
+                   <div class="step" id="scourgeB">Explore ePBS</div>
+                   <div class="arrowRight" id="scourge5">
+                     <div class="lineH"></div>
+                     <img class="arrowR" src="arrow.png">
+                   </div>
+                   <div class="step" id="scourgeD">Explore MEV <br>burn in ePBS</div>
+                   <div class="lineH" id="scourge6"></div>
+                   <div class="lineV" id="scourge7"></div>
+                   <div class="step" id="scourgeE">Distributed block <br>building</div>
+                   <div class="lineH" id="scourge8"></div>
+                   <div class="lineV" id="scourge9"></div>
+                   <div class="step" id="scourgeF">Exsplore <br>execution tickets</div>
+                   <div class="lineH" id="scourge10"></div>
+                   <div class="lineV" id="scourge11"></div>
+                   <div class="mile" id="scourgeG">Endgame block <br>production <br>pipeline</div>
+                   <div class="step" id="scourgeH">App-layer MEV <br>minimzation</div>
+                   <div class="step" id="scourgeI">Explore <br>preconfimations</div>
+                 </div>
+                 <div class="trackGroup" id="scourgeTrackB">
+                   <div class="track" id="scourgeTrackBText">Staking economics / <br>experiance track</div>
+                   <div class="step" id="scourgeJ">Raise max <br>effective balance</div>
+                   <div class="step" id="scourgeK">Improve node <br>operator usability</div>
+                   <div class="step" id="scourgeL">Explore total <br>stake capping</div>
+                   <div class="step" id="scourgeM">Explore solutions <br>to liquid staking <br>centralization</div>
+                 </div>
+                 <!-- <div class="lineV" id="scourge12"></div> -->
+                 <div class="arrowUp hideLinks" id="scourge14">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="dashLineV"></div>
+                 </div>
+                 <div class="dashLineV hideLinks" id="scourge15"></div>
+                 <div class="progress-bar" id="scourge-progress"></div>
+               </div>
+            </div>
+         <div class="description-container" id="scourgeA-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Extra-protocol MEV Markets</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Live</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  MEV is inherent in any system with sufficient economic activity, 
                 and is therefore a problem to be mitigated, not solved. This "upgrade" signals the Ethereum community's 
                 successful partial commoditization of MEV via an extra-protocol market. Previously, the majority of MEV was captured by sophisticated
                 agents, and was not meaningfully redirected to validators, let alone users. Validators now receive the majority of MEV.
-                <br><br>This effort was spearheaded by Flashbots.
-                </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
+                <br><br>
+                This effort was spearheaded by Flashbots.
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
                     <a href="https://www.flashbots.net/" style="color: #fff;" target="_blank"><li>Flashbots</li></a>
                 	<a href="https://mevboost.pics/" style="color: #fff;" target="_blank"><li>mevboost.pics</li></a>
                 	<a href="https://www.mevwatch.info/" style="color: #fff;" target="_blank"><li>mevwatch.info</li></a>
                 </ul>
             </div>
-        </div>
-
-        <!-- Merge ens -->
-        <div class="section2" onclick="openModal('modal-ens')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Enshrined PBS and Inclusion lists <i class="fa-solid fa-crown crown-icon" aria-hidden="true"></i></h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for ens -->
-        <div id="modal-ens" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-ens')">&times;</span>
-                  <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing Research</p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> 
-                While block building and block proposing are not required to be done by different parties, more than 90% of blocks today
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeB-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Explore ePBS</h2>
+			<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+        From a practical perspective, Ethereum has already separated block proposers and block builders.
+        However, this is facilitated by third parties and not necessarily permanent. 
+        <br><br>
+        At this point, it makes little economic sense for 
+        a block proposer (validator) to spend resources building a block, given they will ultimately receive much of the MEV from its ordering in any case. As such, proposing and building
+        have been effectively separated from an economic perspective (there are a few dozen builders that dominate the market). There is reason to enshrine this seperation at the protocol level, however, since it may not always be the case.
+        <br><br>
+        Moreover, if we enshrine PBS alongside Inclusion Lists, we can force the builders to include transactions that meet some threshold of gas and time. 
+        By doing so, we can effectively prohibit censorship via block builders. It also opens the door for other MEV solutions, such as burning.
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                <a href="https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ#Hybrid-PBS-can-we-use-proposers-only-for-inclusion-of-last-resort" style="color: #fff;" target="_blank"><li>Good PBS post</li></a>
+    			<a href="https://mevboost.pics/" style="color: #fff;" target="_blank"><li>mevboost.pics</li></a>
+                <a href="https://www.mevwatch.info/" style="color: #fff;" target="_blank"><li>mevwatch.info</li></a> 
+              </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeC-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Inclusion Lists</h2>
+    			<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+    			While block building and block proposing are not required to be done by different parties, more than 90% of blocks today
                 are built with MEV-Boost and by professional block builders. In other words, while they represent a minority group, validators may still build 
                 their own blocks. There are anti-censorship and MEV mitigation reasons why we want to enshrine this seperation at the protocol level.
                 <br><br>
@@ -87,45 +159,24 @@
                 <br><br>
                 We call these Inclusion Lists, and they are easier to implement after enshrining PBS. I.e., 
                 if the proposer and builder are the same entity, it's a little trickier due to conflicting incentives.
-                 <br><br>
-                To be clear, Inclusion Lists and PBS are separate upgrades and could be implemented independent of one another. 
-                 </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
                 <a href="https://notes.ethereum.org/s3JToeApTx6CKLJt8AbhFQ#Hybrid-PBS-can-we-use-proposers-only-for-inclusion-of-last-resort" style="color: #fff;" target="_blank"><li>Good PBS post</li></a>
-    	<a href="https://mevboost.pics/" style="color: #fff;" target="_blank"><li>mevboost.pics</li></a>
-                	<a href="https://www.mevwatch.info/" style="color: #fff;" target="_blank"><li>mevwatch.info</li></a>                </ul>
+    			<a href="https://mevboost.pics/" style="color: #fff;" target="_blank"><li>mevboost.pics</li></a>
+                <a href="https://www.mevwatch.info/" style="color: #fff;" target="_blank"><li>mevwatch.info</li></a> 
+              </ul>
             </div>
-        </div>
-        </div>
-        <p class="intro-text" style="max-width: 800px;">
-        From a practical perspective, Ethereum has already separated block proposers and block builders.
-        However, this is facilitated by third parties and not necessarily permanent. 
-        
-        <br><br>
-        At this point, it makes little economic sense for 
-        a block proposer (validator) to spend resources building a block, given they will ultimately receive much of the MEV from its ordering in any case. As such, proposing and building
-        have been effectively separated from an economic perspective (there are a few dozen builders that dominate the market). There is reason to enshrine this seperation at the protocol level, however, since it may not always be the case.
-        <br><br>
-       Moreover, if we enshrine PBS alongside Inclusion Lists, we can force the builders to include transactions that meet some threshold of gas and time. 
-        By doing so, we can effectively prohibit censorship via block builders. It also opens the door for other MEV solutions, such as burning.
-    
-        </p>
-        
-                <!-- Burn Section -->
-     <div class="timeline-container">        
-        <div class="section2" onclick="openModal('modal-burn')">
-            <h2 class="upgrade-title" style="font-weight: 100;">MEV Burn</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for Burn -->
-        <div id="modal-burn" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-burn')">&times;</span>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing Research</p>              
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> To understand the potential benefits of an MEV burn, one should
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeD-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Explore MEV Burn </h2>
+		<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> To understand the potential benefits of an MEV burn, one should
                 first familiarize themself with the MEV supply chain. By nature, all MEV originates from user order flow (the beginning of the supply chain), and flows downstream to searchers, 
                 builders, and finally, validators. 
                 <br><br>While much of this may change after Account Abstraction and private mempools become common, the majority of MEV today is captured by validators.
@@ -140,24 +191,18 @@
 
                 </ul>
             </div>
-        </div>
-                    <!-- Dist -->
-        <div class="section2" onclick="openModal('modal-dist')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Distributed Block Building</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for Dist -->
-        <div id="modal-dist" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-dist')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> As mentioned in The Scourge description page, the current and future
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeE-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Distributed Block Building</h2>
+ 				<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> The current and future
                 state of PBS means that most blocks are being built by a few dozen professional operators, which isn't ideal: we've created another centralization
-                vector.
-                <br><br>
-                To the extent that the transactional flow and MEV supply chain begins to centralize around these block builders, 
+                vector. To the extent that the transactional flow and MEV supply chain begins to centralize around these block builders, 
                 it may became paramount to decentralize this block building process, 
                 which could be tackled in a number of ways.
                     <br><br>
@@ -173,20 +218,84 @@
                 	<a href="https://www.youtube.com/watch?v=fAgrIdyWIqc" style="color: #fff;" target="_blank"><li>Vitalik Talk</li></a>
                 </ul>
             </div>
-        </div>
-                            <!-- More Preconfirmations Section -->
-        <div class="section2" onclick="openModal('modal-pre')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Preconfirmations</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for Pre -->
-        <div id="modal-pre" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-pre')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> 
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeF-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Explore Execution Tickets</h2>
+  				<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeG-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Endgame Block Production</h2>
+ 			<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+    
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeH-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">App-layer MEV Minimization</h2>
+ 			<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+    
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeI-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Explore Preconfirmations</h2>
+ 			 <h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
 Block builders could publicly agree to include transactions with a priority fee over a certain amount, and send users a receipt indicating their intent to include the transaction in a specific block.
 The implication here is reputational enforcement, but in protocol is also possible.
  </p>
@@ -195,20 +304,84 @@ The implication here is reputational enforcement, but in protocol is also possib
                 	<a href="https://ethresear.ch/t/based-preconfirmations/17353" style="color: #fff;" target="_blank"><li>Based Preconfirmations</li></a>
                 </ul>
             </div>
-        </div>
-                                    <!-- LST Section -->
-        <div class="section2" onclick="openModal('modal-lst')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Prevent Staking Pool Centralization</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-         <!-- Modal for LST -->
-        <div id="modal-lst" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-lst')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing Community Effort & Research<br></p>             
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> It is bad if more than one entity controls a large share of staked ETH; Lido has a lot. Similar to client diversity, this could be solved by the community.
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeJ-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Raise Max Effective Balance</h2>
+ 				<h3 style="font-family: 'Open Sans', sans-serif;">Awaiting Inclusion in Prague-Electra</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+    
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeK-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Improve Node Operator Usability</h2>
+  			 <h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="scourgeL-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Explore Total Stake Capping</h2>
+  			<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+    
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+       <div class="description-container" id="scourgeM-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Liquid Staking Centralization</h2>
+  			<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Community Effort & Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> It is bad if more than one entity controls a large share of staked ETH; Lido has a lot. Similar to client diversity, this could be solved by the community.
                 There are also some potential technical solutions, but some would consider them less preferable to a social layer remedy.</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
@@ -217,12 +390,12 @@ The implication here is reputational enforcement, but in protocol is also possib
                               	<a href="https://www.validatorqueue.com/" style="color: #fff;" target="_blank"><li>Validator Queue</li></a>
                 </ul>
             </div>
-        </div>
-        </div>
-    
-</div>
-</body>
-<script src="script.js"></script>
-
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+      </div>
+      <div class="bottomSpace"></div>
+      <script type="text/javascript" src="status.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+   </body>
 </html>
-

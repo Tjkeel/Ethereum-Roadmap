@@ -1,49 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SDPK9BWVR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0SDPK9BWVR');
-</script>
-    <title>The Splurge</title>
-    <link rel="icon" type="image/png" href="ethlogo.png">
-    <link rel="stylesheet" href="styles.css">
-<link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<div class="container">
-<div class="tabs-container">
-  <a href="https://ethroadmap.com/" class="tab"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
-  <a href="https://ethroadmap.com/chatroom.html" class="tab"><i class="fas fa-comment-dots"></i><span class="tooltip">Chat</span></a>
-  <span class="tabdivider"></span>
-  <a href="https://ethroadmap.com/merge.html" class="tab"><i class="fas fa-code-branch"></i> <span class="tooltip">Merge</span></a>
-  <a href="https://ethroadmap.com/surge.html" class="tab"><i class="fas fa-water"></i><span class="tooltip">Surge</span> </a>
-  <a href="https://ethroadmap.com/scourge.html" class="tab"><i class="fas fa-biohazard"></i><span class="tooltip">Scourge</span> </a>
-  <a href="https://ethroadmap.com/verge.html" class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
-  <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
-  <a href="https://ethroadmap.com/splurge.html" style="background: rgba(255, 255, 255, 0.1);"  class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
-</div>
-    <h1 class="main-title" style="font-weight: 100;">The Splurge</h1>
-        <!-- 1559 -->
-  <div class="timeline-container">
-        <div class="section2" onclick="openModal('modal-1559')">
-            <h2 class="upgrade-title" style="font-weight: 100;">EIP-1559</h2>
-			 <i class="fas fa-check checkmark"></i>     
-        </div>
-        <!-- Modal for 1559 -->
-        <div id="modal-1559" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-1559')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                  
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> 
+<html>
+   <head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SDPK9BWVR"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-0SDPK9BWVR');
+      </script>
+      <title>The Splurge</title>
+      <link rel="icon" type="image/png" href="ethlogo.png">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
+      <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <!-- container -->
+      <div class="container">
+         <div class="tabs-container">
+            <a href="https://ethroadmap.com/" class="tab"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
+            <a href="https://ethroadmap.com/chatroom.html" class="tab"><i class="fas fa-comment-dots"></i><span class="tooltip">Chat</span></a>
+            <span class="tabdivider"></span>
+            <a href="https://ethroadmap.com/merge.html" class="tab"><i class="fas fa-code-branch"></i> <span class="tooltip">Merge</span></a>
+            <a href="https://ethroadmap.com/surge.html" class="tab"><i class="fas fa-water"></i><span class="tooltip">Surge</span> </a>
+            <a href="https://ethroadmap.com/scourge.html" class="tab"><i class="fas fa-biohazard"></i><span class="tooltip">Scourge</span> </a>
+            <a href="https://ethroadmap.com/verge.html"  class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
+            <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
+            <a href="https://ethroadmap.com/splurge.html" style="background: rgba(255, 255, 255, 0.1);" class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
+         </div>
+         <h1 class="main-title" style="font-weight: 100;">The Splurge</h1>
+         <div class="roadmap">
+            <div class="rowGroup">
+               <div class="splurge">
+                 <i class="fas fa-hat-wizard inIcon"></i>
+                 <h2 class="sectionTitle hideLinks">The Splurge</h2>
+                 <div class="goalText"><b>Goal:</b> fix <b>everything else</b></div>
+                 <div id="ingap">.<br>.<br>.<br>.<br></div>
+                 <div class="step" id="splurgeA">EIP-1559</div>
+                 <div class="arrowRight" id="splurge1">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div id="splurgeBB">
+                   <div class="step" id="splurgeB">EIP-4337 <br>specification</div>
+                 </div>
+                 <div class="arrowRight" id="splurge2">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="trackGroup" id="splurgeTrackA">
+                   <div class="track" id="splurgeTrackAText">Account abstraction track</div>
+                   <div class="step" id="splurgeC">ERC-4337</div>
+                   <div class="arrowRight" id="splurge3">
+                     <div class="lineH"></div>
+                     <img class="arrowR" src="arrow.png">
+                   </div>
+                   <div class="step" id="splurgeD">Voluntary <br>EOA <br>conversion</div>
+                   <div class="arrowRight" id="splurge4">
+                     <div class="lineH"></div>
+                     <img class="arrowR" src="arrow.png">
+                   </div>
+                   <div class="step" id="splurgeE">In-protocol <br>enshrining</div>
+                 </div>
+                 <div class="trackGroup" id="splurgeTrackB">
+                   <div class="track" id="splurgeTrackBText">EVM improvements track</div>
+                   <div class="step" id="splurgeG">EOF</div>
+                   <div class="step" id="splurgeH">Big modular <br>arithmetic</div>
+                   <div class="step" id="splurgeI">Further EVM <br>improvements</div>
+                 </div>
+                 <div class="arrowRight" id="splurge5">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="arrowRight" id="splurge6">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="mile" id="splurgeJ">Endgame <br>EVM</div>
+                 <div class="step" id="splurgeK">Endgame <br>EIP-1559</div>
+                 <div class="mile" id="splurgeF">Endgame <br>account <br>abstraction</div>
+                 <div class="step" id="splurgeL">Explore deep <br>crypto (eg. <br>obfuscation)</div>
+                 <div class="step" id="splurgeM">Explore delay- <br>encrypted</div>
+                 <div class="step" id="splurgeN">VDFs</div>
+                 <div class="arrowDown hideLinks" id="splurge7">
+                   <div class="lineV"></div>
+                   <img class="arrowD" src="arrow.png">
+                 </div>
+                 <div class="progress-bar" id="splurge-progress"></div>
+               </div>
+            </div>
+         <div class="description-container" id="splurgeA-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">EIP-1559</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> August 5, 2021 </h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
 EIP-1559 implemented a hybrid transaction fee mechanism in Ethereum, 
 instituting a base fee per block that was burned and a priority fee for validator incentivization. 
 The base fee was dynamically adjusted each block, targeting a consistent 50% capacity utilization 
@@ -57,116 +112,313 @@ compensated for including transactions through the priority fee.
 There are aspirations to enhance EIP-1559 in the future.
 
  </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
                 	<a href="https://ultrasound.money/" style="color: #fff;" target="_blank"><li>ultra sound money</li></a>
                     <a href="https://domothy.com/eip1559/" style="color: #fff;" target="_blank"><li>domothy post</li></a>
-
                 </ul>
             </div>
-        </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeB-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">ERC-4337 Specification</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> March 1, 2023 </h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+An Account Abstraction standard, and is not a hard fork requiring EIP. Where an EIP requires changes to the Ethereum protocol itself, an ERC, such as ERC-20 (for tokens), 
+proposes standards for contracts on the Ethereum blockchain that operate within the existing framework.<br><br>
 
-        <!-- AA Section -->
-        <div class="section2" onclick="openModal('modal-aa')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Account Abstraction</h2>
-				<i class="fas fa-exclamation-triangle" style="color: #FBEA6A;"></i>
-        </div>
-        <!-- Modal for AA -->
-        <div id="modal-aa" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-aa')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Implementation is underway, and enshrinement research is ongoing</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> ERC-4337 has emerged as a standardized solution in Ethereum for account abstraction, 
-                utilizing an entry point contract to avoid direct modifications to the consensus layer. 
-                It enables users to encapsulate their intended actions in UserOperation objects, 
-                subsequently aggregated into bundles by miners or bundlers for inclusion in the blockchain. 
-                Notably, ERC-4337 introduces a mechanism for gas fee payments using ERC-20 tokens, 
-                such as USDC, via a paymaster system. This approach is not merely theoretical; 
-                it's actively implemented in projects like Eth-Infinitsm and Stackup.
-				<br><br>
-Should ERC-4337 gain wider acceptance and demonstrate its efficacy, some form of embedding it into the protocol via an EIP will be pursued.
-This advancement would require broad consensus within the Ethereum community and thorough testing. 
+Instead of introducing new core features and altering the foundational transaction type, 
+ERC-4337 presents a novel approach through a higher-layer mechanism. 
+This approach utilizes a pseudo-transaction object called a UserOperation. 
+Users transmit these UserOperation objects to a new, distinct mempool. 
+From there, entities known as bundlers aggregate these objects into a single transaction by invoking a specialized contract. 
+This consolidated transaction is then incorporated into a block as usual.
 
  </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="https://www.erc4337.io/" style="color: #fff;" target="_blank"><li>ERC-4337</li></a>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://www.erc4337.io/" style="color: #fff;" target="_blank"><li>erc4337.io</li></a>
                 </ul>
             </div>
-        </div>
-                <!-- EOF Section -->
-        <div class="section2" onclick="openModal('modal-EOF')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Ethereum Object Format (EOF)</h2>
-				<i class="fas fa-exclamation-triangle" style="color: #FBEA6A;"></i>
-        </div>
-        <!-- Modal for EOF -->
-        <div id="modal-EOF" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-EOF')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">The (8) EIPs are written, and were sought for inclusion in Shanghai. 
-                  Look for EOF to ship in an execution layer hard fork after Cancun.</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Ethereum Object Format (EOF) is inspired by the concept of "object file formats" in traditional programming, 
-                where an object file is a structured representation of machine code and data that's ready for use by the system. 
-                EOF aims to bring a similar structured approach to the EVM, organizing the bytecode of smart contracts into distinct, 
-                systematic sections for code, data, and other types. This structure contrasts with the current format, 
-                where such distinctions are less clear and systematic.
-				<br><br>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeC-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">ERC-4337</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> March 1, 2023 </h3>
+                              <p style="font-family: 'Open Sans', sans-serif; "> 
+An Account Abstraction standard, and is not a hard fork requiring EIP. Where an EIP requires changes to the Ethereum protocol itself, an ERC, such as ERC-20 (for tokens), 
+proposes standards for contracts on the Ethereum blockchain that operate within the existing framework.<br><br>
+
+Instead of introducing new core features and altering the foundational transaction type, 
+ERC-4337 presents a novel approach through a higher-layer mechanism. 
+This approach utilizes a pseudo-transaction object called a UserOperation. 
+Users transmit these UserOperation objects to a new, distinct mempool. 
+From there, entities known as bundlers aggregate these objects into a single transaction by invoking a specialized contract. 
+This consolidated transaction is then incorporated into a block as usual.
+
+ </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://www.erc4337.io/" style="color: #fff;" target="_blank"><li>erc4337.io</li></a>
+                </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeD-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Voluntary EOA Conversion</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Soon | Prague - Electra</h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  ERC-4337 probably isn't going to be enshrined in the protocol anymore. Instead Core Devs have decided to include
+               EIP-3074 in the Prague-Electra hard fork, which will allow externally owned accounts to delegate control to a smart contract. It does this by introducing two new instructions: 
+               AUTH and AUTHCALL to the EVM.
+               
+               <br><br>Therefore, EIP-3074 covers two steps in published roadmap: it allows for voluntary EOA conversion, and that conversion is enshrined in the protocol. It is likely that EIP-3074 conversions will enhance the existing
+               ERC-4337 standard, by more easily allowing existing EOAs to convert to the aforementioned ERC standard.
+           
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                 <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="https://eips.ethereum.org/EIPS/eip-3074" style="color: #fff;" target="_blank">
+                     <li>EIP-3074</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeE-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">In-Protocol Enshrining</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Soon | Prague - Electra</h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  ERC-4337 probably isn't going to be enshrined in the protocol anymore. Instead Core Devs have decided to include
+               EIP-3074 in the Prague-Electra hard fork, which will allow externally owned accounts to delegate control to a smart contract. It does this by introducing two new instructions: 
+               AUTH and AUTHCALL to the EVM.
+               
+               <br><br>Therefore, EIP-3074 covers two steps in published roadmap: it allows for voluntary EOA conversion, and that conversion is enshrined in the protocol. It is likely that EIP-3074 conversions will enhance the existing
+               ERC-4337 standard, by more easily allowing existing EOAs to convert to the aforementioned ERC standard.
+               
+                                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+                 <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="https://eips.ethereum.org/EIPS/eip-3074" style="color: #fff;" target="_blank">
+                     <li>EIP-3074</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeF-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Endgame Account Abstraction</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li> TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeG-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">EOF</h2>
+                              <h3 style="font-family: 'Open Sans', sans-serif;"> Awaiting Inclusion</h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Ethereum Object Format (EOF) is inspired by the concept of "object file formats" in traditional programming, 
+               where an object file is a structured representation of machine code and data that's ready for use by the system. EOF aims to bring a similar structured approach to the EVM, 
+               organizing the bytecode of smart contracts into distinct, systematic sections for code, data, and other types. This structure contrasts with the current format, 
+               where such distinctions are less clear and systematic.
+               <br><br>
 				In EOF, this structured format would not only allow for more modular and efficient processing of smart contracts within the EVM, 
-				but would also introduce versioning like object file formats in computing. The format would support new functionalities like improved control flow
- 				operations and stack validation, and enhance the overall efficiency and robustness of Ethereum's infrastructure. </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="https://twitter.com/lightclients/status/1593270266909450241" style="color: #fff;" target="_blank"><li>Twitter Thread by @lightclients</li></a>
-                </ul>
+				but would also introduce versioning like object file formats in computing. 
+				The format would support new functionalities like improved control flow operations and stack validation, 
+				and enhance the overall efficiency and robustness of Ethereum's infrastructure.
+				<br><br>
+				This improvement track is made up on 8 EIPs that have been thoroughly researched, and are awaiting inclusion in a future hard fork. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="https://twitter.com/lightclients/status/1593270266909450241" style="color: #fff;" target="_blank">
+                     <li> Twitter Thread by @lightclients</li>
+                  </a>
+               </ul>
             </div>
-        </div>
-                    <!-- VDF Section -->
-        <div class="section2" onclick="openModal('modal-VDF')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Privacy, VDFs, and More</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for VDF -->
-        <div id="modal-VDF" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-VDF')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> VDFs are computations that take a predetermined time to complete and cannot be sped up through parallel processing. This feature could ensure more secure and unpredictable randomness, crucial for validator selection.
-
-Deep cryptographic methods are also under consideration for integration into Ethereum's framework. This includes exploring obfuscation for enhanced privacy, fully homomorphic encryption for secure and private computation, and one-shot signatures to eliminate the need for slashing mechanisms in PoS.
-<br><br>
-Additionally, the exploration of delay-encrypted mempools targets the improvement of transaction privacy and the reduction of MEV and censorship risks. This involves encrypting transactions in the mempool for a specified period.
-<Br><br>
-Also included here are practical solutions for "dust accounts," which contain funds too small to move due to gas fees outweighing their value . </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="https://vdfresearch.org/" style="color: #fff;" target="_blank"><li>VDF Research</li></a>
-                <a href="https://ethereum-magicians.org/t/some-medium-term-dust-cleanup-ideas/6287" style="color: #fff;" target="_blank"><li>Dust Cleanup Talk</li></a>
-
-                </ul>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeH-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Big Modular Arithmetic</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                              <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
             </div>
-        </div>
-        </div>
-        
-  <p class="intro-text" style="max-width: 800px;"> The Splurge more or less contains all the upgrades that don't fit into any of the five previous buckets.
-  To that end, they are frequently deemed as 'nice to haves,' as opposed to crucial upgrades.
-  However, it is easily argued that Account Abstraction is a necessary user experience upgrade, without which it would be near impossible to reach mass user adoption.
-  Similarly, EOF has the potential to fix many of the developer experience  issues that plague builders.
-  
-  <br><br>
-  
-  EIP-1559 rectified a monetary policy error, wherein all network participants were severely overpaying for miner / validator security.  
-  It too provided a massive user experience upgrade by streamlining gas estimations. 
-  Various privacy focused roadmap items are also bunched in here, further strengthening the argument that The Splurge is <span style= "font-weight: bold;"> The UX Tract. </span>
-
- </p>   
-</div>
-</body>
-	<script src="script.js"></script>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeI-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Further EVM Improvements</h2>
+                     <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeJ-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Endgame EVM</h2>
+                    <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeK-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Endgame EIP-1559</h2>
+                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="splurgeL-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Explore Deep Crypto</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         
+                 <div class="description-container" id="splurgeM-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Explore Delay Encryption</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+                  <div class="description-container" id="splurgeN-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">VDFs</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
+                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+      </div>
+      <div class="bottomSpace"></div>
+      <script type="text/javascript" src="status.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+   </body>
 </html>
-
