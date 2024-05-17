@@ -151,6 +151,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSection = sections.find(section => document.getElementById(`${section}A`));
     let currentSteps = [];
     let currentIndex = 0;
+    let autoAdvanceTimer;
+
+    function resetAutoAdvanceTimer() {
+        clearInterval(autoAdvanceTimer);
+        autoAdvanceTimer = setInterval(() => {
+            let nextIndex = (currentIndex + 1) % currentSteps.length;
+            showDescription(currentSteps[nextIndex]);
+        }, 30000); // Auto-advance every 30 seconds
+    }
 
     if (currentSection) {
         alphabet.split('').forEach(letter => {
@@ -177,9 +186,9 @@ document.addEventListener('DOMContentLoaded', function() {
         });
         document.getElementById(stepId).classList.add('active');
         currentIndex = currentSteps.indexOf(stepId); // Update currentIndex
+        resetAutoAdvanceTimer(); // Reset the timer whenever a new description is shown manually
     }
 
-    // General click event handler to manage clicks on steps and arrows
     document.addEventListener('click', function(event) {
         // Check if a step was clicked
         const stepClicked = currentSteps.find(stepId => event.target.id === stepId);
