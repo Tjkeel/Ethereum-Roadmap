@@ -153,19 +153,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentIndex = 0;
     let autoAdvanceTimer;
 
-    function resetAutoAdvanceTimer() {
-        clearInterval(autoAdvanceTimer);
-        autoAdvanceTimer = setInterval(() => {
-            let nextIndex = (currentIndex + 1) % currentSteps.length;
-            document.getElementById(currentSteps[nextIndex]).click();  // Simulate a click on the next step
-        }, 30000); // Auto-advance every 30 seconds
-    }
-
     if (currentSection) {
         alphabet.split('').forEach(letter => {
             let stepId = `${currentSection}${letter}`;
             if (document.getElementById(stepId)) {
                 currentSteps.push(stepId); // Store step IDs directly
+                document.getElementById(stepId).addEventListener('click', () => {
+                    currentIndex = currentSteps.indexOf(stepId);
+                    showDescription(stepId);
+                });
             }
         });
     }
@@ -185,24 +181,42 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById(id).classList.remove('active');
         });
         document.getElementById(stepId).classList.add('active');
-        currentIndex = currentSteps.indexOf(stepId); // Update currentIndex
-        resetAutoAdvanceTimer(); // Reset the timer whenever a new description is shown manually
+        resetAutoAdvanceTimer();
+    }
+
+    function navigateDescription(direction) {
+        if (direction === 'next') {
+            currentIndex = (currentIndex + 1) % currentSteps.length;
+        } else {
+            currentIndex = (currentIndex - 1 + currentSteps.length) % currentSteps.length;
+        }
+        showDescription(currentSteps[currentIndex]);
+    }
+
+    function resetAutoAdvanceTimer() {
+        clearInterval(autoAdvanceTimer);
+        autoAdvanceTimer = setInterval(() => {
+            navigateDescription('next');
+        }, 30000); // Auto-advance every 30 seconds
     }
 
     document.addEventListener('click', function(event) {
-        if (event.target.id && currentSteps.includes(event.target.id)) {
-            showDescription(event.target.id);
+        if (event.target.matches('.left-arrow-pointer') || event.target.closest('.left-arrow-pointer')) {
+            navigateDescription('prev');
+        } else if (event.target.matches('.right-arrow-pointer') || event.target.closest('.right-arrow-pointer')) {
+            navigateDescription('next');
         }
     });
 
     document.addEventListener('keydown', function(event) {
-        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
-            event.preventDefault();
-            let nextIndex = event.key === 'ArrowRight' ? (currentIndex + 1) % currentSteps.length : (currentIndex - 1 + currentSteps.length) % currentSteps.length;
-            document.getElementById(currentSteps[nextIndex]).click();
+        if (event.key === 'ArrowRight') {
+            navigateDescription('next');
+        } else if (event.key === 'ArrowLeft') {
+            navigateDescription('prev');
         }
     });
 
+    // Add swipe functionality
     document.addEventListener('touchstart', handleTouchStart, false);
     document.addEventListener('touchmove', handleTouchMove, false);
 
@@ -223,11 +237,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
         if (Math.abs(xDiff) > 0) {
             if (xDiff > 0) {
-                let nextIndex = (currentIndex + 1) % currentSteps.length;
-                document.getElementById(currentSteps[nextIndex]).click();
+                navigateDescription('next');
             } else {
-                let prevIndex = (currentIndex - 1 + currentSteps.length) % currentSteps.length;
-                document.getElementById(currentSteps[prevIndex]).click();
+                navigateDescription('prev');
             }
         }
         xDown = null;
