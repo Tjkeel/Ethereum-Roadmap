@@ -157,7 +157,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInterval(autoAdvanceTimer);
         autoAdvanceTimer = setInterval(() => {
             let nextIndex = (currentIndex + 1) % currentSteps.length;
-            showDescription(currentSteps[nextIndex]);
+            document.getElementById(currentSteps[nextIndex]).click();  // Simulate a click on the next step
         }, 30000); // Auto-advance every 30 seconds
     }
 
@@ -190,58 +190,49 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.addEventListener('click', function(event) {
-        // Check if a step was clicked
-        const stepClicked = currentSteps.find(stepId => event.target.id === stepId);
-        if (stepClicked) {
-            showDescription(stepClicked);
-        }
-
-        // Arrow navigation handling
-        if (event.target.matches('.left-arrow-pointer') || event.target.closest('.left-arrow-pointer')) {
-            let prevIndex = (currentIndex - 1 + currentSteps.length) % currentSteps.length;
-            showDescription(currentSteps[prevIndex]);
-        } else if (event.target.matches('.right-arrow-pointer') || event.target.closest('.right-arrow-pointer')) {
-            let nextIndex = (currentIndex + 1) % currentSteps.length;
-            showDescription(currentSteps[nextIndex]);
+        if (event.target.id && currentSteps.includes(event.target.id)) {
+            showDescription(event.target.id);
         }
     });
 
-    // Add swipe functionality
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') {
+            event.preventDefault();
+            let nextIndex = event.key === 'ArrowRight' ? (currentIndex + 1) % currentSteps.length : (currentIndex - 1 + currentSteps.length) % currentSteps.length;
+            document.getElementById(currentSteps[nextIndex]).click();
+        }
+    });
+
     document.addEventListener('touchstart', handleTouchStart, false);
     document.addEventListener('touchmove', handleTouchMove, false);
 
     let xDown = null;
-    let yDown = null;
 
     function handleTouchStart(evt) {
         const firstTouch = evt.touches[0];
         xDown = firstTouch.clientX;
-        yDown = firstTouch.clientY;
     }
 
     function handleTouchMove(evt) {
-        if (!xDown || !yDown) {
+        if (!xDown) {
             return;
         }
 
         let xUp = evt.touches[0].clientX;
-        let yUp = evt.touches[0].clientY;
         let xDiff = xDown - xUp;
 
-        if (Math.abs(xDiff) > 0) { // Horizontal swipe
-            if (xDiff > 0) { // Left swipe
+        if (Math.abs(xDiff) > 0) {
+            if (xDiff > 0) {
                 let nextIndex = (currentIndex + 1) % currentSteps.length;
-                showDescription(currentSteps[nextIndex]);
-            } else { // Right swipe
+                document.getElementById(currentSteps[nextIndex]).click();
+            } else {
                 let prevIndex = (currentIndex - 1 + currentSteps.length) % currentSteps.length;
-                showDescription(currentSteps[prevIndex]);
+                document.getElementById(currentSteps[prevIndex]).click();
             }
         }
-        xDown = null; // Reset values
-        yDown = null;
+        xDown = null;
     }
 
-    // Automatically display the first description for the detected section
     if (currentSection && currentSteps.length > 0) {
         showDescription(currentSteps[0]);
     }
