@@ -1,201 +1,430 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-0SDPK9BWVR"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-0SDPK9BWVR');
-</script>
-    <title>The Verge</title>
-    <link rel="icon" type="image/png" href="ethlogo.png">
-    <link rel="stylesheet" href="styles.css">
-<link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
-<script src="script.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-<div class="container">
-<div class="tabs-container">
-  <a href="https://ethroadmap.com/" class="tab"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
-  <a href="https://ethroadmap.com/chatroom.html" class="tab"><i class="fas fa-comment-dots"></i><span class="tooltip">Chat</span></a>
-  <span class="tabdivider"></span>
-  <a href="https://ethroadmap.com/merge.html" class="tab"><i class="fas fa-code-branch"></i> <span class="tooltip">Merge</span></a>
-  <a href="https://ethroadmap.com/surge.html" class="tab"><i class="fas fa-water"></i><span class="tooltip">Surge</span> </a>
-  <a href="https://ethroadmap.com/scourge.html" class="tab"><i class="fas fa-biohazard"></i><span class="tooltip">Scourge</span> </a>
-  <a href="https://ethroadmap.com/verge.html" style="background: rgba(255, 255, 255, 0.1);" class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
-  <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
-  <a href="https://ethroadmap.com/splurge.html" class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
-</div>
-    <h1 class="main-title" style="font-weight: 100;">The Verge</h1>
-        <!-- Dos -->
-    <div class="timeline-container">
-        <div class="section2" onclick="openModal('modal-dos')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Fix DoS Issues</h2>
-			 <i class="fas fa-check checkmark"></i>     
-        </div>
-        <!-- Modal for Dos -->
-        <div id="modal-dos" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-dos')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                  
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; ">  Gas pricing and resource allocation were changed to prevent attackers from easily overwhelming
+<html>
+   <head>
+      <!-- Google tag (gtag.js) -->
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-0SDPK9BWVR"></script>
+      <script>
+         window.dataLayer = window.dataLayer || [];
+         function gtag(){dataLayer.push(arguments);}
+         gtag('js', new Date());
+         gtag('config', 'G-0SDPK9BWVR');
+      </script>
+      <title>The Verge</title>
+      <link rel="icon" type="image/png" href="ethlogo.png">
+      <link rel="stylesheet" type="text/css" href="styles.css">
+      <link rel="stylesheet" type="text/css" href="position.css">
+      <link rel="stylesheet" type="text/css" href="hideLinks.css">
+      <link href="https://use.fontawesome.com/releases/v6.5.1/css/all.css" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+      <!-- container -->
+      <div class="container">
+         <div class="tabs-container">
+            <a href="https://ethroadmap.com/" class="tab"><i class="fas fa-home"></i><span class="tooltip">Home</span></a>
+            <a href="https://ethroadmap.com/chatroom.html" class="tab"><i class="fas fa-comment-dots"></i><span class="tooltip">Chat</span></a>
+            <span class="tabdivider"></span>
+            <a href="https://ethroadmap.com/merge.html" class="tab"><i class="fas fa-code-branch"></i> <span class="tooltip">Merge</span></a>
+            <a href="https://ethroadmap.com/surge.html" class="tab"><i class="fas fa-water"></i><span class="tooltip">Surge</span> </a>
+            <a href="https://ethroadmap.com/scourge.html" class="tab"><i class="fas fa-biohazard"></i><span class="tooltip">Scourge</span> </a>
+            <a href="https://ethroadmap.com/verge.html" style="background: rgba(255, 255, 255, 0.1);" class="tab"><i class="fas fa-square-check"></i><span class="tooltip">Verge</span></a>
+            <a href="https://ethroadmap.com/purge.html" class="tab"><i class="fas fa-broom"></i><span class="tooltip">Purge</span></a>
+            <a href="https://ethroadmap.com/splurge.html" class="tab"><i class="fas fa-hat-wizard"></i><span class="tooltip">Splurge</span></a>
+         </div>
+         <h1 class="main-title" style="font-weight: 100;">The Verge</h1>
+         <div class="roadmap">
+            <div class="rowGroup">
+               <div class="verge">
+                 <i class="fas fa-square-check inIcon"></i>
+                 <h2 class="sectionTitle hideLinks">The Verge</h2>
+                 <div class="goalText"><b>Goal:</b> <b>verifying</b> blocks should be super easy - download
+                   N bytes of data, perform a few basic computations, verify
+                   a SNARK and you're done</b>
+                 </div>
+                 <div id="ingap">.<br>.<br>.</div>
+                 <div class="step" id="vergeA">Most serious <br>EVM DoS <br>issues solved</div>
+                 <div class="step" id="vergeB">Basic light <br>client support <br>(sync <br>committees)</div>
+                 <div class="arrowRight" id="verge1">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeE">Verkle tree <br>spec + impl</div>
+                 <div class="arrowRight" id="verge2">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeC">SNARK based <br>light clients</div>
+                 <div class="lineH" id="verge3"></div>
+                 <div class="lineV" id="verge4"></div>
+                 <div class="lineH" id="verge5"></div>
+                 <div class="lineV" id="verge6"></div>
+                 <div class="arrowRight" id="verge7">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="arrowDown" id="verge8">
+                   <div class="lineV"></div>
+                   <img class="arrowD" src="arrow.png">
+                 </div>
+                 <div class="arrowUp" id="verge9">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="lineV"></div>
+                 </div>
+                 <div class="step" id="vergeF">Code chunking + gas cost updates</div>
+                 <div class="mile" id="vergeH">Verkle <br>trees</div>
+                 <div class="arrowRight" id="verge10">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeG">Transition spec <br>+ impl</div>
+                 <div class="step" id="vergeJ">SNARK for L1 <br>EVM</div>
+                 <div class="arrowRight" id="verge11">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="arrowDown" id="verge12">
+                   <div class="lineV"></div>
+                   <img class="arrowD" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeI">SNARK for <br>Verkle proofs</div>
+                 <div class="arrowRight" id="verge13">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeD">SNARK for <br>consensus state <br>transition</div>
+                 <div class="lineH" id="verge14"></div>
+                 <div class="arrowUp" id="verge15">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="lineV"></div>
+                 </div>
+                 <div class="mile" id="vergeL">Fully <br>SNARKed <br>Ethereum</div>
+                 <div class="arrowRight" id="verge16">
+                   <div class="lineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="step" id="vergeN">SNARK / <br>STARK ASICs</div>
+                 <div class="step" id="vergeK">Explore EVM <br>verification <br>precompile</div>
+                 <div class="quant" id="vergeM">Quantum-safe <br>SNARKs (eg. <br>STARKs)</div>
+                 <div class="dashLineH hideLinks" id="verge17"></div> 
+                 <div class="dashLineV hideLinks" id="verge19"></div> 
+                 <div class="dashLineV hideLinks" id="verge21"></div>
+                 <div class="dashLineV hideLinks" id="verge22"></div>
+                 <div class="dashLineH hideLinks" id="verge23"></div>
+                 <div class="arrowRight hideLinks" id="verge20">
+                   <div class="dashLineH"></div>
+                   <img class="arrowR" src="arrow.png">
+                 </div>
+                 <div class="dashLineH hideLinks" id="verge24"></div>
+                 <div class="arrowUp hideLinks" id="verge25">
+                   <img class="arrowU" src="arrow.png">
+                   <div class="dashLineV"></div>
+                 </div>
+                 <div class="dashLineV hideLinks" id="verge26"></div>
+                 <div class="progress-bar" id="verge-progress"></div>
+               </div>
+            </div>
+         <div class="description-container" id="vergeA-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">EVM DoS Issues Solved</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> October 18, 2016 </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Gas pricing and resource allocation were changed to prevent attackers from easily overwhelming
                  the network with low-cost, high-computation transactions. This recalibration ensured
                  that operations consuming more computational resources were priced appropriately,
-                  making it economically unfeasible for attackers to exploit these vulnerabilities. <br><br>
+                  making it economically unfeasible for attackers to exploit these vulnerabilities. 
+                  <br><br>
                   Additionally, improvements were made in the EVM's code execution and state management processes, 
                   enhancing its ability to handle a large number of requests without sacrificing speed or security. 
                   This milestone significantly bolstered Ethereum's resilience against DoS attacks, a crucial step 
                   in maintaining the network's stability and efficiency.
-                  
- </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md"style="color: #fff;" target="_blank"><li>These changes were made in the Tangerine Whistle hard fork</li></a>
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://github.com/ethereum/execution-specs/blob/master/network-upgrades/mainnet-upgrades/tangerine-whistle.md"style="color: #fff;" target="_blank">
+                	<li>These changes were made in the Tangerine Whistle hard fork</li>
+                	</a>
                 </ul>
             </div>
-
-        </div>
-        
-                <!-- Sync Committee Section -->
-     
-        <div class="section2" onclick="openModal('modal-sync')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Sync Committees</h2>
-			 <i class="fas fa-check checkmark"></i>     
-        </div>
-        <!-- Modal for Sync Committee -->
-        <div id="modal-sync" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-sync')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Live</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Sync committees are specialized groups of validators responsible for creating a condensed version of the blockchain state at regular intervals.
-                 By doing so, they enable (among other things) light clients to quickly sync with the current state of the blockchain without processing the entire chain history. 
-                 This dramatically reduces the computational and storage requirements for light clients, making it easier for devices with limited resources to participate in the network. 
-                 This upgrade allowed a broader range of devices to engage with the network efficiently. </p>
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md"style="color: #fff;" target="_blank"><li>These changes were made in the Altair Hard Fork</li></a>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeB-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Basic Light Clients</h2>
+ 			 <h3 style="font-family: 'Open Sans', sans-serif;"> October 27, 2021 </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Sync committees are specialized groups of validators responsible for creating a condensed version of the blockchain state at regular intervals. 
+               By doing so, they enable (among other things) light clients to quickly sync with the current state of the blockchain without processing the entire chain history. 
+               This dramatically reduces the computational and storage requirements for light clients, making it easier for devices with limited resources to participate in the network. 
+               This upgrade allowed a broader range of devices to engage with the network efficiently.
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                	<a href="https://github.com/ethereum/consensus-specs/blob/dev/specs/altair/beacon-chain.md"style="color: #fff;" target="_blank">
+                	<li>These changes were made in the Altair Hard Fork</li>
+                	</a>
                 </ul>
             </div>
-        </div>
-                </div>
-                <p class="intro-text" style="max-width: 800px;">
-                
-        Sync committees were introduced in Altair.
-        
-          <br><br>
-        
-        The following three upgrades would likely happen sequentially, each relying upon the other to 
-        set the necessary groundwork. With each new iteration, Ethereum would greatly broaden it's ability to allow participants to interact with the network.
-        I.e., make it easier for lightweight devices to independently verify the state of Etheruem. Today, most users outsource this responsibility to third party RPC providers.
-      <br><br>
-      
-      Beyond accessibility, SNARKs and STARKs have the potential bring privacy to end users while still allowing for some amount of transparency
-      where needed. There are also security improvement achieved  by both, particularly in regards to quantum resistance.
-        </p>
-<div class="timeline-container">
-
-
-                <!-- Verkle Section -->
-        <div class="section2" onclick="openModal('modal-verkle')">
-            <h2 class="upgrade-title" style="font-weight: 100;">Verkle Trees <i class="fa-solid fa-crown crown-icon" aria-hidden="true"></i></h2>
-  </ul>
-			<i class="fas fa-times x-mark"></i>
-			        </div>
-        <!-- Modal for Verkle -->
-        <div id="modal-verkle" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-verkle')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Upgrade Ethereum's state structure from Patricia Merkle Trees to Verkle
-                 Trees via vector commitments, which will allow for a more compact and efficient proof structure.
-             <br><br>
-                In a Merkle tree, the proof size grows logarithmically with the number of elements, leading to larger proofs and more data on Ethereum over time.
-                Verkle trees, by contrast, leverage vector commitments to generate constant-sized proofs regardless of the number of elements.
-                 This would drastically reduce the size of proofs required to verify the state of Ethereum, enhancing the efficiency of data storage and retrieval.
-             <br><br>
-                 The implementation of Verkle trees will markedly improve the functionality of light clients, which aim to allow network participants to independently verify 
-                 the state of Ethereum without running a node AND without relying on a third party RPC provider. After the migration to Verkle Trees, lightweight devices (cell phones) could
-                 sufficiently, securely, and independently verify the state of Ethereum.
-                 
-                 <br><br>
-                 This may become the prioritized upgrade in Osaka, the execution layer fork after Prague.
-                
-                </p>
-                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
-                <ul style="font-family: 'Open Sans', sans-serif;">
-                	<a href="https://verkle.info/" style="color: #fff;" target="_blank"><li>Verkle.info</li></a>
-                	<a href="https://www.youtube.com/watch?v=Q7rStTKwuYs" style="color: #fff;" target="_blank"><li>Talk by Guillaume Ballet</li></a>
-
-                </ul>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeC-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">SNARK Based Light Clients</h2>
+   			<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
             </div>
-        </div>
-                    <!-- SNARK Ethereum Section -->
-        <div class="section2" onclick="openModal('modal-snark')">
-            <h2 class="upgrade-title" style="font-weight: 100;">SNARK Ethereum</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for SNARK Ethereum -->
-        <div id="modal-snark" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-snark')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Assuming the successful implementation of Verkle Trees, Ethereum would subsequently turn its attention to SNARKs (within the context of The Verge).
-                <br><br>
-               
-Incorporating SNARKs into Ethereum would allow for batch processing of transactions and state changes, significantly reducing the data required per transaction. SNARKs have the potential to condense multiple transactions into a single proof, enabling nodes to validate many transactions simultaneously with less computational effort.
-<br><br>
-Furthermore, integrating SNARKs directly into the EVM would allow the EVM to process complex operations more efficiently by validating the correctness of computations without executing them in full. 
-               <br><br>
- They have the potential to enable privacy preserving transactions via zero-knowledge proofs.
-                 </p>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeD-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">SNARK for Consensus State Transition</h2>
+        <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
             </div>
-        </div>
-        
-                            <!-- STARK Ethereum Section -->
-        <div class="section2" onclick="openModal('modal-stark')">
-            <h2 class="upgrade-title" style="font-weight: 100;">STARK Ethereum</h2>
-			<i class="fas fa-times x-mark"></i>
-        </div>
-        <!-- Modal for STARK Ethereum -->
-        <div id="modal-stark" class="modal">
-            <div class="modal-content" style="background: #595959;  color: #fff; font-family: 'Helvetica Neue', Arial, sans-serif; border-radius: 5px; border: 1px solid transparent;">
-                <span class="close" onclick="closeModal('modal-stark')">&times;</span>
-                 <h3 style="font-family: 'Open Sans', sans-serif;"> Status </h3>
-                  <p style="font-family: 'Open Sans', sans-serif; ">Ongoing research</p>                
-                <h3 style="font-family: 'Open Sans', sans-serif;"> Summary </h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> 
-In comparison to SNARKS, STARKs would enable the creation of proofs that are smaller and faster to verify, 
-significantly improving the efficiency of processing complex smart contracts 
-and managing high-volume transactions. 
-<br><br>
-
-They have the potential to attain quantum resistance using hash functions 
-and information-theoretic principles, independent of number-theoretic problems
- vulnerable to quantum computing.
-
-
-<br><br>
-Similar to SNARKs, they have the potential to further enable privacy preserving transactions  via zero-knowledge proofs.
-</p>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeE-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Verkle Tree Spec & Inclusion</h2>
+             <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
             </div>
-        </div>
-        
- </div>   
-</div>
-</body>
-<script src="script.js"></script>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeF-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Verkle Code Chunking & Gas</h2>
+           <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeG-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Verkle Transition Spec & Inclusion</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeH-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Verkle Trees</h2>
+              <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeI-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">SNARK for Verkle Proofs</h2>
+              <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeJ-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">SNARK for L1 EVM</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeK-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">EVM Verification Precompile</h2>
+              <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+         <div class="description-container" id="vergeL-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Fully SNARKED Ethereum</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+    <div class="description-container" id="vergeM-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">Quantum Safe SNARKs (STARKs)</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>
+      <div class="description-container" id="vergeN-description">
+            <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
+            <!-- Left arrow -->
+            <div class="description-content">
+               <h2 class="upgrade-title" style="font-weight: 100;">SNARK / STARK ASICs</h2>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
+               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               </p>
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
+               <ul style="font-family: 'Open Sans', sans-serif;">
+                  <a href="" style="color: #fff;" target="_blank">
+                     <li>TBD</li>
+                  </a>
+               </ul>
+            </div>
+            <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
+            <!-- Right arrow -->
+         </div>          
+      </div>
+      <div class="bottomSpace"></div>
+      <script type="text/javascript" src="status.js"></script>
+      <script type="text/javascript" src="script.js"></script>
+   </body>
 </html>
-

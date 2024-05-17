@@ -143,7 +143,7 @@ setTimeout(() => {
 
 
 
-//Dividing the logic between graphic and description
+//Dividing the logic between graphics and descriptions
 
 document.addEventListener('DOMContentLoaded', function() {
     const sections = ['merge', 'surge', 'scourge', 'verge', 'purge', 'splurge'];
@@ -151,6 +151,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentSection = sections.find(section => document.getElementById(`${section}A`));
     let currentSteps = [];
     let currentIndex = 0;
+    let autoAdvanceTimer;
+
+    function resetAutoAdvanceTimer() {
+        clearInterval(autoAdvanceTimer);
+        autoAdvanceTimer = setInterval(() => {
+            let nextIndex = (currentIndex + 1) % currentSteps.length;
+            showDescription(currentSteps[nextIndex]);
+        }, 30000); // Auto-advance every 30 seconds
+    }
 
     if (currentSection) {
         alphabet.split('').forEach(letter => {
@@ -172,16 +181,22 @@ document.addEventListener('DOMContentLoaded', function() {
             element.style.display = 'block';
             setTimeout(() => element.classList.add('show'), 10);
         }
-        // Ensure all steps are marked inactive then mark the current step active
         currentSteps.forEach(id => {
             document.getElementById(id).classList.remove('active');
         });
         document.getElementById(stepId).classList.add('active');
         currentIndex = currentSteps.indexOf(stepId); // Update currentIndex
+        resetAutoAdvanceTimer(); // Reset the timer whenever a new description is shown manually
     }
 
-    // Arrow navigation using delegated event handling on the document
     document.addEventListener('click', function(event) {
+        // Check if a step was clicked
+        const stepClicked = currentSteps.find(stepId => event.target.id === stepId);
+        if (stepClicked) {
+            showDescription(stepClicked);
+        }
+
+        // Arrow navigation handling
         if (event.target.matches('.left-arrow-pointer') || event.target.closest('.left-arrow-pointer')) {
             let prevIndex = (currentIndex - 1 + currentSteps.length) % currentSteps.length;
             showDescription(currentSteps[prevIndex]);
@@ -212,9 +227,8 @@ document.addEventListener('DOMContentLoaded', function() {
         let xUp = evt.touches[0].clientX;
         let yUp = evt.touches[0].clientY;
         let xDiff = xDown - xUp;
-        let yDiff = yDown - yUp;
 
-        if (Math.abs(xDiff) > Math.abs(yDiff)) {
+        if (Math.abs(xDiff) > 0) { // Horizontal swipe
             if (xDiff > 0) { // Left swipe
                 let nextIndex = (currentIndex + 1) % currentSteps.length;
                 showDescription(currentSteps[nextIndex]);
