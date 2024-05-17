@@ -16,12 +16,12 @@
         0.65s border-color,
         0.2s border-width,
         0.65s filter;
-    border-radius: 10px;
 }
 
 
 .sectionLink {
     color: white;
+    border-radius: 10px;
 }
 
 .sectionLink:hover {
