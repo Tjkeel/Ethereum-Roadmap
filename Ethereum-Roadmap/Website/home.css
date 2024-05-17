@@ -1,0 +1,39 @@
+.step:hover, .mile:hover, .quant:hover, .step.active, .mile.active, .quant.active {
+  filter: drop-shadow(2px 4px 6px black);
+  border-width: 2px;
+  border-color: black;
+  cursor: pointer;
+}
+
+.greyOut.active, .greyOut:hover {
+  filter: drop-shadow(2px 4px 6px black);
+  backdrop-filter: brightness(1);
+}
+
+.sectionLink, .step, .mile, .quant {
+    transition: 
+        0.65s backdrop-filter,
+        0.65s border-color,
+        0.2s border-width,
+        0.65s filter;
+    border-radius: 10px;
+}
+
+
+.sectionLink {
+    color: white;
+}
+
+.sectionLink:hover {
+    text-decoration: none;
+    backdrop-filter: brightness(1.5);
+    border-width: 3px;
+    border-color: white;
+    border-style: solid;
+    .step, .mile, .quant {
+        backdrop-filter: brightness(1.5);
+        border-width: 3px;
+        border-color: white;
+        border-style: solid;
+    }
+}
