@@ -19,21 +19,37 @@
 }
 
 
+
 .sectionLink {
     color: white;
     border-radius: 10px;
+    border-width: 0px;
+    border-color: white;
+    border-style: solid;
 }
 
 .sectionLink:hover {
     text-decoration: none;
     backdrop-filter: brightness(1.5);
     border-width: 3px;
-    border-color: white;
-    border-style: solid;
     .step, .mile, .quant {
         backdrop-filter: brightness(1.5);
         border-width: 3px;
         border-color: white;
         border-style: solid;
+    }
+    #surge13, #scourge15 {
+        left: 22px;
+    }
+    #surge12 {
+        width: calc(100% + 22px);
+    }
+    #verge26 {
+        right: 1px;
+        position: relative;
+    }
+    #purge17, #splurge7 {
+        left: 1px;
+        position: relative;
     }
 }
