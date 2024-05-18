@@ -50,36 +50,41 @@ window.onload = function() {
 
 // Combined setProgressBar function
 function setProgressBar(progressBarId, sections) {
-  const progressBar = document.getElementById(progressBarId);
-  if (progressBar) {
-    progressBar.innerHTML = ''; // Clear existing sections
+  // List of progress bars to update
+  const progressBarIds = [progressBarId, progressBarId + '2'];
 
-    sections.forEach((section) => {
-      const sectionDiv = document.createElement('div');
-      sectionDiv.style.width = `${section.width}%`;
-      sectionDiv.style.height = '100%';
-      sectionDiv.style.display = 'inline-block';
+  progressBarIds.forEach(id => {
+    const progressBar = document.getElementById(id);
+    if (progressBar) {
+      progressBar.innerHTML = ''; // Clear existing sections
 
-      // Check if this is the section that needs the flashing effect
-      if (section.color === '#F1A196') {
-        // Apply the animation to the Pectra color section
-        sectionDiv.style.animation = 'fadeRed 3s infinite';
-      } else {
-        // Apply the standard background color for other sections
-        sectionDiv.style.backgroundColor = section.color;
-      }
+      sections.forEach((section) => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.style.width = `${section.width}%`;
+        sectionDiv.style.height = '100%';
+        sectionDiv.style.display = 'inline-block';
 
-      // Initially set width to 0% for the animation effect
-      sectionDiv.style.width = '0%';
-      progressBar.appendChild(sectionDiv);
+        // Check if this is the section that needs the flashing effect
+        if (section.color === '#F1A196') {
+          // Apply the animation to the Pectra color section
+          sectionDiv.style.animation = 'fadeRed 3s infinite';
+        } else {
+          // Apply the standard background color for other sections
+          sectionDiv.style.backgroundColor = section.color;
+        }
 
-      // Apply transition with a slight delay to ensure it's rendered
-      setTimeout(() => {
-        sectionDiv.style.transition = 'width 2s ease'; // Apply a transition to the width
-        sectionDiv.style.width = `${section.width}%`; // Set to target width
-      }, 100); // Slight delay to ensure rendering
-    });
-  }
+        // Initially set width to 0% for the animation effect
+        sectionDiv.style.width = '0%';
+        progressBar.appendChild(sectionDiv);
+
+        // Apply transition with a slight delay to ensure it's rendered
+        setTimeout(() => {
+          sectionDiv.style.transition = 'width 2s ease'; // Apply a transition to the width
+          sectionDiv.style.width = `${section.width}%`; // Set to target width
+        }, 100); // Slight delay to ensure rendering
+      });
+    }
+  });
 }
 
 // Inject CSS for the fadeRed animation
