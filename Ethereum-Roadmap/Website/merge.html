@@ -128,9 +128,9 @@
                <h3 style="font-family: 'Open Sans', sans-serif;"> October 27, 2021 </h3>
                <p style="font-family: 'Open Sans', sans-serif; "> The first upgrade to the Beacon Chain. It introduced several improvements:</p>
           <ul style="text-align: left; width: 75%; margin: 0 auto; list-style-type: disc;">
-                     <li>sync committees to support light clients</li>
-                     <li>incentive accounting reforms to reduce spec complexity</li>
-                     <li>penalty parameter updates towards their planned maximally punitive values</li>
+                     <li>Sync committees to support light clients</li>
+                     <li>Incentive accounting reforms to reduce spec complexity</li>
+                     <li>Penalty parameter updates towards their planned maximally punitive values</li>
                </ul>
             <p style="font-family: 'Open Sans', sans-serif; "> These upgrades, particularly the latter two, were critical precursors to The Merge. Altair also demonstrated
             Core Devs ability to collectively ship upgrades to the Beacon Chain.</p>
@@ -174,7 +174,7 @@
             <!-- Left arrow -->
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Distributed Validators</h2>
-               <h3 style="font-family: 'Open Sans', sans-serif;"> Live | Extra-Protocol</h3>
+               <h3 style="font-family: 'Open Sans', sans-serif;">Extra-Protocol</h3>
                <p style="font-family: 'Open Sans', sans-serif; ">  
 Distributed Validator Technology allows multiple participants to collaboratively manage the responsibilities of a single validator.
  More than just increasing a validator's resilience via redundancy, a significant advantage of DVT is that it facilitates staking with less than the standard requirement of 32 ETH by pooling resources from multiple stakeholders. 
@@ -229,7 +229,7 @@ Distributed Validator Technology allows multiple participants to collaboratively
                <p style="font-family: 'Open Sans', sans-serif; "> Single Leader Election (SLE) and Secret Single Leader Election (SSLE) are used somewhat interchangeably, and both attempt to resolve the same issue:
                   a block proposer is known to the network slightly in advance of proposing the block. There is therefore a security vulnerability during this window where the proposer may be targeted by attackers.
                   
-                  <br><br> Under this new framework, nobody would know the leader, except the leader themselves.
+                  <br><br> Under this new framework, nobody would know the leader in advance except for the leader themselves.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -247,8 +247,9 @@ Distributed Validator Technology allows multiple participants to collaboratively
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Per Slot Participant Selection</h2>
                               <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; ">  In the same way SLE aims to more appropriately choose the proposer of a block, so does Per Slot Participation Selection
-                aim do better choose attesters of that block. 
+               <p style="font-family: 'Open Sans', sans-serif; ">  Per Slot Participation Selection: determine the most effective, SSF-compatible approach for selecting validators to attest to slots and aggregate signatures. 
+               By exploring potential optimizations in how validators are selected, the aim is to efficiently manage the significant load of signatures per slot. 
+               <br><br>This would involve theoretical enhancements to attestation propagation and signature verification mechanisms to support Ethereum’s core principles of decentralization and security, without overburdening the network’s technical capacities. No concrete method has been finalized, and more research and discussion is required.
                </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -323,12 +324,11 @@ Distributed Validator Technology allows multiple participants to collaboratively
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">SSF!</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> A slot is a fixed period of time (12 seconds), during which a new block can be proposed. 
-                  A given slot will not necessarily contain a block, as some are missed or otherwise not included. 
-                  <br><br>
-                  There are 32 slots per epoch. Therefore, a given epoch is ~ 6.4 minutes. As it exists today, Ethereum finalizes after two epochs (or roughly every 12.8 minutes). 
-                  Single slot finality would attempt to drastically lower finality times to a single 12 second slot. There are many benefits to faster finality, but generally speaking, providing
-                  stronger guarantees and settlement clarity is of benefit to some finance applications.
+               <p style="font-family: 'Open Sans', sans-serif; "> Per Slot Participant Selection, SSF Specification, and SSF Implementation collectively form the foundation for achieving Single Slot Finality. 
+               <br><br>
+               Per Slot Participant Selection focuses on optimizing validator selection to handle a large volume of signatures efficiently, crucial for maintaining network performance under SSF. 
+               The SSF Specification defines the technical parameters for achieving finality within a single 12-second slot, aiming to provide quicker transaction confirmation and improved security. 
+               SSF Implementation addresses the practical challenges of coordinating a high number of validators without sacrificing decentralization, ensuring that the network can sustain rapid finality across diverse operating conditions. 
                   <br><br>
                   SSF is an area of active research and debate, and it shouldn't be expected in the short term.
                </p>
@@ -359,8 +359,8 @@ Current initiatives involve exploring and potentially adopting cryptographic met
 
 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://ethresear.ch/t/how-to-hard-fork-to-save-most-users-funds-in-a-quantum-emergency/18901" style="color: #fff;" target="_blank">
+                     <li>A Recent Discussion</li>
                   </a>
                </ul>
             </div>
@@ -406,5 +406,6 @@ Current initiatives involve exploring and potentially adopting cryptographic met
       <script type="text/javascript" src="status.js"></script>
       <script type="text/javascript" src="descriptions.js"></script>
       <script type="text/javascript" src="script.js"></script>
+      
    </body>
 </html>

@@ -19,10 +19,10 @@ const statusList = [
     ["mergeE", false, 100],                                       // Distributed validators
     ["mergeF", true, { green: 60, purple: 0, blue: 0, red: 0 }],  // Secret leader election
     ["mergeG", true, { green: 50, purple: 0, blue: 0, red: 0 }],  // Per-slot participant selection
-    ["mergeH", true, { green: 35, purple: 0, blue: 0, red: 0 }],  // SSF specification
-    ["mergeI", true, { green: 10, purple: 15, blue: 0, red: 5 }], // Implmentation
+    ["mergeH", true, { green: 50, purple: 0, blue: 0, red: 0 }],  // SSF specification
+    ["mergeI", true, { green: 0, purple: 0, blue: 0, red: 0 }], // Implmentation
     ["mergeJ", false, 20],                                        // Single slot finality (SSF)
-    ["mergeK", true, { green: 0, purple: 0, blue: 0, red: 50 }],  // Increase validator count
+    ["mergeK", true, { green: 0, purple: 0, blue: 10, red: 40 }],  // Increase validator count
     ["mergeL", false, 20],                                        // Ideal quantum-safe signatures
     // Surge
     ["surgeA", true, { green: 66, purple: 0, blue: 0, red: 0 }],  // Optimistic rollup fraud provers

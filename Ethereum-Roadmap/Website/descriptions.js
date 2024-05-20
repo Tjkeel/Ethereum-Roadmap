@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function() {
         clearInterval(autoAdvanceTimer);
         autoAdvanceTimer = setInterval(() => {
             navigateDescription('next');
-        }, 30000); // Auto-advance every 30 seconds
+        },450000); // Auto-advance every 45 seconds
     }
 
     document.addEventListener('click', function(event) {
