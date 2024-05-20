@@ -27,8 +27,8 @@ const statusList = [
     // Surge
     ["surgeA", true, { green: 66, purple: 0, blue: 0, red: 0 }],  // Optimistic rollup fraud provers
     ["surgeB", true, { green: 55, purple: 0, blue: 0, red: 0 }],  // ZK-EVMs
-    ["surgeC", true, { green: 100, purple: 0, blue: 0, red: 0 }], // EIP-4844 specification
-    ["surgeD", true, { green: 95, purple: 0, blue: 0, red: 0 }],  // EIP-4844 implementation
+    ["surgeC", true, { green: 0, purple: 0, blue: 100, red: 0 }], // EIP-4844 specification
+    ["surgeD", true, { green: 0, purple: 0, blue: 100, red: 0 }],  // EIP-4844 implementation
     ["surgeE", false, 100],                                       // Basic rollup scaling
     ["surgeF", true, { green: 60, purple: 0, blue: 0, red: 0 }],  // peerDAS
     ["surgeG", true, { green: 20, purple: 0, blue: 0, red: 0 }],  // Efficient DA self-healing

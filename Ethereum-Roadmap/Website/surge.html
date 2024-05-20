@@ -90,16 +90,19 @@
             <!-- Left arrow -->
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Optimistic Rollups</h2>
-               <h3 style="font-family: 'Open Sans', sans-serif;"> TBD </h3>
-             <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Live | Stage 0 & 1 </h3>
+             <p style="font-family: 'Open Sans', sans-serif; "> 
+Optimistic Rollups process Ethereum transactions off-chain and post results to the mainnet, assuming transactions are valid unless a fraud proof is submitted during a challenge period. 
+This mechanism contrasts with ZK-EVMs, which ensure the correctness of transactions through cryptographic proofs before posting to the blockchain. 
+<br><br>
+
+Unique to Optimistic Rollups, the challenge window allows external validators the opportunity to dispute transactions, leveraging Ethereum’s security for data verification without the computational overhead of zero-knowledge proofs inherent to ZK-EVMs. 
+This design significantly lowers gas costs by deferring validation responsibilities until disputes arise.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://l2beat.com/scaling/summary" style="color: #fff;" target="_blank">
+                     <li>L2beat</li>
                   </a>
                </ul>
             </div>
@@ -111,16 +114,17 @@
             <!-- Left arrow -->
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">ZK-EVMs</h2>
-               <h3 style="font-family: 'Open Sans', sans-serif;"> TBD </h3>
-             <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <h3 style="font-family: 'Open Sans', sans-serif;"> Live | Stage 0 </h3>
+             <p style="font-family: 'Open Sans', sans-serif; ">  ZK-EVMs streamline Ethereum scaling by executing transactions off-chain while maintaining EVM compatibility. 
+             They use zero-knowledge proofs to validate these transactions before any data is posted to the mainnet, contrasting with Optimistic Rollups that rely on post-transaction fraud proofs. 
+             <br><br>
+             Specifically, ZK-EVMs produce a cryptographic validity proof for each batch of transactions, confirming correctness upfront and ensuring immediate finality without waiting periods. 
+             This method not only secures transactions but also significantly reduces gas costs by compressing transaction data and posting minimal summary data as calldata, effectively bypassing the gas-heavy demand of traditional transaction processing on Ethereum.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                    <a href="https://l2beat.com/scaling/summary" style="color: #fff;" target="_blank">
+                     <li>L2beat</li>
                   </a>
                </ul>
             </div>
