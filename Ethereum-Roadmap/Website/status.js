@@ -30,8 +30,8 @@ const statusList = [
     ["surgeC", true, { green: 0, purple: 0, blue: 100, red: 0 }], // EIP-4844 specification
     ["surgeD", true, { green: 0, purple: 0, blue: 100, red: 0 }],  // EIP-4844 implementation
     ["surgeE", false, 100],                                       // Basic rollup scaling
-    ["surgeF", true, { green: 60, purple: 0, blue: 0, red: 0 }],  // peerDAS
-    ["surgeG", true, { green: 20, purple: 0, blue: 0, red: 0 }],  // Efficient DA self-healing
+    ["surgeF", true, { green: 0, purple: 0, blue: 50, red: 0 }],  // peerDAS
+    ["surgeG", true, { green: 0, purple: 0, blue: 20, red: 0 }],  // Efficient DA self-healing
     ["surgeH", false, 50],                                        // Full rollup scaling
     ["surgeI", true, { green: 30, purple: 0, blue: 0, red: 0 }],  // Improve cross-rollup standards + interop
     ["surgeJ", false, 20],                                        // Q-sale, no-setup commitments
