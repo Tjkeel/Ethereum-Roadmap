@@ -1,49 +1,51 @@
+
+
 window.onload = function() {
   setProgressBar('merge-progress', [
-    { width: 50, color: '#99C66D' }, // Green
-    { width: 20, color: '#AE80B1' }, // Purple
-    { width: 5, color: '#6A9BE7' },  // Blue
-    { width: 5, color: '#F1A196' },  // Red
+    { width: 50, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
+    { width: 20, color: '#AE80B1', name: 'Shanghai' }, // Purple
+    { width: 5, color: '#6A9BE7', name: 'Cancun' },  // Blue
+    { width: 5, color: '#F1A196', name: 'Prague' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('surge-progress', [
-    { width: 10, color: '#99C66D' }, // Green
-    { width: 0, color: '#AE80B1' },  // Purple
-    { width: 65, color: '#6A9BE7' }, // Blue
-    { width: 0, color: '#F1A196' },  // Red
+    { width: 10, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
+    { width: 65, color: '#6A9BE7', name: 'Cancun' }, // Blue
+    { width: 0, color: '#F1A196', name: 'Prague' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('scourge-progress', [
-    { width: 15, color: '#99C66D' }, // Green
-    { width: 0, color: '#AE80B1' },  // Purple
-    { width: 0, color: '#6A9BE7' },  // Blue
-	{ width: 0, color: '#F1A196' },  // Red
+    { width: 15, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
+    { width: 0, color: '#6A9BE7', name: 'Cancun' },  // Blue
+	{ width: 0, color: '#F1A196', name: 'Prague' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('verge-progress', [
-    { width: 15, color: '#99C66D' }, // Green
-    { width: 0, color: '#AE80B1' },  // Purple
-    { width: 0, color: '#6A9BE7' },  // Blue
-    { width: 5, color: '#F1A196' },  // Red
+    { width: 15, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
+    { width: 0, color: '#6A9BE7', name: 'Cancun' },  // Blue
+    { width: 5, color: '#F1A196', name: 'Prague' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('purge-progress', [
-    { width: 20, color: '#99C66D' }, // Green
-    { width: 5, color: '#AE80B1' },  // Purple
-    { width: 5, color: '#6A9BE7' },  // Blue
-    { width: 0, color: '#F1A196' },  // Red
+    { width: 20, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
+    { width: 5, color: '#AE80B1', name: 'Shanghai' },  // Purple
+    { width: 5, color: '#6A9BE7', name: 'Cancun' },  // Blue
+    { width: 0, color: '#F1A196', name: 'Prague' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('splurge-progress', [
-    { width: 30, color: '#99C66D' }, // Green
-    { width: 0, color: '#AE80B1' },  // Purple
-    { width: 0, color: '#6A9BE7' },  // Blue
-    { width: 30, color: '#F1A196' },  // Red
+    { width: 30, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
+    { width: 0, color: '#6A9BE7', name: 'Cancun' },  // Blue
+    { width: 30, color: '#F1A196', name: 'Prague' },  // Red
     // Add more sections as needed
   ]);
 };
@@ -63,6 +65,8 @@ function setProgressBar(progressBarId, sections) {
         sectionDiv.style.width = `${section.width}%`;
         sectionDiv.style.height = '100%';
         sectionDiv.style.display = 'inline-block';
+        sectionDiv.setAttribute("tips", section.name);
+        sectionDiv.setAttribute("tips-col", section.color);
 
         // Check if this is the section that needs the flashing effect
         if (section.color === '#F1A196') {
@@ -118,6 +122,25 @@ function injectAnimationStyles() {
 }
 
 injectAnimationStyles();
+
+// Hover tips for progress bar
+function tips() {
+  const elements = [...document.querySelectorAll('[tips]')]
+  for (const el of elements) {
+    const tip = document.createElement('div')
+    tip.classList.add('tooltipBar')
+    tip.textContent = el.getAttribute('tips')
+    tip.style.backgroundColor = el.getAttribute('tips-col')
+    el.style.position = 'relative'
+    tip.style.position = 'absolute'
+    tip.style.left = 'calc(50% + 2px)' // + 2px for border...
+    tip.style.transform = 'translateX(-50%)'
+    tip.style.top = '100%'
+    el.appendChild(tip)
+  }
+}
+
+setTimeout(tips, 500)
 
 
 // Get the modal

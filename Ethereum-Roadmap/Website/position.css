@@ -1652,3 +1652,27 @@ h1 {
   }
 }
 
+.progress-bar {
+  overflow: visible;
+}
+
+[tips] .tooltipBar {
+  line-height: 20px;
+  background: #444;
+  color: white;
+  text-align: center;
+  padding: 10px 12px 5px 12px;
+  font-size: calc(0.1em + 0.7vw);
+  border-radius: 0px 0px 6px 6px;
+  font-weight: 600;
+  border-bottom: #595959 3px solid;
+  border-right: #595959 3px solid;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+
+[tips]:hover .tooltipBar {
+  visibility: visible;
+  opacity: 1;
+}
