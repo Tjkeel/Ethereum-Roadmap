@@ -89,3 +89,16 @@
   filter: contrast(1.1);
   backdrop-filter: brightness(1.05);
 }
+
+.quant:hover, .quant:active {
+  border-image: linear-gradient(to top right,
+    rgba(184, 39, 252, 0.85) 0%,
+    rgba(44, 144, 252, 0.85) 25%, 
+    rgba(184, 253, 51, 0.85) 50%, 
+    rgba(254, 200, 55, 0.85) 75%, 
+    rgba(253, 24, 146, 0.85) 100%);
+  border-image-slice: 1;
+  outline-width: 2px;
+  outline-color: white;
+  outline-style: solid;
+}

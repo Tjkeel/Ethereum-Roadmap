@@ -94,7 +94,12 @@ h1 {
 }
 
 .quant {
-  border-image: linear-gradient(to bottom right, #b827fc 0%, #2c90fc 25%, #b8fd33 50%, #fec837 75%, #fd1892 100%);
+  border-image: linear-gradient(to bottom right,
+    rgba(184, 39, 252, 1) 0%,
+    rgba(44, 144, 252, 1) 25%, 
+    rgba(184, 253, 51, 1) 50%, 
+    rgba(254, 200, 55, 1) 75%, 
+    rgba(253, 24, 146, 1) 100%);
   border-image-slice: 1;
 }
 

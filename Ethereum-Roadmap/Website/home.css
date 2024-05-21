@@ -14,14 +14,26 @@
     outline-style: solid;
 }
 
-.sectionLink:hover {
+.sectionLink:hover, .section:active {
     text-decoration: none;
     backdrop-filter: brightness(1.5);
     outline-width: 3px;
-    .step, .mile, .quant {
+    .step, .mile {
         backdrop-filter: brightness(1.5);
         border-width: 3px;
         border-color: white;
         border-style: solid;
+    }
+    .quant {
+        border-image: linear-gradient(to top right,
+            rgba(184, 39, 252, 0.85) 0%,
+            rgba(44, 144, 252, 0.85) 25%, 
+            rgba(184, 253, 51, 0.85) 50%, 
+            rgba(254, 200, 55, 0.85) 75%, 
+            rgba(253, 24, 146, 0.85) 100%);
+        border-image-slice: 1;
+        outline-width: 2px;
+        outline-color: white;
+        outline-style: solid;
     }
 }
