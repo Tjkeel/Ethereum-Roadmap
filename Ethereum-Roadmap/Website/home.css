@@ -14,7 +14,7 @@
     transition: 
         0.65s backdrop-filter,
         0.65s border-color,
-        0.2s border-width,
+        0.2s outline-width,
         0.65s filter;
 }
 
@@ -23,22 +23,22 @@
 .sectionLink {
     color: white;
     border-radius: 10px;
-    border-width: 0px;
-    border-color: white;
-    border-style: solid;
+    outline-width: 0px;
+    outline-color: white;
+    outline-style: solid;
 }
 
 .sectionLink:hover {
     text-decoration: none;
     backdrop-filter: brightness(1.5);
-    border-width: 3px;
+    outline-width: 3px;
     .step, .mile, .quant {
         backdrop-filter: brightness(1.5);
         border-width: 3px;
         border-color: white;
         border-style: solid;
     }
-    #surge13, #scourge15 {
+    /*#surge13, #scourge15 {
         left: 22px;
     }
     #surge12 {
@@ -51,5 +51,5 @@
     #purge17, #splurge7 {
         left: 1px;
         position: relative;
-    }
+    }*/
 }
