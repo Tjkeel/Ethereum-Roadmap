@@ -1,0 +1,77 @@
+.hideLinks {
+    display: none;
+}
+
+.description-container {
+    position: relative;
+    margin: 25px auto;
+    max-width: 800px;
+    border-radius: 10px;
+    display: none; /* Initially hidden */
+    opacity: 0; /* Initially transparent */
+  transition: opacity 0.5s ease-in-out, transform 0.2s ease;
+    will-change: opacity, transform; /* Hint to browsers to optimize handling of these properties */    height: 500px; /* Set a fixed height for the entire container */
+    background: rgba(0, 0, 0, 0.3); /* Background of the container */
+
+}
+
+.description-content {
+    height: 100%; /* Take up all the available height of the parent */
+    overflow-y: auto; /* Scroll inside the content area only */
+    padding-left:12.5%;
+    padding-right:12.5%;
+
+}
+
+.description-container.show {
+    display: block; /* Display when active */
+    opacity: 1;     /* Fully opaque when active */
+}
+
+.left-arrow-pointer, .right-arrow-pointer {
+    position: absolute;
+    top: 45%; /* Center vertically */
+    font-size: 35px;
+    color: #fff;
+    z-index: 100;
+    transition: transform 0.3s ease; 
+
+}
+
+.left-arrow-pointer {
+    left: -80px;
+}
+
+.left-arrow-pointer:hover {
+    transform: scale(1.2); /* Increase the size slightly on hover */
+    cursor: pointer; /* Ensure it's clear the arrow is interactive */
+}
+
+.right-arrow-pointer {
+    right: -80px;
+}
+
+.right-arrow-pointer:hover {
+    transform: scale(1.1); /* Increase the size slightly on hover */
+    cursor: pointer; /* Ensure it's clear the arrow is interactive */
+}
+
+/* Hide arrows on mobile devices */
+@media (max-width: 1200px) {
+    .left-arrow-pointer, .right-arrow-pointer {
+        display: none;
+    }
+}
+
+.step:hover, .mile:hover, .quant:hover, .step.active, .mile.active, .quant.active {
+  filter: contrast(1.2);
+  backdrop-filter: brightness(1.5);
+  border-width: 3px;
+  border-color: white;
+  cursor: pointer;
+}
+
+.greyOut.active, .greyOut:hover {
+  filter: contrast(1.1);
+  backdrop-filter: brightness(1.05);
+}
