@@ -446,3 +446,22 @@ async function fetchEnteringValidatorQueue() {
 }
 
 fetchEnteringValidatorQueue();
+
+//Toggle button for the old / new main sections of the homepage
+
+document.getElementById('toggleViewButton').addEventListener('click', function() {
+    var oldSection = document.getElementById('oldSection');
+    var newSection = document.getElementById('newSection');
+    var button = document.getElementById('toggleViewButton'); // Get the button element
+
+    if (oldSection.style.display === 'none') {
+        oldSection.style.display = 'block';
+        newSection.style.display = 'none';
+        button.textContent = 'Expand'; // Set text to 'Collapse' when old section is visible
+    } else {
+        oldSection.style.display = 'none';
+        newSection.style.display = 'block';
+        button.textContent = 'Collapse'; // Set text to 'Expand' when new section is visible
+    }
+});
+

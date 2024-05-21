@@ -47,6 +47,63 @@
     <img class="modal-content" id="img01">
     <div id="caption"></div>
   </div>
+  
+<!--Toggle between views -->
+<button id="toggleViewButton">Expand</button>
+<!--End Toggle -->
+<!--Old Section -->
+<div id="oldSection" style="display: block;">
+  <div class="timeline-container">
+  <div id="roadmap" style="font-weight: 100;">
+    <!-- Each section is clickable and redirects to a new page for more details. -->
+    <!-- The Merge -->
+    <div class="section2" onclick="window.location.href='merge.html';">
+      <h2 style="font-weight: 100;">The Merge</h2>   
+      <div class="progress-container">
+        <div class="progress-bar" id="merge-progress"></div>
+      </div>
+    </div>
+    <!-- The Surge -->
+    <div class="section2" onclick="window.location.href='surge.html';">
+      <h2 style="font-weight: 100;">The Surge</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="surge-progress"></div>
+      </div>
+    </div>
+    <!-- The Scourge -->
+    <div class="section2" onclick="window.location.href='scourge.html';">
+      <h2 style="font-weight: 100;">The Scourge</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="scourge-progress"></div>
+      </div>
+    </div>
+    <!-- The Verge -->
+    <div class="section2" onclick="window.location.href='verge.html';">
+      <h2 style="font-weight: 100;">The Verge</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="verge-progress"></div>
+      </div>
+    </div>
+    <!-- The Purge -->
+    <div class="section2" onclick="window.location.href='purge.html';">
+      <h2 style="font-weight: 100;">The Purge</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="purge-progress"></div>
+      </div>
+    </div>
+    <!-- The Splurge -->
+    <div class="section2" onclick="window.location.href='splurge.html';">
+      <h2 style="font-weight: 100;">The Splurge</h2>
+      <div class="progress-container">
+        <div class="progress-bar" id="splurge-progress"></div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+<!-- End Old Section-->
+  <!-- New Section-->
+<div id="newSection" style="display: none;">
   <div id="roadmap" style="font-weight: 100;">
     <!-- Each section is clickable and redirects to a new page for more details. -->
     <div class="rowGroup">
@@ -439,8 +496,9 @@
       </a>
     </div>
   </div>
+  </div>
 
-
+<!-- End New Section-->
 <!-- Execution Layer Timeline -->
 <h1 style="font-weight: 100;">Hard Fork Timeline</h1>
 <div class="timeline-container">
