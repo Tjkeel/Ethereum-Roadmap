@@ -223,12 +223,11 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Ban SELF-DESTRUCT</h2>
              <h3 style="font-family: 'Open Sans', sans-serif;"> March 13, 2024</h3>
-               <p style="font-family: 'Open Sans', sans-serif; ">  EIP-6780 went live in the Cancun Deneb hard fork. 
+               <p style="font-family: 'Open Sans', sans-serif; ">  EIP-6780 went live in the Cancun Deneb hard fork. It revised the SELFDESTRUCT opcode in Ethereum, limiting its execution to only within the transaction it is invoked. 
+               This adjustment, partially driven by the transition towards Verkle trees, ensures that SELFDESTRUCT no longer has the capability to delete the contract’s code, storage, or reset the nonce after the contract's creation unless it is used during that initial transaction. 
                <br><br>
-               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               This change was aimed at reducing the opcode's potential for misuse, which had historically led to unintended consequences and security vulnerabilities, 
+               while ensuring minimal disruption to existing contracts that utilize SELFDESTRUCT. 
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">

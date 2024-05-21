@@ -71,7 +71,7 @@ const statusList = [
     ["purgeD", true, { green: 100, purple: 0, blue: 0, red: 0 }], // Beacon chain fast sync
     ["purgeE", true, { green: 60, purple: 0, blue: 0, red: 0 }],  // P2P history (eg. Portal)
     ["purgeF", false, 50],                                        // History expiry (EIP-4444)
-    ["purgeG", true, { green: 60, purple: 0, blue: 0, red: 0 }],  // Ban SELF-DESTRUCT
+    ["purgeG", true, { green: 0, purple: 0, blue: 100, red: 0 }],  // Ban SELF-DESTRUCT
     ["purgeH", true, { green: 20, purple: 0, blue: 0, red: 0 }],  // Simplify gas mechanics
     ["purgeI", true, { green: 20, purple: 0, blue: 0, red: 0 }],  // Precompiles EVM impls
     ["purgeJ", true, { green: 30, purple: 0, blue: 0, red: 0 }],  // Address space extension
@@ -82,9 +82,9 @@ const statusList = [
     // Splurge
     ["splurgeA", true, { green: 100, purple: 0, blue: 0, red: 0 }], // EIP-1559
     ["splurgeB", true, { green: 100, purple: 0, blue: 0, red: 0 }], // EIP-4337 specification
-    ["splurgeC", true, { green: 80, purple: 0, blue: 0, red: 0 }],  // ERC-4337
-    ["splurgeD", true, { green: 40, purple: 0, blue: 0, red: 0 }],  // Voluntary EOA conversion
-    ["splurgeE", true, { green: 40, purple: 0, blue: 0, red: 0 }],  // In-protocol enshrining
+    ["splurgeC", true, { green: 100, purple: 0, blue: 0, red: 0 }],  // ERC-4337
+    ["splurgeD", true, { green: 40, purple: 0, blue: 0, red: 60 }],  // Voluntary EOA conversion
+    ["splurgeE", true, { green: 40, purple: 0, blue: 0, red: 60 }],  // In-protocol enshrining
     ["splurgeF", false, 50],                                        // Endgame account abstraction
     ["splurgeG", true, { green: 90, purple: 0, blue: 0, red: 0 }],  // EOF
     ["splurgeH", true, { green: 75, purple: 0, blue: 0, red: 0 }],  // Big modular arithmetic
