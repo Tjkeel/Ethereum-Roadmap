@@ -25,8 +25,8 @@ const statusList = [
     ["mergeK", true, { green: 0, purple: 0, blue: 10, red: 40 }],  // Increase validator count
     ["mergeL", false, 20],                                        // Ideal quantum-safe signatures
     // Surge
-    ["surgeA", true, { green: 66, purple: 0, blue: 0, red: 0 }],  // Optimistic rollup fraud provers
-    ["surgeB", true, { green: 55, purple: 0, blue: 0, red: 0 }],  // ZK-EVMs
+    ["surgeA", true, { green: 70, purple: 0, blue: 0, red: 0 }],  // Optimistic rollup fraud provers
+    ["surgeB", true, { green: 35, purple: 0, blue: 0, red: 0 }],  // ZK-EVMs
     ["surgeC", true, { green: 0, purple: 0, blue: 100, red: 0 }], // EIP-4844 specification
     ["surgeD", true, { green: 0, purple: 0, blue: 100, red: 0 }],  // EIP-4844 implementation
     ["surgeE", false, 100],                                       // Basic rollup scaling
