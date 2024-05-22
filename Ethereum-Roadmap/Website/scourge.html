@@ -68,7 +68,7 @@
                    <div class="step" id="scourgeE">Distributed block <br>building</div>
                    <div class="lineH" id="scourge8"></div>
                    <div class="lineV" id="scourge9"></div>
-                   <div class="step" id="scourgeF">Exsplore <br>execution tickets</div>
+                   <div class="step" id="scourgeF">Explore <br>execution tickets</div>
                    <div class="lineH" id="scourge10"></div>
                    <div class="lineV" id="scourge11"></div>
                    <div class="mile" id="scourgeG">Endgame block <br>production <br>pipeline</div>
@@ -296,8 +296,9 @@ Execution tickets would differ from the current perpetual validator rights, requ
                <h2 class="upgrade-title" style="font-weight: 100;">Explore Preconfirmations</h2>
  			 <h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
                <p style="font-family: 'Open Sans', sans-serif; "> 
-Block builders could publicly agree to include transactions with a priority fee over a certain amount, and send users a receipt indicating their intent to include the transaction in a specific block.
-The implication here is reputational enforcement, but in protocol is also possible.
+This would require proposer slashing and forced inclusion mechanisms, allowing an L1 proposer to become a preconfer by opting into specific slashing conditions. Preconfers issue signed promises to users, receiving preconf tips in return. Transactions with a preconf promise can be included and executed immediately, while non-preconfed transactions are queued until the first preconfer slot is not missed, ensuring execution precedence for preconfed transactions.
+<br><br>
+Preconfers are prioritized based on their slot position, with two types of slashable faults: liveness faults and safety faults. Users seeking preconfs acquire promises from the next preconfer in the proposer lookahead. Preconfers may use public APIs or p2p gossip channels to advertise and manage promises, with fallback options for resilience against faults. To mitigate risks like replay attacks and ensure fair exchange, various strategies such as public promise streams, mutually trusted relays, and cryptographic protocols may be employed.
  </p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
@@ -314,7 +315,7 @@ The implication here is reputational enforcement, but in protocol is also possib
                <h2 class="upgrade-title" style="font-weight: 100;">Raise Max Effective Balance</h2>
  				<h3 style="font-family: 'Open Sans', sans-serif;">Awaiting Inclusion in Prague-Electra</h3>
                <p style="font-family: 'Open Sans', sans-serif; "> 
- The MaxEB proposal seeks to increase the Maximum Effective Balance for Ethereum validators from 32 ETH to 2048 ETH, addressing outdated constraints that stem from execution sharding—a previous scaling solution. This shift would simplify operations for those staking large amounts of ETH, reducing the number of required validators and easing network congestion. By consolidating many smaller validators into fewer, larger ones, the proposal aims to enhance overall network efficiency and scalability, allowing for faster validator onboarding and expanded data capacity.
+Increase the Maximum Effective Balance for Ethereum validators from 32 ETH to 2048 ETH, would address outdated constraints that stem from execution sharding—a previous scaling solution. This shift would simplify operations for those staking large amounts of ETH, reducing the number of required validators and easing network congestion. By consolidating many smaller validators into fewer, larger ones, the proposal aims to enhance overall network efficiency and scalability, allowing for faster validator onboarding and expanded data capacity.
 <br><br>
 Additionally, MaxEB levels the playing field for smaller node operators by allowing them to earn rewards on amounts exceeding 32 ETH without waiting to accumulate full 32 ETH increments. This change would enable more frequent compounding of earnings, making it easier for individual stakers to grow their stakes and benefit from the network's rewards system. Thus, while MaxEB benefits large stakers by reducing operational complexity, it also democratizes the rewards system, supporting both small and large operators alike.
                </p>
@@ -380,7 +381,10 @@ Additionally, MaxEB levels the playing field for smaller node operators by allow
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Liquid Staking Centralization</h2>
   			<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Community Effort & Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> It is bad if more than one entity controls a large share of staked ETH; Lido has a lot. Similar to client diversity, this could be solved by the community.
+               <p style="font-family: 'Open Sans', sans-serif; "> It is bad if more than one entity controls a large share of staked ETH; Lido has a lot. There are various limits at which it becomes worse, and it's not clear where the line should be drawn; Danny Ryan famously
+               suggested 33%. In the limit, a single dominant, centralized LST provider would make Ethereum a de-facto delegated proof of stake system: we need to avoid this.
+               <br><br>
+               Similar to client diversity, this could be solved by the community.
                 There are also some potential technical solutions, but some would consider them less preferable to a social layer remedy.</p>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                 <ul style="font-family: 'Open Sans', sans-serif;">
