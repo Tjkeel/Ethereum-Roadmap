@@ -1,3 +1,6 @@
+
+/* commenting out previous style
+
 .sectionLink, .step, .mile, .quant {
     transition: 
         0.65s backdrop-filter,
@@ -36,4 +39,29 @@
         outline-color: white;
         outline-style: solid;
     }
+}
+
+*/
+
+/*Trying new style to better match, feel free to switch back */
+
+.sectionLink, .step, .mile, .quant {
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+.sectionLink {
+    color: white;
+    border-radius: 10px;
+    outline-width: 0px;
+    outline-color: white;
+    outline-style: solid;
+}
+
+.sectionLink:hover, .section:active {
+    text-decoration: none;
+  	transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    
+
 }

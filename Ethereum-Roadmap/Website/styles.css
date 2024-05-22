@@ -1145,14 +1145,12 @@ font-weight: bold;
 #toggleViewButton {
   display: inline-block;
   background: rgba(0, 0, 0, 0.3);
-  margin-right: -2px;
-  margin-top: 10px;
-  margin-bottom: 5px;
   color: #fff;
   padding: 5px 10px;
   border-radius: 5px;
   transition: transform 0.5s ease, background-color 0.5s ease;
-
+  font-weight: bold;
+  margin-bottom:-10px;
 }
 
 #toggleViewButton:hover {

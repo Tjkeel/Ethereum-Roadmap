@@ -457,11 +457,11 @@ document.getElementById('toggleViewButton').addEventListener('click', function()
     if (oldSection.style.display === 'none') {
         oldSection.style.display = 'block';
         newSection.style.display = 'none';
-        button.textContent = 'Expand'; // Set text to 'Collapse' when old section is visible
+        button.textContent = '+'; // Set text to 'Collapse' when old section is visible
     } else {
         oldSection.style.display = 'none';
         newSection.style.display = 'block';
-        button.textContent = 'Collapse'; // Set text to 'Expand' when new section is visible
+        button.textContent = '-'; // Set text to 'Expand' when new section is visible
     }
 });
 
