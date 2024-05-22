@@ -230,15 +230,25 @@ This consolidated transaction is then incorporated into a block as usual.
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Endgame Account Abstraction</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; ">
+               Nobody is going to agree 100% on what this should look like, but there are core goals nearly everybody is hoping to achieve.
                </p>
+               
+               <ul style="text-align: left; width: 75%; margin: 0 auto; list-style-type: disc;">
+                     <li>We want to greatly simplify onboarding to give everybody access to Ethereum, irrespective of technical capabilities.</li>
+                     <li>We want to give existing EOA accounts the ability to convert to this simplified form of account management.</li>
+                     <li>We want to limit the scale and scope of inadvertent permissions granting during these migrations.</li>
+                     <li>We want want your grandma on-chain.</li>
+               </ul>
+               
+                 <p style="font-family: 'Open Sans', sans-serif; ">
+                 In practice, it's looking the primary solution will be a combination of ERC-4337, and some opcode enshrinements in the Prague-Electra hard fork.
+               </p>
+               
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li> TBD</li>
+                  <a href="https://metamask.io/news/latest/account-abstraction-past-present-future/" style="color: #fff;" target="_blank">
+                     <li>Account Abstraction</li>
                   </a>
                </ul>
             </div>
@@ -342,15 +352,15 @@ This consolidated transaction is then incorporated into a block as usual.
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Endgame EIP-1559</h2>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                <p style="font-family: 'Open Sans', sans-serif; "> 
+Multidimensional EIP 1559 would improve resource management in the EVM by introducing separate basefees and limits for different resources, such as EVM execution, transaction calldata, witness data, and storage size growth. Each resource would have its own burst limit and sustained target, addressing inefficiencies in the current system where all resources are combined into a single gas metric.
+<br><br>
+Vitalik's proposal outlines two options: one retains the current gas system with adjusted prices for special resources, while the other eliminates the block gas limit, using only resource-specific limits.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://ethresear.ch/t/multidimensional-eip-1559/11651" style="color: #fff;" target="_blank">
+                     <li>Multidimensional 1559</li>
                   </a>
                </ul>
             </div>
