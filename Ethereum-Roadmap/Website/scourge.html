@@ -228,15 +228,14 @@
                <h2 class="upgrade-title" style="font-weight: 100;">Explore Execution Tickets</h2>
   				<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
                <p style="font-family: 'Open Sans', sans-serif; "> 
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+This change would introduce an in-protocol market for buying and selling tickets that grant future block proposal rights. These tickets, dynamically priced to maintain a target number in circulation, would be one-time use and valid only for a randomly assigned slot. The mechanism involves two lotteries: one for selecting the beacon block proposer and attesters, and another for selecting the execution block proposer and attesters. The beacon block would include an inclusion list of transactions, while the execution block, proposed by the ticket owner, would include the actual transactions on-chain. Validators would post collateral to ensure they produce a single execution block per assigned slot, with penalties for equivocation or being offline.
+<br><br>
+Execution tickets would differ from the current perpetual validator rights, requiring explicit purchase of future block proposal rights. This system would introduce a primary market for future block space, separate from the secondary MEV-boost auction market. Although conceptually similar to PBS, execution tickets aim to decouple MEV rewards from beacon block production, mitigating centralizing pressures on the validator set. The beacon and execution blocks would be proposed in separate rounds within each slot, each with its own attesting committee to maintain chain integrity..
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://ethresear.ch/t/execution-tickets/17944" style="color: #fff;" target="_blank">
+                     <li>Research Post</li>
                   </a>
                </ul>
             </div>
@@ -271,17 +270,18 @@
             <!-- Left arrow -->
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">App-layer MEV Minimization</h2>
- 			<h3 style="font-family: 'Open Sans', sans-serif;">Ongoing Research</h3>
+ 			<h3 style="font-family: 'Open Sans', sans-serif;">Extra-Protocol</h3>
                <p style="font-family: 'Open Sans', sans-serif; "> 
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                  This is not an EIP or a protocol change. Rather this item refers to dApp developers building with MEV in mind. In the context of a decentralized exchange, this could
+                  be as simple as preventing front-running through a secondary mempool or an OFA. 
+                  
+                  <br><br>
+                  Other more elegant solutions such as pre-determined ordering, or encrypting a transaction before inclusion could be possible, thus preventing substantial MEV.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://www.mev.wiki/solutions/mev-minimization" style="color: #fff;" target="_blank">
+                     <li>MEV Wiki</li>
                   </a>
     
                </ul>

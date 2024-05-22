@@ -43,7 +43,7 @@
 
 */
 
-/*Trying new style to better match, feel free to switch back */
+/*Trying new styles to better match the legacy diagram, feel free to switch back. I'm not sure if this is an improvement, so I'll let you make the final call*/
 
 .sectionLink, .step, .mile, .quant {
   transition: transform 0.5s ease, background-color 0.5s ease;
