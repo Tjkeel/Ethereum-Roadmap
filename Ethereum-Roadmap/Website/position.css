@@ -1661,15 +1661,24 @@ h1 {
   background: #444;
   color: white;
   text-align: center;
-  padding: 10px 12px 5px 12px;
+  padding: 5px 8px 5px 8px;
   font-size: calc(0.1em + 0.7vw);
-  border-radius: 0px 0px 6px 6px;
+  border-radius: 5px;
   font-weight: 600;
-  border-bottom: #595959 3px solid;
-  border-right: #595959 3px solid;
   visibility: hidden;
   opacity: 0;
   transition: opacity 0.5s;
+  position: relative;
+}
+
+[tips] .tooltipBar::before {
+  content: "";
+  position: absolute;
+  top: -10px; /* Adjust this value to move the triangle up or down */
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
 }
 
 [tips]:hover .tooltipBar {
