@@ -20,7 +20,8 @@ window.onload = function() {
   ]);
 
   setProgressBar('scourge-progress', [
-    { width: 5, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 15, color: '#78D0DE', name: 'Extra Protocol' }, // Teal
+    { width: 0, color: '#99C66D', name: 'Pre-Shapella' }, // Green
     { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
     { width: 5, color: '#6A9BE7', name: 'Dencun' },  // Blue
 	{ width: 20, color: '#F1A196', name: 'Pectra' },  // Red
@@ -28,6 +29,7 @@ window.onload = function() {
   ]);
 
   setProgressBar('verge-progress', [
+    { width: 0, color: '#78D0DE', name: 'Extra Protocol' }, // Teal
     { width: 20, color: '#99C66D', name: 'Pre-Shapella' }, // Green
     { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
     { width: 0, color: '#6A9BE7', name: 'Dencun' },  // Blue
@@ -36,7 +38,8 @@ window.onload = function() {
   ]);
 
   setProgressBar('purge-progress', [
-    { width: 20, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 20, color: '#78D0DE', name: 'Extra Protocol' }, // Teal
+    { width: 5, color: '#99C66D', name: 'Pre-Shapella' }, // Green
     { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
     { width: 5, color: '#6A9BE7', name: 'Dencun' },  // Blue
     { width: 0, color: '#F1A196', name: 'Pectra' },  // Red
@@ -44,9 +47,10 @@ window.onload = function() {
   ]);
 
   setProgressBar('splurge-progress', [
-    { width: 30, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 10, color: '#78D0DE', name: 'Extra Protocol' }, // Teal
+    { width: 10, color: '#99C66D', name: 'Pre-Shapella' }, // Green
     { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
-    { width: 0, color: '#6A9BE7', name: 'Dencun' },  // Blue
+    { width: 2, color: '#6A9BE7', name: 'Dencun' },  // Blue
     { width: 30, color: '#F1A196', name: 'Pectra' },  // Red
     // Add more sections as needed
   ]);
