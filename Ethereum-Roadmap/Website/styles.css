@@ -1139,21 +1139,3 @@ font-weight: bold;
   align-self: center;  /* Center it vertically */
   display: inline-block;  /* Display inline with the tabs */
 }
-
-
-
-#toggleViewButton {
-  display: inline-block;
-  background: rgba(0, 0, 0, 0.3);
-  color: #fff;
-  padding: 5px 10px;
-  border-radius: 5px;
-  transition: transform 0.5s ease, background-color 0.5s ease;
-  font-weight: bold;
-  margin-bottom:-10px;
-}
-
-#toggleViewButton:hover {
-  background-color: rgba(0, 0, 0, 0.1);
-  color: #fff;
-}
