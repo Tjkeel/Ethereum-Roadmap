@@ -3,50 +3,51 @@
 window.onload = function() {
   setProgressBar('merge-progress', [
     { width: 5, color: '#78D0DE', name: 'Extra Protocol' }, // Teal
-    { width: 50, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
-    { width: 20, color: '#AE80B1', name: 'Shanghai' }, // Purple
-    { width: 5, color: '#6A9BE7', name: 'Cancun' },  // Blue
-    { width: 5, color: '#F1A196', name: 'Prague' },  // Red
+    { width: 50, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 20, color: '#AE80B1', name: 'Shapella' }, // Purple
+    { width: 5, color: '#6A9BE7', name: 'Dencun' },  // Blue
+    { width: 5, color: '#F1A196', name: 'Pectra' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('surge-progress', [
-    { width: 10, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
-    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
-    { width: 65, color: '#6A9BE7', name: 'Cancun' }, // Blue
+    { width: 25, color: '#78D0DE', name: 'Extra Protocol' }, // Teal
+    { width: 0, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
+    { width: 35, color: '#6A9BE7', name: 'Cancun' }, // Blue
     { width: 0, color: '#F1A196', name: 'Prague' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('scourge-progress', [
-    { width: 5, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
-    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
-    { width: 5, color: '#6A9BE7', name: 'Cancun' },  // Blue
-	{ width: 20, color: '#F1A196', name: 'Prague' },  // Red
+    { width: 5, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
+    { width: 5, color: '#6A9BE7', name: 'Dencun' },  // Blue
+	{ width: 20, color: '#F1A196', name: 'Pectra' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('verge-progress', [
-    { width: 20, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
-    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
-    { width: 0, color: '#6A9BE7', name: 'Cancun' },  // Blue
-    { width: 0, color: '#F1A196', name: 'Prague' },  // Red
+    { width: 20, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
+    { width: 0, color: '#6A9BE7', name: 'Dencun' },  // Blue
+    { width: 0, color: '#F1A196', name: 'Pectra' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('purge-progress', [
-    { width: 20, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
-    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
-    { width: 5, color: '#6A9BE7', name: 'Cancun' },  // Blue
-    { width: 0, color: '#F1A196', name: 'Prague' },  // Red
+    { width: 20, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
+    { width: 5, color: '#6A9BE7', name: 'Dencun' },  // Blue
+    { width: 0, color: '#F1A196', name: 'Pectra' },  // Red
     // Add more sections as needed
   ]);
 
   setProgressBar('splurge-progress', [
-    { width: 30, color: '#99C66D', name: 'Pre-Shanghai' }, // Green
-    { width: 0, color: '#AE80B1', name: 'Shanghai' },  // Purple
-    { width: 0, color: '#6A9BE7', name: 'Cancun' },  // Blue
-    { width: 30, color: '#F1A196', name: 'Prague' },  // Red
+    { width: 30, color: '#99C66D', name: 'Pre-Shapella' }, // Green
+    { width: 0, color: '#AE80B1', name: 'Shapella' },  // Purple
+    { width: 0, color: '#6A9BE7', name: 'Dencun' },  // Blue
+    { width: 30, color: '#F1A196', name: 'Pectra' },  // Red
     // Add more sections as needed
   ]);
 };
