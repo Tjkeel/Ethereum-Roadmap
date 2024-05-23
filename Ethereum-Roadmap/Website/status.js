@@ -1,6 +1,6 @@
 // Color definitions for visual progress indicators
 const progColor = {
-	teal: '#78D0DE;',
+	teal: '#78D0DE',
     green: '#99C66D',
     purple: '#AE80B1',
     blue: '#6A9BE7',
