@@ -35,7 +35,7 @@ const statusList = [
     ["surgeG", false, 20],                                        // Efficient DA self-healing
     ["surgeH", false, 50],                                        // Full rollup scaling
     ["surgeI", true, { teal: 30, green: 0, purple: 0, blue: 0, red: 0 }], // Improve cross-rollup standards + interop
-    ["surgeJ", false, 20],                                        // Q-sale, no-setup commitments
+    ["surgeJ", false, 20],                                        // Q-safe, no-setup commitments
     // Scourge
     ["scourgeA", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }],   // Extra-protocol MEV markets
     ["scourgeB", false, 50],                                        // Explore ePBS
@@ -47,7 +47,7 @@ const statusList = [
     ["scourgeH", true, { teal: 20, green: 0, purple: 0, blue: 0, red: 0 }],   // App-layer MEV minimzation
     ["scourgeI", false, 20],                                        // Explore preconfimations
     ["scourgeJ", true, { green: 0, purple: 0, blue: 0, red: 100 }],  // Raise max effective balance
-    ["scourgeK", true, { teal: 0, green: 0, purple: 10, blue: 10, red: 25 }],  // Improve node operator usability
+    ["scourgeK", true, { teal: 25, green: 0, purple: 10, blue: 10, red: 25 }],  // Improve node operator usability
     ["scourgeL", false, 20],                                        // Explore total stake capping
     ["scourgeM", true, { teal: 20, green: 0, purple: 0, blue: 20, red: 20 }],  // Explore solutions to liquid staking centralization
     // Verge
@@ -89,7 +89,7 @@ const statusList = [
     ["splurgeF", false, 50],                                        // Endgame account abstraction
     ["splurgeG", false, 90],  										// EOF
     ["splurgeH", false, 75], 										// Big modular arithmetic
-    ["splurgeI", true, { green: 20, purple: 0, blue: 20, red: 20 }],  // Further EVM improvements
+    ["splurgeI", true, { teal: 0, green: 10, purple: 0, blue: 10, red: 10 }],  // Further EVM improvements
     ["splurgeJ", false, 50],                                        // Endgame EVM
     ["splurgeK", false, 20],                                        // Endgame EIP-1559
     ["splurgeL", false, 10],                                        // Explore deep crypto (eg. <br>obfuscation)
