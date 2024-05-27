@@ -35,7 +35,7 @@ const statusList = [
     ["surgeG", false, 20],                                        // Efficient DA self-healing
     ["surgeH", false, 50],                                        // Full rollup scaling
     ["surgeI", true, { teal: 30, green: 0, purple: 0, blue: 0, red: 0 }], // Improve cross-rollup standards + interop
-    ["surgeJ", false, 20],                                        // Q-sale, no-setup commitments
+    ["surgeJ", false, 20],                                        // Q-safe, no-setup commitments
     // Scourge
     ["scourgeA", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }],   // Extra-protocol MEV markets
     ["scourgeB", false, 50],                                        // Explore ePBS
