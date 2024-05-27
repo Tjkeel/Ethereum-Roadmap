@@ -89,7 +89,7 @@ const statusList = [
     ["splurgeF", false, 50],                                        // Endgame account abstraction
     ["splurgeG", false, 90],  										// EOF
     ["splurgeH", false, 75], 										// Big modular arithmetic
-    ["splurgeI", true, { green: 20, purple: 0, blue: 20, red: 20 }],  // Further EVM improvements
+    ["splurgeI", true, { teal: 0, green: 10, purple: 0, blue: 10, red: 10 }],  // Further EVM improvements
     ["splurgeJ", false, 50],                                        // Endgame EVM
     ["splurgeK", false, 20],                                        // Endgame EIP-1559
     ["splurgeL", false, 10],                                        // Explore deep crypto (eg. <br>obfuscation)

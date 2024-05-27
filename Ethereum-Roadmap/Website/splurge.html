@@ -305,10 +305,10 @@ This consolidated transaction is then incorporated into a block as usual.
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Further EVM Improvements</h2>
                      <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                <p style="font-family: 'Open Sans', sans-serif; "> 
+                  This is a catch all roadmap item. The EVM is Turing complete, but Solidity is not the easiest language to use, and it has its inefficiencies.
+                  <br><br>
+                  To that end, we want to add and remove opcodes, or make other improvements as we can.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -326,10 +326,9 @@ This consolidated transaction is then incorporated into a block as usual.
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Endgame EVM</h2>
                     <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                <p style="font-family: 'Open Sans', sans-serif; "> Endgame EVM refers to the ultimate vision for optimizing the EVM to achieve peak performance, security, and scalability. This initiative aims to enhance the execution of smart contracts, making them faster and more efficient. By streamlining these processes, Ethereum can reduce the computational resources required for transactions.
+              <br><br>
+              EOF will go a long way to solving many of the EVM's original sins, and will hopefully help developers have an easier time making dApps.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -368,15 +367,15 @@ Vitalik's proposal outlines two options: one retains the current gas system with
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Explore Deep Crypto</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Explore Deep Cryptography involves staying up-to-date with the latest advancements in cryptographic techniques and integrating them into Ethereum’s cryptoeconomic structures. This initiative could include exploring advanced methods like obfuscation for enhancing privacy, fully homomorphic encryption for creating encrypted mempools, and one-shot signatures for eliminating slashing or implementing “quantum cash.”
+                  <br><br>
+                  Obfuscation can make transactions and smart contract data private, fully homomorphic encryption allows computations on encrypted data without decryption, and one-shot signatures offer new ways to handle consensus and security, potentially paving the way for more resilient cryptoeconomic models.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://vitalik.eth.limo/general/2020/07/20/homomorphic.html" style="color: #fff;" target="_blank">
+                     <li>FHE</li>
                   </a>
                </ul>
             </div>
@@ -390,15 +389,15 @@ Vitalik's proposal outlines two options: one retains the current gas system with
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Explore Delay Encryption</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Explore Delay Encryption involves using encrypted mempools to mitigate MEV and censorship in Ethereum. Users submit encrypted transactions, which block producers commit to before decrypting and executing. This prevents front-running and makes censorship difficult, as excluding all encrypted transactions would be costly.
+                  <br><br>
+                  Several methods ensure guaranteed decryption without user dependency: trusted parties, trusted hardware, and threshold encryption by a committee. These techniques secure transactions against MEV and censorship while maintaining the integrity and security of the network.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://joncharbonneau.substack.com/p/encrypted-mempools" style="color: #fff;" target="_blank">
+                     <li>Jon's Newsletter</li>
                   </a>
                </ul>
             </div>
