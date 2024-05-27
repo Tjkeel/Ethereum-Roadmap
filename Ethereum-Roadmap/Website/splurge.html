@@ -284,10 +284,10 @@ This consolidated transaction is then incorporated into a block as usual.
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Big Modular Arithmetic</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-                              <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                              <p style="font-family: 'Open Sans', sans-serif; ">
+                                  Optimizing cryptographic operations that rely on modular arithmetic over very large numbers could increase efficiency by reducing computational costs and speeding up transaction processing when implemented directly in the EVM.
+                                 <br><br>
+                                 This enhancement could benefit various applications within the Ethereum ecosystem, such as zero-knowledge proofs and digital signatures, by improving the performance and scalability of cryptographic operations. This would support the network’s goals of increasing efficiency and supporting more complex decentralized applications.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -411,15 +411,15 @@ Vitalik's proposal outlines two options: one retains the current gas system with
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">VDFs</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-                <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+                <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Verifiable Delay Functions (VDFs) are being explored as a strategy to enhance the randomness used in Ethereum’s consensus. A VDF requires a significant amount of non-parallelizable work to compute but can be verified very quickly. This makes VDFs ideal for generating entropy for validator and committee selection, as they are resistant to manipulation and do not depend on a specific fraction of nodes being online.
+                  <br><br>
+                  A common example of a VDF is the iterated modular square root, where each computation step depends on the previous result, preventing parallelization. VDFs offer several advantages over other randomness schemes like RANDAO or BLS threshold signatures, including simpler setup procedures and increased resistance to manipulation. However, the possibility of attackers using ASICs to gain a speed advantage remains a concern. To mitigate this, the design must balance the computation and verification times to effectively resist such attacks within Ethereum’s ecosystem.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://ethresear.ch/t/verifiable-delay-functions-and-attacks/2365" style="color: #fff;" target="_blank">
+                     <li>Research Post</li>
                   </a>
                </ul>
             </div>

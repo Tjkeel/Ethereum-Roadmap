@@ -47,7 +47,7 @@ const statusList = [
     ["scourgeH", true, { teal: 20, green: 0, purple: 0, blue: 0, red: 0 }],   // App-layer MEV minimzation
     ["scourgeI", false, 20],                                        // Explore preconfimations
     ["scourgeJ", true, { green: 0, purple: 0, blue: 0, red: 100 }],  // Raise max effective balance
-    ["scourgeK", true, { teal: 0, green: 0, purple: 10, blue: 10, red: 25 }],  // Improve node operator usability
+    ["scourgeK", true, { teal: 25, green: 0, purple: 10, blue: 10, red: 25 }],  // Improve node operator usability
     ["scourgeL", false, 20],                                        // Explore total stake capping
     ["scourgeM", true, { teal: 20, green: 0, purple: 0, blue: 20, red: 20 }],  // Explore solutions to liquid staking centralization
     // Verge
