@@ -97,8 +97,10 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Eliminate Gas Refunds</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> August 5, 2021 </h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> This upgrade refers to EIP-3529, or the reduction in refunds, 
-               which went live in the London hard fork. This EIP fixed an exploit caused by large refund amounts.
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Eliminate Gas Refunds refers to EIP-3529, introduced in the London hard fork, which reduced gas refunds to address an exploit caused by large refund amounts. This EIP specifically targeted reducing the gas refund from the SELFDESTRUCT operation and eliminating the refund for SSTORE operations that reset contract storage. The primary goal was to prevent bloating the blockchain state with temporary data just to benefit from gas refunds, enhancing the network’s efficiency and security.
+                  <br><br>
+                  By curbing these refunds, the EIP aimed to disincentivize practices that artificially manipulated gas usage, contributing to a more stable and predictable gas market. This change also helped in mitigating certain types of denial-of-service attacks that exploited high refund amounts to consume excessive block resources.
 				</p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -116,9 +118,10 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">EIP-4444 Specification</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Done </h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> The primary aim is to prune historical block headers, bodies, and receipts that are older 
-               than one year from the clients. This move is motivated by the growing disk space requirement for storing Ethereum's 
-               full transaction history (in PoS Ethereum, SSD storage is one of the more expensive pieces of hardware).
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  The purpose of EIP-4444 is to prune historical block headers, bodies, and receipts older than one year from Ethereum clients. This initiative addresses the increasing disk space requirements for storing Ethereum’s full transaction history, particularly as SSD storage remains a significant cost for running a node.
+                  <br><br>
+                  EIP-4444 will reduce the storage burden on nodes, making it more feasible for individuals to operate their own nodes without needing extensive and costly storage solutions. Additionally, this pruning enhances the synchronization speed for new nodes joining the network, as they need to download and process less historical data.
 				</p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -139,9 +142,11 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">EIP-4444 Inclusion</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Awaiting Inclusion</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> The primary aim is to prune historical block headers, bodies, and receipts that are older 
-               than one year from the clients. This move is motivated by the growing disk space requirement for storing Ethereum's 
-               full transaction history (in PoS Ethereum, SSD storage is one of the more expensive pieces of hardware).
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  EIP-4444 Inclusion refers to the process of incorporating EIP-4444, which was written in November 2021, into the Ethereum network through a future hard fork.
+                  <br><br>
+                  EIP-4444 has been fully drafted and reviewed, and now it only requires inclusion in an upcoming hard fork to become active.
+
 				</p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -162,8 +167,9 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Beacon chain fast sync</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;">Extra-Protocol</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Ethereum clients built 'checkpoint' sync functionality to greatly speed up a node's 
-               initial sync with the Beacon chain. This was not accomplished via an EIP, but was rather an upgrade that client teams implemented ad-hoc.
+               <p style="font-family: 'Open Sans', sans-serif; "> An upgrade implemented by Ethereum client teams to significantly speed up a node’s initial synchronization with the Beacon chain. Unlike other improvements that follow a formal EIP process, this upgrade was developed and deployed ad-hoc by the client teams. 
+                  <br><br>
+                  The ‘checkpoint’ sync functionality allows new nodes to quickly catch up with the current state of the Beacon chain by starting from a recent checkpoint, rather than processing the entire chain history from the genesis block. This enhancement reduces the time and resources needed for a node to become fully operational.
 				</p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -181,10 +187,11 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">P2P History | Portal Network</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Extra-Protocol</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+
+                  P2P History | Portal Network offers a new method for accessing Ethereum data in a decentralized manner with minimal hardware and bandwidth requirements. Traditionally, users either needed to run a resource-intensive Ethereum node or rely on centralized third-party RPC providers. The Portal Network distributes Ethereum data across multiple peer-to-peer networks, enabling almost instant syncing and access with minimal resources.
+                  <br><br>
+                  This network consists of several P2P networks (state, beacon, and history networks), each storing specific subsets of Ethereum data. Individual Portal clients hold only small portions of this data, while the entire network collectively maintains all historical data. Data requests are broadcast across the network until they reach the node storing the required information, eliminating centralized intermediaries and promoting greater decentralization and participation in the Ethereum network.
 				</p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -202,15 +209,15 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">History Expiry Complete</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Awaiting Inclusion</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  The State in Ethereum refers to the current status of all accounts and smart contracts, representing the cumulative outcomes of all transactions and contract executions up to the present block. It is dynamic and changes with each new block. The History, on the other hand, includes the entire record of all transactions and blocks processed since the genesis block, detailing transaction data, block headers, receipts, and more. This historical record is crucial for understanding how the current state has been reached but is not necessary for processing new transactions.
+                  <br><br>
+                  History Expiry will allow the Ethereum network to prune historical data that is no longer needed for the current state, reducing storage requirements for nodes. This enables nodes to operate more efficiently and lowers the barrier to entry for running a node, thereby enhancing decentralization. 
 				</p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://eips.ethereum.org/EIPS/eip-4444" style="color: #fff;" target="_blank">
+                     <li>EIP-4444</li>
                   </a>
                </ul>
             </div>
