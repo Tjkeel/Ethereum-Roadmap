@@ -316,14 +316,17 @@
            <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">State Expiry</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+
+                  State Expiry refers to the routine removal of old state data from the Ethereum network to manage it's growing size. The state includes the current information representing the cumulative outcomes of all transactions and contract executions up to the present block. Unlike history, which is a comprehensive record of all past transactions, the state is dynamic and constantly changing.
+                  <br><br>
+                  Implementing state expiry would mean that data not accessed or modified within a certain period would be pruned from the active state, reducing the burden on nodes to store and maintain this information. This approach helps in managing the ever-growing state size, making it easier for nodes to operate efficiently. The challenge lies in ensuring that expired state data can be retrieved or recreated if needed, potentially via a verkle root.
+
+               </p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://www.reddit.com/r/ethereum/comments/o9s15i/impromptu_technical_ama_on_statelessness_and/" style="color: #fff;" target="_blank">
+                     <li>Vitalik AMA</li>
                   </a>
                </ul>
             </div>
@@ -336,10 +339,11 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">LOG Reform</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  LOG Reform aims to simplify the way event logs are managed in Ethereum to enable more efficient searching of historical events. Currently, Ethereum uses Bloom filters to index logs, which help applications quickly identify relevant blocks and transactions that contain specific log entries. However, this approach has been criticized for being inefficient and slow.
+                  <br><br>
+                  The proposed LOG reform suggests removing Bloom filters and instead using decentralized protocols that employ zero-knowledge proofs (ZK-SNARKs) for log indexing. These protocols, such as those implemented in ZK-rollups, provide a way to generate provably correct log trees that ensure privacy and efficiency. By adopting this approach, Ethereum can streamline data handling and improve the performance of querying historical logs.   
+               </p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
                   <a href="" style="color: #fff;" target="_blank">
@@ -354,12 +358,13 @@
             <div class="left-arrow-pointer"><i class="fas fa-arrow-left"></i></div>
             <!-- Left arrow -->
             <div class="description-content">
-               <h2 class="upgrade-title" style="font-weight: 100;">Remove Old TXN Types/h2>
+               <h2 class="upgrade-title" style="font-weight: 100;">Remove Old TXN Types</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Stop supporting older transaction types to reduce code complexity in clients.
+                  <br><br>
+                  However, this proposal comes with a trade-off regarding backward compatibility. Removing support for old transaction types means that certain legacy transactions and applications that rely on them may no longer function without updates. This necessitates careful planning and communication with the Ethereum community to ensure a smooth transition, possibly involving migration tools or support periods to minimize disruption for users relying on older transaction types.
+               </p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
                   <a href="" style="color: #fff;" target="_blank">
@@ -376,14 +381,15 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Serialization Harmonization</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Serialization Harmonization involves standardizing the data serialization method across Ethereum’s execution and consensus layers. Currently, the execution layer uses Recursive Length Prefix (RLP) for serialization, while the consensus layer employs Simple Serialize (SSZ). The proposal aims to replace RLP with SSZ across all layers of Ethereum, enhancing uniformity and efficiency in data handling.
+                  <br><br>
+                  Simple Serialize (SSZ) is designed for deterministic serialization with efficient Merkleization. It separates data into basic types (like unsigned integers and booleans), which are directly converted into little-endian byte strings, and composite types, which may include a mix of fixed and variable-length elements. Variable-length elements are placed at the end of the serialization, indexed by offsets in the main structure.
+               </p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://ethereum.org/en/developers/docs/data-structures-and-encoding/ssz/" style="color: #fff;" target="_blank">
+                     <li>SSZ</li>
                   </a>
                </ul>
             </div>
