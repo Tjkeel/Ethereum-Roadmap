@@ -252,15 +252,16 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Simplify Gas Mechanics</h2>
                 <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; ">  
+                  Simplify Gas Mechanics involves removing or revising certain features in the EVM that add unnecessary complexity and cost. Over time, Ethereum has accumulated features that, if redesigned today, might not be included due to our improved understanding of smart contract and blockchain protocol design. Simplifying gas mechanics aims to streamline the protocol by addressing these "vestigial features" which cause ongoing harm due to their complexity.
+                  <br><br>
+                  This step would involve removing features like the 2300 gas stipend, which complicates gas repricing and does not effectively serve its original purpose. It also includes revising how gas visibility and refunds are handled to prevent inefficiencies and security risks. By removing these complex and often redundant features, Ethereum can reduce the cost of implementing new protocol changes and minimize the risk of bugs caused by interactions with these features.
+               
                </p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://hackmd.io/@vbuterin/evm_feature_removing" style="color: #fff;" target="_blank">
+                     <li>List of EVM features worth removing</li>
                   </a>
                </ul>
             </div>
@@ -273,13 +274,15 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Remove Precompiles</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; ">  Precompiles are specialized operations effectively subsidized by the network, offering specific functions 
-               at a lower gas cost than if written from scratch. These precompiles can be replaced with direct EVM implementations. 
+               <p style="font-family: 'Open Sans', sans-serif; ">  
+                  Transition away from specialized operations (precompiles) that are subsidized by the network to direct EVM implementations. Precompiles are specific functions implemented at the protocol level, offering lower gas costs compared to if they were written from scratch in Solidity. These functions include operations like cryptographic hashing and signature verification, but can vary in functionality. See the linked list of precompiles below.
+                  <br><br>
+                  As we improve the EVM this becomes more palatable, and the network can stop favoring certain operations.
                </p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://www.evm.codes/precompiled?fork=merge" style="color: #fff;" target="_blank">
+                     <li>Precompiles</li>
                   </a>
                </ul>
             </div>
@@ -292,14 +295,15 @@
              <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Address Space Extension</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research</h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; "> 
+                  Increase the size of Ethereum addresses from 20 bytes to 32 bytes. The current 20-byte (160-bit) addresses offer 80 bits of collision resistance, which may become insufficient against sophisticated attacks. Expanding to 32-byte addresses provides enhanced security by increasing collision resistance and allows for additional features such as shard IDs and epoch data, supporting future state expiry schemes and sharding.
+                  <br><br>
+                  This change requires transitioning existing contracts and systems to accommodate the new address size. Proposed methods include new opcodes like CREATE3 for generating 32-byte addresses and BIGCALLER for handling calls from both old and new address formats. This transition would ensure backward compatibility, allowing new-style addresses to interact with pre-existing contracts and maintain persistent identities.
+               </p>
          <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="" style="color: #fff;" target="_blank">
-                     <li>TBD</li>
+                  <a href="https://ethereum-magicians.org/t/increasing-address-size-from-20-to-32-bytes/5485" style="color: #fff;" target="_blank">
+                     <li>Research Post</li>
                   </a>
                </ul>
             </div>
