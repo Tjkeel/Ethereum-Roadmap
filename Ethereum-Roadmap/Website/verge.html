@@ -157,6 +157,7 @@
  			 <h3 style="font-family: 'Open Sans', sans-serif;"> October 27, 2021 </h3>
                <p style="font-family: 'Open Sans', sans-serif; ">  Sync committees are specialized groups of validators responsible for creating a condensed version of the blockchain state at regular intervals. 
                By doing so, they enable (among other things) light clients to quickly sync with the current state of the blockchain without processing the entire chain history. 
+               <br><br>
                This dramatically reduces the computational and storage requirements for light clients, making it easier for devices with limited resources to participate in the network. 
                This upgrade allowed a broader range of devices to engage with the network efficiently.
                </p>
@@ -176,10 +177,11 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">SNARK Based Light Clients</h2>
    			<h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
-               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; ">  
+                  This step would enhance the efficiency of synchronizing Ethereum light clients by utilizing SNARKs (Succinct Non-interactive ARguments of Knowledge). Specifically, this involves SNARKifying the sync committee transition to swiftly and securely prove which validators make up the current sync committee.
+                  <br><br>
+                  In Ethereum’s consensus protocol, sync committees are crucial for ensuring that light clients can stay updated with minimal data. By implementing SNARKs, the network can provide cryptographic proofs that verify the composition of the sync committee without requiring light clients to process or verify all underlying transactions or committee changes. This allows light clients to quickly and securely update their understanding of the network state with significantly reduced computational and data overhead. 
+               
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
@@ -197,10 +199,10 @@
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">SNARK for Consensus State Transition</h2>
         <h3 style="font-family: 'Open Sans', sans-serif;"> Ongoing Research </h3>
-               <p style="font-family: 'Open Sans', sans-serif; ">  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
-                  incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
-                  ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                  Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. 
+               <p style="font-family: 'Open Sans', sans-serif; ">  
+                  Implementing SNARKs for fully trustless verification of the consensus layer would revolutionize Ethereum’s security framework by ensuring every transaction and state transition is independently verifiable, without reliance on trust-minimized sync committees. This hypothetical step involves using SNARKs (Succinct Non-interactive Arguments of Knowledge) to create compact cryptographic proofs that can confirm the correctness of state transitions on their own.
+                  <br><br>
+                  Adopting this approach would significantly enhance network security by removing the dependency on intermediaries and reducing potential points of failure and manipulation. It would also decrease the computational load on clients that need to verify the chain.  
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
