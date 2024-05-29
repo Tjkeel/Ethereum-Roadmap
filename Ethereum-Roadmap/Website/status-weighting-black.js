@@ -146,12 +146,13 @@ Object.entries(statusList).forEach(([groupKey, group]) => {
                 document.getElementById(ident).style.animation = "fadeRedsBlack 3s ease infinite";
             } else {
                 const progStart = item[2] / 2;
-                const grad = `linear-gradient(90deg, #00000069 ${progStart}%, rgb(250 250 250 / 0%) ${progStart}%, rgb(250 250 250 / 0%) 100%)`;
+                const grad = `linear-gradient(90deg, rgb(0 0 0 / 0%) ${progStart}%, rgb(89 89 89) ${progStart}%, rgb(89 89 89) 100%)`;
                 document.getElementById(ident).style.background = grad;
                 document.getElementById(ident).style.backgroundSize = '200%';
                 document.getElementById(ident).style.backgroundPosition = '100%';
                 document.getElementById(ident).style.transition = "background-position 2s";
                 document.getElementById(ident).classList.add("greyOut");
+                document.getElementById(ident).style.animation = 'fadeBlack2 3s infinite';
             }
         }
     })
@@ -244,6 +245,9 @@ function setProgressBarW(progressBarId, sections) {
         if (section.color === '#F1A196') {
           // Apply the animation to the Pectra color section
           sectionDiv.style.animation = 'fadeRed 3s infinite';
+        } else if (section.color === 'rgb(30 28 28)') {
+            // Apply the animation to the on-going research color section
+          sectionDiv.style.animation = 'fadeBlack 3s infinite';
         } else {
           // Apply the standard background color for other sections
           sectionDiv.style.backgroundColor = section.color;
@@ -286,7 +290,7 @@ function injectAnimationStyles() {
   style.innerHTML = `
     @keyframes fadeRed {
       0% { background-color: #F1A196; }
-      50% { background-color: rgb(30 28 28); }
+      50% { background-color: transparent; }
       100% { background-color: #F1A196; }
     }
   `;
@@ -308,7 +312,7 @@ function tips() {
     tip.style.position = 'absolute'
     tip.style.left = 'calc(50% + 2px)' // + 2px for border...
     tip.style.transform = 'translateX(-50%)'
-    tip.style.top = 'calc(100% + 9px)'
+    tip.style.top = 'calc(100% + 11px)'
     el.appendChild(tip)
 
     // Create a unique class for this tooltip
