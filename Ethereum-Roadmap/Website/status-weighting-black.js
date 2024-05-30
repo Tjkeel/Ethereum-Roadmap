@@ -46,79 +46,79 @@ const statusList = {
         ["mergeL", false, 20, {weighting: 1}],                                                    // Ideal quantum-safe signatures
     ],
     surge: [
-        ["surgeA", true, { teal: 66.66, green: 0, purple: 0, blue: 0, red: 0 }],  // Optimistic rollup fraud provers
-        ["surgeB", true, { teal: 66.66, green: 0, purple: 0, blue: 0, red: 0 }],  // ZK-EVMs
-        ["surgeC", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }],    // EIP-4844 specification
-        ["surgeD", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }],    // EIP-4844 implementation
-        ["surgeE", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }],    // Basic rollup scaling
-        ["surgeF", false, 50],                                                    // peerDAS
-        ["surgeG", false, 20],                                                    // Efficient DA self-healing
-        ["surgeH", false, 50],                                                    // Full rollup scaling
-        ["surgeI", true, { teal: 30, green: 0, purple: 0, blue: 0, red: 0 }],     // Improve cross-rollup standards + interop
-        ["surgeJ", false, 20],                                                    // Q-sale, no-setup commitments
+        ["surgeA", true, { teal: 66.66, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // Optimistic rollup fraud provers
+        ["surgeB", true, { teal: 66.66, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // ZK-EVMs
+        ["surgeC", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }, {weighting: 1}],    // EIP-4844 specification
+        ["surgeD", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }, {weighting: 1}],    // EIP-4844 implementation
+        ["surgeE", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }, {weighting: 1}],    // Basic rollup scaling
+        ["surgeF", false, 50, {weighting: 1}],                                                    // peerDAS
+        ["surgeG", false, 20, {weighting: 1}],                                                    // Efficient DA self-healing
+        ["surgeH", false, 50, {weighting: 1}],                                                    // Full rollup scaling
+        ["surgeI", true, { teal: 30, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],     // Improve cross-rollup standards + interop
+        ["surgeJ", false, 20], {weighting: 1},                                                    // Q-sale, no-setup commitments
     ],
     scourge: [
-        ["scourgeA", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }],   // Extra-protocol MEV markets
-        ["scourgeB", false, 50],                                                   // Explore ePBS
-        ["scourgeC", false, 80],                                                   // Inclusion lists
-        ["scourgeD", false, 20],                                                   // Explore MEV burn in ePBS
-        ["scourgeE", false, 20],                                                   // Distributed block building
-        ["scourgeF", false, 20],                                                   // Exsplore execution tickets
-        ["scourgeG", false, 50],                                                   // Endgame block production <br>pipeline
-        ["scourgeH", true, { teal: 20, green: 0, purple: 0, blue: 0, red: 0 }],    // App-layer MEV minimzation
-        ["scourgeI", false, 20],                                                   // Explore preconfimations
-        ["scourgeJ", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 100 }],   // Raise max effective balance
-        ["scourgeK", true, { teal: 0, green: 0, purple: 10, blue: 10, red: 25 }],  // Improve node operator usability
-        ["scourgeL", false, 20],                                                   // Explore total stake capping
-        ["scourgeM", true, { teal: 20, green: 0, purple: 0, blue: 20, red: 20 }],  // Explore solutions to liquid staking centralization
+        ["scourgeA", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // Extra-protocol MEV markets
+        ["scourgeB", false, 50, {weighting: 1}],                                                   // Explore ePBS
+        ["scourgeC", false, 80, {weighting: 1}],                                                   // Inclusion lists
+        ["scourgeD", false, 20, {weighting: 1}],                                                   // Explore MEV burn in ePBS
+        ["scourgeE", false, 20, {weighting: 1}],                                                   // Distributed block building
+        ["scourgeF", false, 20, {weighting: 1}],                                                   // Exsplore execution tickets
+        ["scourgeG", false, 50, {weighting: 1}],                                                   // Endgame block production <br>pipeline
+        ["scourgeH", true, { teal: 20, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],    // App-layer MEV minimzation
+        ["scourgeI", false, 20, {weighting: 1}],                                                   // Explore preconfimations
+        ["scourgeJ", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 100 }, {weighting: 1}],   // Raise max effective balance
+        ["scourgeK", true, { teal: 0, green: 0, purple: 10, blue: 10, red: 25 }, {weighting: 1}],  // Improve node operator usability
+        ["scourgeL", false, 20, {weighting: 1}],                                                   // Explore total stake capping
+        ["scourgeM", true, { teal: 20, green: 0, purple: 0, blue: 20, red: 20 }, {weighting: 1}],  // Explore solutions to liquid staking centralization
     ],
     verge: [
-        ["vergeA", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }], // Most serious EVM DoS issues solved
-        ["vergeB", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }], // Basic light client support (sync <br>committees)
-        ["vergeC", false, 80],                                                 // SNARK based light clients
-        ["vergeD", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }],   // SNARK for consensus state transition
-        ["vergeE", false, 80],                                                 // Verkle tree spec + impl
-        ["vergeF", false, 50],                                                 // Code chunking + gas cost updates
-        ["vergeG", false, 80],                                                 // Transition spec+ impl
-        ["vergeH", false, 50],                                                 // Verkle trees
-        ["vergeI", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }],   // SNARK for Verkle proofs
-        ["vergeJ", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }],   // SNARK for L1 EVM
-        ["vergeK", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }],   // Explore EVM verification precompile
-        ["vergeL", false, 10],                                                 // Fully SNARKed Ethereum
-        ["vergeM", false, 10],                                                 // Quantum-safe SNARKs (eg. <br>STARKs)
-        ["vergeN", false, 20],                                                 // SNARK / STARK ASICs
+        ["vergeA", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }, {weighting: 1}], // Most serious EVM DoS issues solved
+        ["vergeB", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }, {weighting: 1}], // Basic light client support (sync <br>committees)
+        ["vergeC", false, 80, {weighting: 1}],                                                 // SNARK based light clients
+        ["vergeD", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // SNARK for consensus state transition
+        ["vergeE", false, 80, {weighting: 1}],                                                 // Verkle tree spec + impl
+        ["vergeF", false, 50, {weighting: 1}],                                                 // Code chunking + gas cost updates
+        ["vergeG", false, 80, {weighting: 1}],                                                 // Transition spec+ impl
+        ["vergeH", false, 50, {weighting: 1}],                                                 // Verkle trees
+        ["vergeI", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // SNARK for Verkle proofs
+        ["vergeJ", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // SNARK for L1 EVM
+        ["vergeK", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // Explore EVM verification precompile
+        ["vergeL", false, 10, {weighting: 1}],                                                 // Fully SNARKed Ethereum
+        ["vergeM", false, 10, {weighting: 1}],                                                 // Quantum-safe SNARKs (eg. <br>STARKs)
+        ["vergeN", false, 20, {weighting: 1}],                                                 // SNARK / STARK ASICs
     ],
     purge: [
-        ["purgeA", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }],  // Eliminate most gas refunds
-        ["purgeB", false, 100],                                                 // EIP-4444 specification
-        ["purgeC", false, 20],                                                  // EIP-4444 implementation
-        ["purgeD", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }],  // Beacon chain fast sync
-        ["purgeE", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }],  // P2P history (eg. Portal)
-        ["purgeF", false, 50],                                                  // History expiry (EIP-4444)
-        ["purgeG", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }],  // Ban SELF-DESTRUCT
-        ["purgeH", false, 20],                                                  // Simplify gas mechanics
-        ["purgeI", false, 20],                                                  // Precompiles EVM impls
-        ["purgeJ", false, 30],                                                  // Address space extension
-        ["purgeK", false, 50],                                                  // State expiry
-        ["purgeL", false, 20],                                                  // LOG reform
-        ["purgeM", false, 20],                                                  // Remove old tx types
-        ["purgeN", false, 20],                                                  // Serialization harmonization
+        ["purgeA", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // Eliminate most gas refunds
+        ["purgeB", false, 100, {weighting: 1}],                                                 // EIP-4444 specification
+        ["purgeC", false, 20, {weighting: 1}],                                                  // EIP-4444 implementation
+        ["purgeD", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // Beacon chain fast sync
+        ["purgeE", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // P2P history (eg. Portal)
+        ["purgeF", false, 50, {weighting: 1}],                                                  // History expiry (EIP-4444)
+        ["purgeG", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }, {weighting: 1}],  // Ban SELF-DESTRUCT
+        ["purgeH", false, 20, {weighting: 1}],                                                  // Simplify gas mechanics
+        ["purgeI", false, 20, {weighting: 1}],                                                  // Precompiles EVM impls
+        ["purgeJ", false, 30, {weighting: 1}],                                                  // Address space extension
+        ["purgeK", false, 50, {weighting: 1}],                                                  // State expiry
+        ["purgeL", false, 20, {weighting: 1}],                                                  // LOG reform
+        ["purgeM", false, 20, {weighting: 1}],                                                  // Remove old tx types
+        ["purgeN", false, 20, {weighting: 1}],                                                  // Serialization harmonization
     ],
     splurge: [
-        ["splurgeA", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }], // EIP-1559
-        ["splurgeB", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }], // EIP-4337 specification
-        ["splurgeC", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }], // ERC-4337
-        ["splurgeD", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 100 }], // Voluntary EOA conversion
-        ["splurgeE", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 100 }], // In-protocol enshrining
-        ["splurgeF", false, 50],                                                 // Endgame account abstraction
-        ["splurgeG", false, 90],                                                 // EOF
-        ["splurgeH", false, 75],                                                 // Big modular arithmetic
-        ["splurgeI", true, { teal: 0, green: 20, purple: 0, blue: 20, red: 20 }],// Further EVM improvements
-        ["splurgeJ", false, 50],                                                 // Endgame EVM
-        ["splurgeK", false, 20],                                                 // Endgame EIP-1559
-        ["splurgeL", false, 10],                                                 // Explore deep crypto (eg. <br>obfuscation)
-        ["splurgeM", false, 10],                                                 // Explore delay- encrypted
-        ["splurgeN", false, 40],                                                 // VDFs
+        ["splurgeA", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }, {weighting: 1}], // EIP-1559
+        ["splurgeB", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}], // EIP-4337 specification
+        ["splurgeC", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}], // ERC-4337
+        ["splurgeD", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 100 }, {weighting: 1}], // Voluntary EOA conversion
+        ["splurgeE", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 100 }, {weighting: 1}], // In-protocol enshrining
+        ["splurgeF", false, 50, {weighting: 1}],                                                 // Endgame account abstraction
+        ["splurgeG", false, 90, {weighting: 1}],                                                 // EOF
+        ["splurgeH", false, 75, {weighting: 1}],                                                 // Big modular arithmetic
+        ["splurgeI", true, { teal: 0, green: 20, purple: 0, blue: 20, red: 20 }, {weighting: 1}],// Further EVM improvements
+        ["splurgeJ", false, 50, {weighting: 1}],                                                 // Endgame EVM
+        ["splurgeK", false, 20, {weighting: 1}],                                                 // Endgame EIP-1559
+        ["splurgeL", false, 10, {weighting: 1}],                                                 // Explore deep crypto (eg. <br>obfuscation)
+        ["splurgeM", false, 10, {weighting: 1}],                                                 // Explore delay- encrypted
+        ["splurgeN", false, 40, {weighting: 1}],                                                 // VDFs
     ]
 };
 
