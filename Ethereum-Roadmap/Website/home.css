@@ -15,7 +15,7 @@
     text-decoration: none;
   	transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.1);
-    .step, .mile, .progress-bar {
+    .step, .mile {
         border-width: 2px;
         border-color: white;
         border-style: solid;
@@ -32,13 +32,20 @@
         outline-color: white;
         outline-style: solid;
     }
+    .progress-bar {
+        outline-width: 2px;
+        outline-color: white;
+        outline-style: solid;
+    }
 }
+
+
 
 .section2:hover {
     .progress-bar {
-        border-width: 2px;
-        border-color: white;
-        border-style: solid;
+        outline-width: 2px;
+        outline-color: white;
+        outline-style: solid;
     }
 }
 
@@ -131,3 +138,16 @@ input:checked + .slider:before {
     grid-column: 2;
 }
 
+.name-logo {
+    display: grid;
+    grid-template-columns: 1fr 40px auto 1fr;
+    .fas {
+        grid-column: 2;
+        align-self: center;
+        justify-self: left;
+    }
+    h2 {
+        grid-column: 3;
+        text-align: left;
+    }
+}
