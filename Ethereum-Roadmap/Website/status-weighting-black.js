@@ -143,7 +143,7 @@ Object.entries(statusList).forEach(([groupKey, group]) => {
                 document.getElementById(ident).style.backgroundSize = '200%';
                 document.getElementById(ident).style.backgroundPosition = '100%';
                 document.getElementById(ident).style.transition = "background-position 2s";
-                document.getElementById(ident).style.animation = "fadeRedsBlack 3s ease infinite";
+                document.getElementById(ident).style.animation = "fadeReds 3s ease infinite";
             } else {
                 const progStart = item[2] / 2;
                 const grad = `linear-gradient(90deg, rgb(0 0 0 / 0%) ${progStart}%, rgb(89 89 89) ${progStart}%, rgb(89 89 89) 100%)`;
@@ -268,22 +268,6 @@ function setProgressBarW(progressBarId, sections) {
 }
 
 // Inject CSS for the fadeRed animation
-function injectAnimationStyles() {
-  const style = document.createElement('style');
-  style.type = 'text/css';
-  style.innerHTML = `
-    @keyframes fadeRed {
-      0% { background-color: #F1A196; }
-      50% { background-color: transparent; }
-      100% { background-color: #F1A196; }
-    }
-  `;
-  document.getElementsByTagName('head')[0].appendChild(style);
-}
-
-injectAnimationStyles();
-
-//Make Pectra color in progress bar flash transparent setup
 function injectAnimationStyles() {
   const style = document.createElement('style');
   style.type = 'text/css';

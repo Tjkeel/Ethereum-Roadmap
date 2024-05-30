@@ -76,7 +76,19 @@ h1 {
 /*flash color*/
 @keyframes fadeReds {
   0%, 100% { background-color: rgb(241, 161, 150); }
-  50% { background-color: #595959; }
+  50% { background-color: rgb(89 89 89); }
+}
+
+/*flash black progress bar*/
+@keyframes fadeBlack {
+  0%, 100% { background-color: rgb(30 28 28); }
+  50% { background-color: rgb(89 89 89 / 0%); }
+}
+
+/*flash black diagram*/
+@keyframes fadeBlack2 {
+  0%, 100% { background-color: rgb(30 28 28); }
+  50% { background-color: rgb(89 89 89); }
 }
 
 
@@ -235,8 +247,10 @@ h1 {
 }
 
 .progress-bar {
+  overflow: visible;
   grid-row: -1;
   grid-column: 1 / -1;
+  outline: white 1px solid;
 }
 
 /*Beacon chain launch*/
@@ -1650,10 +1664,6 @@ h1 {
   #merge6 {
     margin-bottom: -6px;
   }
-}
-
-.progress-bar {
-  overflow: visible;
 }
 
 [tips] .tooltipBar {
