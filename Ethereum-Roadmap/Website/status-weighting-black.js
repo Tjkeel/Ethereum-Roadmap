@@ -55,7 +55,7 @@ const statusList = {
         ["surgeG", false, 20, {weighting: 1}],                                                    // Efficient DA self-healing
         ["surgeH", false, 50, {weighting: 1}],                                                    // Full rollup scaling
         ["surgeI", true, { teal: 30, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],     // Improve cross-rollup standards + interop
-        ["surgeJ", false, 20], {weighting: 1},                                                    // Q-sale, no-setup commitments
+        ["surgeJ", false, 20, {weighting: 1}],                                                   // Q-sale, no-setup commitments
     ],
     scourge: [
         ["scourgeA", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // Extra-protocol MEV markets
