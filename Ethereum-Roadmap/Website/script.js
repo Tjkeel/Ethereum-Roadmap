@@ -55,7 +55,7 @@ const statusList = {
         ["surgeG", false, 20, {weighting: 1}],                                                    // Efficient DA self-healing
         ["surgeH", false, 50, {weighting: 1}],                                                    // Full rollup scaling
         ["surgeI", true, { teal: 30, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],     // Improve cross-rollup standards + interop
-        ["surgeJ", false, 20, {weighting: 1}],                                                   // Q-sale, no-setup commitments
+        ["surgeJ", false, 20, {weighting: 1}],                                                    // Q-sale, no-setup commitments
     ],
     scourge: [
         ["scourgeA", true, { teal: 100, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // Extra-protocol MEV markets
@@ -68,7 +68,7 @@ const statusList = {
         ["scourgeH", true, { teal: 20, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],    // App-layer MEV minimzation
         ["scourgeI", false, 20, {weighting: 1}],                                                   // Explore preconfimations
         ["scourgeJ", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 100 }, {weighting: 1}],   // Raise max effective balance
-        ["scourgeK", true, { teal: 0, green: 0, purple: 10, blue: 10, red: 25 }, {weighting: 1}],  // Improve node operator usability
+        ["scourgeK", true, { teal: 25, green: 0, purple: 10, blue: 10, red: 25 }, {weighting: 1}],  // Improve node operator usability
         ["scourgeL", false, 20, {weighting: 1}],                                                   // Explore total stake capping
         ["scourgeM", true, { teal: 20, green: 0, purple: 0, blue: 20, red: 20 }, {weighting: 1}],  // Explore solutions to liquid staking centralization
     ],
@@ -113,7 +113,7 @@ const statusList = {
         ["splurgeF", false, 50, {weighting: 1}],                                                 // Endgame account abstraction
         ["splurgeG", false, 90, {weighting: 1}],                                                 // EOF
         ["splurgeH", false, 75, {weighting: 1}],                                                 // Big modular arithmetic
-        ["splurgeI", true, { teal: 0, green: 20, purple: 0, blue: 20, red: 20 }, {weighting: 1}],// Further EVM improvements
+        ["splurgeI", true, { teal: 0, green: 10, purple: 0, blue: 10, red: 10 }, {weighting: 1}],// Further EVM improvements
         ["splurgeJ", false, 50, {weighting: 1}],                                                 // Endgame EVM
         ["splurgeK", false, 20, {weighting: 1}],                                                 // Endgame EIP-1559
         ["splurgeL", false, 10, {weighting: 1}],                                                 // Explore deep crypto (eg. <br>obfuscation)
