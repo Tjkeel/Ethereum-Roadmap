@@ -15,7 +15,7 @@
     text-decoration: none;
   	transform: translateY(-2px);
     background: rgba(255, 255, 255, 0.1);
-    .step, .mile {
+    .step, .mile, .progress-bar {
         border-width: 2px;
         border-color: white;
         border-style: solid;
@@ -33,6 +33,15 @@
         outline-style: solid;
     }
 }
+
+.section2:hover {
+    .progress-bar {
+        border-width: 2px;
+        border-color: white;
+        border-style: solid;
+    }
+}
+
 
 .switch {
     position: relative;
