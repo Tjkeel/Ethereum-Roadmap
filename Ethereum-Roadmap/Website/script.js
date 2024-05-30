@@ -86,7 +86,7 @@ const statusList = {
         ["vergeK", true, { teal: 0, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // Explore EVM verification precompile
         ["vergeL", false, 10, {weighting: 1}],                                                 // Fully SNARKed Ethereum
         ["vergeM", false, 10, {weighting: 1}],                                                 // Quantum-safe SNARKs (eg. <br>STARKs)
-        ["vergeN", false, 20, {weighting: 1}],                                                 // SNARK / STARK ASICs
+        ["vergeN", true, { teal: 20, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],   // SNARK / STARK ASICs
     ],
     purge: [
         ["purgeA", true, { teal: 0, green: 100, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // Eliminate most gas refunds
