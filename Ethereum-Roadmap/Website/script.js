@@ -122,20 +122,21 @@ const statusList = {
     ]
 };
 
+// Diagram progress levels
 Object.entries(statusList).forEach(([groupKey, group]) => {
     group.forEach(item => {
         const ident = item[0];
         const isHardFork = item[1];
-        if (document.getElementById(ident)) {
+        if (document.getElementById(ident)) { // if page has diagram step
             if (isHardFork) {
                 let progStart = 0;
                 let grad = 'linear-gradient(90deg, ';
                 Object.entries(item[2]).forEach(([color, value], index, array) => {
-                    const progEnd = progStart + (value / 2);
+                    const progEnd = progStart + (value / 2); // For the slide anaimation the gradient is 200% wide so values need to be /2
                     grad += `${progColor[color]} ${progStart}%, ${progColor[color]} ${progEnd}%`;
                     progStart = progEnd;
                     if (index !== array.length - 1) {
-                        grad += ', ';
+                        grad += ', '; // deliminator 
                     }
                 });
                 grad += `, rgb(89 89 89) ${progStart}%, rgb(89 89 89) 100%)`;
@@ -158,6 +159,7 @@ Object.entries(statusList).forEach(([groupKey, group]) => {
     })
 })
 
+// slide in animation for diagram
 setTimeout(() => {
     Object.entries(statusList).forEach(([groupKey, group]) => {
         group.forEach(step => {
@@ -173,10 +175,11 @@ setTimeout(() => {
 
 let progressBars = [];
 
+// Calculate progress bar for each group with weightings 
 Object.entries(statusList).forEach(([groupKey, group]) => {
     barName = groupKey + "-progress"
     if(document.getElementById(barName)) {
-        let colors = ["teal", "green", "purple", "blue", "red"];
+        let colors = ["teal", "green", "purple", "blue", "red"]; // update this in future 
         let colorSums = {};
         let weightSum = 0
         let stepCount = 0
@@ -216,6 +219,7 @@ Object.entries(statusList).forEach(([groupKey, group]) => {
     };
 });
 
+// on load show group progress bars
 window.onload = function() {
     progressBars.forEach(({barName, progressList}) => {
         setProgressBarW(barName, progressList);
@@ -223,7 +227,7 @@ window.onload = function() {
 }
 
 
-
+// style group progress bars 
 function setProgressBarW(progressBarId, sections) {
   // List of progress bars to update
   const progressBarIds = [progressBarId, progressBarId + '2'];
