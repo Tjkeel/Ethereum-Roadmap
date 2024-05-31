@@ -47,7 +47,7 @@ const statusList = {
     ],
     surge: [
         ["surgeA", true, { teal: 66.66, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // Optimistic rollup fraud provers
-        ["surgeB", true, { teal: 66.66, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // ZK-EVMs
+        ["surgeB", true, { teal: 50, green: 0, purple: 0, blue: 0, red: 0 }, {weighting: 1}],  // ZK-EVMs
         ["surgeC", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }, {weighting: 1}],    // EIP-4844 specification
         ["surgeD", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }, {weighting: 1}],    // EIP-4844 implementation
         ["surgeE", true, { teal: 0, green: 0, purple: 0, blue: 100, red: 0 }, {weighting: 1}],    // Basic rollup scaling
