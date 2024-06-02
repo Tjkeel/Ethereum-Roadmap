@@ -1666,6 +1666,20 @@ h1 {
   }
 }
 
+
+/*Smaller margins when screen < 550px*/
+@media (max-width: 550px) {
+  .container {
+    padding: 10px;
+    padding-top: 20px;
+    width: calc(100% - 30px);
+  }
+  .merge, .surge, .scourge, .verge, .purge, .splurge {
+    padding-left: 8px;
+  }
+}
+
+
 [tips] .tooltipBar {
   line-height: 20px;
   background: #444;
