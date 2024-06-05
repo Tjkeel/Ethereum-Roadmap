@@ -161,9 +161,12 @@
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="https://bordel.wtf/" style="color: #fff;" target="_blank">
-                     <li>bordel.wtf</li>
-                  </a>
+                    <a href="https://ethereum.org/en/glossary/#terminal-total-difficulty" style="color: #fff;" target="_blank">
+                         <li>Total Terminal Difficulty (TTD)</li>
+                     </a>
+                     <a href="https://consensys.io/merge" style="color: #fff;" target="_blank">
+                         <li>consensys.io/merge</li>
+                     </a>
                </ul>
             </div>
             <div class="right-arrow-pointer"><i class="fas fa-arrow-right"></i></div>
@@ -177,6 +180,8 @@
                <h3 style="font-family: 'Open Sans', sans-serif;">Extra-Protocol</h3>
                <p style="font-family: 'Open Sans', sans-serif; ">  
 Distributed Validator Technology allows multiple participants to collaboratively manage the responsibilities of a single validator.
+The goal of distributing validator execution across multiple nodes is to improve the resilience of the validator (safety, liveness, or both), compared to running a validator on a single machine. 
+So long as at least ⅔ of the validators in a DVT setup are functional, the others can go offline, perform poorly, or even be hacked without as severe, or any, penalties being incurred.
  More than just increasing a validator's resilience via redundancy, a significant advantage of DVT is that it facilitates staking with less than the standard requirement of 32 ETH by pooling resources from multiple stakeholders. 
  This makes participation in the validation process more accessible to individuals with smaller amounts of ETH, further democratizing the process and broadening network participation. <br><br>
  DVT did not require changes to mainnet, and similar to liquid staking, is an extra protocol innovation.
@@ -203,17 +208,21 @@ Distributed Validator Technology allows multiple participants to collaboratively
             <div class="description-content">
                <h2 class="upgrade-title" style="font-weight: 100;">Withdrawals</h2>
                <h3 style="font-family: 'Open Sans', sans-serif;"> April 12, 2023 </h3>
-               <p style="font-family: 'Open Sans', sans-serif; "> EIP-4895, included in the Shanghai-Capella hard fork, enabled support
-                  for validator withdrawals from the Beacon chain to the EVM via a new "system-level" operation type.
+               <p style="font-family: 'Open Sans', sans-serif; "> While the Merge joined Ethereum’s execution layer (EL) and consensus layer (CL), it did not include a mechanism for validator withdrawals. 
+                  In other words, there was no way for the 32 ETH “locked” in each validator balance on the CL to be withdrawn and credited to an address on Ethereum’s EL.
+                  EIP-4895, included in the Shanghai-Capella hard fork, enabled support for validator withdrawals from the Beacon chain (consensus layer) to the EVM (execution layer) via a new "system-level" operation type.
                   This EIP completed the three part process of Ethereum's transition to a proof of stake consensus mechanism.
                </p>
                <h3 style="font-family: 'Open Sans', sans-serif;"> Resources </h3>
                <ul style="font-family: 'Open Sans', sans-serif;">
-                  <a href="https://www.validatorqueue.com/" style="color: #fff;" target="_blank">
+                  </a>  <a href="https://www.validatorqueue.com/" style="color: #fff;" target="_blank">
                      <li>validator queue</li>
                   </a>
                   <a href="https://consensys.io/shanghai-capella-upgrade" style="color: #fff;" target="_blank">
                      <li>guide to ETH withdrawals</li>
+                  </a>
+                   <a href="https://eips.ethereum.org/EIPS/eip-4895" style="color: #fff;" target="_blank">
+                     <li>EIP-4895</li>
                   </a>
                </ul>
             </div>
