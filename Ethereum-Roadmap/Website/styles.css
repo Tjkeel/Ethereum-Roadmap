@@ -643,22 +643,23 @@ transform: translateY(-2px);
 /* ... footer... */
 
 .footer {
-    display: flex; /* Use flexbox to manage layout */
-    justify-content: space-between; /* Space between the boxes */
-    align-items: center; /* Align items vertically */
-    width: 100%; /* Full width of its container */
-    padding: 10px 0; /* Padding around the footer */
-    box-sizing: border-box; /* Include padding in width calculation */
+  display: flex; /* Use flexbox to manage layout */
+  justify-content: space-between; /* Space between the boxes */
+  align-items: center; /* Align items vertically */
+  width: 85%; /* Set width to 80% of its container */
+  padding: 10px 0; /* Padding around the footer */
+  box-sizing: border-box; /* Include padding in width calculation */
+  margin: 0 auto; /* Center the footer horizontally in its container */
 }
 
 .footer-box {
-    display: flex; /* Enables the content to be centered */
-    justify-content: center; /* Center horizontally in the box */
-    align-items: center; /* Center vertically in the box */
-    width: 33.33%; /* Each box takes up one-third of the footer */
-    text-align: center; /* Center the text inside */
-    padding: 10px; /* Padding inside each box */
-    background: transparent; /* Background is transparent */
+  display: flex; /* Enables the content to be centered */
+  justify-content: center; /* Center horizontally in the box */
+  align-items: center; /* Center vertically in the box */
+  flex: 1; /* Each box flexes to fill the space */
+  text-align: center; /* Center the text inside */
+  padding: 10px; /* Padding inside each box */
+  background: transparent; /* Background is transparent */
 }
 
 .footer-box a {
@@ -974,7 +975,7 @@ transform: translateY(-2px);
 }
 
 .tab {
-  padding: 5px 10px;
+  padding: 5px 7px;
   background: rgba(0, 0, 0, 0.3);  color: #fff;
   color: #fff; /* White text */
   text-decoration: none;
