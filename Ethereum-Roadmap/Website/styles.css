@@ -1140,3 +1140,21 @@ font-weight: bold;
   align-self: center;  /* Center it vertically */
   display: inline-block;  /* Display inline with the tabs */
 }
+
+.timeline-eventP {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.timeline-eventP:hover {
+  transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+
+}
