@@ -13,26 +13,14 @@ body, html {
   overflow-x: hidden;
   position: relative; /* Ensure positioning context for pseudo-element */
   scroll-behavior: smooth;
+  background-color: #2f2f2f;
 }
-
-body::before {
-  content: '';
-  position: fixed; /* Use fixed instead of absolute */
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('background.png') top center / contain no-repeat fixed; /* Combine background properties */
-  filter: blur(6px); /* Adjust blur intensity as needed */
-  z-index: -1; /* Place it behind the content */
-}
-
 
 .container {
   position: relative;
   width: 80%;
   margin: 40px auto;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgb(67 67 67);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -83,7 +71,7 @@ h1 {
   height: 20px;
   bottom: 10px;
   width: 100%; /* Ensure it fills the container */
-  background-color: transparent; /* No longer a single color */
+  background-color: #595959; /* changed for dark mode and to match diagram */
   border-radius: 2px;
   position: relative;
   overflow: hidden;
@@ -649,6 +637,7 @@ transform: translateY(-2px);
     width: 100%; /* Full width of its container */
     padding: 10px 0; /* Padding around the footer */
     box-sizing: border-box; /* Include padding in width calculation */
+    background-color: #434343;
 }
 
 .footer-box {

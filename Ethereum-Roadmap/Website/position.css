@@ -250,7 +250,7 @@ h1 {
   overflow: visible;
   grid-row: -1;
   grid-column: 1 / -1;
-  outline: white 1px solid;
+  outline: white 2px solid;
 }
 
 /*Beacon chain launch*/
