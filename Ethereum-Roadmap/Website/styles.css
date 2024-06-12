@@ -13,14 +13,26 @@ body, html {
   overflow-x: hidden;
   position: relative; /* Ensure positioning context for pseudo-element */
   scroll-behavior: smooth;
-  background-color: #2f2f2f;
 }
+
+body::before {
+  content: '';
+  position: fixed; /* Use fixed instead of absolute */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('background.png') top center / contain no-repeat fixed; /* Combine background properties */
+  filter: blur(6px); /* Adjust blur intensity as needed */
+  z-index: -1; /* Place it behind the content */
+}
+
 
 .container {
   position: relative;
   width: 80%;
   margin: 40px auto;
-  background: rgb(67 67 67);
+  background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -71,7 +83,7 @@ h1 {
   height: 20px;
   bottom: 10px;
   width: 100%; /* Ensure it fills the container */
-  background-color: #595959; /* changed for dark mode and to match diagram */
+  background-color: transparent; /* No longer a single color */
   border-radius: 2px;
   position: relative;
   overflow: hidden;
@@ -631,23 +643,23 @@ transform: translateY(-2px);
 /* ... footer... */
 
 .footer {
-    display: flex; /* Use flexbox to manage layout */
-    justify-content: space-between; /* Space between the boxes */
-    align-items: center; /* Align items vertically */
-    width: 100%; /* Full width of its container */
-    padding: 10px 0; /* Padding around the footer */
-    box-sizing: border-box; /* Include padding in width calculation */
-    background-color: #434343;
+  display: flex; /* Use flexbox to manage layout */
+  justify-content: space-between; /* Space between the boxes */
+  align-items: center; /* Align items vertically */
+  width: 85%; /* Set width to 80% of its container */
+  padding: 10px 0; /* Padding around the footer */
+  box-sizing: border-box; /* Include padding in width calculation */
+  margin: 0 auto; /* Center the footer horizontally in its container */
 }
 
 .footer-box {
-    display: flex; /* Enables the content to be centered */
-    justify-content: center; /* Center horizontally in the box */
-    align-items: center; /* Center vertically in the box */
-    width: 33.33%; /* Each box takes up one-third of the footer */
-    text-align: center; /* Center the text inside */
-    padding: 10px; /* Padding inside each box */
-    background: transparent; /* Background is transparent */
+  display: flex; /* Enables the content to be centered */
+  justify-content: center; /* Center horizontally in the box */
+  align-items: center; /* Center vertically in the box */
+  flex: 1; /* Each box flexes to fill the space */
+  text-align: center; /* Center the text inside */
+  padding: 10px; /* Padding inside each box */
+  background: transparent; /* Background is transparent */
 }
 
 .footer-box a {
@@ -850,20 +862,20 @@ transform: translateY(-2px);
 }
 
 .flip-container-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin: 20px 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
 }
 
 .flip-container {
-    perspective: 1000px;
-    width: 100%;
-    height: 40px;
+  perspective: 1000px;
+  width: 100%;
+  height: 40px;
 }
 
 .flipper {
-  transition: 1s;
+  transition: transform 1s;
   transform-style: preserve-3d;
   position: relative;
   width: 100%;
@@ -876,15 +888,22 @@ transform: translateY(-2px);
   left: 0;
   width: 100%;
   height: 100%;
+  display: flex;
   backface-visibility: hidden;
   justify-content: center;
   align-items: center;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
 }
 
 .back {
   background-color: rgba(255, 255, 255, 0.2);
   color: white;
   transform: rotateY(180deg);
+  z-index: 1;
 }
 
 .flip-container:hover .flipper {
@@ -963,7 +982,7 @@ transform: translateY(-2px);
 }
 
 .tab {
-  padding: 5px 10px;
+  padding: 5px 7px;
   background: rgba(0, 0, 0, 0.3);  color: #fff;
   color: #fff; /* White text */
   text-decoration: none;
@@ -1127,4 +1146,22 @@ font-weight: bold;
   margin: 0 0px;  /* Space it out from the tabs, adjust as needed */
   align-self: center;  /* Center it vertically */
   display: inline-block;  /* Display inline with the tabs */
+}
+
+.timeline-eventP {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.timeline-eventP:hover {
+  transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+
 }
