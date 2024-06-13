@@ -1,3 +1,8 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
 .sectionLink, .step, .mile, .quant {
     transition: transform 0.5s ease, background-color 0.5s ease;
 
@@ -115,6 +120,12 @@
     grid-template-columns: 1fr;
     margin-bottom: -20px;
     justify-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 #sw-simp, #sw-det {
