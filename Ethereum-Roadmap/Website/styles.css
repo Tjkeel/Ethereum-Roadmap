@@ -634,12 +634,16 @@ transform: translateY(-2px);
   display: flex; /* Use flexbox to manage layout */
   justify-content: space-between; /* Space between the boxes */
   align-items: center; /* Align items vertically */
-  width: 85%; /* Set width to 85% of its container */
-  padding: 10px 0; /* Padding around the footer */
-  box-sizing: border-box; /* Include padding in width calculation */
-  margin: 0 auto; /* Center the footer horizontally in its container */
-  background-color: #434343;
-  border-radius: 25px 25px 0px 0px;
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+  background: rgb(67 67 67);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  font-weight: 100;
+
 }
 
 .footer-box {
@@ -653,12 +657,12 @@ transform: translateY(-2px);
 }
 
 .footer-box a {
-    color: black; /* Ensures links are black */
+    color: white; /* Ensures links are black */
 }
 
 
 .footer p {
-    color: black; /* Ensures links are black */
+    color: white; /* Ensures links are black */
   margin: 0; /* Removes default paragraph margin */
 }
 
