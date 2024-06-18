@@ -119,15 +119,22 @@ h1 {
   background-color: #00000069;;
 }
 
-.track, .trackGroup {
+.track {
   background-color: #7f7f7f;
   border: unset;
-}
-
-.track {
   border-radius: unset;
   z-index: 2;
   color: black;
+}
+
+.trackGroup {
+  background-color: #3b3a3a;
+  border-radius: 10px;
+}
+
+.trackGroup .track {
+  color: white;
+  background-color: #3b3a3a;
 }
 
 .arrowRight, .arrowLeft, .arrowUp, .arrowDown {
