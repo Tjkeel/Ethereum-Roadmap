@@ -371,15 +371,15 @@ function updateCountdown3() {
 setInterval(updateCountdown, 1000);
 
 function updateCountdown() {
-  const callDate = new Date('2024-03-13T13:55:35Z');
+  const callDate = new Date('2024-03-13');
   const now = new Date();
   const diff = callDate - now;
 
   // Calculate days, hours, minutes, seconds
   const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+  const hours = Math.abs(Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)));
+  const minutes = Math.abs(Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60)));
+  const seconds = Math.abs(Math.floor((diff % (1000 * 60)) / 1000));
 
   // Update the countdown display
   document.getElementById('days').textContent = days;
@@ -471,7 +471,7 @@ async function fetchLatestGasPriceFromFirebase() {
     const data = await response.json();
 
     if (data && data.status === "1" && data.message === "OK" && data.result) {
-      const gasPriceValue = data.result.SafeGasPrice;
+      const gasPriceValue = Math.round(data.result.SafeGasPrice); // Rounding to the nearest whole unit
       document.getElementById('gasPriceValue').textContent = `${gasPriceValue} Gwei`;
     } else {
       console.error('Failed to fetch latest gas price:', data);
