@@ -824,7 +824,7 @@ h1 {
 }
 
 
-/*Track container (Staking economics / experiance track)*/
+/*Track container (Staking economics / experience track)*/
 #scourgeTrackB {
   display: grid;
   grid-template-columns: repeat(34, 1fr);
@@ -837,7 +837,7 @@ h1 {
   border-radius: 10px;
 }
 
-/*Staking economics / experiance track*/
+/*Staking economics / experience track*/
  #scourgeTrackBText {
   grid-column: 2 / 6;
   text-align: left;
