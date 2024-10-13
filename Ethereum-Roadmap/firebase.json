@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "Ethereum-Roadmap/Website",
+    "public": "Ethereum-Roadmap/Ethereum-Roadmap/Website",
     "ignore": [
       "firebase.json",
       "**/.*",

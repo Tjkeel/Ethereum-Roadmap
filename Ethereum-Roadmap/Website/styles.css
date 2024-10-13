@@ -538,6 +538,46 @@ transform: translateY(-2px);
 
 }
 
+#amsterdam{
+  display: inline-block;
+  background-color: #ff69b4;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#amsterdam:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#gunknown{
+  display: inline-block;
+  background-color: #ff69b4;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#gunknown:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
 #futureforks{
   display: inline-block;
   background-color: transparent;
@@ -787,6 +827,20 @@ transform: translateY(-2px);
   text-align: center;
 
 
+}
+
+/* Amsterdam-g(unknown) */
+.estimate-buttonAm {
+  background-color: #ff69b4;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .estimate-buttonK {
   background-color: #6A9BE7;
