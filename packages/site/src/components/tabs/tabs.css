@@ -1,0 +1,69 @@
+.tabs-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: -10px; /* Adjust as necessary */
+  padding: 10px 0;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.tab {
+  padding: 5px 7px;
+  background: rgba(0, 0, 0, 0.3);  color: #fff;
+  color: #fff; /* White text */
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 0.8rem; /* Smaller font size for compact tabs */
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  position: relative; /* Needed for tooltip positioning */
+  display: inline-block; /* Ensure the tab can size correctly */
+}
+
+.tab:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tabdivider {
+  height: 20px;  /* This controls the height of the line */
+  width: 2px;    /* This controls the thickness of the line */
+  background-color: #fff;  /* White color, adjust as necessary */
+  border-radius: 1px;  /* Optionally round the edges slightly */
+  margin: 0 0px;  /* Space it out from the tabs, adjust as needed */
+  align-self: center;  /* Center it vertically */
+  display: inline-block;  /* Display inline with the tabs */
+}
+
+.tooltip {
+  visibility: hidden;
+  width: 200%; /* Twice the width of the tab */
+  background-color: transparent; /* Make background transparent */
+  color: #fff; /* Set text color to white */
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: -30px; /* Adjust based on your design */
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 0.8rem; /* Adjust based on your design */
+}
+
+.tab:hover .tooltip {
+  visibility: visible;
+}
+
+.price-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  position: absolute;
+  right: 20px; /* Position the container to the right */
+  top: 20px; /* Adjust the top position as needed */
+}
+
+@media (max-width: 800px) {
+  .price-container {
+    display: none;
+  }
+}

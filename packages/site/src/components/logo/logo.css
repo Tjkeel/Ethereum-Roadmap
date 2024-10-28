@@ -1,0 +1,6 @@
+.siteLogo {
+  width: 600px;
+  max-width: calc(100vw - 200px);
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
