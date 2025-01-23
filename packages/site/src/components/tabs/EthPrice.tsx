@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { fetchEthPrice } from "~/lib/metrics/eth-price";
+import { fetchEthPrice } from "~/lib/eth-price";
 
 export const EthPrice = () => {
   const [ethPrice, setEthPrice] = useState(Infinity);

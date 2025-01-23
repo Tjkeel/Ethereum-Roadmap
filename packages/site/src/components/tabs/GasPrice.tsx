@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react"
-import { mock as fetchGasPrice } from "~/lib/metrics/gas-price";
+import { fetchGasPrice } from "~/lib/gas-price";
 
 export const GasPrice = () => {
   const [gasPrice, setGasPrice] = useState(Infinity);
