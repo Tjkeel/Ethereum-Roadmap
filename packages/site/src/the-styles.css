@@ -1,0 +1,1042 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("//use.fontawesome.com/releases/v5.15.3/css/all.css");
+
+
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 100;
+  height: 100%;
+  text-align: center;
+  color: #fff;
+  overflow-x: hidden;
+  position: relative; /* Ensure positioning context for pseudo-element */
+  scroll-behavior: smooth;
+  background-color: #2f2f2f;
+}
+
+.container {
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+  background: rgb(67 67 67);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  font-weight: 100;
+  
+}
+
+h1 {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+}
+
+.section2 {
+  margin: 0px auto; /* Centered with auto margins on the left and right */
+  max-width: 800px; /* Example maximum width, adjust as needed */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  position: relative;
+}
+
+
+.section2:hover {
+  transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+
+}
+.section {
+  background: rgba(0, 0, 0, 0.3);  color: #fff;
+  margin: 10px auto; /* Centered with auto margins on the left and right */
+  max-width: 800px; /* Example maximum width, adjust as needed */
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  position: relative;
+}
+
+
+.section:hover {
+  transform: translateY(-2px);
+}
+
+.progress-bar {
+  height: 20px;
+  bottom: 10px;
+  width: 100%; /* Ensure it fills the container */
+  background-color: #595959; /* changed for dark mode and to match diagram */
+  border-radius: 2px;
+  position: relative;
+  overflow: hidden;
+  transition: width 0.5s ease-in-out;
+  text-align: left; /* Align text to the left */
+
+}
+
+.progress-container {
+  direction: ltr; /* Ensure left-to-right text direction */
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.progress-bar::after {
+  content: '';
+}
+
+.checkmark {
+  color: #B4E087;
+  font-size: 1.5em;
+}
+
+.x-mark {
+  color: #F1A196;
+  font-size: 1.5em;
+}
+
+
+.section-title {
+  font-size: 1.5em;
+  color: #fff;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.supplemental-section {
+  background-color: transparent;
+  padding: 0px 30px 20px 30px; /* reduced top padding */
+}
+
+a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.main-title {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.type-title {
+  font-size: 2em;
+  color: #fff;
+  margin-bottom: 0; /* removed bottom margin */
+  text-align: center;
+}
+
+.upgrade-title {
+  font-size: 1.5em;
+  color: #fff;
+  margin: 20px 0 10px;
+}
+
+.description {
+  font-size: 1em;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.intro-text {
+  color: #fff; /* White text for visibility */
+  margin: 0 auto 10px; /* Centered with some margin at the bottom */
+  padding: 0 5%; /* Padding on the sides to focus the text in the center */
+  text-align: center; /* Center the text */
+  font-size: 1em; /* Slightly larger font size for readability */
+}
+
+@media (max-width: 600px) {
+  .modal-content {
+    width: 95%; /* Let the modal take more space on small screens */
+    margin: 10% auto; /* Increase margin from the top if needed */
+    padding: 5%; /* Increase padding to make it look bigger */
+  }
+}
+
+.image-container {
+  text-align: center;
+  margin: 20px 0 40px;
+  
+}
+
+.modal-image {
+  max-width: 90%; /* Adjust to your preference */
+  max-height: 300px; /* Adjust to your preference */
+  cursor: pointer;
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* Styles for the back arrow */
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.back-arrow {
+  font-size: 4vw; /* Adjust the size of the arrow based on the width of the viewport */
+  position: relative;
+  color: white;
+  top: 2vh; /* Position the arrow slightly from the top of the viewport */
+  left: 2vw; /* Position the arrow slightly from the left of the viewport */
+  z-index: 5; /* Ensure it's above other content */
+  display: inline-block; /* Allows the use of width and height */
+  width: 8vw; /* Width of the back arrow container */
+  height: 8vw; /* Height of the back arrow container */
+  line-height: 8vw; /* Centers the arrow vertically */
+  text-align: center; /* Centers the arrow horizontally */
+}
+
+.back-arrow:hover {
+  text-decoration: none;
+}
+
+/* Adjusted countdown container to have less margin at the bottom */
+.countdown-container {
+  text-align: center;
+  margin: 20px auto 10px; /* Reduced bottom margin to 10px */
+  font-size: 1.5em; /* Same size as the 'Ethereum Roadmap' title */
+}
+
+.countdown-time {
+  font-weight: bold;
+  margin: 0 10px;
+}
+
+.next-call-text {
+  font-size: 0.5em; /* Smaller font size for the subtitle */
+  margin-top: 10px;
+}
+
+.section:first-of-type {
+  margin-top: 20px; /* Reduced top margin to 20px */
+}
+
+/* ... existing styles ... */
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10; /* Sit on top */
+  padding-top: 5vh; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 5vh auto; /* Top margin as viewport height */
+  padding: 4vw; /* Padding as viewport width */
+  border: 1px solid #888;
+  width: 80%; /* Relative to the parent width */
+  max-width: 700px; /* Maximum width */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  animation-name: zoom;
+  animation-duration: 0.6s;
+  color: #333;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  position: relative; /* Positioned relative to its parent which is .modal */
+}
+
+.close {
+  position: absolute; /* Positioned absolutely within the .modal-content */
+  top: 1vh; /* Positioned from the top of the viewport */
+  right: 1vw; /* Positioned from the right of the viewport */
+  color: #aaa;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+@keyframes zoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+/* ... existing styles ... */
+
+.timeline-container {
+  margin: 25px auto;
+  background: rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 10px;
+  
+}
+
+.timeline-title {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.timeline {
+  list-style: none;
+  padding: 0px;
+  text-align: center;
+}
+
+.timeline li {
+  display: inline-block;
+  background-color: #A2C578;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+.timeline li:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+transform: translateY(-2px);
+}
+
+#shanghai{
+  display: inline-block;
+  background-color: #AE90B1;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#shanghai:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#capella{
+  display: inline-block;
+  background-color: #AE90B1;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#capella:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#cancun{
+  display: inline-block;
+  background-color: #6A9BE7;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#cancun:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#deneb{
+  display: inline-block;
+  background-color: #6A9BE7;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#deneb:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#prague{
+  display: inline-block;
+  background-color: #F1A196;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#prague:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#electra{
+  display: inline-block;
+  background-color: #F1A196;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#electra:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#osaka{
+  display: inline-block;
+  background-color: #FBEA6A;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#osaka:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#funknown{
+  display: inline-block;
+  background-color: #FBEA6A;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #000;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#funknown:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+#futureforks{
+  display: inline-block;
+  background-color: transparent;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+#futureforks:hover {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+#futureforks2{
+  display: inline-block;
+  background-color: transparent;
+  margin-right: -2px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+#futureforks2:hover{
+/*  background-color: rgba(0, 0, 0, 0.3); */
+  color: #fff;
+  transform: translateY(-2px);
+
+}
+
+/* ... Additional Consensus Layer Timeline Content... */
+
+.detailed-timeline {
+  margin: 20px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.timeline-event {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+}
+
+.timeline-date {
+  background-color: transparent;
+  color: white;
+  font-size: 1em;
+  text-align: center;
+  border-radius: 5px;
+  padding: 5px 0;
+}
+
+.timeline-content h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2em;
+}
+
+.timeline-content p {
+  margin: 10px 0 0;
+  color: #ddd;
+  font-size: 0.9em;
+}
+
+@media (max-width: 600px) {
+  .timeline-event {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .timeline-date {
+    margin-bottom: 10px;
+  }
+}
+
+
+/* ... footer... */
+
+.footer {
+  display: flex; /* Use flexbox to manage layout */
+  justify-content: space-between; /* Space between the boxes */
+  align-items: center; /* Align items vertically */
+  position: relative;
+  width: 80%;
+  margin: 40px auto;
+  background: rgb(67 67 67);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: auto;
+  font-weight: 100;
+
+}
+
+.footer-box {
+  display: flex; /* Enables the content to be centered */
+  justify-content: center; /* Center horizontally in the box */
+  align-items: center; /* Center vertically in the box */
+  flex: 1; /* Each box flexes to fill the space */
+  text-align: center; /* Center the text inside */
+  padding: 10px; /* Padding inside each box */
+  background: transparent; /* Background is transparent */
+}
+
+.footer-box a {
+    color: white; /* Ensures links are black */
+}
+
+
+.footer p {
+    color: white; /* Ensures links are black */
+  margin: 0; /* Removes default paragraph margin */
+}
+
+.footer a {
+  color: #000; /* Ensures the text link is white */
+}
+
+
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.team {
+  background: #B67EB4;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+.team2 {
+  background: #78D0DE;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+.team3 {
+  background: #78D0DE;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+.team:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+    transform: translateY(-2px);
+
+}
+
+
+.team2:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+    transform: translateY(-2px);
+
+}
+
+.team3:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+    transform: translateY(-2px);
+
+}
+
+.estimate-buttons {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.estimate-button {
+  background-color: #6A9BE7;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1em;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  text-decoration: none;
+}
+
+.estimate-button:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+      transform: translateY(-2px);
+
+}
+
+/* Prague-Electra Button Styles */
+.estimate-button2 {
+  background-color: #F1A196;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Osaka-f(unknown) */
+.estimate-buttonO {
+  background-color: #FBEA6A;
+  color: #000;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+
+}
+.estimate-buttonK {
+  background-color: #6A9BE7;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.estimate-buttonS {
+  background-color: #B67EB4;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.estimate-buttonT {
+  background-color: #78D0DE;
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+
+.estimate-button3 {
+  background-color: rgba(241, 161, 150, 0.5);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+}
+.estimate-button4 {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 1em;
+  text-decoration: none;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flip-container-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.flip-container {
+  perspective: 1000px;
+  width: 100%;
+  height: 40px;
+}
+
+.flipper {
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.front, .back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  backface-visibility: hidden;
+  justify-content: center;
+  align-items: center;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(0deg);
+}
+
+.back {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  transform: rotateY(180deg);
+  z-index: 1;
+}
+
+.flip-container:hover .flipper {
+  transform: rotateY(180deg);
+}
+
+
+.cross-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FFFFFF; /* White color */
+  pointer-events: none; /* To allow clicking on the button underneath */
+}
+
+.cross-overlay::before, .cross-overlay::after {
+  content: '';
+  position: absolute;
+  width: 20%; /* Significantly wider */
+  height: 2px; /* Height of the slash */
+  background-color: #FFFFFF; /* White color */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+}
+
+.cross-overlay::before {
+  transform: translate(-50%, -50%) rotate(45deg); /* Adjust positioning and angle */
+}
+
+.cross-overlay::after {
+  transform: translate(-50%, -50%) rotate(-45deg); /* Adjust positioning and angle */
+}
+
+/* ... existing styles ... */
+
+.deployment-futurefork.has-checkmark:after, .deployment-futurefork.has-xmark:after {
+  position: absolute;
+  left: 50%;
+  bottom: -25px; /* Adjust as needed */
+  transform: translateX(-50%);
+  font-size: 1.5em; /* Adjust as needed */
+  content: '';
+}
+
+.deployment-futurefork.has-checkmark:after {
+  content: '\f00c'; /* FontAwesome checkmark */
+  color: #fff; /* Checkmark color */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* Solid style */
+}
+
+.deployment-futurefork.has-xmark:after {
+  content: '\f00d'; /* FontAwesome X-mark */
+  color: #fff; /* X-mark color */
+  font-family: 'Font Awesome 5 Free';
+  font-weight: 900; /* Solid style */
+}
+
+.deployment-futurefork {
+  position: relative;
+  margin-bottom: 30px; /* Adjust as needed to accommodate the icon */
+}
+
+.crown-icon {
+  font-size: 0.5em; /* Smaller icon */
+  vertical-align: middle; /* Aligns icon with the middle of the text */
+  margin-left: 5px; /* Space between the text and the icon */
+}
+
+#inprogress {
+color: #F1A196;
+position: absolute;
+left: 20px;
+font-weight: bold;
+
+}
+
+@media (max-width: 800px) {
+  #inprogress {
+    display: none;
+  }
+}
+
+
+.calculation-box {
+    width: 150px; 
+    height: 150px; 
+    background: rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 10px; /* Optional: adds rounded corners */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+    font-size: 1em; /* Adjust text size as needed */
+    color: #fff; /* Text color */
+	flex-direction: column; /* Stack items vertically */
+
+}
+
+/* Additional styling for the text inside the boxes */
+.calculation-box p {
+    margin: 0;
+    padding: 10px;
+}
+
+.calculation-container {
+  margin: 25px auto;
+  background: rgba(0, 0, 0, 0.3);
+  max-width: 800px;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px; /* Adjust the gap between boxes as needed */
+ justify-content: center; /* Center the boxes within the container */
+  
+}
+
+/* Media query for mobile devices */
+@media (max-width: 600px) {
+    .calculation-box {
+        width: calc(50% - 10px); /* Adjust width for mobile, accounting for the gap */
+        height: calc(50% - 10px); /* Adjust height similarly to maintain square shape */
+        aspect-ratio: 1 / 1; /* Maintain a 1:1 aspect ratio to keep boxes square */
+        font-size: 0.9em; /* Optionally adjust font size for mobile */
+    }
+}
+
+.calculation-box.hazard {
+  position: relative; /* Needed for absolute positioning of children */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@keyframes fadeTransparency {
+  0% {
+    color: rgba(251, 234, 106, 0.0); /* Less transparent start */
+  }
+  50% {
+    color: rgba(251, 234, 106, 0.5); /* More transparent midpoint */
+  }
+  100% {
+    color: rgba(251, 234, 106, 0.0); /* Back to less transparent */
+  }
+}
+
+.icon-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 4em; /* Adjust size as needed */
+  color: rgba(251, 234, 106, 0.3); /* Initial color */
+  z-index: 1; /* Ensure the icon is behind the text */
+  animation: fadeTransparency 3s infinite; /* Apply the animation */
+}
+
+/* Ensure text is readable and prominently displayed */
+.calculation-box.hazard > span,
+.calculation-box.hazard > div {
+  position: relative;
+  z-index: 2; /* Higher z-index to ensure text appears above the icon */
+  color: #fff; /* Adjust text color for readability if necessary */
+}
+
+
+.timeline-eventP {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  gap: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+.timeline-eventP:hover {
+  transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+
+}

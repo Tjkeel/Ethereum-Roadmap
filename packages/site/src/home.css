@@ -1,0 +1,172 @@
+* {
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    -webkit-touch-callout: none;
+}
+
+.sectionLink, .step, .mile, .quant {
+    transition: transform 0.5s ease, background-color 0.5s ease;
+
+}
+
+.siteLogo {
+    width: 600px;
+    max-width: calc(100vw - 200px);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.sectionLink {
+    color: white;
+    border-radius: 10px;
+    outline-width: 0px;
+    outline-color: white;
+    outline-style: solid;
+}
+
+.sectionLink:hover, .section:active {
+    text-decoration: none;
+  	transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.1);
+    .step, .mile {
+        border-width: 2px;
+        border-color: white;
+        border-style: solid;
+    }
+    .quant {
+        border-image: linear-gradient(to top right,
+            rgba(184, 39, 252, 0.85) 0%,
+            rgba(44, 144, 252, 0.85) 25%, 
+            rgba(184, 253, 51, 0.85) 50%, 
+            rgba(254, 200, 55, 0.85) 75%, 
+            rgba(253, 24, 146, 0.85) 100%);
+        border-image-slice: 1;
+        outline-width: 2px;
+        outline-color: white;
+        outline-style: solid;
+    }
+    .progress-bar {
+        outline-width: 3px;
+        outline-color: white;
+        outline-style: solid;
+    }
+}
+
+
+
+.section2:hover {
+    .progress-bar {
+        outline-width: 3px;
+        outline-color: white;
+        outline-style: solid;
+    }, 
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 34px;
+}
+
+.switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    color: #2f2f2f;
+    font-weight: bold;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+    align-content: center;
+    font-size: 13px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    border: solid 3px #cccccc;
+}
+
+.slider:hover {
+    border-color: white;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+#toggleLayout {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-bottom: -20px;
+    justify-items: center;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#sw-simp, #sw-det {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.6s, color 0.6s;
+}
+
+#sw-simp {
+    background-color: #2f2f2f;
+    color: white;
+    border-radius: 35px 0px 0px 35px;
+}
+
+#sw-det {
+    border-radius: 0px 35px 35px 0px;
+}
+
+
+#toggleViewButton:checked ~ .slider #sw-simp {
+    background-color: #ccc;
+    color: #595959;
+}
+
+#toggleViewButton:checked ~ .slider #sw-det {
+    background-color: #2f2f2f;
+    color: white;
+}
+
+.name-logo {
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    .fas {
+        grid-column: 1;
+        align-self: center;
+        justify-self: left;
+    }
+    h2 {
+        grid-column: 2;
+        text-align: left;
+    }
+}
