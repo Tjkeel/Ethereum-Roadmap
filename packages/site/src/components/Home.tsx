@@ -7,7 +7,6 @@ import { HardforkRecent } from "~/components/hardfork/Recent";
 import { Organizations } from "~/components/organizations/Organizations";
 import { Foot } from "~/components/Foot";
 import { HardforkUpcoming } from "./hardfork/Upcoming";
-import { NetworkHealth } from "./network-health/NetworkHealth";
 import '../home.css';
 
 export const Home = () => <>
@@ -20,7 +19,6 @@ export const Home = () => <>
     <HardforkRecent/>
     <HardforkUpcoming/>
     <Organizations/>
-    <NetworkHealth/>
     {/*<script src="script.js"></script>*/}
   </div>
 
