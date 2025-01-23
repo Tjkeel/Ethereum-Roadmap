@@ -430,6 +430,26 @@ function updateCountdown4() {
   document.getElementById('seconds4').textContent = seconds;
 }
 
+// Update the countdown every second for Amsterdam-G(unkown)
+setInterval(updateCountdown5, 1000);
+
+function updateCountdown5() {
+  const callDate = new Date('2026-12-31');
+  const now = new Date();
+  const diff = callDate - now;
+
+  // Calculate days, hours, minutes, seconds
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  // Update the countdown display
+  document.getElementById('days5').textContent = days;
+  document.getElementById('hours5').textContent = hours;
+  document.getElementById('minutes5').textContent = minutes;
+  document.getElementById('seconds5').textContent = seconds;
+}
 
 //Code for Modals within each of the six development paths
 function openModal(modalId) {
